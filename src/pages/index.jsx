@@ -9,11 +9,13 @@ import SectionElegirnos from '@/components/home/SectionElegirnosFortaleza';
 // import SectionLicenciaDeConducir from '@/components/home/SectionLicenciaConducirFortaleza';
 // import SectionGraduados from '@/components/home/SectionGraduadosFortaleza';
 import SectionTestimonial from '@/components/home/SectionTestimonialFortaleza';
+import Cloudinary from '@/components/admin/Cloudinary';
 import SectionRedes from '@/components/home/SectionRedesFortaleza';
 // import SectionTrabajaConNosotros from '@/components/home/SectionTrabajaConNosotrosFortaleza';
 // import SectionPreguntasFrecuentes from '@/components/home/SectionFAQFortaleza';
 import SectionContact from '@/components/home/SectionContactFortaleza';
 // import './globals.css'
+
 import '@/css/style-animated.min.css'
 import "animate.css";
 // import '@/css/style-swiper.css';
@@ -39,6 +41,7 @@ export default function Home() {
 
       <section id="nuestros-servicios">
         <SectionNuestrosServicios />
+        {/* <Cloudinary /> */}
       </section>
 
       <section id="que-ofrecemos" >
