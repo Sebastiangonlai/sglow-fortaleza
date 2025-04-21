@@ -1,0 +1,13 @@
+/* TEAM */
+Developer: Sebastián González
+Site: https://sglow.vercel.app
+Location: Montevideo, Uruguay
+
+
+/* SITE */
+Last update: 2025-04-20
+Standards: React
+Styling: Tailwind CSS, Tailwind Merge
+Build Tool: Vite
+Animations: Framer Motion
+Hosting: Hostingenlaweb

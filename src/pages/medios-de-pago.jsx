@@ -51,7 +51,7 @@ export default function MediosDePago() {
                   {description}
                 </p>
                 {link && (
-                  <a href={link} className="text-base dark:font-medium cursor-pointer font-normal text-indigo-900 hover:text-indigo-700 dark:hover:text-indigo-400 dark:text-indigo-300">
+                  <a aria-label="Informacion" href={link} className="text-base dark:font-medium cursor-pointer font-normal text-indigo-900 hover:text-indigo-700 dark:hover:text-indigo-400 dark:text-indigo-300">
                     Más información &rarr;</a>
                 )}
               </div>

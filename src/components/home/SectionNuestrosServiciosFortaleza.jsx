@@ -25,15 +25,15 @@ const SectionNuestrosServiciosFortaleza = () => {
 								description={
 									<div className="mb-8">
 										<div className="mb-2 overflow-hidden rounded-[5px] shadow-[0_8px_16px_rgb(0_0_0/0.2)] bg-black">
-											<a href={d.href} className="block">
+											<a href={d.href} className="block" aria-label="Academia Fortaleza" >
 												<ImageComponent iSrc={d.imgSrc} iAlt={d.alt} iWidth={400} iHeight={400} iClassName="h-full w-full rounded-[5px] transition hover:rotate-6 hover:scale-125" />
 											</a>
 										</div>
 										<div className="flex flex-row justify-between items-center">
-											<a href={d.href} className="inline-block text-xl font-bold text-dark hover:text-primary dark:text-white dark:hover:text-blue-300 sm:text-xl lg:text-xl xl:text-xl leading-tight tracking-tight">
+											<a aria-label="Nuestros servicios" href={d.href} className="inline-block text-xl font-bold text-dark hover:text-primary dark:text-white dark:hover:text-blue-300 sm:text-xl lg:text-xl xl:text-xl leading-tight tracking-tight">
 												{d.title}
 											</a>
-											<a href={d.href} className="text-[12px] dark:text-blue-300 dark:hover:text-blue-300 rounded-xl cursor-pointer flex px-1 pt-1 justify-center items-center">
+											<a href={d.href} aria-label="Mas informacion" className="text-[12px] dark:text-blue-300 dark:hover:text-blue-300 rounded-xl cursor-pointer flex px-1 pt-1 justify-center items-center">
 												Ver más{` `}<FiChevronRight size='14px' />
 											</a>
 										</div>

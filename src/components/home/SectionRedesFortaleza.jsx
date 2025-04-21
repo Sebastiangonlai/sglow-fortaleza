@@ -42,14 +42,14 @@ const SectionRedesFortaleza = () => {
                       description={
 
                         <nav className="grid gap-2 mt-4 md:mt-10 justify-center" aria-label="Tabs" role="tablist" aria-orientation="vertical">
-                          <button className="max-w-[400px] rounded-lg border-[0.1rem] bg-slate-900 hover:border-blue-600 ring-1 dark:border-slate-300/20 dark:bg-dark/40 ring-blue/30 dark:hover:bg-blue-800/40 dark:focus:bg-blue/50" onClick={() => handleTabClick("tabs-with-card-1")}
+                          <button aria-label="Redes" className="max-w-[400px] rounded-lg border-[0.1rem] bg-slate-900 hover:border-blue-600 ring-1 dark:border-slate-300/20 dark:bg-dark/40 ring-blue/30 dark:hover:bg-blue-800/40 dark:focus:bg-blue/50" onClick={() => handleTabClick("tabs-with-card-1")}
                             role="tab"
                             aria-selected={activeTab === "tabs-with-card-1"}
                             aria-controls="tabpanel-1"
                             id="tab-1">
                             <div className="flex items-center justify-start gap-4 px-20 my-3">
                               {activeTab === "tabs-with-card-1" ? (
-                                <a href={import.meta.env.VITE_INSTAGRAM} target="_blank" rel="noopener noreferrer" className="flex gap-4 items-center justify-start ">
+                                <a href={import.meta.env.VITE_INSTAGRAM} target="_blank" rel="noopener noreferrer" className="flex gap-4 items-center justify-start " aria-label="Instagram" >
                                   <PiEyeBold size="30px" color="#fff" />
                                   <h3 className="block text-lg font-semibold hs-tab-active:text-blue-500 text-neutral-200 dark:hs-tab-active:text-blue-500 dark:text-neutral-200">
                                     Instagram
@@ -74,7 +74,7 @@ const SectionRedesFortaleza = () => {
                             id="tab-2">
                             <div className="flex items-center justify-start gap-4 px-20 py-3">
                               {activeTab === "tabs-with-card-2" ? (
-                                <a href={import.meta.env.VITE_FACEBOOK} target="_blank" rel="noopener noreferrer" className="flex gap-4 items-center justify-start">
+                                <a href={import.meta.env.VITE_FACEBOOK} target="_blank" rel="noopener noreferrer" className="flex gap-4 items-center justify-start" aria-label="Facebook" >
                                   <PiEyeBold size="30px" color="#fff" />
                                   <h3 className="block text-lg font-semibold hs-tab-active:text-blue-500 text-neutral-200 dark:hs-tab-active:text-blue-500 dark:text-neutral-200">
                                     Facebook
@@ -99,7 +99,7 @@ const SectionRedesFortaleza = () => {
                             id="tab-3">
                             <div className="flex items-center justify-start gap-4 px-20 py-3">
                               {activeTab === "tabs-with-card-3" ? (
-                                <a href={import.meta.env.VITE_YOUTUBE} target="_blank" rel="noopener noreferrer" className="flex gap-4 items-center justify-start">
+                                <a href={import.meta.env.VITE_YOUTUBE} target="_blank" rel="noopener noreferrer" className="flex gap-4 items-center justify-start" aria-label="Youtube" >
                                   <PiEyeBold size="30px" color="#fff" />
                                   <h3 className="block text-lg font-semibold hs-tab-active:text-blue-500 text-neutral-200 dark:hs-tab-active:text-blue-500 dark:text-neutral-200">
                                     Youtube

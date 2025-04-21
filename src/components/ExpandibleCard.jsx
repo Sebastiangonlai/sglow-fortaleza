@@ -47,11 +47,11 @@ const PortfolioCard = ({ imageSrc, category, title, description, checkText, butt
 						<div className="w-full" key={title}>
 							<div className="mb-2">
 								<div className="mb-2 overflow-hidden rounded-[5px] shadow-[0_8px_16px_rgb(0_0_0/0.2)] bg-black">
-									<a className="block">
+									<a aria-label="servicios" className="block">
 										<ImageComponent iSrc={imageSrc} iAlt="image" iClassName="h-full w-full rounded-[5px] transition group-hover:rotate-6deg group-hover:scale-125" iWidth={500} iHeight={500} />
 									</a>
 								</div>
-								<a className="mb-0.5 inline-block text-base font-semibold text-dark hover:text-primary dark:text-white dark:hover:text-indigo-400 sm:text-2xl lg:text-base xl:text-base leading-tight tracking-tight">
+								<a aria-label="nuestros servicios" className="mb-0.5 inline-block text-base font-semibold text-dark hover:text-primary dark:text-white dark:hover:text-indigo-400 sm:text-2xl lg:text-base xl:text-base leading-tight tracking-tight">
 									{title}
 								</a>
 							</div>
@@ -101,7 +101,7 @@ const PortfolioCard = ({ imageSrc, category, title, description, checkText, butt
 						</div>
 					</ModalContent>
 					<ModalFooter className="gap-4">
-						<a href={buttonHref} className="px-3 py-1.5 bg-gray-200 text-black dark:bg-black/80 dark:border-black dark:hover:bg-black dark:text-white border border-gray-300 rounded-md text-sm font-medium w-38">
+						<a href={buttonHref} className="px-3 py-1.5 bg-gray-200 text-black dark:bg-black/80 dark:border-black dark:hover:bg-black dark:text-white border border-gray-300 rounded-md text-sm font-medium w-38" aria-label="mas informacion">
 							Más información
 						</a>
 					</ModalFooter>

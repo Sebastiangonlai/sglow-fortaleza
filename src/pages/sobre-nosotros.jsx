@@ -48,7 +48,7 @@ const SobreNosotrosIndex = () => {
           <div className="flex space-x-3 pt-6">
             <SocialIcon kind="email" href={`mailto:${'info@academiafortaleza.com.uy'}`} />
             <SocialIcon kind="instagram" href={import.meta.env.VITE_INSTAGRAM} />
-            <SocialIcon kind="facebook" href={import.meta.env.VITE_FACEBOOK} />
+            <SocialIcon kind="facebook" aria-label="Facebook" href={import.meta.env.VITE_FACEBOOK} />
             <SocialIcon kind="whatsapp" href={import.meta.env.VITE_API_WHATSAPP} />
           </div>
         </div>

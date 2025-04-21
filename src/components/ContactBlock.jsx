@@ -131,7 +131,7 @@ const ContactoBlock = () => (
 
     <div className="mb-1">
       <h4 className="text-xl leading-tight font-medium">Teléfono</h4>
-      <a href={import.meta.env.VITE_API_WHATSAPP} className="flex items-center gap-[10px] text-base font-medium text-gray-400 dark:hover:text-blue-300 whitespace-nowrap">
+      <a aria-label="Whatsapp" href={import.meta.env.VITE_API_WHATSAPP} className="flex items-center gap-[10px] text-base font-medium text-gray-400 dark:hover:text-blue-300 whitespace-nowrap">
         {import.meta.env.VITE_PHONE}
       </a>
     </div>

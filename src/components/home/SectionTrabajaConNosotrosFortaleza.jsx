@@ -37,7 +37,7 @@ const SectionTrabajaConNosotrosFortaleza = () => {
             </div>
 
             <div className="lg:flex-none flex mx-auto justify-center items-center pt-5 lg:pt-4  lg:flex  pl-2 md:mt-0 ">
-              <button onClick={handleOpen} className="inline-block py-2 lg:py-2 px-5 lg:mr-6 text-white text-[14px] font-medium bg-[#4338ca]/70 duration-150 hover:bg-[#4338ca]/50 rounded-full shadow-sm hover:shadow-sm whitespace-nowrap items-center">
+              <button aria-label="Postulate" onClick={handleOpen} className="inline-block py-2 lg:py-2 px-5 lg:mr-6 text-white text-[14px] font-medium bg-[#4338ca]/70 duration-150 hover:bg-[#4338ca]/50 rounded-full shadow-sm hover:shadow-sm whitespace-nowrap items-center">
                 Enviar postulación
               </button>
             </div>
