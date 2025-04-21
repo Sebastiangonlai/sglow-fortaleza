@@ -99,9 +99,7 @@ export default function Navbar() {
   const [theme, setTheme] = useState('dark');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   // const { language, setLanguage, t } = useLanguage()
-  const [mounted, setMounted] = useState(false)
-  const [isOpen, setIsOpen] = useState(false)
-  const dropdownRef = useRef(null)
+
   const navbarRef = useRef()
 
   const toggleTheme = () => {
@@ -150,11 +148,11 @@ export default function Navbar() {
   //   { href: "#contacto", label: t("contacto"), icon: <Phone className="h-5 w-5" /> },
   // ];
   const navLinks = [
-    { href: '/', title: 'Inicio', icon: <HomeIcon className="h-5 w-5" /> },
-    { href: '/#nuestros-servicios', title: 'Servicios', icon: <HomeIcon className="h-5 w-5" /> },
-    { href: '/#licencia-de-conducir', title: 'Cursos', icon: <HomeIcon className="h-5 w-5" /> },
-    { href: '/#preguntas-frecuentes', title: 'Preguntas', icon: <HomeIcon className="h-5 w-5" /> },
-    { href: '/#contacto', title: 'Contacto', icon: <HomeIcon className="h-5 w-5" /> },
+    { href: '/', label: 'Inicio', icon: <HomeIcon className="h-5 w-5" /> },
+    { href: '/#nuestros-servicios', label: 'Servicios', icon: <HomeIcon className="h-5 w-5" /> },
+    { href: '/#licencia-de-conducir', label: 'Cursos', icon: <HomeIcon className="h-5 w-5" /> },
+    { href: '/#preguntas-frecuentes', label: 'Preguntas', icon: <HomeIcon className="h-5 w-5" /> },
+    { href: '/#contacto', label: 'Contacto', icon: <HomeIcon className="h-5 w-5" /> },
   ];
 
   return (
@@ -162,8 +160,8 @@ export default function Navbar() {
       <div className="container flex h-16 items-center justify-between" ref={navbarRef}>
 
         {/* Logo */}
-        <a href="#inicio" onClick={(e) => { handleMenuClose(); handleSmoothScroll(e, "#inicio"); }} className="flex items-end gap-2 pl-1.5 group" aria-label="Inicio">
-          <img src="/favicon.svg" alt="Logo" className="w-11 scale-110 transition-transform duration-300 group-hover:rotate-12" />
+        <a href="#inicio" onClick={(e) => { handleMenuClose(); handleSmoothScroll(e, "#inicio"); }} className="flex items-end gap-2 pl-1.5" aria-label="Inicio">
+          <img src="/favicon.svg" alt="Logo" className="w-8 scale-110 transition-transform duration-300 group-hover:rotate-12" />
           <span className="text-white text-2xl items-center font-medium pl-2 ">Academia Fortaleza</span>
         </a>
 
@@ -180,48 +178,7 @@ export default function Navbar() {
             </a>
           ))}
 
-          <div className="navbar-actions">
-            {/* <div className="dropdown" ref={dropdownRef}>
-              <button className="btn btn-icon " onClick={() => setIsOpen(!isOpen)}
-                aria-haspopup="true"
-                aria-expanded={isOpen}
-                aria-label={t("changeLanguage")}>
-                <Languages className="icon" />
-
-              </button>
-
-              {isOpen && (
-                <div className="dropdown-content" role="menu" aria-orientation="vertical">
-                  <button className={`dropdown-item ${language === "es" ? "active" : ""}`}
-                    onClick={() => {
-                      setLanguage("es")
-                      setIsOpen(false)
-                    }}
-                    role="menuitem">
-                    Español
-                  </button>
-                  <button className={`dropdown-item ${language === "en" ? "active" : ""}`}
-                    onClick={() => {
-                      setLanguage("en")
-                      setIsOpen(false)
-                    }}
-                    role="menuitem">
-                    English
-                  </button>
-                </div>
-              )}
-            </div> */}
-
-            {/* Selector de tema */}
-            {/* <button className="btn btn-icon btn-outline theme-toggle" onClick={toggleTheme} aria-label={t("toggleTheme")}>
-              {theme === "dark" ? (
-                <Sun className="icon theme-toggle-icon theme-toggle-moon" />
-              ) : (
-                <Moon className="icon theme-toggle-icon theme-toggle-sun" />
-              )}
-            </button> */}
-          </div>
-        </nav>
+              </nav>
 
         {/* Mobile Menu */}
         <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
@@ -232,36 +189,6 @@ export default function Navbar() {
               onClick={handleMenuOpen}>
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
-            {/* <div className="navbar-actions">
-              <div className="dropdown" ref={dropdownRef}>
-                <button className="btn w-12 h-12" onClick={() => setIsOpen(!isOpen)}
-                  aria-haspopup="true"
-                  aria-expanded={isOpen}
-                  aria-label={t("changeLanguage")}>
-                  <Languages className="icon" />
-                </button>
-
-              {isOpen && (
-                  <div className="dropdown-content" role="menu" aria-orientation="vertical">
-                    <button className={`dropdown-item ${language === "es" ? "active" : ""}`}
-                      onClick={() => {
-                        setLanguage("es")
-                        setIsOpen(false)
-                      }}
-                      role="menuitem">
-                      Español
-                    </button>
-                    <button className={`dropdown-item ${language === "en" ? "active" : ""}`}
-                      onClick={() => {
-                        setLanguage("en")
-                        setIsOpen(false)
-                      }} role="menuitem">
-                      English
-                    </button>
-                  </div>
-                )}
-              </div>
-            </div> */}
           </div>
 
           <SheetContent side="right" className="min-w-full h-full z-[150] backdrop-blur supports-[backdrop-filter]:bg-[#131624]/60 text-gray-300 border-none" onCloseAutoFocus={handleMenuClose}>
