@@ -95,17 +95,50 @@ import { Languages, HomeIcon, Phone, Menu, X, Sun, Moon, Award, BookOpen, Messag
 import { Sheet, SheetContent } from "../sheet.jsx";
 
 export default function Navbar() {
-  const [theme, setTheme] = useState('dark');
+  // const [theme, setTheme] = useState('dark');
+  // const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // const navbarRef = useRef()
+
+  // const toggleTheme = () => {
+  //   const newTheme = theme === 'dark' ? 'light' : 'dark';
+  //   setTheme(newTheme);
+  //   localStorage.setItem('theme', newTheme);
+  //   document.documentElement.classList.toggle('dark', newTheme === 'dark');
+  // };
+
+  // const handleMenuOpen = useCallback(() => {
+  //   setIsMenuOpen(true);
+  //   document.body.classList.add("overflow-hidden");
+  // }, []);
+
+  // const handleMenuClose = useCallback(() => {
+  //   setIsMenuOpen(false);
+  //   document.body.classList.remove("overflow-hidden");
+  // }, []);
+
+  // const handleSmoothScroll = useCallback((event, targetId) => {
+  //   event.preventDefault();
+  //   const targetElement = document.querySelector(targetId);
+  //   if (targetElement) {
+  //     targetElement.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // }, []);
+
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     if (window.innerWidth > 768) {
+  //       setIsMenuOpen(false);
+  //       document.body.classList.remove("overflow-hidden");
+  //     }
+  //   };
+  //   window.addEventListener("resize", handleResize);
+  //   return () => {
+  //     window.removeEventListener("resize", handleResize);
+  //   };
+  // }, []);
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const navbarRef = useRef()
-
-  const toggleTheme = () => {
-    const newTheme = theme === 'dark' ? 'light' : 'dark';
-    setTheme(newTheme);
-    localStorage.setItem('theme', newTheme);
-    document.documentElement.classList.toggle('dark', newTheme === 'dark');
-  };
 
   const handleMenuOpen = useCallback(() => {
     setIsMenuOpen(true);
@@ -117,6 +150,8 @@ export default function Navbar() {
     document.body.classList.remove("overflow-hidden");
   }, []);
 
+
+
   const handleSmoothScroll = useCallback((event, targetId) => {
     event.preventDefault();
     const targetElement = document.querySelector(targetId);
@@ -124,21 +159,6 @@ export default function Navbar() {
       targetElement.scrollIntoView({ behavior: "smooth" });
     }
   }, []);
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth > 768) {
-        setIsMenuOpen(false);
-        document.body.classList.remove("overflow-hidden");
-      }
-    };
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-
   const navLinks = [
     { href: '#inicio', label: 'Inicio', icon: <HomeIcon className="h-5 w-5" /> },
     { href: '#nuestros-servicios', label: 'Servicios', icon: <HomeIcon className="h-5 w-5" /> },
@@ -148,9 +168,10 @@ export default function Navbar() {
   ];
 
   return (
-    <div className="fixed w-screen top-0 z-[120] border-b border-violet-200/20 backdrop-blur supports-[backdrop-filter]:bg-[#131624]/60 text-gray-100 select-none" >
-      <div className="container flex h-16 items-center justify-between" ref={navbarRef}>
-
+    // <div className="fixed w-screen top-0 z-[120] border-b border-violet-200/20 backdrop-blur supports-[backdrop-filter]:bg-[#131624]/60 text-gray-100 select-none" >
+    //   <div className="container flex h-16 items-center justify-between" ref={navbarRef}>
+    <div className="fixed w-screen top-0 z-120 border-b border-violet-200/20 backdrop-blur supports-[backdrop-filter]:bg-[#111928]/50 text-gray-100 select-none" >
+      <div className="container flex h-16 items-center justify-between" >
         {/* Logo */}
         {/* <a href="#inicio" onClick={(e) => { handleMenuClose(); handleSmoothScroll(e, "#inicio"); }} className="flex items-end gap-2 pl-1.5" aria-label="Inicio">
           <img src="/favicon.svg" alt="Logo" className="w-8 scale-110 transition-transform duration-300 group-hover:rotate-12" />
@@ -176,7 +197,7 @@ export default function Navbar() {
             </a>
           ))}
 
-              </nav>
+        </nav>
 
         {/* Mobile Menu */}
         <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>

@@ -79,7 +79,7 @@ const FooterFortaleza = () => {
 
         </div>
 
-        <div className="select-none text-xs pt-6 text-gray-400 font-normal text-center">© Copyright {`${new Date().getFullYear()}`}&ensp;Academia Fortaleza&ensp;-<button href="/admin" className="hover:text-gray-200 font-medium text-blue-300">
+        <div className="select-none text-xs pt-6 text-gray-400 font-normal text-center">© Copyright {`${new Date().getFullYear()}`}&ensp;Academia Fortaleza&ensp;-<button href="https://sglow.vercel.app/" className="hover:text-gray-200 font-medium text-blue-300" aria-label="developer">
           &ensp;by Sebastián González
         </button>
         </div>
@@ -134,7 +134,7 @@ const LinkGroup = ({ children, header }) => {
 const NavLink = ({ link, label }) => {
   return (
     <li>
-      <a href={link} className="flex lg:w-[200px] justify-center lg:justify-start text-[15px] pb-[0.5px] text-[#637381] dark:hover:text-blue-300 dark:text-[#D1D5DB]">
+      <a href={link} className="flex lg:w-[200px] justify-center lg:justify-start text-[15px] pb-[0.5px] text-[#637381] dark:hover:text-blue-300 dark:text-[#D1D5DB]" aria-label={label}>
         {label}
       </a>
     </li>
