@@ -140,11 +140,11 @@ export default function Navbar() {
 
 
   const navLinks = [
-    { href: '/', label: 'Inicio', icon: <HomeIcon className="h-5 w-5" /> },
-    { href: '/#nuestros-servicios', label: 'Servicios', icon: <HomeIcon className="h-5 w-5" /> },
-    { href: '/#licencia-de-conducir', label: 'Cursos', icon: <BookOpen className="h-5 w-5" /> },
-    { href: '/#preguntas-frecuentes', label: 'Preguntas', icon: <Award className="h-5 w-5" /> },
-    { href: '/#contacto', label: 'Contacto', icon: <Phone className="h-5 w-5" /> },
+    { href: '#inicio', label: 'Inicio', icon: <HomeIcon className="h-5 w-5" /> },
+    { href: '#nuestros-servicios', label: 'Servicios', icon: <HomeIcon className="h-5 w-5" /> },
+    { href: '#licencia-de-conducir', label: 'Cursos', icon: <BookOpen className="h-5 w-5" /> },
+    { href: '#preguntas-frecuentes', label: 'Preguntas', icon: <Award className="h-5 w-5" /> },
+    { href: '#contacto', label: 'Contacto', icon: <Phone className="h-5 w-5" /> },
   ];
 
   return (
@@ -152,9 +152,15 @@ export default function Navbar() {
       <div className="container flex h-16 items-center justify-between" ref={navbarRef}>
 
         {/* Logo */}
-        <a href="#inicio" onClick={(e) => { handleMenuClose(); handleSmoothScroll(e, "#inicio"); }} className="flex items-end gap-2 pl-1.5" aria-label="Inicio">
+        {/* <a href="#inicio" onClick={(e) => { handleMenuClose(); handleSmoothScroll(e, "#inicio"); }} className="flex items-end gap-2 pl-1.5" aria-label="Inicio">
           <img src="/favicon.svg" alt="Logo" className="w-8 scale-110 transition-transform duration-300 group-hover:rotate-12" />
           <span className="text-white text-[12px] items-center font-medium pl-2 ">Academia Fortaleza</span>
+        </a> */}
+
+        <a href="/#inicio" onClick={(e) => { handleMenuClose(); handleSmoothScroll(e, "#inicio"); }}
+          className="flex items-center px-4" aria-label="Inicio">
+          <img src="/logo.webp" alt="Logo" width={48} height={48} />
+          <span className="text-white text-[22px] items-center font-bold pl-2 mt-0 leading-relaxed tracking-tight">Academia Fortaleza</span>
         </a>
 
         {/* Desktop Navigation */}
