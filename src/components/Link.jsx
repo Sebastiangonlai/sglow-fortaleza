@@ -1,22 +1,14 @@
-// import Link from 'next/link'
-
 const CustomLink = ({ href, ...rest }) => {
-  const isInternalLink = href && href.startsWith('/')
-  const isAnchorLink = href && href.startsWith('#')
+  const isInternalLink = href && href.startsWith('/');
+  const isAnchorLink = href && href.startsWith('#');
 
-  if (isInternalLink) {
-    return (
-      <a legacyBehavior href={href}>
-        <a {...rest} />
-      </a>
-    )
+  if (isInternalLink || isAnchorLink) {
+    // Enlaces internos o anclas
+    return <a href={href} {...rest} />;
   }
 
-  if (isAnchorLink) {
-    return <a href={href} {...rest} />
-  }
+  // Enlaces externos
+  return <a target="_blank" rel="noopener noreferrer" href={href} {...rest} />;
+};
 
-  return <a target="_blank" rel="noopener noreferrer" href={href} {...rest} />
-}
-
-export default CustomLink
+export default CustomLink;

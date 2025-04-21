@@ -93,12 +93,10 @@
 import { useState, useCallback, useEffect, useRef } from "react"
 import { Languages, HomeIcon, Phone, Menu, X, Sun, Moon, Award, BookOpen, MessageSquare } from "lucide-react";
 import { Sheet, SheetContent } from "../sheet.jsx";
-// import { useLanguage } from "../contexts/language-context.jsx"
 
 export default function Navbar() {
   const [theme, setTheme] = useState('dark');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  // const { language, setLanguage, t } = useLanguage()
 
   const navbarRef = useRef()
 
@@ -140,19 +138,13 @@ export default function Navbar() {
     };
   }, []);
 
-  // const navLinks = [
-  //   { href: "#inicio", label: t("inicio"), icon: <HomeIcon className="h-5 w-5" /> },
-  //   { href: "#proyectos", label: t("proyectos"), icon: <BookOpen className="h-5 w-5" /> },
-  //   { href: "#herramientas", label: t("herramientas"), icon: <Award className="h-5 w-5" /> },
-  //   { href: "/#blog", label: t("blog"), icon: <MessageSquare className="h-5 w-5" /> },
-  //   { href: "#contacto", label: t("contacto"), icon: <Phone className="h-5 w-5" /> },
-  // ];
+
   const navLinks = [
     { href: '/', label: 'Inicio', icon: <HomeIcon className="h-5 w-5" /> },
     { href: '/#nuestros-servicios', label: 'Servicios', icon: <HomeIcon className="h-5 w-5" /> },
-    { href: '/#licencia-de-conducir', label: 'Cursos', icon: <HomeIcon className="h-5 w-5" /> },
-    { href: '/#preguntas-frecuentes', label: 'Preguntas', icon: <HomeIcon className="h-5 w-5" /> },
-    { href: '/#contacto', label: 'Contacto', icon: <HomeIcon className="h-5 w-5" /> },
+    { href: '/#licencia-de-conducir', label: 'Cursos', icon: <BookOpen className="h-5 w-5" /> },
+    { href: '/#preguntas-frecuentes', label: 'Preguntas', icon: <Award className="h-5 w-5" /> },
+    { href: '/#contacto', label: 'Contacto', icon: <Phone className="h-5 w-5" /> },
   ];
 
   return (
@@ -161,7 +153,7 @@ export default function Navbar() {
 
         {/* Logo */}
         <a href="#inicio" onClick={(e) => { handleMenuClose(); handleSmoothScroll(e, "#inicio"); }} className="flex items-end gap-2 pl-1.5" aria-label="Inicio">
-          {/* <img src="/favicon.svg" alt="Logo" className="w-8 scale-110 transition-transform duration-300 group-hover:rotate-12" /> */}
+          <img src="/favicon.svg" alt="Logo" className="w-8 scale-110 transition-transform duration-300 group-hover:rotate-12" />
           <span className="text-white text-[12px] items-center font-medium pl-2 ">Academia Fortaleza</span>
         </a>
 
@@ -206,9 +198,6 @@ export default function Navbar() {
             </div>
           </SheetContent>
         </Sheet>
-
-
-
       </div>
     </div>
   );
