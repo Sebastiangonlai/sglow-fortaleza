@@ -164,7 +164,7 @@ export default function Navbar() {
         {/* Logo */}
         <a href="#inicio" onClick={(e) => { handleMenuClose(); handleSmoothScroll(e, "#inicio"); }} className="flex items-end gap-2 pl-1.5 group" aria-label="Inicio">
           <img src="/favicon.svg" alt="Logo" className="w-11 scale-110 transition-transform duration-300 group-hover:rotate-12" />
-          <span className="text-white text-2xl items-center font-semibold pl-2 ">Academia Fortaleza</span>
+          <span className="text-white text-2xl items-center font-medium pl-2 ">Academia Fortaleza</span>
         </a>
 
         {/* Desktop Navigation */}
