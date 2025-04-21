@@ -1,0 +1,59 @@
+<rss version="2.0"
+    xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Academia Fortaleza</title>
+        <link>https://academiafortaleza.com.uy</link>
+        <description>Licencia de Conducir · Clases de Manejo en Montevideo · Sacá tu libreta de conducir · Academia de Choferes</description>
+        <language>es-ES</language>
+        <managingEditor>info@academiafortaleza.com.uy (Academia Fortaleza)</managingEditor>
+        <webMaster>info@academiafortaleza.com.uy (Academia Fortaleza)</webMaster>
+        <lastBuildDate>Wed, 31 Jan 2024 00:00:00 GMT</lastBuildDate>
+        <atom:link href="https://academiafortaleza.com.uy/feed.xml" rel="self" type="application/rss+xml"/>
+
+        <item>
+            <guid>https://academiafortaleza.com.uy/nuestros-servicios</guid>
+            <title>Nuestros Servicios</title>
+            <link>https://academiafortaleza.com.uy/nuestros-servicios</link>
+            <description>Cursos personalizados y adaptados a las distintas necesidades</description>
+            <pubDate>Tue, 02 May 2023 00:00:00 GMT</pubDate>
+            <author>info@academiafortaleza.com.uy (Academia Fortaleza)</author>
+            <category></category>
+            <category></category>
+            <category></category>
+        </item>
+
+        <item>
+            <guid>https://academiafortaleza.com.uy/medios-de-pago</guid>
+            <title>Promociones y Descuentos</title>
+            <link>https://academiafortaleza.com.uy/medios-de-pago</link>
+            <description>Paquete promocional de 15 clases, con el que te regalamos una clase extra</description>
+            <pubDate>Wed, 31 Jan 2024 00:00:00 GMT</pubDate>
+            <author>info@academiafortaleza.com.uy (Academia Fortaleza)</author>
+            <category></category>
+            <category></category>
+            <category></category>
+        </item>
+
+        <item>
+            <guid>https://academiafortaleza.com.uy/contacto</guid>
+            <title>Información de Contacto</title>
+            <link>https://academiafortaleza.com.uy/contacto</link>
+            <description>Contacto</description>
+            <pubDate>Thu, 16 Nov 2023 00:00:00 GMT</pubDate>
+            <author>info@academiafortaleza.com.uy (Academia Fortaleza)</author>
+            <category></category>
+            <category></category>
+            <category></category>
+        </item>
+
+        <item>
+            <guid>https://academiafortaleza.com.uy/licencia-de-conducir</guid>
+            <title>Licencia de conducir</title>
+            <link>https://academiafortaleza.com.uy/licencia-de-conducir</link>
+            <description>Licencia de conducir</description>
+            <pubDate>Sun, 27 Aug 2023 00:00:00 GMT</pubDate>
+            <author>info@academiafortaleza.com.uy (Academia Fortaleza)</author>
+            <category></category>
+        </item>
+    </channel>
+</rss>

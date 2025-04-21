@@ -1,0 +1,16 @@
+User-agent: Googlebot
+Disallow: /nogooglebot/
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: FacebookExternalHit
+User-agent: FacebookBot
+User-agent: Twitterbot
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: *
+Allow: /
+
+Sitemap: https://academiafortaleza.com.uy/sitemap.xml

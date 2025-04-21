@@ -1,0 +1,19 @@
+{
+  "name": "Academia Fortaleza",
+  "short_name": "Fortaleza",
+  "description": "Academia de Choferes Fortaleza · Licencia de Conducir · Clases de Manejo · Sacá tu libreta de conducir",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/static/favicons/android-chrome-192x192.png",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/favicons/android-chrome-512x512.png",
+      "type": "image/png"
+    }
+  ]
+}
