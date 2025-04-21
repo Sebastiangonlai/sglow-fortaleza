@@ -67,7 +67,7 @@ const NavbarEffects = () => {
           <NavbarBrand>
             <Link href="/" className="flex">
               <img className="w-[45px] sm:w-[50px] lg:max-w-[55px] select-none" src="/static/favicons/logo.ico" alt="logo" width={80} height={80} />
-              <p className="flex text-xl sm:text-2xl md:text-2xl lg:text:3xl xl:text-2xl items-center justify-center px-1 fontTitle whitespace-nowrap"> Academia Fortaleza</p>
+              <p className="flex text-[22px] lg:text:2xl xl:text-2xl items-center justify-center px-1 fontTitle whitespace-nowrap"> Academia Fortaleza</p>
             </Link>
           </NavbarBrand>
         </NavbarContent>
