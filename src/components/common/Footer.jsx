@@ -10,10 +10,8 @@ const FooterFortaleza = () => {
         <div className="container flex flex-wrap justify-center max-w-[1200px] pb-6 truncate">
           <div className="lg:w-1/3 md:w-1/3 w-full">
             <div className="pb-1 text-gray-900 dark:text-gray-200 text-base font-semibold text-center lg:text-left">
-              <LinkGroup className="text-base font-bold">
-                <Link href="/" className="text-base font-semibold text-[#111928] dark:text-white dark:hover:text-blue-300">
-                  Inicio
-                </Link>
+              <LinkGroup className="text-base font-bold" header="Enlaces útiles">
+                <NavLink href="/" className="text-base font-semibold text-[#111928] dark:text-white dark:hover:text-blue-300" label="Inicio" />
                 <NavLink link="/cursos-personalizados" label="Nuestros Cursos" />
                 <NavLink link="/licencia-de-conducir" label="Licencia de Conducir" />
                 <NavLink link="/medios-de-pago" label="Promociones" />
@@ -25,10 +23,8 @@ const FooterFortaleza = () => {
 
           <div className="lg:w-1/3 md:w-1/2 sm:w-1/2 w-full justify-center">
             <div className="pb-2 text-gray-900 dark:text-gray-200 text-base font-semibold text-center lg:text-left">
-              <LinkGroup className="text-base font-bold" >
-                <Link href="/sobre-nosotros" className="flex mb-1 font-semibold text-base cursor-pointer text-dark dark:text-white dark:hover:text-blue-300 justify-center lg:justify-start">
-                  Sobre Nosotros
-                </Link>
+              <LinkGroup className="text-base font-bold" header="Información">
+                <NavLink href="/sobre-nosotros" className="flex mb-1 font-semibold text-base cursor-pointer text-dark dark:text-white dark:hover:text-blue-300 justify-center lg:justify-start" label="Sobre Nosotros" />
                 <NavLink link="/nuestros-servicios" label="Nuestros Servicios" />
                 <NavLink link="/preguntas-frecuentes" label="Preguntas Frecuentes" />
                 <NavLink link="/coche-escuela" label="Flota de Vehículos" />
@@ -83,9 +79,9 @@ const FooterFortaleza = () => {
 
         </div>
 
-        <div className="select-none text-xs pt-6 text-gray-400 font-normal text-center">© Copyright {`${new Date().getFullYear()}`}&ensp;Academia Fortaleza&ensp;-<Link href="/admin" className="hover:text-gray-200 font-medium text-blue-300">
+        <div className="select-none text-xs pt-6 text-gray-400 font-normal text-center">© Copyright {`${new Date().getFullYear()}`}&ensp;Academia Fortaleza&ensp;-<button href="/admin" className="hover:text-gray-200 font-medium text-blue-300">
           &ensp;by Sebastián González
-        </Link>
+        </button>
         </div>
 
         <div>
