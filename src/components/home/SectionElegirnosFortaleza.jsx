@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import TitleHeader from "@/components/TitleHeader";
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { GetContarImagenes } from '@/components/admin/imagenes/ImagenService'
-
-
 
 
 const SectionElegirnosFortaleza = () => {

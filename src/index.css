@@ -81,7 +81,7 @@ html {
   -o-tab-size: 4;
   tab-size: 4;
   scroll-behavior: smooth;
-  font-family:
+  /* font-family:
     ui-sans-serif,
     system-ui,
     -apple-system,
@@ -97,7 +97,7 @@ html {
     'Segoe UI Symbol',
     'Noto Color Emoji';
   font-feature-settings: normal;
-  font-variation-settings: normal;
+  font-variation-settings: normal; */
 }
 
 
@@ -147,8 +147,8 @@ code,
 kbd,
 samp,
 pre {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
-    'Courier New', monospace;
+  /* font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
+    'Courier New', monospace; */
   font-size: 1em;
 }
 small {
@@ -306,9 +306,9 @@ button,
 } */
 
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
+  /* body {
+    font-family: Arial, Helvetica, sans-serif;
+  } */
 
 /* contacto */
 .ee {

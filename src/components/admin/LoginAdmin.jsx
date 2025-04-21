@@ -3,8 +3,8 @@ import Button from '@mui/joy/Button'
 import swal from 'sweetalert';
 import { getDatabase, ref, onValue } from "firebase/database";
 import 'firebase/compat/auth';
-import '../../../.bkp/firebase/firebase';
-import { auth } from "../../../.bkp/firebase/firebase";
+import '../../../firebase/firebase';
+import { auth } from "../../../firebase/firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import AltaImagen from '@/components/admin/imagenes/AltaImagen';
 

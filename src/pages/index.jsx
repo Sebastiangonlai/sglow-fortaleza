@@ -9,7 +9,6 @@ import SectionElegirnos from '@/components/home/SectionElegirnosFortaleza';
 // import SectionLicenciaDeConducir from '@/components/home/SectionLicenciaConducirFortaleza';
 // import SectionGraduados from '@/components/home/SectionGraduadosFortaleza';
 import SectionTestimonial from '@/components/home/SectionTestimonialFortaleza';
-import Cloudinary from '@/components/admin/Cloudinary';
 import SectionRedes from '@/components/home/SectionRedesFortaleza';
 // import SectionTrabajaConNosotros from '@/components/home/SectionTrabajaConNosotrosFortaleza';
 // import SectionPreguntasFrecuentes from '@/components/home/SectionFAQFortaleza';
@@ -41,7 +40,6 @@ export default function Home() {
 
       <section id="nuestros-servicios">
         <SectionNuestrosServicios />
-        {/* <Cloudinary /> */}
       </section>
 
       <section id="que-ofrecemos" >
@@ -52,9 +50,9 @@ export default function Home() {
         <SectionElegirnos />
       </section>
 
-      {/* <section id="licencia-de-conducir" className="overflow-hidden">
+      <section id="licencia-de-conducir" className="overflow-hidden">
         < SectionLicenciaDeConducir />
-      </section > */}
+      </section >
       {/* 
       <section id="graduados">
         <SectionGraduados />
