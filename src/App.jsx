@@ -3,8 +3,8 @@ import React, { useState, useEffect } from 'react';
 import { Routes, Route } from "react-router-dom"
 
 import Home from '@/pages/index.jsx';
-import GaleriaMedia from '@/pages/galeria-media.jsx';
-import NuestrosServicios from '@/pages/nuestros-servicios.jsx';
+// import GaleriaMedia from '@/pages/galeria-media.jsx';
+// import NuestrosServicios from '@/pages/nuestros-servicios.jsx';
 import PreguntasFrecuentes from '@/pages/preguntas-frecuentes.jsx';
 import CursosPersonalizados from '@/pages/cursos-personalizados.jsx';
 import LicenciaDeConducir from '@/pages/licencia-de-conducir.jsx';
@@ -28,8 +28,8 @@ function App() {
 
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/galeria-media" element={<GaleriaMedia />} />
-      <Route path="/nuestros-servicios" element={<NuestrosServicios />} />
+      {/* <Route path="/galeria-media" element={<GaleriaMedia />} /> */}
+      {/* <Route path="/nuestros-servicios" element={<NuestrosServicios />} /> */}
       <Route path="/preguntas-frecuentes" element={<PreguntasFrecuentes />} />
       <Route path="/cursos-personalizados" element={<CursosPersonalizados />} />
       <Route path="/licencia-de-conducir" element={<LicenciaDeConducir />} />

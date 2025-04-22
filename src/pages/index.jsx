@@ -1,7 +1,7 @@
 {/*********  by δεϐąstián *********/ }
 import { useState, useEffect } from 'react';
 // import SectionHeader from '@/components/home/SectionHeaderFortaleza';
-import SectionNuestrosServicios from '@/components/home/SectionNuestrosServiciosFortaleza';
+// import SectionNuestrosServicios from '@/components/home/SectionNuestrosServiciosFortaleza';
 import SectionOfrecemos from '@/components/home/SectionOfrecemosFortaleza';
 import SectionElegirnos from '@/components/home/SectionElegirnosFortaleza';
 import SectionLicenciaDeConducir from '@/components/home/SectionLicenciaConducirFortaleza';
@@ -31,9 +31,9 @@ export default function Home() {
         <SectionHeader />
       </section> */}
 
-      <section id="nuestros-servicios">
+      {/* <section id="nuestros-servicios">
         <SectionNuestrosServicios />
-      </section>
+      </section> */}
 
       <section id="que-ofrecemos" >
         <SectionOfrecemos />
