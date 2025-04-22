@@ -5,7 +5,7 @@ import { HomeIcon, Phone, Menu, X, Award, BookOpen } from "lucide-react";
 import { Sheet, SheetContent } from "../sheet.jsx";
 
 
-export default function Navbar() {
+const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleMenuOpen = useCallback(() => {
@@ -41,7 +41,7 @@ export default function Navbar() {
         <a href="/#inicio" onClick={(e) => { handleMenuClose(); handleSmoothScroll(e, "#inicio"); }}
           className="flex items-center px-4" aria-label="Inicio">
           <img src="/logo.webp" alt="Logo" width={48} height={48} loading="eager" />
-          <p className="text-white text-[18px] sm:text-[18px] lg:text-[22px] items-center justify-center font-bold pl-2 mt-1 leading-relaxed tracking-tight">Academia Fortaleza</p>
+          <span className="text-white text-[20px] pl-4">Academia Fortaleza</span>
         </a>
 
         {/* Desktop Navigation */}
@@ -87,3 +87,5 @@ export default function Navbar() {
     </div>
   );
 };
+
+export default Navbar;
