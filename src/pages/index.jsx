@@ -1,6 +1,6 @@
 {/*********  by δεϐąstián *********/ }
 import { useState, useEffect } from 'react';
-import SectionHeader from '@/components/home/SectionHeaderFortaleza';
+// import SectionHeader from '@/components/home/SectionHeaderFortaleza';
 import SectionNuestrosServicios from '@/components/home/SectionNuestrosServiciosFortaleza';
 import SectionOfrecemos from '@/components/home/SectionOfrecemosFortaleza';
 import SectionElegirnos from '@/components/home/SectionElegirnosFortaleza';
@@ -27,9 +27,9 @@ export default function Home() {
 
   return (
     <>
-      <section id="inicio" className="overflow-hidden">
+      {/* <section id="inicio" className="overflow-hidden">
         <SectionHeader />
-      </section>
+      </section> */}
 
       <section id="nuestros-servicios">
         <SectionNuestrosServicios />
