@@ -41,7 +41,6 @@ const Navbar = () => {
         <a href="/#inicio" onClick={(e) => { handleMenuClose(); handleSmoothScroll(e, "#inicio"); }}
           className="flex items-center px-4" aria-label="Inicio">
           <img src="https://sglow-fortaleza.vercel.app/logo.webp" alt="Logo" width={48} height={48}  />
-          <span className="text-white text-[22px] items-center font-bold pl-2 mt-0 leading-relaxed tracking-tight">Fortaleza</span>
         </a>
 
         {/* Desktop Navigation */}
