@@ -45,12 +45,12 @@ export default function Home() {
 
       <section id="licencia-de-conducir" className="overflow-hidden">
         < SectionLicenciaDeConducir />
-      </section >
-      {/* 
-      <section id="graduados">
+      </section > 
+      
+      {/* <section id="graduados">
         <SectionGraduados />
-      </section>
-*/}
+      </section> */}
+
       <section id="testimonio">
         <SectionTestimonial />
       </section>

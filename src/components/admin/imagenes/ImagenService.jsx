@@ -23,28 +23,6 @@ export function GetContarImagenes(ruta) {
 }
 
 
-// Obtener la URL de una imagen por su índice
-export async function getImagen(ruta, indice) {
-  try {
-    const listRef = ref(storage, ruta);
-    const res = await listAll(listRef);
-
-    const itemsOrdenados = res.items.sort((a, b) =>
-      a.name.localeCompare(b.name, undefined, { numeric: true })
-    );
-
-    if (indice >= 0 && indice < itemsOrdenados.length) {
-      const url = await getDownloadURL(itemsOrdenados[indice]);
-      return url;
-    }
-
-    return null;
-  } catch (error) {
-    console.error("Error al obtener imagen:", error);
-    return null;
-  }
-}
-
 
 // Obtener las últimas 'n' imágenes
 export function GetUltimasImagenes(cantidad) {

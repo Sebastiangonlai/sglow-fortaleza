@@ -7,7 +7,8 @@ import { GetContarImagenes } from '@/components/admin/imagenes/ImagenService'
 
 
 const SectionElegirnosFortaleza = () => {
-	const recibidos = GetContarImagenes("img/") + 204;
+	const cantidadFirebase = GetContarImagenes("img/");
+	const recibidos = cantidadFirebase + 204;
 
 	const itemData = [{
 		desc: "100%", title: 'Calificaciones positivas',
@@ -79,7 +80,7 @@ const SectionElegirnosFortaleza = () => {
 										className="select-none flex flex-col">
 										<a href={d.estHref}>
 											{/* <div className="mb-1 rounded-xl bg-[#0d1117]/20 px-[50px] pb-[22px] pt-[22px] shadow-testimonial dark:bg-[#111928] dark:shadow-none"> */}
-											<div className="wow fadeInUp group mb-1 rounded-xl bg-[#0d1117]/20 px-[50px] pb-[22px] pt-[22px] shadow-testimonial dark:bg-[#111928] dark:shadow-none" data-wow-delay=".3s">
+											<div className="group mb-1 rounded-xl bg-[#0d1117]/20 px-[50px] pb-[22px] pt-[22px] shadow-testimonial dark:bg-[#111928] dark:shadow-none">
 												<svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="text-cyan-800 w-20 h-20 inline-block" viewBox="0 0 25 26">
 													<path d={d.iconSvg}></path>
 												</svg>
