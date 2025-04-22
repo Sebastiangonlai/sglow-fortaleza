@@ -70,37 +70,6 @@
   }
 }
 
-.fontTitle {
-  font-family: 'Segoe UI';
-  font-weight: bolder;
-}
-
-html {
-  line-height: 1.5;
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
-  scroll-behavior: smooth;
-  /* font-family:
-    ui-sans-serif,
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    'Noto Sans',
-    sans-serif,
-    'Apple Color Emoji',
-    'Segoe UI Emoji',
-    'Segoe UI Symbol',
-    'Noto Color Emoji';
-  font-feature-settings: normal;
-  font-variation-settings: normal; */
-}
-
-
 
 hr {
   height: 0;
@@ -108,10 +77,10 @@ hr {
   border-top-width: 1px;
 }
 
-/* abbr:where([title]) {
+abbr:where([title]) {
   -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
-} */
+}
 
 /* h1,
 h2,
@@ -129,10 +98,6 @@ h6 {
   text-decoration: inherit;
 } */
 
-b,
-strong {
-  font-weight: bolder;
-}
 
 /* contacto */
 .ee {
@@ -143,48 +108,14 @@ strong {
 }
 /* fin contacto */
 
-code,
-kbd,
-samp,
-pre {
-  /* font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
-    'Courier New', monospace; */
-  font-size: 1em;
-}
-small {
-  font-size: 80%;
-}
-
-sub,
-sup {
-  /* font-size: 75%; */
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-sup {
-  top: -0.5em;
-}
-
-table {
-  /* text-indent: 0; */
-  border-color: inherit;
-  border-collapse: collapse;
-}
-
 
 input,
 optgroup,
 select,
 textarea {
-  /* font-family: inherit;
+  font-family: inherit;
   font-feature-settings: inherit;
-  font-variation-settings: inherit; */
+  font-variation-settings: inherit;
   font-size: 100%;
   font-weight: inherit;
   line-height: inherit;
@@ -201,7 +132,7 @@ textarea{
 
 button,
 select {
-  /* text-transform: none; */
+  text-transform: none;
 }
 
 button,
@@ -285,39 +216,11 @@ button,
   }
 }
 
-/* .bg-primary {
-  background-color: hsl(var(--primary));
-}
-
-.text-primary-foreground {
-  color: hsl(var(--primary-foreground));
-}
-
-.rounded-lg {
-  border-radius: var(--radius);
-}
-
-.rounded-md {
-  border-radius: calc(var(--radius) - 2px);
-}
-
-.rounded-sm {
-  border-radius: calc(var(--radius) - 4px);
-} */
 
 
   /* body {
     font-family: Arial, Helvetica, sans-serif;
   } */
-
-/* contacto */
-.ee {
-  width: 6.25rem;
-}
-.ep {
-  gap: 2.5rem;
-}
-/* fin contacto */
 
 
 
@@ -338,9 +241,9 @@ button,
   .animation-delay-4000 {
     animation-delay: 4s;
   }
-   /* .text-balance {
+   .text-balance {
     text-wrap: balance;
-  } */
+  }
 
 }
 
@@ -496,6 +399,9 @@ Button {
 
 /* BOTÓN CERRAR MODAL*/
 .close {
+    color: #fff;
+  background-color: transparent;
+
   position: absolute;
   display: flex;
   top: 20px;

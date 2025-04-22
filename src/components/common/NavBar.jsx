@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useCallback } from "react"
-import { HomeIcon, Phone, Menu, X, Award, BookOpen } from "lucide-react";
+import {  Menu, X } from "lucide-react";
 import { Sheet, SheetContent } from "../sheet.jsx";
 
 
@@ -27,20 +27,21 @@ const Navbar = () => {
     }
   }, []);
   const navLinks = [
-    { href: '#inicio', label: 'Inicio', icon: <HomeIcon className="h-5 w-5" /> },
-    { href: '#nuestros-servicios', label: 'Servicios', icon: <HomeIcon className="h-5 w-5" /> },
-    { href: '#licencia-de-conducir', label: 'Cursos', icon: <BookOpen className="h-5 w-5" /> },
-    { href: '#preguntas-frecuentes', label: 'Preguntas', icon: <Award className="h-5 w-5" /> },
-    { href: '#contacto', label: 'Contacto', icon: <Phone className="h-5 w-5" /> },
+    { href: '#inicio', label: 'Inicio' },
+    { href: '#nuestros-servicios', label: 'Servicios' },
+    { href: '#licencia-de-conducir', label: 'Cursos' },
+    { href: '#preguntas-frecuentes', label: 'Preguntas' },
+    { href: '#contacto', label: 'Contacto' },
   ];
 
   return (
-    <div className="fixed w-screen top-0 z-120 border-b border-violet-200/20 supports-[backdrop-filter]:bg-[#111928]/50 text-gray-100 select-none" >
+    <div className="fixed w-screen top-0 z-120 border-b border-violet-200/20 backdrop-blur-sm supports-[backdrop-filter]:bg-[#020817]/80 text-gray-100 select-none" >
       <div className="container flex h-16 items-center justify-between" >
         {/* Logo */}
         <a href="/#inicio" onClick={(e) => { handleMenuClose(); handleSmoothScroll(e, "#inicio"); }}
           className="flex items-center px-4" aria-label="Inicio">
-          <img src="https://sglow-fortaleza.vercel.app/logo.webp" alt="Logo" width={48} height={48}  />
+          <img src="https://sglow-fortaleza.vercel.app/logo.webp" alt="Logo" width={48} height={48} />
+          <span className="text-2xl font-bold text-gray-100 ml-2">Academia Fortaleza</span>
         </a>
 
         {/* Desktop Navigation */}
@@ -70,11 +71,10 @@ const Navbar = () => {
           <SheetContent side="right" className="min-w-full h-full z-[150] backdrop-blur supports-[backdrop-filter]:bg-[#131624]/60 text-gray-300 border-none" onCloseAutoFocus={handleMenuClose}>
             <div className="flex flex-col h-full">
               <nav className="flex flex-col space-y-6 pt-8">
-                {navLinks.map(({ href, label, icon }) => (
+                {navLinks.map(({ href, label }) => (
                   <a key={href} href={`/${href}`} aria-label={label}
                     onClick={(e) => { handleMenuClose(); handleSmoothScroll(e, href); }}
                     className="flex items-center gap-3 text-lg font-medium transition-colors hover:text-violet-400">
-                    {icon}
                     {label}
                   </a>
                 ))}
