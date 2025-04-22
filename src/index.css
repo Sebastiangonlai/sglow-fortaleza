@@ -108,10 +108,10 @@ hr {
   border-top-width: 1px;
 }
 
-abbr:where([title]) {
+/* abbr:where([title]) {
   -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
-}
+} */
 
 /* h1,
 h2,
@@ -157,7 +157,7 @@ small {
 
 sub,
 sup {
-  font-size: 75%;
+  /* font-size: 75%; */
   line-height: 0;
   position: relative;
   vertical-align: baseline;
@@ -172,7 +172,7 @@ sup {
 }
 
 table {
-  text-indent: 0;
+  /* text-indent: 0; */
   border-color: inherit;
   border-collapse: collapse;
 }
@@ -182,9 +182,9 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit;
+  /* font-family: inherit;
   font-feature-settings: inherit;
-  font-variation-settings: inherit;
+  font-variation-settings: inherit; */
   font-size: 100%;
   font-weight: inherit;
   line-height: inherit;
@@ -201,7 +201,7 @@ textarea{
 
 button,
 select {
-  text-transform: none;
+  /* text-transform: none; */
 }
 
 button,
@@ -338,9 +338,9 @@ button,
   .animation-delay-4000 {
     animation-delay: 4s;
   }
-   .text-balance {
+   /* .text-balance {
     text-wrap: balance;
-  }
+  } */
 
 }
 
