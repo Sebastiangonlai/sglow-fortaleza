@@ -1,4 +1,5 @@
-import React from "react";
+'use client'
+
 import ContactBlock from "../ContactBlock";
 import TitleHeader from "../TitleHeader";
 

@@ -1,4 +1,4 @@
-import React from 'react';
+'use client'
 import TitleHeader from "@/components/TitleHeader";
 import SectionFAQ from '@/components/section/SectionFAQ';
 import ImageComponent from '../../components/ImageComponent';

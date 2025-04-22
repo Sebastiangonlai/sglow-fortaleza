@@ -22,4 +22,4 @@ const siteMetadata = {
     },
 }
 
-module.exports = siteMetadata
+export default siteMetadata

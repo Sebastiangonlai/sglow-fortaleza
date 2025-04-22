@@ -1,4 +1,5 @@
-import React from 'react';
+'use client'
+
 import { InfiniteMovingCards } from "@/lib/infinite-moving-cards";
 import { quotes } from "@/data/quotesData";
 import ButtonSection from "@/components/BtnSection";

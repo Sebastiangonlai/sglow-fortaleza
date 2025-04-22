@@ -1,4 +1,5 @@
-import React from 'react';
+'use client'
+
 import serviceData from '@/data/serviceDataIndex'
 import { GlowingStarsDescription } from "@/lib/glowing-stars";
 import ButtonSection from "@/components/BtnSection";

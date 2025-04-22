@@ -1,8 +1,8 @@
 import React from "react";
-import Link from "@/components/Link";
+// import Link from "@/components/Link";
 // import { IconosReact } from "@/components/social-icons";
-import {  SiInstagram, SiWhatsapp } from "react-icons/si";
-import { TfiEmail } from "react-icons/tfi";
+// import {  SiInstagram, SiWhatsapp } from "react-icons/si";
+// import { TfiEmail } from "react-icons/tfi";
 
 
 const FooterFortaleza = () => {

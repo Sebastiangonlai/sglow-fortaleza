@@ -1,4 +1,5 @@
-import React from "react";
+'use client'
+
 import TitleHeader from "@/components/TitleHeader";
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
