@@ -1,11 +1,11 @@
 "use client"
 
-import { useState, useCallback} from "react"
-import {  HomeIcon, Phone, Menu, X, Award, BookOpen} from "lucide-react";
+import { useState, useCallback } from "react"
+import { HomeIcon, Phone, Menu, X, Award, BookOpen } from "lucide-react";
 import { Sheet, SheetContent } from "../sheet.jsx";
 
-export default function Navbar() {
 
+export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleMenuOpen = useCallback(() => {
@@ -17,7 +17,6 @@ export default function Navbar() {
     setIsMenuOpen(false);
     document.body.classList.remove("overflow-hidden");
   }, []);
-
 
 
   const handleSmoothScroll = useCallback((event, targetId) => {
@@ -36,14 +35,13 @@ export default function Navbar() {
   ];
 
   return (
-    // <div className="fixed w-screen top-0 z-[120] border-b border-violet-200/20 backdrop-blur supports-[backdrop-filter]:bg-[#131624]/60 text-gray-100 select-none" >
-    //   <div className="container flex h-16 items-center justify-between" ref={navbarRef}>
     <div className="fixed w-screen top-0 z-120 border-b border-violet-200/20 supports-[backdrop-filter]:bg-[#111928]/50 text-gray-100 select-none" >
       <div className="container flex h-16 items-center justify-between" >
         {/* Logo */}
         <a href="/#inicio" onClick={(e) => { handleMenuClose(); handleSmoothScroll(e, "#inicio"); }}
           className="flex items-center px-4" aria-label="Inicio">
-          <img src="/logo.webp" alt="Logo" width={48} height={48} />
+          <img src="/logo.webp" alt="Logo" width={48} height={48} loading="eager" />
+
           <p className="text-white text-[18px] sm:text-[18px] lg:text-[22px] items-center justify-center font-bold pl-2 mt-1 leading-relaxed tracking-tight">Academia Fortaleza</p>
         </a>
 
@@ -52,14 +50,12 @@ export default function Navbar() {
           {navLinks.map(({ href, label }) => (
             <a key={href}
               href={`/${href}`}
-              // onClick={(e) => handleSmoothScroll(e, href)}
               onClick={(e) => { handleMenuClose(); handleSmoothScroll(e, href); }}
               aria-label={label}
               className={`relative font-medium transition-colors duration-300 after:absolute justify-end right-0 after:right-0 after:bottom-0 after:h-0.5 after:w-0 after:bg-violet-400 after:transition-all hover:after:w-full hover:text-violet-400`}>
               {label}
             </a>
           ))}
-
         </nav>
 
         {/* Mobile Menu */}
