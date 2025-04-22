@@ -1,6 +1,6 @@
 import React from 'react';
 import ImageComponent from "@/components/ImageComponent";
-import { SocialIcon } from '@/components/social-icons'
+// import { SocialIcon } from '@/components/social-icons'
 import Breadcrumb from '@/components/Breadcrumb';
 import SectionTeam from '@/components/section/SectionTeam';
 // import PageSEO from '@/components/SEO';
@@ -29,7 +29,7 @@ const SobreNosotrosIndex = () => {
         nameUri="Sobre Nosotros"
         href="home" />
 
-      <div className="container wow fadeInUp items-center w-[90%] space-y-4 xl:grid xl:grid-cols-3 xl:gap-x-4 xl:space-y-0 pt-[60px] pb-20" data-wow-delay=".20s" data-wow-duration="3s">
+      <div className="container items-center w-[90%] space-y-4 xl:grid xl:grid-cols-3 xl:gap-x-4 xl:space-y-0 pt-[60px] pb-20" >
         <div className="flex flex-col items-center pt-4">
           <ImageComponent
             iSrc={'/static/favicons/favicon.svg'}
@@ -46,10 +46,10 @@ const SobreNosotrosIndex = () => {
           </div>
           <div className="text-gray-500 dark:text-gray-400">{'Responsables'}</div>
           <div className="flex space-x-3 pt-6">
-            <SocialIcon kind="email" href={`mailto:${'info@academiafortaleza.com.uy'}`} />
+            {/* <SocialIcon kind="email" href={`mailto:${'info@academiafortaleza.com.uy'}`} />
             <SocialIcon kind="instagram" href={import.meta.env.VITE_INSTAGRAM} />
             <SocialIcon kind="facebook" aria-label="Facebook" href={import.meta.env.VITE_FACEBOOK} />
-            <SocialIcon kind="whatsapp" href={import.meta.env.VITE_API_WHATSAPP} />
+            <SocialIcon kind="whatsapp" href={import.meta.env.VITE_API_WHATSAPP} /> */}
           </div>
         </div>
         <div className="prose max-w-none pt-8 pb-8 dark:prose-[#111928] xl:col-span-2">

@@ -5,11 +5,11 @@ import SectionNuestrosServicios from '@/components/home/SectionNuestrosServicios
 import SectionOfrecemos from '@/components/home/SectionOfrecemosFortaleza';
 import SectionElegirnos from '@/components/home/SectionElegirnosFortaleza';
 import SectionLicenciaDeConducir from '@/components/home/SectionLicenciaConducirFortaleza';
-// import SectionGraduados from '@/components/home/SectionGraduadosFortaleza';
+import SectionGraduados from '@/components/home/SectionGraduadosFortaleza';
 import SectionTestimonial from '@/components/home/SectionTestimonialFortaleza';
 import SectionRedes from '@/components/home/SectionRedesFortaleza';
-// import SectionTrabajaConNosotros from '@/components/home/SectionTrabajaConNosotrosFortaleza';
-// import SectionPreguntasFrecuentes from '@/components/home/SectionFAQFortaleza';
+import SectionTrabajaConNosotros from '@/components/home/SectionTrabajaConNosotrosFortaleza';
+import SectionPreguntasFrecuentes from '@/components/home/SectionFAQFortaleza';
 import SectionContact from '@/components/home/SectionContactFortaleza';
 
 import '@/css/style-animated.min.css'
@@ -45,11 +45,11 @@ export default function Home() {
 
       <section id="licencia-de-conducir" className="overflow-hidden">
         < SectionLicenciaDeConducir />
-      </section > 
-      
-      {/* <section id="graduados">
+      </section >
+
+      <section id="graduados">
         <SectionGraduados />
-      </section> */}
+      </section>
 
       <section id="testimonio">
         <SectionTestimonial />
@@ -59,17 +59,17 @@ export default function Home() {
         <SectionRedes />
       </section>
 
-      {/* <section id="preguntas-frecuentes" className="overflow-hidden">
+      <section id="preguntas-frecuentes" className="overflow-hidden">
         <SectionPreguntasFrecuentes />
-      </section> */}
+      </section>
 
       <section id="contacto">
         <SectionContact />
       </section>
 
-      {/* <section id="trabaja-con-nosotros">
+      <section id="trabaja-con-nosotros">
         <SectionTrabajaConNosotros />
-      </section>  */}
+      </section>
     </>
   );
 }
