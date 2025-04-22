@@ -3,9 +3,9 @@ import { useState, useEffect } from 'react';
 // import SectionHeader from '@/components/home/SectionHeaderFortaleza';
 // import SectionNuestrosServicios from '@/components/home/SectionNuestrosServiciosFortaleza';
 import SectionOfrecemos from '@/components/home/SectionOfrecemosFortaleza';
-import SectionElegirnos from '@/components/home/SectionElegirnosFortaleza';
-import SectionLicenciaDeConducir from '@/components/home/SectionLicenciaConducirFortaleza';
-import SectionGraduados from '@/components/home/SectionGraduadosFortaleza';
+// import SectionElegirnos from '@/components/home/SectionElegirnosFortaleza';
+// import SectionLicenciaDeConducir from '@/components/home/SectionLicenciaConducirFortaleza';
+// import SectionGraduados from '@/components/home/SectionGraduadosFortaleza';
 // import SectionTestimonial from '@/components/home/SectionTestimonialFortaleza';
 // import SectionRedes from '@/components/home/SectionRedesFortaleza';
 // import SectionTrabajaConNosotros from '@/components/home/SectionTrabajaConNosotrosFortaleza';
@@ -39,7 +39,7 @@ export default function Home() {
         <SectionOfrecemos />
       </section>
 
-      <section id="elegirnos">
+      {/* <section id="elegirnos">
         <SectionElegirnos />
       </section>
 
@@ -49,7 +49,7 @@ export default function Home() {
 
       <section id="graduados">
         <SectionGraduados />
-      </section>
+      </section> */}
 
       {/* <section id="testimonio">
         <SectionTestimonial />
