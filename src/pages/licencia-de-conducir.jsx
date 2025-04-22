@@ -31,10 +31,10 @@ const LicenciaDeConducir = () => {
         <div className="wow fadeInUp overflow-hidden" data-wow-delay=".2s" data-wow-duration="2s">
           <div className="flex flex-wrap items-center">
             <div className="mx-auto max-w-7xl w-full px-4 text-left">
-              <h1 className="mb-1 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[35px] md:leading-[1]">
+              <h1 className="mb-1 text-3xl font-bold text-[#111928] dark:text-white sm:text-4xl md:text-[35px] md:leading-[1]">
                 Cursos a tu medida
               </h1>
-              <p className="text-left text-base text-[#637381] dark:text-dark-6 max-w-[650px]">
+              <p className="text-left text-base text-[#637381] dark:text-[#9CA3AF] max-w-[650px]">
                 Cursos personalizados y adaptados a las distintas necesidades.
               </p>
             </div>
@@ -49,10 +49,10 @@ const LicenciaDeConducir = () => {
             <div className="wow fadeInUp overflow-hidden" data-wow-delay=".5s" data-wow-duration="3s">
               <div className="flex flex-wrap items-center -mx-4">
                 <div className="mx-auto max-w-7xl w-full px-4 text-left">
-                  <h3 className="mb-1 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[35px] md:leading-[1]">
+                  <h3 className="mb-1 text-3xl font-bold text-[#111928] dark:text-white sm:text-4xl md:text-[35px] md:leading-[1]">
                     Solicitud
                   </h3>
-                  <p className="text-left text-base text-[#637381] dark:text-dark-6 max-w-[650px]">
+                  <p className="text-left text-base text-[#637381] dark:text-[#9CA3AF] max-w-[650px]">
                     Licencia de conducir por primera vez hasta 79 años.
                   </p>
                 </div>
@@ -76,7 +76,7 @@ const LicenciaDeConducir = () => {
 
                 <ul className="space-y-2 sm:space-y-4">
                   <li className="flex gap-x-3">
-                    <span className="mt-0.5 h-5 w-5 flex-shrink-0 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-600/40 dark:text-blue-400">
+                    <span className="mt-0.5 h-5 w-5 flex-shrink-0 flex justify-center items-center rounded-full bg-[#334a61] text-blue-600 dark:bg-blue-600/40 dark:text-blue-400">
                       <svg className="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 -1 24 24">
                         <polyline points="20 6 9 17 4 12" />
                       </svg>
@@ -89,7 +89,7 @@ const LicenciaDeConducir = () => {
                   </li>
 
                   <li className="flex gap-x-3">
-                    <span className="mt-0.5 h-5 w-5 flex-shrink-0 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-600/40 dark:text-blue-400">
+                    <span className="mt-0.5 h-5 w-5 flex-shrink-0 flex justify-center items-center rounded-full bg-[#334a61] text-blue-600 dark:bg-blue-600/40 dark:text-blue-400">
                       <svg className="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 -1 24 24">
                         <polyline points="20 6 9 17 4 12" />
                       </svg>
@@ -102,7 +102,7 @@ const LicenciaDeConducir = () => {
                   </li>
 
                   <li className="flex gap-x-3">
-                    <span className="mt-0.5 h-5 w-5 flex-shrink-0 flex justify-center items-center rounded-full bg-blue-50 text-blue-600 dark:bg-blue-600/40 dark:text-blue-400">
+                    <span className="mt-0.5 h-5 w-5 flex-shrink-0 flex justify-center items-center rounded-full bg-[#334a61] text-blue-600 dark:bg-blue-600/40 dark:text-blue-400">
                       <svg className="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 -1 24 24">
                         <polyline points="20 6 9 17 4 12" />
                       </svg>

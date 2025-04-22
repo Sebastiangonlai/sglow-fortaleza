@@ -30,7 +30,7 @@ const SectionNuestrosServiciosFortaleza = () => {
 											</a>
 										</div>
 										<div className="flex flex-row justify-between items-center">
-											<a aria-label="Nuestros servicios" href={d.href} className="inline-block text-xl font-bold text-dark hover:text-primary dark:text-white dark:hover:text-blue-300 sm:text-xl lg:text-xl xl:text-xl leading-tight tracking-tight">
+											<a aria-label="Nuestros servicios" href={d.href} className="inline-block text-xl font-bold text-[#111928] hover:text-primary dark:text-white dark:hover:text-blue-300 sm:text-xl lg:text-xl xl:text-xl leading-tight tracking-tight">
 												{d.title}
 											</a>
 											<a href={d.href} aria-label="Mas informacion" className="text-[12px] dark:text-blue-300 dark:hover:text-blue-300 rounded-xl cursor-pointer flex px-1 pt-1 justify-center items-center">
@@ -39,7 +39,7 @@ const SectionNuestrosServiciosFortaleza = () => {
 										</div>
 										<div className="mx-auto flex flex-col">
 											<div className="flex justify-between items-end">
-												<GlowingStarsDescription className="max-w-[400px] text-base text-[#637381] dark:text-dark-6 leading-tight tracking-tight">
+												<GlowingStarsDescription className="max-w-[400px] text-base text-[#637381] dark:text-[#9CA3AF] leading-tight tracking-tight">
 													{d.description}
 												</GlowingStarsDescription>
 											</div>

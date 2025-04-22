@@ -51,7 +51,7 @@ export default function FourZeroFour() {
                   Lo siento, la página que está buscando no se puede encontrar o se ha eliminado.
                 </p>
               </div>
-              <div className="bottom-0 left-0 w-full mx-auto h-px bg-gradient-to-r from-stroke/0 via-stroke dark:via-dark-5 to-stroke/0 mt-2">
+              <div className="bottom-0 left-0 w-full mx-auto h-px bg-gradient-to-r from-stroke/0 via-stroke dark:via-[#111928]-5 to-stroke/0 mt-2">
               </div>
 
               <div className="mt-6">

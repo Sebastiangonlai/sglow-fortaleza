@@ -128,14 +128,14 @@ const PortfolioCard = ({ showCard, category, ImageHref, title, button, buttonHre
 							iHeight={IMG.height}
 							iClassName="aspect-square object-cover object-center blur-none group-hover/img:blur-sm transition-all duration-200 rounded-xl" />
 					</div>
-					<div className="relative mx-7 -mt-20 rounded-[10px] bg-white dark:bg-[#1F2A37] py-[20px] px-3 text-center shadow-portfolio dark:shadow-box-dark">
+					<div className="relative mx-7 -mt-20 rounded-[10px] bg-white dark:bg-[#1F2A37] py-[20px] px-3 text-center shadow-portfolio dark:shadow-box-[#111928]">
 						<span className="text-primary mb-2 block text-sm font-medium">
 							{category}
 						</span>
-						<h4 className="text-dark dark:text-white mb-3 text-xl font-medium tracking-tight leading-tight">{title}</h4>
+						<h4 className="text-[#111928] dark:text-white mb-3 text-xl font-medium tracking-tight leading-tight">{title}</h4>
 						<a href={buttonHref} aria-label="Más información sobre cómo obtener tu licencia de conducir">
 							<Block className="col-span-1 dark:bg-[#1f2937]bg-transparent md:col-span-1" whileHover={{ rotate: '-2.5deg', scale: 1.1 }}>
-								<div className={`relative flex items-center z-10 cursor-pointer rounded-2xl text-sm text-normal bg-transparent hover:bg-btndi/20 py-2 px-3 ring-1 ring-white/10`}>
+								<div className={`relative flex items-center z-10 cursor-pointer rounded-2xl text-sm text-normal bg-transparent hover:bg-[#4f46e5]/20 py-2 px-3 ring-1 ring-white/10`}>
 									{button}
 									<svg fill="none" height="20" viewBox="0 0 22 22" width="20" xmlns="http://www.w3.org/2000/svg">
 										<path d="M10.75 8.75L14.25 12L10.75 15.25" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
@@ -199,7 +199,7 @@ const ExpandableModalCard = () => {
 			<div>
 				<Modals id="myModal" open={open} onClose={handleClose} className="flex flex-wrap justify-center self-center px-2">
 					<Sheet className="w-fit h-fit rounded-xl flex" >
-						<ModalClose className="close right-2 dark:bg-[#111928]/70 dark:hover:bg-dark/70" variant='solid' color='neutral'>&times;</ModalClose>
+						<ModalClose className="close right-2 dark:bg-[#111928]/70 dark:hover:bg-[#111928]/70" variant='solid' color='neutral'>&times;</ModalClose>
 						<ImageComponent iSrc={imgSrc.src} iWidth={IMG.width} iHeight={IMG.height} iAlt="Alumnos Academia de manejo" id="myImg" loading="lazy" iClassName="w-full h-full object-cover rounded-xl focus:touch-pan-x delay-200 border border-zinc-500 select-none dark:rounded-lg dark:border justify-center" />
 					</Sheet>
 				</Modals>

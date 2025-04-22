@@ -18,11 +18,11 @@ const NuestrosServicios = () => {
 
       <section className="dark:bg-[#111928]">
 
-      <Breadcrumb
-        title="Nuestros Servicios"
-        subtitle="Información sobre la licencia de conducir."
-        nameUri="Servicios"
-        href="nuestros-servicios" />
+        <Breadcrumb
+          title="Nuestros Servicios"
+          subtitle="Información sobre la licencia de conducir."
+          nameUri="Servicios"
+          href="nuestros-servicios" />
         <div className="container">
           <div className="wow fadeInUp w-full flex flex-wrap justify-center pt-14 pb-4" data-wow-delay=".5s" data-wow-duration="1s">
             <div className="w-full ">
@@ -93,7 +93,7 @@ const PortfolioCard = ({ imageSrc, category, title, description, checkText, butt
                     <ImageComponent iSrc={imageSrc} iAlt="image" iClassName="h-full w-full rounded-[5px] transition hover:rotate-6 hover:scale-125" iWidth={500} iHeight={500} />
                   </a>
                 </div>
-                <a aria-label={title} className="mb-0.5 inline-block text-base font-semibold text-dark hover:text-primary dark:text-white dark:hover:text-indigo-400 sm:text-2xl lg:text-base xl:text-base leading-tight tracking-tight">
+                <a aria-label={title} className="mb-0.5 inline-block text-base font-semibold text-[#111928] hover:text-primary dark:text-white dark:hover:text-indigo-400 sm:text-2xl lg:text-base xl:text-base leading-tight tracking-tight">
                   {title}
                 </a>
               </div>
@@ -121,7 +121,7 @@ const PortfolioCard = ({ imageSrc, category, title, description, checkText, butt
                   {checkText !== "" && (
                     checkText.map((itemText, index) => (
                       <li key={index} className="flex gap-x-3">
-                        <span className="mt-0.5 size-5 flex justify-center items-center rounded-full bg-blue-50 text-blue-500 dark:bg-blue-600/40 dark:text-blue-300">
+                        <span className="mt-0.5 size-5 flex justify-center items-center rounded-full bg-[#334a61] text-blue-500 dark:bg-blue-600/40 dark:text-blue-300">
                           <svg className="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                             <polyline points="20 6 9 17 4 12" />
                           </svg>

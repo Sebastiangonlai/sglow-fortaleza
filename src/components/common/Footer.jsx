@@ -1,6 +1,8 @@
 import React from "react";
 import Link from "@/components/Link";
 // import { IconosReact } from "@/components/social-icons";
+import {  SiInstagram, SiWhatsapp } from "react-icons/si";
+import { TfiEmail } from "react-icons/tfi";
 
 
 const FooterFortaleza = () => {
@@ -24,7 +26,7 @@ const FooterFortaleza = () => {
           <div className="lg:w-1/3 md:w-1/2 sm:w-1/2 w-full justify-center">
             <div className="pb-2 text-gray-900 dark:text-gray-200 text-base font-semibold text-center lg:text-left">
               <LinkGroup className="text-base font-bold" header="Información">
-                <NavLink link="/sobre-nosotros" className="flex mb-1 font-semibold text-base cursor-pointer text-dark dark:text-white dark:hover:text-blue-300 justify-center lg:justify-start" label="Sobre Nosotros" />
+                <NavLink link="/sobre-nosotros" className="flex mb-1 font-semibold text-base cursor-pointer text-[#111928] dark:text-white dark:hover:text-blue-300 justify-center lg:justify-start" label="Sobre Nosotros" />
                 <NavLink link="/nuestros-servicios" label="Nuestros Servicios" />
                 <NavLink link="/preguntas-frecuentes" label="Preguntas Frecuentes" />
                 <NavLink link="/coche-escuela" label="Flota de Vehículos" />
@@ -57,16 +59,16 @@ const FooterFortaleza = () => {
                   <div className="pt-4 flex justify-center lg:justify-start">
                     <ul className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-center">
                       <li className="inline-flex lg:ml-auto lg:mt-2 mt-1 w-full justify-center md:justify-start md:w-auto">
-                        <IconosReact kind="email" href={`mailto:info@academiafortaleza.com.uy`} aria-label="Email" />
+                        <TfiEmail kind="email" href={`mailto:info@academiafortaleza.com.uy`} aria-label="Email" />
                       </li>
                       <li className="inline-flex lg:ml-auto lg:mt-2 mt-1 w-full justify-center md:justify-start md:w-auto">
-                        <IconosReact kind="instagram" href={import.meta.env.VITE_INSTAGRAM} aria-label="Instagram" />
+                        <SiInstagram kind="instagram" href={import.meta.env.VITE_INSTAGRAM} aria-label="Instagram" />
                       </li>
                       <li className="inline-flex lg:ml-auto lg:mt-2 mt-1 w-full justify-center md:justify-start md:w-auto">
-                        <IconosReact kind="facebook" href={import.meta.env.VITE_FACEBOOK} aria-label="Facebook" />
+                        <SiWhatsapp kind="facebook" href={import.meta.env.VITE_FACEBOOK} aria-label="Facebook" />
                       </li>
                       <li className="inline-flex lg:ml-auto lg:mt-2 mt-1 w-full justify-center md:justify-start md:w-auto">
-                        <IconosReact kind="whatsapp" href={import.meta.env.VITE_API_WHATSAPP} aria-label="WhatsApp" />
+                        <SiWhatsapp kind="whatsapp" href={import.meta.env.VITE_API_WHATSAPP} aria-label="WhatsApp" />
                       </li>
                     </ul>
                   </div>
@@ -79,9 +81,9 @@ const FooterFortaleza = () => {
 
         </div>
 
-        <div className="select-none text-xs pt-6 text-gray-400 font-normal text-center">© Copyright {`${new Date().getFullYear()}`}&ensp;Academia Fortaleza&ensp;-<button href="https://sglow.vercel.app/" className="hover:text-gray-200 font-medium text-blue-300" aria-label="developer">
+        <div className="select-none text-xs pt-6 text-gray-400 font-normal text-center">© Copyright {`${new Date().getFullYear()}`}&ensp;Academia Fortaleza&ensp;-<a href="https://sglow.vercel.app/" target="_blank" className="hover:text-gray-200 font-medium text-blue-300" aria-label="Desarrollado por">
           &ensp;by Sebastián González
-        </button>
+        </a>
         </div>
 
         <div>

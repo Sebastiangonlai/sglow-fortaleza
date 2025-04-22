@@ -1,3 +1,4 @@
+'use client'
 import React, { useState } from 'react';
 import { GetUltimasImagenes } from '../admin/imagenes/ImagenService';
 import Grid from '@mui/joy/Grid';
@@ -66,10 +67,10 @@ export function TabAlumnos() {
           <div className="flex flex-wrap items-center -mx-4">
             <div className="w-full px-4">
               <div className="text-center">
-                <h2 className="mb-1 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[35px] md:leading-[1.2]">
+                <h2 className="mb-1 text-3xl font-bold text-[#111928] dark:text-white sm:text-4xl md:text-[35px] md:leading-[1.2]">
                   Nuestros Graduados
                 </h2>
-                <p className="mb-2 text-base text-[#637381] dark:text-dark-6 mx-auto max-w-[650px]">
+                <p className="mb-2 text-base text-[#637381] dark:text-[#9CA3AF] mx-auto max-w-[650px]">
                   Es un orgullo celebrar cientos de licencias otorgadas.
                 </p>
               </div>
@@ -96,7 +97,7 @@ export function TabAlumnos() {
 
           <Modal id="myModal" open={open} onClose={handleClose} className="flex flex-wrap justify-center self-center">
             <Sheet className="w-fit h-fit rounded-xl flex" >
-              <ModalClose className="close right-0 dark:bg-[#111928]/70 dark:hover:bg-dark/70" variant='solid' color='neutral'>&times;</ModalClose>
+              <ModalClose className="close right-0 dark:bg-[#111928]/70 dark:hover:bg-[#111928]/70" variant='solid' color='neutral'>&times;</ModalClose>
               <ImageComponent iWidth={IMG.width} iHeight={IMG.height} iAlt="Alumnos" id="myImg" iSrc={imgSrc} loading="lazy" iClassName="object-cover rounded-xl focus:touch-pan-x delay-200 border border-zinc-500 select-none dark:rounded-lg dark:border justify-center" />
             </Sheet>
           </Modal>
@@ -107,14 +108,14 @@ export function TabAlumnos() {
 
                 {/* Botón para ir a la primera página */}
                 <li className='hidden sm:hidden md:flex lg:flex'>
-                  <button className="flex h-10 min-w-10 items-center justify-center rounded-full px-2 text-dark hover:bg-blue-2 dark:text-white dark:hover:bg-blue/20" onClick={() => handlePageChange(1)} disabled={currentPage === 1}>
+                  <button className="flex h-10 min-w-10 items-center justify-center rounded-full px-2 text-[#111928] hover:bg-blue-2 dark:text-white dark:hover:bg-blue/20" onClick={() => handlePageChange(1)} disabled={currentPage === 1}>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="-0.5 -0.5 16 16" fill="none" stroke="white" strokeLinecap="round" strokeLinejoin="round" id="Chevron-Left-Pipe--Streamline-Tabler" height="22" width="22"><path d="M4.375 3.75v7.5" strokeWidth="1.2"></path><path d="m11.25 3.75 -3.75 3.75 3.75 3.75" strokeWidth="1.2"></path></svg>
                   </button>
                 </li>
 
                 {/* Botón para retroceder una página */}
                 <li>
-                  <button className="flex h-10 min-w-10 items-center justify-center rounded-full px-2 text-dark hover:bg-blue-2 dark:text-white dark:hover:bg-blue/20" onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1}>
+                  <button className="flex h-10 min-w-10 items-center justify-center rounded-full px-2 text-[#111928] hover:bg-blue-2 dark:text-white dark:hover:bg-blue/20" onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1}>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="-0.5 -0.5 16 16" fill="none" stroke="white" strokeLinecap="round" strokeLinejoin="round" id="Chevron-Left--Streamline-Tabler" height="22" width="22"><path d="m9.375 3.75 -3.75 3.75 3.75 3.75" strokeWidth="1.2"></path>
                     </svg>
                   </button>
@@ -124,7 +125,7 @@ export function TabAlumnos() {
                 {getPageNumbers().map((pageNumber) => (
                   <li key={pageNumber}>
                     <button onClick={() => handlePageChange(pageNumber)}
-                      className={`flex h-10 min-w-10 items-center justify-center rounded-full px-2 text-dark hover:bg-blue dark:text-white dark:hover:bg-blue/20 ${currentPage === pageNumber ? 'dark:bg-blue/20 dark:font-semibold' : 'text-[#637381] dark:text-dark-6'}`}>
+                      className={`flex h-10 min-w-10 items-center justify-center rounded-full px-2 text-[#111928] hover:bg-blue dark:text-white dark:hover:bg-blue/20 ${currentPage === pageNumber ? 'dark:bg-blue/20 dark:font-semibold' : 'text-[#637381] dark:text-[#9CA3AF]'}`}>
                       {pageNumber}
                     </button>
                   </li>
@@ -133,7 +134,7 @@ export function TabAlumnos() {
                 {/* Botón para avanzar una página */}
                 <li>
                   <button onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === totalPages}
-                    className="flex h-10 min-w-10 items-center justify-center rounded-full px-2 text-dark hover:bg-[#F3F4F6] dark:text-white dark:hover:bg-blue/20">
+                    className="flex h-10 min-w-10 items-center justify-center rounded-full px-2 text-[#111928] hover:bg-[#F3F4F6] dark:text-white dark:hover:bg-blue/20">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="-0.5 -0.5 16 16" fill="none" stroke="white" strokeLinecap="round" strokeLinejoin="round" id="Chevron-Right-Pipe--Streamline-Tabler" height="22" width="22"><path d="m5.625 3.75 3.75 3.75 -3.75 3.75" strokeWidth="1.2"></path>
                     </svg>
                   </button>
@@ -142,7 +143,7 @@ export function TabAlumnos() {
                 {/* Botón para ir a la última página */}
                 <li className='hidden sm:hidden md:flex lg:flex'>
                   <button onClick={() => handlePageChange(totalPages)} disabled={currentPage === totalPages}
-                    className="flex h-10 min-w-10 items-center justify-center rounded-full px-2 text-dark hover:bg-blue-2 dark:text-white dark:hover:bg-blue/20">
+                    className="flex h-10 min-w-10 items-center justify-center rounded-full px-2 text-[#111928] hover:bg-blue-2 dark:text-white dark:hover:bg-blue/20">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="-0.5 -0.5 16 16" fill="none" stroke="white" strokeLinecap="round" strokeLinejoin="round" id="Chevron-Right-Pipe--Streamline-Tabler" height="22" width="22"><path d="m3.75 3.75 3.75 3.75 -3.75 3.75" strokeWidth="1.2"></path><path d="M10.625 3.125v8.125" strokeWidth="1.2"></path>
                     </svg>
                   </button>

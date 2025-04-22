@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import EmblaCarouselVideos from "../embla-carousel/EmblaCarouselVideos";
 
@@ -14,10 +15,10 @@ const TabVideos = () => {
                     <div className="flex flex-wrap items-center -mx-4">
                         <div className="w-full px-4">
                             <div className="text-center">
-                                <h1 className="mb-1 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[35px] md:leading-[1.2]">
+                                <h1 className="mb-1 text-3xl font-bold text-[#111928] dark:text-white sm:text-4xl md:text-[35px] md:leading-[1.2]">
                                     Videos
                                 </h1>
-                                <p className="mb-2 text-base text-[#637381] dark:text-dark-6 mx-auto max-w-[650px]">
+                                <p className="mb-2 text-base text-[#637381] dark:text-[#9CA3AF] mx-auto max-w-[650px]">
                                     Intro Academia Fortaleza.
                                 </p>
                             </div>

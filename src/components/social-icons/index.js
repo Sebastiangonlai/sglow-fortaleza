@@ -41,9 +41,9 @@ const IconosReact = ({ kind, href, size = 4 }) => {
   const SocialSvg = components[kind]
 
   return (
-    <a aria-label="redes" className="overflow: visible;  mr-1 flex h-8 w-8 items-center justify-center rounded-full border border-stroke text-dark hover:border-primary hover:bg-primary dark:border-[#1F2A37] dark:text-white dark:hover:border-blue-400 sm:mr-4 lg:mr-1 xl:mr-2 text-sm transition hover:text-gray-600" target="_blank" rel="noopener noreferrer" href={href}>
+    <a aria-label="redes" className="overflow: visible;  mr-1 flex h-8 w-8 items-center justify-center rounded-full border border-stroke text-[#111928] hover:border-primary hover:bg-primary dark:border-[#1F2A37] dark:text-white dark:hover:border-blue-400 sm:mr-4 lg:mr-1 xl:mr-2 text-sm transition hover:text-gray-600" target="_blank" rel="noopener noreferrer" href={href}>
       <span className="sr-only">{kind}</span>
-      <SocialSvg className={`fill-current text-gray-800  dark:text-gray-100 h-${size} w-${size}`} />
+      <SocialSvg className={`fill-current text-gray-800 dark:text-gray-100 h-${size} w-${size}`} />
     </a>
   )
 }
@@ -53,4 +53,4 @@ export { SocialIcon, IconosReact };
 
 
 
-// rounded-full border border-stroke text-dark hover:border-primary hover:bg-primary hover:text-white dark:border-dark-3 dark:text-white dark:hover:border-primary
+// rounded-full border border-stroke text-[#111928] hover:border-primary hover:bg-primary hover:text-white dark:border-[#111928]-3 dark:text-white dark:hover:border-primary

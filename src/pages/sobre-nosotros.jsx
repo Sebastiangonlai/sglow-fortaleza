@@ -52,7 +52,7 @@ const SobreNosotrosIndex = () => {
             <SocialIcon kind="whatsapp" href={import.meta.env.VITE_API_WHATSAPP} />
           </div>
         </div>
-        <div className="prose max-w-none pt-8 pb-8 dark:prose-dark xl:col-span-2">
+        <div className="prose max-w-none pt-8 pb-8 dark:prose-[#111928] xl:col-span-2">
           <h3 className="text-2xl leading-tight">Nuestra Misión</h3>
           <p className="text-base leading-tight">Academia Fortaleza crece día a día con el objetivo de formar nuevos conductores
             responsables y seguros. Nos comprometemos a educar a quienes realizan el curso,

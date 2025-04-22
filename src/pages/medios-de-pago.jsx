@@ -21,7 +21,7 @@ export default function MediosDePago() {
       <div className="wow fadeInUp container pb-[40px] pt-14" data-wow-delay=".20s" data-wow-duration="3s">
         <div className="flex flex-wrap items-center">
           <div className="w-full px-4 text-center">
-            <h1 className="pb-10 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]">
+            <h1 className="pb-10 text-3xl font-bold text-[#111928] dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]">
               Nuestros Convenios
             </h1>
           </div>

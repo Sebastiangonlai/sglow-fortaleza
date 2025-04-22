@@ -75,7 +75,7 @@ export const InfiniteMovingCards = ({ items, direction = "left", speed = "fast",
                                         <img src="/static/images/svg/icon-star.svg" alt="star icon" width={20} height={20} />
                                         <img src="/static/images/svg/icon-star.svg" alt="star icon" width={20} height={20} />
                                     </div>
-                                    <p className="mb-4 text-base text-[#637381] dark:text-dark-6 leading-tight tracking-tight">
+                                    <p className="mb-4 text-base text-[#637381] dark:text-[#9CA3AF] leading-tight tracking-tight">
                                         {item.quote}
                                     </p>
                                     <a href="#" className="flex items-center gap-4">

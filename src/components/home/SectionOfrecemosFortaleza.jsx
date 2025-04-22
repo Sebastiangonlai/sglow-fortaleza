@@ -102,10 +102,10 @@ const ServiceCard = ({ icon: Icon, title, description, href }) => {
 				</a>
 			</div>
 			<div className="w-full px-4">
-				<h3 className="mb-2 text-xl font-bold text-dark dark:text-white sm:text-2xl lg:text-xl xl:text-2xl leading-tight tracking-tight">
+				<h3 className="mb-2 text-xl font-bold text-[#111928] dark:text-white sm:text-2xl lg:text-xl xl:text-2xl leading-tight tracking-tight">
 					{title}
 				</h3>
-				<p className="text-base text-[#637381] dark:text-dark-6 leading-tight tracking-tight">
+				<p className="text-base text-[#637381] dark:text-[#9CA3AF] leading-tight tracking-tight">
 					{description}
 				</p>
 			</div>

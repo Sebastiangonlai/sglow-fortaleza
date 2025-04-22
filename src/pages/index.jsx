@@ -1,5 +1,5 @@
 {/*********  by δεϐąstián *********/ }
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 // import siteMetadata from '@/data/siteMetadata'
 // import PageSEO from '@/components/SEO'
 import SectionHeader from '@/components/home/SectionHeaderFortaleza';
@@ -13,7 +13,6 @@ import SectionRedes from '@/components/home/SectionRedesFortaleza';
 // import SectionTrabajaConNosotros from '@/components/home/SectionTrabajaConNosotrosFortaleza';
 // import SectionPreguntasFrecuentes from '@/components/home/SectionFAQFortaleza';
 import SectionContact from '@/components/home/SectionContactFortaleza';
-// import './globals.css'
 
 import '@/css/style-animated.min.css'
 import "animate.css";
@@ -34,7 +33,7 @@ export default function Home() {
     <>
       {/* <PageSEO title={`${siteMetadata.title} - Clases de Manejo en Montevideo - Academia de choferes`} description={`${siteMetadata.description}`} /> */}
 
-      <section className="overflow-hidden">
+      <section id="inicio" className="overflow-hidden">
         <SectionHeader />
       </section>
 

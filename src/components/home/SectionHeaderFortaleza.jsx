@@ -16,9 +16,9 @@ const SectionHeaderFortaleza = () => {
 
   return (
     <section className="flex flex-col select-none items-center overflow-hidden justify-center h-screen">
-      <div className="z-[100] -mt-28 lg:pt-24 sm:mt-6">
+      <h1 className="z-[100] -mt-28 lg:pt-24 sm:mt-6 bg-transparent dark:bg-transparent">
         <TypewriterEffectSmoothDemo />
-      </div>
+      </h1>
       {showBackgroundLines && (
         <BackgroundLines className="absolute select-none justify-center items-center top-0 left-0" />
       )}

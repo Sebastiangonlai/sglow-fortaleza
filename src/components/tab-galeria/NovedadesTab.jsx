@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useState } from 'react';
 // import { useInView } from 'react-intersection-observer'
 import Box from '@mui/joy/Box';
@@ -47,10 +49,10 @@ const TabNovedades = ({ cantidad }) => {
           <div className="flex flex-wrap items-center -mx-4">
             <div className="w-full px-4">
               <div className="text-center">
-                <h1 className="mb-1 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[35px] md:leading-[1.2]">
+                <h1 className="mb-1 text-3xl font-bold text-[#111928] dark:text-white sm:text-4xl md:text-[35px] md:leading-[1.2]">
                   Recién Graduados
                 </h1>
-                <p className="mb-2 text-base text-[#637381] dark:text-dark-6 mx-auto max-w-[650px]">
+                <p className="mb-2 text-base text-[#637381] dark:text-[#9CA3AF] mx-auto max-w-[650px]">
                   Felicita a nuestros alumnos graduados.
                 </p>
               </div>
@@ -98,7 +100,7 @@ const TabNovedades = ({ cantidad }) => {
 
           <Modal id="myModal" open={open} onClose={handleClose} className="flex flex-wrap justify-center self-center">
             <Sheet className="w-fit h-fit rounded-xl flex" >
-              <ModalClose className="close right-0 dark:bg-dark/70 dark:hover:bg-dark/70" variant='solid' color='neutral'>&times;</ModalClose>
+              <ModalClose className="close right-0 dark:bg-[#111928]/70 dark:hover:bg-[#111928]/70" variant='solid' color='neutral'>&times;</ModalClose>
               <ImageComponent iWidth={IMG.width} iHeight={IMG.height} iAlt="Alumnos" id="myImg" iSrc={imgSrc} loading="lazy" iClassName="object-cover rounded-xl focus:touch-pan-x delay-200 border border-zinc-500 select-none dark:rounded-lg dark:border justify-center" />
             </Sheet>
           </Modal>

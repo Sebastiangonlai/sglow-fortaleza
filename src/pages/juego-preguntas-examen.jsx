@@ -298,10 +298,10 @@ export default function DrivingGame() {
             <table className="table-auto w-full font-medium text-center ">
               <thead>
                 <tr className="bg-sky-400">
-                  <th className="border-b border-l border-t text-dark font-bold px-4 py-1">🏆</th>
-                  <th className="border-b border-t font-bold text-dark px-4 py-1">Nombre</th>
-                  <th className="border-b border-t font-bold text-dark px-4 py-1">Tiempo</th>
-                  <th className="border-b border-r border-t font-bold text-dark px-4 py-1">Puntos</th>
+                  <th className="border-b border-l border-t text-[#111928] font-bold px-4 py-1">🏆</th>
+                  <th className="border-b border-t font-bold text-[#111928] px-4 py-1">Nombre</th>
+                  <th className="border-b border-t font-bold text-[#111928] px-4 py-1">Tiempo</th>
+                  <th className="border-b border-r border-t font-bold text-[#111928] px-4 py-1">Puntos</th>
 
                 </tr>
               </thead>
@@ -336,7 +336,7 @@ export default function DrivingGame() {
           </div>
           <p className="pt-1.5 text-sm font-medium">¡Felicidades! Has ingresado al ranking.</p>
           <p className="text-sm font-medium">Por favor, ingresa tu nombre:</p>
-          <input type="text" id="name" name="name" className="text-dark bg-white py-1 mt-2 w-full rounded-md" />
+          <input type="text" id="name" name="name" className="text-[#111928] bg-white py-1 mt-2 w-full rounded-md" />
           <button type="submite" className="group mt-2 text-sm flex w-full items-center justify-center gap-2 rounded-md py-1.5 px-3 bg-blue/80 data-[focus]:bg-blue/10">Confirmar
             <CheckIcon className="size-4 fill-white/80" />
           </button>
