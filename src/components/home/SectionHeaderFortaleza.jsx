@@ -13,6 +13,7 @@ const SectionHeaderFortaleza = () => {
     }, 1800);
     return () => clearTimeout(timer);
   }, []);
+  
 
   return (
     <section className="flex flex-col select-none items-center overflow-hidden justify-center h-screen">

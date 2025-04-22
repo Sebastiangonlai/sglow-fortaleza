@@ -9,8 +9,8 @@ const ImageComponent = ({ iSrc, iAlt, iWidth, iHeight, iClassName, iPriority }) 
 			alt={iAlt}
 			width={iWidth}
 			height={iHeight}
-			className={iClassName}
-			priority={iPriority}
+			className={`${iClassName} w-full h-auto`}
+			loading={iPriority ? 'eager' : 'lazy'}
 		/>
 	);
 };
