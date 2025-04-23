@@ -1,8 +1,10 @@
+"use client"
+
 import { cn } from "@/lib/utils";
 import React, { useEffect, useRef, useId, useState } from "react";
 import { motion } from "framer-motion";
 import { useOutsideClick } from "@/lib/use-outside-click";
-import { GetUltimasImagenes } from "@/components/admin/imagenes/ImagenService";
+import { ListImagesSupabase } from "@/components/admin/imagenes/ImagenService";
 import { Modal } from "../../lib/animated-modal";
 import Modals from '@mui/joy/Modal';
 import ModalClose from '@mui/joy/ModalClose';
@@ -157,7 +159,7 @@ const ExpandableModalCard = () => {
 	const [imgSrc, setImgSrc] = useState('');
 	const id = useId();
 	const ref = useRef(null);
-	let aux = GetUltimasImagenes(6);
+	let aux = ListImagesSupabase({ imgFirst: 0, imgLimit: 6 });
 	let imagesFirst = [{ src: aux[0] }, { src: aux[1] }, { src: aux[2] }];
 	let imagesSecond = [{ src: aux[3] }, { src: aux[4] }, { src: aux[5] }];
 

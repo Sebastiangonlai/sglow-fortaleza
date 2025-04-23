@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { BackgroundLines } from "@/lib/background-lines";
 import ImageComponent from "@/components/ImageComponent";
 
+
 const SectionHeaderFortaleza = () => {
   const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
   const [showBackgroundLines, setShowBackgroundLines] = useState(false);

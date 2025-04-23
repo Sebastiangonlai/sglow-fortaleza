@@ -3,12 +3,20 @@
 import TitleHeader from "@/components/TitleHeader";
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { GetContarImagenes } from '@/components/admin/imagenes/ImagenService'
+import { ContarImagenesSupabase } from '../admin/imagenes/ImagenService.jsx'
+import { useEffect, useState } from "react";
 
 
 const SectionElegirnosFortaleza = () => {
-	const cantidadFirebase = GetContarImagenes("img/");
-	const recibidos = cantidadFirebase + 204;
+	const [recibidos, setRecibidos] = useState(0);
+
+	useEffect(() => {
+		const fetchDatas = async () => {
+			const resp = await ContarImagenesSupabase() + 204
+			setRecibidos(resp);
+		};
+		fetchDatas();
+	}, []);
 
 	const itemData = [{
 		desc: "100%", title: 'Calificaciones positivas',

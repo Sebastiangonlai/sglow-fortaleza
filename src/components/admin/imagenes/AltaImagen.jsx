@@ -14,7 +14,6 @@ import Typography from '@mui/joy/Typography';
 import AspectRatio from '@mui/joy/AspectRatio';
 import imageCompression from "browser-image-compression";
 import ImageCropper from './ImageCropper';
-// import Image from 'next/image';
 
 
 const VisuallyHiddenInput = styled('input')`

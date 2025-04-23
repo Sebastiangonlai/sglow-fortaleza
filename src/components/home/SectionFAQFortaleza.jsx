@@ -121,29 +121,22 @@ const SectionFaqFortaleza = () => {
                       </div>
                     </div>
                   }
-                  duration={1}
-                  delay={0.5}
+                  duration={1} delay={0.5}
                   effect={{ initial: { opacity: 0, x: -100 }, animate: { opacity: 1, x: 0 } }}
                   transition={{ duration: 1, delay: 0.5, ease: 'easeInOut' }}
                 />
               </div>
 
-
               <div className="w-full px-4 lg:w-1/2">
                 <div className="mb-2 max-w-[540px] lg:mb-0">
                   <ScrollAnimation
-                    description={
-                      <SectionFAQ />
-                    }
-                    duration={1}
-                    delay={0.5}
+                    description={<SectionFAQ />}
+                    duration={1} delay={0.5}
                     effect={{ initial: { opacity: 0, x: 100 }, animate: { opacity: 1, x: 0 } }}
                     transition={{ duration: 1, delay: 0.5, ease: 'easeInOut' }}
                   />
                 </div>
               </div>
-
-
             </div>
           </div>
         </div>
