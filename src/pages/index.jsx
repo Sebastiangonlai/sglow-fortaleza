@@ -6,10 +6,10 @@ import SectionOfrecemos from '@/components/home/SectionOfrecemosFortaleza';
 import SectionElegirnos from '@/components/home/SectionElegirnosFortaleza';
 import SectionLicenciaDeConducir from '@/components/home/SectionLicenciaConducirFortaleza';
 import SectionGraduados from '@/components/home/SectionGraduadosFortaleza';
-// import SectionTestimonial from '@/components/home/SectionTestimonialFortaleza';
-// import SectionRedes from '@/components/home/SectionRedesFortaleza';
+import SectionTestimonial from '@/components/home/SectionTestimonialFortaleza';
+import SectionRedes from '@/components/home/SectionRedesFortaleza';
 // import SectionTrabajaConNosotros from '@/components/home/SectionTrabajaConNosotrosFortaleza';
-// import SectionPreguntasFrecuentes from '@/components/home/SectionFAQFortaleza';
+import SectionPreguntasFrecuentes from '@/components/home/SectionFAQFortaleza';
 import SectionContact from '@/components/home/SectionContactFortaleza';
 
 import '@/css/style-animated.min.css'
@@ -51,7 +51,7 @@ export default function Home() {
         <SectionGraduados />
       </section>
 
-      {/* <section id="testimonio">
+      <section id="testimonio">
         <SectionTestimonial />
       </section>
 
@@ -62,7 +62,7 @@ export default function Home() {
       <section id="preguntas-frecuentes" className="overflow-hidden">
         <SectionPreguntasFrecuentes />
       </section>
- */}
+
       <section id="contacto">
         <SectionContact />
       </section>
