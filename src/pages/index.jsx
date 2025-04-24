@@ -16,6 +16,7 @@ import '@/css/style-animated.min.css'
 import "animate.css";
 
 
+
 export default function Home() {
   const handleResize = () => setWindowWidth(window.innerWidth);
   const [windowWidth, setWindowWidth] = useState();

@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react';
-import { GetUltimasImagenes } from '../admin/imagenes/ImagenService';
+import { ListImagesSupabase } from '../admin/imagenes/ImagenService';
 import Grid from '@mui/joy/Grid';
 import ModalClose from '@mui/joy/ModalClose';
 import Modal from '@mui/joy/Modal';
@@ -18,12 +18,15 @@ export function TabAlumnos() {
   const [imgSrc, setImgSrc] = useState('');
 
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 6; // Items por pagina.
+  const itemsPerPage = 6;  // Items por pagina.
   const totalItems = 120;  // Cantidad total de imágenes.
 
   const totalPages = Math.ceil(totalItems / itemsPerPage); // Cantidad total de páginas.
-  const imagesUrl = GetUltimasImagenes(totalItems);
-
+  // const imagesUrl = GetUltimasImagenes(totalItems);
+  console.log("totalItems: ", imgSrc);
+  // const imagesUrl = ListImagesSupabase({ imgFirst: 0, imgLimit: totalItems });
+  let imagesUrl = ListImagesSupabase({ imgFirst: 0, imgLimit: 6 }); //totalItems
+  console.log("imagesUrl: ", imagesUrl);
   // Calcular las imágenes que se mostrarán en cada pagina.
   const lastItem = imagesUrl.length - (currentPage * itemsPerPage);
   const firstItem = (lastItem - itemsPerPage);

@@ -126,7 +126,6 @@ const SectionRedesFortaleza = () => {
             </div>
           </div>
         </section>
-
       </div>
     </>
   );

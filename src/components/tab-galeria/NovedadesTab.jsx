@@ -1,9 +1,9 @@
 'use client'
 
-import React, { useState } from 'react';
-// import { useInView } from 'react-intersection-observer'
+import React, { useState, useEffect } from 'react';
+import { useInView } from 'react-intersection-observer'
 import Box from '@mui/joy/Box';
-import { GetUltimasImagenes } from '../admin/imagenes/ImagenService';
+import { ListImagesSupabase } from '../admin/imagenes/ImagenService';
 import Grid from '@mui/joy/Grid';
 import ModalClose from '@mui/joy/ModalClose';
 import Modal from '@mui/joy/Modal';
@@ -19,7 +19,7 @@ const IMG = {
 const TabNovedades = ({ cantidad }) => {
   const [open, setOpen] = useState(false);
   const [imgSrc, setImgSrc] = useState('');
-  // const [caption, setCaption] = useState([]);
+  const [caption, setCaption] = useState([]);
 
   // const [refGid, inViewGid] = useInView({
   //   threshold: 0,
@@ -28,6 +28,16 @@ const TabNovedades = ({ cantidad }) => {
   //   scale: [1, 1.5, 1],
   //   rootMargin: '100px 100px 30px 100px'
   // });
+
+
+  // useEffect(() => {
+  //   const fetchDatas = async () => {
+  //     setRecibidos(resp);
+  //   };
+  //   fetchDatas();
+  // }, []);
+
+  const resp = ListImagesSupabase({ imgFirst: 0, imgLimit: cantidad });
 
   const handleOpen = (src, alt) => {
     setImgSrc(src);
@@ -39,7 +49,7 @@ const TabNovedades = ({ cantidad }) => {
     setOpen(false);
   };
 
-  const mostrarImagenes = GetUltimasImagenes(cantidad);
+  // const mostrarImagenes = GetUltimasImagenes(cantidad);
 
 
   return (
@@ -65,11 +75,11 @@ const TabNovedades = ({ cantidad }) => {
         {/* </div> sx={{ width: 270, height: 200, flexGrow: 1, boxShadow: 'sm', borderColor: 'grey' }}> */}
         <Box className="grid gap-x-4 gap-y-3 text-center items-center">
           <div className="flex flex-wrap justify-center ">
-            {mostrarImagenes.slice().reverse().map((item, index) => (
+            {resp.slice().reverse().map((item, index) => (
               <div key={index} className="w-full mx-1.5 md:w-1/2 lg:w-1/4">
                 <div className="mb-3 overflow-hidden rounded-lg">
                   <Grid item xs={4} sm={4} md={4} onClick={() => handleOpen(`${item}`)}>
-                    <ImageComponent key={index} iWidth={320} iHeight={320} iAlt="Alumnos graduados" iSrc={item} loading="lazy" iClassName="cursor-pointer w-full h-[250px] object-cover rounded-md focus:touch-pan-x hover:ease-in-out delay-300 border border-zinc-500 select-none overflow-hidden shadow-sm shadow-gray-300 dark:rounded-md dark:border dark:shadow-sm dark:border-zinc-800 dark:shadow-zinc-800 justify-center" />
+                    <ImageComponent key={index} iWidth={320} iHeight={320} iAlt={item} iSrc={item} loading="lazy" iClassName="cursor-pointer w-full h-[250px] object-cover rounded-md focus:touch-pan-x hover:ease-in-out delay-300 border border-zinc-500 select-none overflow-hidden shadow-sm shadow-gray-300 dark:rounded-md dark:border dark:shadow-sm dark:border-zinc-800 dark:shadow-zinc-800 justify-center" />
                   </Grid>
                 </div>
               </div>
@@ -81,22 +91,22 @@ const TabNovedades = ({ cantidad }) => {
               //   className="select-none flex flex-col">
 
               //   <Grid item xs={4} sm={4} md={4} onClick={() => handleOpen(`${item}`, "Mensaje caption!!!")}>
-              //     <Image key={index} width={320} height={320} alt="Alumnos" src={item} loading="lazy"
-              //       className="object-cover rounded-md focus:touch-pan-x hover:ease-in-out delay-300 border border-zinc-500 select-none overflow-hidden shadow-sm shadow-gray-300 dark:rounded-md dark:border dark:shadow-sm dark:border-zinc-800 dark:shadow-zinc-800 justify-center" />
+              //     <ImageComponent key={index} iWidth={320} iHeight={320} iAlt="Alumnos" iSrc={item} loading="lazy"
+              //       iClassName="object-cover rounded-md focus:touch-pan-x hover:ease-in-out delay-300 border border-zinc-500 select-none overflow-hidden shadow-sm shadow-gray-300 dark:rounded-md dark:border dark:shadow-sm dark:border-zinc-800 dark:shadow-zinc-800 justify-center" />
               //   </Grid>
               // </motion.div>
             ))}
           </div>
 
-          {/* <Modal open={open} onClose={handleClose}>
-          <Sheet>
-            <div id="myModal" className="modal-content" >
-              <ModalClose className="close">&times;</ModalClose>
-              <Image width={IMG.width} height={IMG.height} alt="Alumnos" id="myImg" src={imgSrc} loading="lazy" className="object-cover rounded-xl focus:touch-pan-x delay-200 border border-zinc-500 select-none dark:rounded-xl dark:border justify-center" />
-              <div id="caption" className="text-center text-gray-900 dark:text-white">{caption}</div>
+          <Modal open={open} onClose={handleClose}>
+            <Sheet>
+              <div id="myModal" className="modal-content" >
+                <ModalClose className="close">&times;</ModalClose>
+                <ImageComponent width={IMG.width} height={IMG.height} alt="Alumnos" id="myImg" src={imgSrc} loading="lazy" className="object-cover rounded-xl focus:touch-pan-x delay-200 border border-zinc-500 select-none dark:rounded-xl dark:border justify-center" />
+                <div id="caption" className="text-center text-gray-900 dark:text-white">{caption}</div>
               </div>
-              </Sheet>
-              </Modal> */}
+            </Sheet>
+          </Modal>
 
           <Modal id="myModal" open={open} onClose={handleClose} className="flex flex-wrap justify-center self-center">
             <Sheet className="w-fit h-fit rounded-xl flex" >
@@ -104,9 +114,9 @@ const TabNovedades = ({ cantidad }) => {
               <ImageComponent iWidth={IMG.width} iHeight={IMG.height} iAlt="Alumnos" id="myImg" iSrc={imgSrc} loading="lazy" iClassName="object-cover rounded-xl focus:touch-pan-x delay-200 border border-zinc-500 select-none dark:rounded-lg dark:border justify-center" />
             </Sheet>
           </Modal>
-          {/* {cantidad === 6 && <Link href="/galeria-media" className="text-base text-primary-800 hover:text-primary-600 dark:hover:text-primary-300 dark:text-primary-400">
-          Mostrar todo &rarr;
-        </Link>} */}
+          {/* {cantidad === 6 && <a href="/galeria-media" className="text-base text-primary-800 hover:text-primary-600 dark:hover:text-primary-300 dark:text-primary-400">
+            Mostrar todo &rarr;
+          </a>} */}
         </Box>
       </div>
     </>

@@ -18,6 +18,7 @@ const SectionElegirnosFortaleza = () => {
 		fetchDatas();
 	}, []);
 
+	
 	const itemData = [{
 		desc: "100%", title: 'Calificaciones positivas',
 		iconSvg: "M22 11.08V12a10 10 0 11-5.93-9.14 M22 4L12 14.01l-3-3", estHref: import.meta.env.VITE_GOOGLE_REVIEW

@@ -45,14 +45,15 @@ import { supabase } from '../../utils/supabase';
 //   return imagenesUrls;
 // }
 
+
+
 ////////////////////////////////////////////
 
 // SUPABASE
-
 const URL = import.meta.env.VITE_SUPABASE_STORAGE_URL;
 
 // Obtener la lista de imágenes desde Supabase
-export function ListImagesSupabase({ imgFirst = 0, imgLimit = 100 }) {
+export function ListImagesSupabase({ imgFirst = 1, imgLimit = 170 }) {
   const [images, setimages] = useState([]);
 
   useEffect(() => {
