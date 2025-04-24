@@ -33,96 +33,71 @@ const SectionRedesFortaleza = () => {
 
         <section className="z-20 overflow-hidden dark:bg-[#182341] lg:pb-[50px] lg:pt-[10px] -pt-[30px] delay-500 mx-auto justify-center items-center">
           <div className="container group pb-2 mx-auto justify-center items-center">
-            <div className="max-w-[700px] flex flex-col mx-auto ">
+            <div className="max-w-[700px] flex flex-col mx-auto">
 
               <div className="lg:w-1/1">
                 <div className="relative z-[10] lg:grid lg:grid-cols-6 lg:gap-6 lg:items-center">
                   <div className="mb-8 mt-4 lg:mb-0 lg:col-span-6 lg:col-start-8 lg:order-2 z-[1000]">
                     <ScrollAnimation
                       description={
-
                         <nav className="grid gap-2 mt-4 md:mt-10 justify-center" aria-label="Tabs" role="tablist" aria-orientation="vertical">
                           <button aria-label="Redes" className="max-w-[400px] rounded-lg border-[0.1rem] bg-slate-900 hover:border-blue-600 ring-1 dark:border-slate-300/20 dark:bg-[#111928]/40 ring-blue/30 dark:hover:bg-blue-800/40 dark:focus:bg-blue/50" onClick={() => handleTabClick("tabs-with-card-1")}
-                            role="tab"
-                            aria-selected={activeTab === "tabs-with-card-1"}
-                            aria-controls="tabpanel-1"
-                            id="tab-1">
+                            role="tab" aria-selected={activeTab === "tabs-with-card-1"}
+                            aria-controls="tabpanel-1" id="tab-1">
                             <div className="flex items-center justify-start gap-4 px-20 my-3">
                               {activeTab === "tabs-with-card-1" ? (
-                                <a href={import.meta.env.VITE_INSTAGRAM} target="_blank" rel="noopener noreferrer" className="flex gap-4 items-center justify-start " aria-label="Instagram" >
+                                <a href={import.meta.env.VITE_INSTAGRAM} target="_blank" rel="noopener noreferrer" className="flex gap-4 items-center justify-start" aria-label="Instagram" >
                                   <PiEyeBold size="30px" color="#fff" />
-                                  <h3 className="block text-lg font-semibold hs-tab-active:text-blue-500 text-neutral-200 dark:hs-tab-active:text-blue-500 dark:text-neutral-200">
-                                    Instagram
-                                  </h3>
+                                  <h3 className="block text-lg font-semibold hs-tab-active:text-blue-500 text-neutral-200 dark:hs-tab-active:text-blue-500 dark:text-neutral-200">Instagram</h3>
                                 </a>
                               ) : (
                                 <>
                                   <IoLogoInstagram size="30px" color="#fff" />
-                                  <h3 className="block text-lg font-semibold hs-tab-active:text-blue-500 text-neutral-200 dark:hs-tab-active:text-blue-500 dark:text-neutral-200">
-                                    Instagram
-                                  </h3>
+                                  <h3 className="block text-lg font-semibold hs-tab-active:text-blue-500 text-neutral-200 dark:hs-tab-active:text-blue-500 dark:text-neutral-200">Instagram</h3>
                                 </>
                               )}
                             </div>
                           </button>
 
-
                           <button className="max-w-[400px] rounded-lg border-[0.1rem] bg-slate-900 hover:border-blue-600 ring-1 dark:border-slate-300/20 dark:bg-[#111928]/40 ring-blue/30 dark:hover:bg-blue-800/40 dark:focus:bg-blue/50" onClick={() => handleTabClick("tabs-with-card-2")}
-                            role="tab"
-                            aria-selected={activeTab === "tabs-with-card-2"}
-                            aria-controls="tabpanel-2"
-                            id="tab-2">
+                            role="tab" aria-selected={activeTab === "tabs-with-card-2"} aria-controls="tabpanel-2" id="tab-2">
                             <div className="flex items-center justify-start gap-4 px-20 py-3">
                               {activeTab === "tabs-with-card-2" ? (
-                                <a href={import.meta.env.VITE_FACEBOOK} target="_blank" rel="noopener noreferrer" className="flex gap-4 items-center justify-start" aria-label="Facebook" >
+                                <a href={import.meta.env.VITE_FACEBOOK} target="_blank" rel="noopener noreferrer" className="flex gap-4 items-center justify-start" aria-label="Facebook">
                                   <PiEyeBold size="30px" color="#fff" />
-                                  <h3 className="block text-lg font-semibold hs-tab-active:text-blue-500 text-neutral-200 dark:hs-tab-active:text-blue-500 dark:text-neutral-200">
-                                    Facebook
-                                  </h3>
+                                  <h3 className="block text-lg font-semibold hs-tab-active:text-blue-500 text-neutral-200 dark:hs-tab-active:text-blue-500 dark:text-neutral-200">Facebook</h3>
                                 </a>
                               ) : (
                                 <>
                                   <IoLogoFacebook size="30px" color="#fff" />
-                                  <h3 className="block text-lg font-semibold hs-tab-active:text-blue-500 text-neutral-200 dark:hs-tab-active:text-blue-500 dark:text-neutral-200">
-                                    Facebook
-                                  </h3>
+                                  <h3 className="block text-lg font-semibold hs-tab-active:text-blue-500 text-neutral-200 dark:hs-tab-active:text-blue-500 dark:text-neutral-200">Facebook</h3>
                                 </>
                               )}
                             </div>
                           </button>
 
-
                           <button className="max-w-[400px] rounded-lg border-[0.1rem] bg-slate-900 hover:border-blue-600 ring-1 dark:border-slate-300/20 dark:bg-[#111928]/40 ring-blue/30 dark:hover:bg-blue-800/40 dark:focus:bg-blue/50" onClick={() => handleTabClick("tabs-with-card-3")}
-                            role="tab"
-                            aria-selected={activeTab === "tabs-with-card-3"}
-                            aria-controls="tabpanel-3"
-                            id="tab-3">
+                            role="tab" aria-selected={activeTab === "tabs-with-card-3"} aria-controls="tabpanel-3" id="tab-3">
                             <div className="flex items-center justify-start gap-4 px-20 py-3">
                               {activeTab === "tabs-with-card-3" ? (
                                 <a href={import.meta.env.VITE_YOUTUBE} target="_blank" rel="noopener noreferrer" className="flex gap-4 items-center justify-start" aria-label="Youtube" >
                                   <PiEyeBold size="30px" color="#fff" />
-                                  <h3 className="block text-lg font-semibold hs-tab-active:text-blue-500 text-neutral-200 dark:hs-tab-active:text-blue-500 dark:text-neutral-200">
-                                    Youtube
-                                  </h3>
+                                  <h3 className="block text-lg font-semibold hs-tab-active:text-blue-500 text-neutral-200 dark:hs-tab-active:text-blue-500 dark:text-neutral-200">Youtube</h3>
                                 </a>
                               ) : (
                                 <>
                                   <IoLogoYoutube size="30px" color="#fff" />
-                                  <h3 className="block text-lg font-semibold hs-tab-active:text-blue-600 text-neutral-200 dark:hs-tab-active:text-blue-500 dark:text-neutral-200">
-                                    Youtube
-                                  </h3>
+                                  <h3 className="block text-lg font-semibold hs-tab-active:text-blue-600 text-neutral-200 dark:hs-tab-active:text-blue-500 dark:text-neutral-200">Youtube</h3>
                                 </>
                               )}
                             </div>
                           </button>
                         </nav>
                       }
-                      duration={1}
-                      delay={0.5}
+                      duration={1} delay={0.5}
                       // rootMargin="0px 0px -10px 0px"
                       effect={{ initial: { opacity: 0, x: 100 }, animate: { opacity: 1, x: 0 } }}
-                      transition={{ duration: 0.9, delay: 0.5, ease: 'easeInOut' }}
-                    />
+                      transition={{ duration: 0.9, delay: 0.5, ease: 'easeInOut' }} />
                   </div>
 
                   <ScrollAnimation
@@ -130,19 +105,18 @@ const SectionRedesFortaleza = () => {
                       <div className="relative mx-auto lg:col-span-5">
                         <div className="flex justify-center items-center mx-auto">
                           <div id="tabs-with-card-1" className={activeTab === "tabs-with-card-1" || activeTab === "tabs-with-card-0" ? "" : "hidden"} role="tabpanel" aria-labelledby="tabs-with-card-item-1">
-                            <ImageComponent iSrc="/static/images/redes/instagram.png" iClassName="shadow-xl shadow-gray-200 rounded-[40px] dark:shadow-gray-900/20 max-w-[280px]" iAlt="Instagram" iWidth={315} iHeight={642} />
+                            <ImageComponent iSrc="/static/images/redes/instagram.png" iClassName="shadow-xl shadow-gray-200 rounded-[40px] dark:shadow-gray-900/20 min-w-[280px]" iAlt="Instagram" iWidth={315} iHeight={642} />
                           </div>
                           <div id="tabs-with-card-2" className={activeTab === "tabs-with-card-2" ? "" : "hidden"} role="tabpanel" aria-labelledby="tabs-with-card-item-2">
-                            <ImageComponent iClassName="shadow-xl shadow-gray-200 rounded-[40px] dark:shadow-gray-900/20 max-w-[280px]" iSrc="/static/images/redes/s.png" iAlt="Facebook" iWidth={315} iHeight={642} />
+                            <ImageComponent iClassName="shadow-xl shadow-gray-200 rounded-[40px] dark:shadow-gray-900/20 min-w-[280px]" iSrc="/static/images/redes/s.png" iAlt="Facebook" iWidth={315} iHeight={642} />
                           </div>
                           <div id="tabs-with-card-3" className={activeTab === "tabs-with-card-3" ? "" : "hidden"} role="tabpanel" aria-labelledby="tabs-with-card-item-3">
-                            <ImageComponent iClassName="shadow-xl shadow-gray-200 rounded-[40px] dark:shadow-gray-900/20 max-w-[280px]" iSrc="/static/images/redes/you.png" iAlt="Sitio web" iWidth={315} iHeight={642} />
+                            <ImageComponent iClassName="shadow-xl shadow-gray-200 rounded-[40px] dark:shadow-gray-900/20 min-w-[280px]" iSrc="/static/images/redes/you.png" iAlt="Sitio web" iWidth={315} iHeight={642} />
                           </div>
                         </div>
                       </div>
                     }
-                    duration={1}
-                    delay={0.5}
+                    duration={1} delay={0.5}
                     // rootMargin="0px 0px -10px 0px"
                     effect={{ initial: { opacity: 0, x: -100 }, animate: { opacity: 1, x: 0 } }}
                     transition={{ duration: 0.9, delay: 0.5, ease: 'easeInOut' }}
@@ -154,7 +128,6 @@ const SectionRedesFortaleza = () => {
         </section>
 
       </div>
-
     </>
   );
 };

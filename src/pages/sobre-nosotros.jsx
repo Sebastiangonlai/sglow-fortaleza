@@ -1,9 +1,9 @@
 import React from 'react';
 import ImageComponent from "@/components/ImageComponent";
-// import { SocialIcon } from '@/components/social-icons'
 import Breadcrumb from '@/components/Breadcrumb';
 import SectionTeam from '@/components/section/SectionTeam';
 // import PageSEO from '@/components/SEO';
+// import { SocialIcon } from '@/components/social-icons'
 
 
 const IMGlogo = {
@@ -22,7 +22,6 @@ const SobreNosotrosIndex = () => {
 
   return (
     <>
-
       <Breadcrumb
         title="Sobre Nosotros"
         subtitle="Conoce más sobre nosotros."

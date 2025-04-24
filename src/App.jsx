@@ -16,7 +16,6 @@ import Home from '@/pages/index.jsx';
 // import Contacto from '@/pages/contacto.jsx';
 
 
-
 function App() {
   const handleResize = () => setWindowWidth(window.innerWidth);
   const [windowWidth, setWindowWidth] = useState();

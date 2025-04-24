@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/game/card"
 import GameCanvas from "./components/game/GameCanvas"
 import QuestionModal from "./components/game/QuestionModal"
 import questions from "./data/questions"
-import { HelpModal, HelpModals } from "./components/game/HelpModal"
+import { HelpModal } from "./components/game/HelpModal"
 import ImageComponent from "./components/ImageComponent"
 import Timer from "./components/game/Timer";
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'

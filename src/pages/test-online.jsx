@@ -17,6 +17,7 @@ import { BsSignStop, BsSignStopLights } from "react-icons/bs";
 import { URL_PDF } from '@/data/constants';
 // import PageSEO from '@/components/SEO';
 
+
 const TestOnline = () => {
   const [openPdf, setOpenPdf] = useState(false);
   const [activa, setActiva] = useState(false);
@@ -33,7 +34,7 @@ const TestOnline = () => {
     <>
       {/* <PageSEO title="Test Online - Academia Fortaleza" description="Practica con nuestro test online y prepárate para el examen teórico de la licencia de conducir." /> */}
 
-      <div className=" dark:bg-[#111928]">
+      <div className="dark:bg-[#111928]">
         <StrictMode>
           <StyledEngineProvider injectFirst>
 
@@ -92,7 +93,7 @@ const TestOnline = () => {
                             <ImageComponent iSrc="/static/doc/portada.webp" iAlt="Téorico IMM" loading="lazy" iWidth={100} iHeight={100} />
                           </AspectRatio>
                         </CardOverflow>
-                        <CardContent  >
+                        <CardContent>
                           <Typography className="dark:text-white" fontWeight="md">Téorico IMM</Typography>
                           <Typography level="body-sm" className="dark:text-gray-300">Guia nacional de conducción</Typography>
                         </CardContent>
@@ -105,10 +106,7 @@ const TestOnline = () => {
                       <Card className="bg-[#111928]/10 dark:hover:border dark:hover:border-blue-600 dark:text-white dark:border-slate-300/20" orientation="horizontal" variant="outlined" sx={{ width: 340 }}>
                         <CardOverflow>
                           <AspectRatio ratio="1" sx={{ width: 90 }}>
-                            <ImageComponent
-                              iSrc="/static/images/card/servicio_2.webp"
-                              iAlt="Examen Practico"
-                              loading="lazy" iWidth={100} iHeight={100} />
+                            <ImageComponent iSrc="/static/images/card/servicio_2.webp" iAlt="Examen Practico" loading="lazy" iWidth={100} iHeight={100} />
                           </AspectRatio>
                         </CardOverflow>
                         <CardContent>

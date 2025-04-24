@@ -9,11 +9,11 @@ export default function PreguntasFrecuentes() {
     <>
       {/* <PageSEO title="Preguntas Frecuentes - Academia Fortaleza" description="Encuentra respuestas a las preguntas más frecuentes sobre nuestros cursos y servicios." /> */}
 
-        <Breadcrumb
-          title="Preguntas Frecuentes"
-          subtitle="Encuentra respuestas a las preguntas más frecuentes sobre nuestros cursos y servicios."
-          nameUri="FAQ"
-          href="preguntas-frecuentes" />
+      <Breadcrumb
+        title="Preguntas Frecuentes"
+        subtitle="Encuentra respuestas a las preguntas más frecuentes sobre nuestros cursos y servicios."
+        nameUri="FAQ"
+        href="preguntas-frecuentes" />
 
       <div className="container">
         <div className="animate__animated animate__fadeInUp lg:mt-[30px] mt-10">
