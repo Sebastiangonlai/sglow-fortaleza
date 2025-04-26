@@ -1,4 +1,5 @@
-{/*********  by δεϐąstián *********/ }
+'use client'
+
 import SectionHeader from '@/components/home/SectionHeaderFortaleza';
 import SectionOfrecemos from '@/components/home/SectionOfrecemosFortaleza';
 import SectionElegirnos from '@/components/home/SectionElegirnosFortaleza';
@@ -15,7 +16,6 @@ import SectionNuestrosServicios from '@/components/home/SectionNuestrosServicios
 export default function Home() {
   return (
     <>
-      {/* <Suspense fallback={<LoadingSpinner />}> */}
         <section id="inicio" className="overflow-hidden">
           <SectionHeader />
         </section>
@@ -59,7 +59,6 @@ export default function Home() {
         {/* <section id="trabaja-con-nosotros">
         <SectionTrabajaConNosotros />
       </section> */}
-      {/* </Suspense> */}
     </>
   );
 }

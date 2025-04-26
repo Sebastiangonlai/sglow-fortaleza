@@ -1,7 +1,6 @@
 import React from 'react';
 import Breadcrumb from '@/components/Breadcrumb';
 import ImageComponent from '@/components/ImageComponent';
-// import PageSEO from '@/components/SEO';
 
 
 export default function ClasesPracticas() {

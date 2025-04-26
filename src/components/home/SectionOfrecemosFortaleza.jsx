@@ -1,3 +1,5 @@
+'use client'
+
 import React from "react";
 import { RiUserStarLine, RiCarLine, RiSteering2Fill, RiIdCardLine } from "react-icons/ri";
 import TitleHeader from "@/components/TitleHeader";

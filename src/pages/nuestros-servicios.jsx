@@ -3,7 +3,6 @@ import { Modal, ModalBody, ModalContent, ModalTrigger, ModalFooter } from "@/lib
 import Breadcrumb from "@/components/Breadcrumb";
 import nuestrosServiciosData from '@/data/nuestrosServiciosData'
 import ImageComponent from "@/components/ImageComponent";
-// import PageSEO from "@/components/SEO";
 
 
 const NuestrosServicios = () => {

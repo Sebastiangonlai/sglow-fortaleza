@@ -5,8 +5,7 @@ import SectionPricing from '@/components/section/SectionPricing';
 import ButtonSection from '@/components/ButtonSection';
 import { URL_PDF } from '@/data/constants';
 import Modal from '@mui/joy/Modal';
-// import Image from 'next/image';
-// import PageSEO from '@/components/SEO';
+
 
 
 const LicenciaDeConducir = () => {

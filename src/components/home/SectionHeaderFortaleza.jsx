@@ -14,7 +14,7 @@ const SectionHeaderFortaleza = () => {
     }, 1800);
     return () => clearTimeout(timer);
   }, []);
-  
+
 
   return (
     <section className="flex flex-col select-none items-center overflow-hidden justify-center h-screen">
@@ -80,18 +80,17 @@ const SectionHeaderFortaleza = () => {
         </span>
       )}
 
-
-      <h1 className="z-[100] -mt-28 lg:pt-24 sm:mt-6">
+      <h1 className="z-[100] -mt-28 lg:pt-4 sm:mt-6">
         <TypewriterEffectSmoothDemo />
       </h1>
       <div className="flex md:flex lg:flex flex-col justify-center items-center overflow-hidden">
-        <div className="bg-transparent relative dark:bg-transparent rounded-xl mt-6 sm:mt-0 ">
+        <div className="bg-transparent relative dark:bg-transparent rounded-xl">
           <div className="anim-left">
             <ImageComponent
               iSrc="/static/images/carousel/auto-gris.webp"
               iAlt="Obtén tu licencia de conducir"
-              iWidth={900}
-              iHeight={390}
+              iWidth={640}
+              iHeight={384}
               iClassName="my-5 -mx-6 pr-28 absolute rounded-3xl inset-0 object-cover transition-transform ease-in-out contrast-150 brightness-100 min-w-full" />
           </div>
 
@@ -99,8 +98,8 @@ const SectionHeaderFortaleza = () => {
             <ImageComponent
               iSrc="/static/images/carousel/auto-azulb.webp"
               iAlt="Nuestra flota"
-              iWidth={800}
-              iHeight={600}
+              iWidth={640}
+              iHeight={384}
               iClassName="rounded-3xl inset-0 object-cover object-center transition-transform ease-in-out contrast-105 brightness-100" />
           </div>
         </div>

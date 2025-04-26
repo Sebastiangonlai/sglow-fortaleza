@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useState } from "react";
 import TitleHeader from "@/components/TitleHeader";
 import { IoLogoInstagram, IoLogoFacebook, IoLogoYoutube } from "react-icons/io5";

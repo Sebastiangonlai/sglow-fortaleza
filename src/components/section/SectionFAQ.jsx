@@ -80,7 +80,7 @@ const AccordionItem = ({ header, text, index, activeIndex, handleToggle }) => {
     <AccordionGroup
       variant="outlined"
       color="neutral"
-      transition="0.2s"     
+      transition="0.2s"
       border='1px solid #e2e3e5'
       className="animate__animated animate__bounceInLeft"
       sx={{
@@ -108,15 +108,14 @@ const AccordionItem = ({ header, text, index, activeIndex, handleToggle }) => {
 
       <Accordion expanded={isActive} onChange={() => handleToggle(index)}>
         <AccordionSummary
-          // expandIcon={<Plus />}
-          aria-controls={`${header}`}
+          aria-controls={`panel${index}-content`}
           id={`panel${index}-header`}
           className="pb-1 pt-1 lg:pb-0 lg:pt-0 sm:p-2 lg:px-2 xl:px-2 text-left">
           <div className="relative cursor-pointer text-[16px] list-none pr-4 font-semibold duration-300 leading-tight tracking-tight">
             {header}
           </div>
         </AccordionSummary>
-        <AccordionDetails>
+        <AccordionDetails id={`panel${index}-content`}>
           <p className="-mt-[6px] pb-[2px] inline-block align-middle text-[15px] font-normal text-gray-400 dark:text-gray-300 leading-tight tracking-tight">
             {text}
           </p>

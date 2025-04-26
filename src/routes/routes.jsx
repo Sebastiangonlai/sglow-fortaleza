@@ -1,5 +1,6 @@
 import React, { lazy } from 'react';
-const  Home  = lazy(() => import('@/pages/index.jsx'));
+
+const Home = lazy(() => import('@/pages/index.jsx'));
 const GaleriaMedia = lazy(() => import('@/pages/galeria-media.jsx'));
 const NuestrosServicios = lazy(() => import('@/pages/nuestros-servicios.jsx'));
 const PreguntasFrecuentes = lazy(() => import('@/pages/preguntas-frecuentes.jsx'));

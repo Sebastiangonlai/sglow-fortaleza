@@ -1,10 +1,10 @@
 import React from 'react';
 import { Routes, Route } from "react-router-dom";
 import routes from '@/routes/routes';
+import ErrorBoundary from "@/routes/ErrorBoundary";
 
 import NavBar from "@/components/common/NavBar";
 import Footer from "@/components/common/Footer";
-import ErrorBoundary from "@/routes/ErrorBoundary";
 
 function App() {
   return (
