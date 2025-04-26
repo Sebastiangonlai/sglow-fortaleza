@@ -1,21 +1,21 @@
 'use client';
 import React from 'react';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
-import ButtonSection from '@/components/BtnSection';
+import ButtonSection from '@/components/ButtonSection';
 import ImageComponent from '@/components/ImageComponent';
 import Link from '@/components/Link';
 
 
 const imgalumnos = [
-  { srcalum: "/static/images/alumnos/alumno20.webp" },
-  { srcalum: "/static/images/alumnos/alumno21.webp" },
-  { srcalum: "/static/images/alumnos/alumno22.webp" },
-  { srcalum: "/static/images/alumnos/alumno23.webp" },
-  { srcalum: "/static/images/alumnos/alumno24.webp" },
-  { srcalum: "/static/images/alumnos/alumno25.webp" },
-  { srcalum: "/static/images/alumnos/alumno26.webp" },
-  { srcalum: "/static/images/alumnos/alumno27.webp" },
-  { srcalum: "/static/images/alumnos/alumno28.webp" },
+  { id: 1, srcalum: "/static/images/alumnos/alumno20.webp" },
+  { id: 2, srcalum: "/static/images/alumnos/alumno21.webp" },
+  { id: 3, srcalum: "/static/images/alumnos/alumno22.webp" },
+  { id: 4, srcalum: "/static/images/alumnos/alumno23.webp" },
+  { id: 5, srcalum: "/static/images/alumnos/alumno24.webp" },
+  { id: 6, srcalum: "/static/images/alumnos/alumno25.webp" },
+  { id: 7, srcalum: "/static/images/alumnos/alumno26.webp" },
+  { id: 8, srcalum: "/static/images/alumnos/alumno27.webp" },
+  { id: 9, srcalum: "/static/images/alumnos/alumno28.webp" },
 ];
 
 const SectionGraduadosFortaleza = () => {
@@ -35,10 +35,10 @@ const SectionGraduadosFortaleza = () => {
   // Ajustar la configuración del resorte para un desplazamiento más fluido
   const springConfig = {
     // stiffness: 300, damping: 50, bounce: 10, mass: 2,
-    stiffness: 100, damping: 20, bounce: 0.25,
+    stiffness: 100, damping: 20,
   };
-  const translateX = useSpring(useTransform(scrollYProgress, [0, 0.5], [0, 500]), springConfig);
-  const translateXReverse = useSpring(useTransform(scrollYProgress, [0, 0.5], [0, -500]), springConfig);
+  const translateX = useSpring(useTransform(scrollYProgress, [0, 0.5], [0, 400]), springConfig);
+  const translateXReverse = useSpring(useTransform(scrollYProgress, [0, 0.5], [0, -400]), springConfig);
   // const rotateX = useSpring(useTransform(scrollYProgress, [0, 0.2], [15, 0]), springConfig);
   const opacity = useSpring(useTransform(scrollYProgress, [0, 0.2], [0.3, 0.5]), springConfig);
   const rotateZ = useSpring(useTransform(scrollYProgress, [0, 0.2], [20, 0]), springConfig);
@@ -49,20 +49,29 @@ const SectionGraduadosFortaleza = () => {
       <div ref={ref} className="h-full pb-4 py-5 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]">
         <Header />
         <motion.div style={{ rotateZ, translateY, opacity }}>
-          {groups.map((group, index) => (
+          {/* {groups.map((group, index) => (
             <motion.div
               className={`flex ${index % 2 === 0 ? 'flex-row-reverse space-x-reverse' : 'flex-row'} ml-8 mb-8 lg:ml-8 lg:mb-8`}
               key={index}>
               {group.map((product, idx) => (
                 <ProductCard key={idx.srcalum} product={product} translate={index % 2 === 0 ? translateX : translateXReverse} />
               ))}
+            </motion.div> */}
+          {groups.map((group, index) => (
+            <motion.div
+              className={`flex ${index % 2 === 0 ? 'flex-row-reverse space-x-reverse' : 'flex-row'} ml-8 mb-8 lg:ml-8 lg:mb-8`}
+              key={index} // Key único para el grupo
+            >
+              {group.map((product) => (
+                <ProductCard key={product.id} product={product} translate={index % 2 === 0 ? translateX : translateXReverse} />
+              ))}
             </motion.div>
           ))}
         </motion.div>
+        <ButtonSection
+          namebtn="Fotos de nuestros graduados"
+          uri="/galeria-media" />
       </div>
-      <ButtonSection
-        namebtn="Fotos de nuestros graduados"
-        uri="/galeria-media" />
     </>
   );
 };
@@ -73,10 +82,10 @@ export default SectionGraduadosFortaleza;
 export const Header = () => {
   return (
     <div className="max-w-7xl absolute mx-auto py-40 md:py-40 px-4 w-full left-0 top-0 z-[100]">
-      <h1 className="text-4xl md:text-6xl font-bold dark:text-white">
+      <h1 className="text-4xl md:text-6xl font-bold dark:text-white text-shadow-sm/50">
         Nuestros <br /> Graduados
       </h1>
-      <p className="max-w-2xl text-base md:text-xl mt-3 lg:mt-4 dark:text-neutral-300 tracking-tight leading-tight">
+      <p className="max-w-2xl text-base md:text-xl mt-3 lg:mt-4 dark:text-neutral-300 tracking-tight leading-tight text-shadow-sm/50">
         Nuestro mayor orgullo es ver a nuestros alumnos obtener su libreta y cumplir su meta.
       </p>
       <Link className="inline-flex items-center gap-x-2 text-blue-500 decoration-2 dark:hover:text-blue-300 focus:outline-none font-medium dark:text-blue-300 text-[20px]" href="/galeria-media">
@@ -94,9 +103,8 @@ export const ProductCard = ({ product, translate }) => {
       transition={{ duration: 1 }}
       // whileHover={{ y: -20, }}
       key={product}
-      className="group/product h-[17rem] w-[20rem] lg:h-96 lg:w-[40rem] ml-6 relative flex-shrink-0">
-      <ImageComponent iSrc={product.srcalum} iClassName="object-cover object-left-top absolute h-full w-full inset-0 rounded-3xl" iAlt="Licencia de conducir"
-        iWidth={300} iHeight={300} />
+      className=" h-[17rem] w-[20rem] lg:h-90 lg:w-[40rem] ml-6 relative flex-shrink-0">
+      <ImageComponent iSrc={product.srcalum} iClassName="object-cover object-left-top absolute h-full w-full inset-0 rounded-3xl" iAlt="Licencia de conducir" iWidth={30} iHeight={30} />
     </motion.div>
   );
 };

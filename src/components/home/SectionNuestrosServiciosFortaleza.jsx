@@ -2,7 +2,7 @@
 
 import serviceData from '@/data/serviceDataIndex'
 import { GlowingStarsDescription } from "@/lib/glowing-stars";
-import ButtonSection from "@/components/BtnSection";
+import ButtonSection from "@/components/ButtonSection";
 import TitleHeader from "@/components/TitleHeader";
 import { FiChevronRight } from "react-icons/fi";
 import ImageComponent from '@/components/ImageComponent';

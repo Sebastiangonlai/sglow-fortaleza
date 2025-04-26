@@ -105,13 +105,13 @@ const SectionRedesFortaleza = () => {
                       <div className="relative mx-auto lg:col-span-5">
                         <div className="flex justify-center items-center mx-auto">
                           <div id="tabs-with-card-1" className={activeTab === "tabs-with-card-1" || activeTab === "tabs-with-card-0" ? "" : "hidden"} role="tabpanel" aria-labelledby="tabs-with-card-item-1">
-                            <ImageComponent iSrc="/static/images/redes/instagram.png" iClassName="shadow-xl shadow-gray-200 rounded-[40px] dark:shadow-gray-900/20 min-w-[280px]" iAlt="Instagram" iWidth={315} iHeight={642} />
+                            <ImageComponent iSrc="/static/images/redes/instagram.webp" iClassName="shadow-xl shadow-gray-200 rounded-[40px] dark:shadow-gray-900/20 min-w-[280px]" iAlt="Instagram" iWidth={315} iHeight={642} />
                           </div>
                           <div id="tabs-with-card-2" className={activeTab === "tabs-with-card-2" ? "" : "hidden"} role="tabpanel" aria-labelledby="tabs-with-card-item-2">
-                            <ImageComponent iClassName="shadow-xl shadow-gray-200 rounded-[40px] dark:shadow-gray-900/20 min-w-[280px]" iSrc="/static/images/redes/s.png" iAlt="Facebook" iWidth={315} iHeight={642} />
+                            <ImageComponent iClassName="shadow-xl shadow-gray-200 rounded-[40px] dark:shadow-gray-900/20 min-w-[280px]" iSrc="/static/images/redes/s.webp" iAlt="Facebook" iWidth={315} iHeight={642} />
                           </div>
                           <div id="tabs-with-card-3" className={activeTab === "tabs-with-card-3" ? "" : "hidden"} role="tabpanel" aria-labelledby="tabs-with-card-item-3">
-                            <ImageComponent iClassName="shadow-xl shadow-gray-200 rounded-[40px] dark:shadow-gray-900/20 min-w-[280px]" iSrc="/static/images/redes/you.png" iAlt="Sitio web" iWidth={315} iHeight={642} />
+                            <ImageComponent iClassName="shadow-xl shadow-gray-200 rounded-[40px] dark:shadow-gray-900/20 min-w-[280px]" iSrc="/static/images/redes/you.webp" iAlt="Sitio web" iWidth={315} iHeight={642} />
                           </div>
                         </div>
                       </div>

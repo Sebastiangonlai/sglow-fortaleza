@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useCallback } from "react"
-import {  Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Sheet, SheetContent } from "../sheet.jsx";
 
 
@@ -35,13 +35,15 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="fixed w-screen top-0 z-120 border-b border-violet-200/20 backdrop-blur-sm supports-[backdrop-filter]:bg-[#020817]/80 text-gray-100 select-none" >
+    <div className="fixed w-screen top-0 z-120 border-b border-violet-200/10 backdrop-blur-sm supports-[backdrop-filter]:bg-[#020817]/90 text-gray-100 select-none" >
       <div className="container flex h-16 items-center justify-between" >
         {/* Logo */}
         <a href="/#inicio" onClick={(e) => { handleMenuClose(); handleSmoothScroll(e, "#inicio"); }}
           className="flex items-center px-4" aria-label="Inicio">
-          <img src="https://sglow-fortaleza.vercel.app/logo.webp" alt="Logo" width={48} height={48} />
-          <span className="text-2xl font-bold text-gray-100 ml-2">Academia Fortaleza</span>
+          <img src="https://sglow-fortaleza.vercel.app/logo.webp" 
+            className="h-10 w-10 rounded-full object-cover"
+            alt="Logo Fortaleza" />
+          <span className="text-xl font-bold text-gray-100 ml-2">Academia Fortaleza</span>
         </a>
 
         {/* Desktop Navigation */}
@@ -51,7 +53,7 @@ const Navbar = () => {
               href={`/${href}`}
               onClick={(e) => { handleMenuClose(); handleSmoothScroll(e, href); }}
               aria-label={label}
-              className={`relative font-medium transition-colors duration-300 after:absolute justify-end right-0 after:right-0 after:bottom-0 after:h-0.5 after:w-0 after:bg-violet-400 after:transition-all hover:after:w-full hover:text-violet-400`}>
+              className={`relative font-medium transition-colors duration-500 after:absolute justify-end right-0 after:right-0 after:bottom-0 after:h-0.5 after:w-0 after:bg-violet-400 after:transition-all hover:after:w-full hover:text-violet-400`}>
               {label}
             </a>
           ))}

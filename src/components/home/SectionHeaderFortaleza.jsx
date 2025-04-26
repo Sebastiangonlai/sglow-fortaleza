@@ -18,9 +18,6 @@ const SectionHeaderFortaleza = () => {
 
   return (
     <section className="flex flex-col select-none items-center overflow-hidden justify-center h-screen">
-      <h1 className="z-[100] -mt-28 lg:pt-24 sm:mt-6">
-        <TypewriterEffectSmoothDemo />
-      </h1>
       {showBackgroundLines && (
         <BackgroundLines className="absolute select-none justify-center items-center top-0 left-0" />
       )}
@@ -84,6 +81,9 @@ const SectionHeaderFortaleza = () => {
       )}
 
 
+      <h1 className="z-[100] -mt-28 lg:pt-24 sm:mt-6">
+        <TypewriterEffectSmoothDemo />
+      </h1>
       <div className="flex md:flex lg:flex flex-col justify-center items-center overflow-hidden">
         <div className="bg-transparent relative dark:bg-transparent rounded-xl mt-6 sm:mt-0 ">
           <div className="anim-left">
@@ -92,16 +92,16 @@ const SectionHeaderFortaleza = () => {
               iAlt="Obtén tu licencia de conducir"
               iWidth={900}
               iHeight={390}
-              iClassName="my-5 -mx-6 pr-28 absolute rounded-3xl inset-0 object-cover transition-transform ease-in-out contrast-125 brightness-100" />
+              iClassName="my-5 -mx-6 pr-28 absolute rounded-3xl inset-0 object-cover transition-transform ease-in-out contrast-150 brightness-100 min-w-full" />
           </div>
 
           <div className="anim-leftb">
             <ImageComponent
               iSrc="/static/images/carousel/auto-azulb.webp"
               iAlt="Nuestra flota"
-              iWidth={880}
+              iWidth={800}
               iHeight={600}
-              iClassName="rounded-3xl inset-0 object-cover object-center transition-transform ease-in-out brightness-100" />
+              iClassName="rounded-3xl inset-0 object-cover object-center transition-transform ease-in-out contrast-105 brightness-100" />
           </div>
         </div>
       </div>

@@ -6,7 +6,6 @@ import TabNovedades from '@/components/tab-galeria/NovedadesTab';
 import { TabAlumnos } from '@/components/tab-galeria/AlumnosTab';
 import TabVideos from '@/components/tab-galeria/VideosTab';
 import TabHome from "@/components/tab-galeria/ImagenesTabHome";
-// import PageSEO from "@/components/SEO";
 
 
 export default function GaleriaMedia() {
@@ -34,9 +33,9 @@ export default function GaleriaMedia() {
 					<Tabs.Root className="max-w-screen-2xl mt-2 mx-auto px-4 md:px-8" value={selectedTab} onValueChange={(val) => setSelectedTab(val)}>
 
 						{/* desktop */}
-						<Tabs.List className="hidden bg-gray-100 dark:bg-[#111928] border dark:border-[#111928]-4/50 mx-auto items-center justify-center lg:w-fit py-2 px-3 rounded-lg gap-x-3 overflow-x-auto text-sm sm:flex text-white dark:text-white" aria-label="">
+						<Tabs.List className="hidden bg-gray-100 dark:bg-[#111928] border dark:border-gray-400/30 mx-auto items-center justify-center lg:w-fit py-2 px-3 rounded-lg gap-x-3 overflow-x-auto text-sm sm:flex text-white dark:text-white" aria-label="">
 							{tabItems.map((item, idx) => (
-								<Tabs.Trigger key={idx} className="data-[state=active]:bg-blue/80 data-[state=active]:text-blue-100 data-[state=active]:shadow-sm py-1.5 px-3 rounded-lg duration-150 text-white dark:text-white hover:bg-blue-600/70 active:bg-white/50 font-medium" value={item}>
+								<Tabs.Trigger key={idx} className="data-[state=active]:bg-blue-800/40 data-[state=active]:text-white data-[state=active]:shadow-sm py-1.5 px-3 rounded-lg duration-150 text-white dark:text-white hover:bg-blue-800/40 active:bg-white/50 font-medium" value={item}>
 									{item}
 								</Tabs.Trigger>
 							))}

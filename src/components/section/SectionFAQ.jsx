@@ -80,9 +80,7 @@ const AccordionItem = ({ header, text, index, activeIndex, handleToggle }) => {
     <AccordionGroup
       variant="outlined"
       color="neutral"
-      transition="0.2s"
-      justifyContent='center'
-      borderRadius='md'
+      transition="0.2s"     
       border='1px solid #e2e3e5'
       className="animate__animated animate__bounceInLeft"
       sx={{
@@ -110,7 +108,7 @@ const AccordionItem = ({ header, text, index, activeIndex, handleToggle }) => {
 
       <Accordion expanded={isActive} onChange={() => handleToggle(index)}>
         <AccordionSummary
-          expandIcon={<Plus />}
+          // expandIcon={<Plus />}
           aria-controls={`${header}`}
           id={`panel${index}-header`}
           className="pb-1 pt-1 lg:pb-0 lg:pt-0 sm:p-2 lg:px-2 xl:px-2 text-left">

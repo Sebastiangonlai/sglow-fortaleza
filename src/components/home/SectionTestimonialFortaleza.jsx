@@ -2,21 +2,21 @@
 
 import { InfiniteMovingCards } from "@/lib/infinite-moving-cards";
 import { quotes } from "@/data/quotesData";
-import ButtonSection from "@/components/BtnSection";
+import ButtonSection from "@/components/ButtonSection";
 import TitleHeader from "@/components/TitleHeader";
 
 
 const SectionTestimonialFortaleza = () => {
   return (
     <>
-      <section className="dark:bg-[#1F2A37] text-gray-900 dark:text-gray-500 pt-[80px] lg:pt-[80px] pb-[20px] lg:pb-[1px] select-none overflow-hidden bg-[#F9FAFB] mx-auto justify-center">
+      <section className="dark:bg-[#1F2A37] text-gray-900 dark:text-gray-500 pt-[80px] pb-[20px] lg:pt-[80px] lg:pb-[10px] select-none overflow-hidden bg-[#F9FAFB] mx-auto justify-center">
 
         <TitleHeader
           title="Testimonios de Alumnos"
           subtitle="Opiniones de nuestros alumnos sobre su experiencia."
           uri={import.meta.env.VITE_GOOGLE_REVIEW} />
 
-        <div className="wow fadeIn -mx-4 lg:py-1 py-6 flex flex-wrap" data-wow-delay=".10s" data-wow-duration="3s">
+        <div className="-mx-4 lg:py-1 py-6 flex flex-wrap" >
           <div className="swiper testimonial-carousel common-carousel p-5">
             <InfiniteMovingCards items={quotes} direction="right" speed="slow">
             </InfiniteMovingCards>

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ExpandibleCard from '@/components/ExpandibleCard';
 import Breadcrumb from '@/components/Breadcrumb';
 import SectionPricing from '@/components/section/SectionPricing';
-import ButtonSection from '@/components/BtnSection';
+import ButtonSection from '@/components/ButtonSection';
 import { URL_PDF } from '@/data/constants';
 import Modal from '@mui/joy/Modal';
 // import Image from 'next/image';

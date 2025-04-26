@@ -1,7 +1,7 @@
 "use client"
 
 import { cn } from "@/lib/utils";
-import React, { useEffect, useRef, useId, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { useOutsideClick } from "@/lib/use-outside-click";
 import { ListImagesSupabase } from "@/components/admin/imagenes/ImagenService";
@@ -13,29 +13,30 @@ import { twMerge } from "tailwind-merge";
 import TitleHeader from "@/components/TitleHeader";
 import ImageComponent from "@/components/ImageComponent";
 import { ScrollAnimation } from "@/components/ScrollAnimation";
+import ButtonSection from "@/components/ButtonSection";
 
 
 const IMG = {
-	width: 640,
-	height: 480
+	width: 80,
+	height: 80
 }
 
-const Block = ({ className, ...rest }) => {
-	return (
-		<motion.div
-			variants={{
-				initial: { scale: 0.5, y: 50, opacity: 0, },
-				animate: { scale: 1, y: 0, opacity: 1, },
-			}}
-			transition={{ type: "spring", mass: 5, stiffness: 400, damping: 80, }}
-			className={twMerge(
-				"rounded-full bg-transparent p-2 w-fit mx-auto items-center justify-center align-center",
-				className,
-			)}
-			{...rest}
-		/>
-	);
-};
+// const Block = ({ className, ...rest }) => {
+// 	return (
+// 		<motion.div
+// 			variants={{
+// 				initial: { scale: 0.5, y: 50, opacity: 0, },
+// 				animate: { scale: 1, y: 0, opacity: 1, },
+// 			}}
+// 			transition={{ type: "spring", mass: 5, stiffness: 400, damping: 80, }}
+// 			className={twMerge(
+// 				"rounded-full bg-transparent p-2 w-fit mx-auto items-center justify-center align-center",
+// 				className,
+// 			)}
+// 			{...rest}
+// 		/>
+// 	);
+// };
 
 
 const SectionLicenciaConducir = () => {
@@ -135,16 +136,18 @@ const PortfolioCard = ({ showCard, category, ImageHref, title, button, buttonHre
 							{category}
 						</span>
 						<h4 className="text-[#111928] dark:text-white mb-3 text-xl font-medium tracking-tight leading-tight">{title}</h4>
-						<a href={buttonHref} aria-label="Más información sobre cómo obtener tu licencia de conducir">
+						{/* <a href={buttonHref} aria-label="Más información sobre cómo obtener tu licencia de conducir">
 							<Block className="col-span-1 dark:bg-[#1f2937]bg-transparent md:col-span-1" whileHover={{ rotate: '-2.5deg', scale: 1.1 }}>
-								<div className={`relative flex items-center z-10 cursor-pointer rounded-2xl text-sm text-normal bg-transparent hover:bg-[#4f46e5]/20 py-2 px-3 ring-1 ring-white/10`}>
+								<button className={`relative flex items-center z-10 cursor-pointer rounded-2xl text-sm text-normal bg-transparent hover:bg-[#4f46e5]/20 py-2 px-3 ring-1 ring-white/10`}>
 									{button}
 									<svg fill="none" height="20" viewBox="0 0 22 22" width="20" xmlns="http://www.w3.org/2000/svg">
 										<path d="M10.75 8.75L14.25 12L10.75 15.25" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
 									</svg>
-								</div>
+								</button>
 							</Block>
-						</a>
+						</a> */}
+
+						<ButtonSection namebtn={button} uri={buttonHref} />
 					</div>
 				</div>
 			</div>
@@ -157,7 +160,7 @@ const ExpandableModalCard = () => {
 	const [active, setActive] = useState(null);
 	const [open, setOpen] = useState(false);
 	const [imgSrc, setImgSrc] = useState('');
-	const id = useId();
+	// const id = useId();
 	const ref = useRef(null);
 	let aux = ListImagesSupabase({ imgFirst: 0, imgLimit: 6 });
 	let imagesFirst = [{ src: aux[0] }, { src: aux[1] }, { src: aux[2] }];
@@ -199,10 +202,11 @@ const ExpandableModalCard = () => {
 	return (
 		<>
 			<div>
-				<Modals id="myModal" open={open} onClose={handleClose} className="flex flex-wrap justify-center self-center px-2">
-					<Sheet className="w-fit h-fit rounded-xl flex" >
-						<ModalClose className="close right-2 dark:bg-[#111928]/70 dark:hover:bg-[#111928]/70" variant='solid' color='neutral'>&times;</ModalClose>
-						<ImageComponent iSrc={imgSrc.src} iWidth={IMG.width} iHeight={IMG.height} iAlt="Alumnos Academia de manejo" id="myImg" loading="lazy" iClassName="w-full h-full object-cover rounded-xl focus:touch-pan-x delay-200 border border-zinc-500 select-none dark:rounded-lg dark:border justify-center" />
+				<Modals id="myModal" open={open} onClose={handleClose} className="flex flex-wrap justify-center self-center py-2 px-2">
+					<Sheet className="w-fit h-fit rounded-xl flex " >
+						<ModalClose className="close right-3 z-100" aria-label="Close" color="none"
+							sx={{ backgroundColor: "rgba(0, 0, 0, 0.70)", color: "#ffff", }}>&times;</ModalClose>
+						<ImageComponent iSrc={imgSrc.src} iWidth={IMG.width} iHeight={IMG.height} iAlt="Alumnos Academia de manejo" id="myImg" loading="lazy" iClassName="w-full h-full object-cover rounded-xl focus:touch-pan-x delay-200 border border-zinc-900 select-none dark:rounded-lg dark:border dark:border-zinc-600/90 justify-center" />
 					</Sheet>
 				</Modals>
 			</div>

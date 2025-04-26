@@ -1,15 +1,14 @@
-// import Image from 'next/image';
 import PropTypes from 'prop-types';
 
 
-const ImageComponent = ({ iSrc, iAlt, iWidth, iHeight, iClassName, iPriority }) => {
+const ImageComponent = ({ iSrc, iAlt="Imagenes Academia de conducir", iWidth = 20, iHeight = 20, iClassName, iPriority }) => {
 	return (
 		<img
 			src={iSrc}
 			alt={iAlt}
 			width={iWidth}
 			height={iHeight}
-			className={`${iClassName} w-full h-auto`}
+			className={`${iClassName} w-fit h-fit`}
 			loading={iPriority ? 'eager' : 'lazy'}
 		/>
 	);
@@ -18,8 +17,8 @@ const ImageComponent = ({ iSrc, iAlt, iWidth, iHeight, iClassName, iPriority }) 
 ImageComponent.propTypes = {
 	iSrc: PropTypes.string.isRequired,
 	iAlt: PropTypes.string.isRequired,
-	iWidth: PropTypes.number.isRequired,
-	iHeight: PropTypes.number.isRequired,
+	iWidth: PropTypes.number,
+	iHeight: PropTypes.number,
 	iClassName: PropTypes.string,
 	iPriority: PropTypes.bool,
 };

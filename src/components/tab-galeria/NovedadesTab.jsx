@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react';
-import { useInView } from 'react-intersection-observer'
+// import { useInView } from 'react-intersection-observer'
 import Box from '@mui/joy/Box';
 import { ListImagesSupabase } from '../admin/imagenes/ImagenService';
 import Grid from '@mui/joy/Grid';
@@ -12,14 +12,13 @@ import ImageComponent from '../ImageComponent';
 
 
 const IMG = {
-  width: 640,
-  height: 480
+  width: 400,
+  height: 300
 }
 
 const TabNovedades = ({ cantidad }) => {
   const [open, setOpen] = useState(false);
   const [imgSrc, setImgSrc] = useState('');
-  const [caption, setCaption] = useState([]);
 
   // const [refGid, inViewGid] = useInView({
   //   threshold: 0,
@@ -29,28 +28,16 @@ const TabNovedades = ({ cantidad }) => {
   //   rootMargin: '100px 100px 30px 100px'
   // });
 
-
-  // useEffect(() => {
-  //   const fetchDatas = async () => {
-  //     setRecibidos(resp);
-  //   };
-  //   fetchDatas();
-  // }, []);
-
   const resp = ListImagesSupabase({ imgFirst: 0, imgLimit: cantidad });
 
   const handleOpen = (src, alt) => {
     setImgSrc(src);
-    // setCaption(alt);
     setOpen(true);
   };
 
   const handleClose = () => {
     setOpen(false);
   };
-
-  // const mostrarImagenes = GetUltimasImagenes(cantidad);
-
 
   return (
     <>
@@ -97,27 +84,16 @@ const TabNovedades = ({ cantidad }) => {
               // </motion.div>
             ))}
           </div>
-
-          <Modal open={open} onClose={handleClose}>
-            <Sheet>
-              <div id="myModal" className="modal-content" >
-                <ModalClose className="close">&times;</ModalClose>
-                <ImageComponent width={IMG.width} height={IMG.height} alt="Alumnos" id="myImg" src={imgSrc} loading="lazy" className="object-cover rounded-xl focus:touch-pan-x delay-200 border border-zinc-500 select-none dark:rounded-xl dark:border justify-center" />
-                <div id="caption" className="text-center text-gray-900 dark:text-white">{caption}</div>
-              </div>
-            </Sheet>
-          </Modal>
-
+         
           <Modal id="myModal" open={open} onClose={handleClose} className="flex flex-wrap justify-center self-center">
             <Sheet className="w-fit h-fit rounded-xl flex" >
-              <ModalClose className="close right-0 dark:bg-[#111928]/70 dark:hover:bg-[#111928]/70" variant='solid' color='neutral'>&times;</ModalClose>
+      
+              <ModalClose className="close right-3 z-100" aria-label="Close" color="none"
+                sx={{ backgroundColor: "rgba(0, 0, 0, 0.70)", color: "#ffff", }}>&times;</ModalClose>
               <ImageComponent iWidth={IMG.width} iHeight={IMG.height} iAlt="Alumnos" id="myImg" iSrc={imgSrc} loading="lazy" iClassName="object-cover rounded-xl focus:touch-pan-x delay-200 border border-zinc-500 select-none dark:rounded-lg dark:border justify-center" />
             </Sheet>
           </Modal>
-          {/* {cantidad === 6 && <a href="/galeria-media" className="text-base text-primary-800 hover:text-primary-600 dark:hover:text-primary-300 dark:text-primary-400">
-            Mostrar todo &rarr;
-          </a>} */}
-        </Box>
+               </Box>
       </div>
     </>
   )

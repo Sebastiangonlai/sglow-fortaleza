@@ -1,7 +1,6 @@
 
 @import "tailwindcss";
 
-
 @custom-variant dark (&:where(.dark, .dark *));
 
 @layer base {
@@ -31,9 +30,9 @@
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
-
     --ring: 262.1 83.3% 57.8%;
     --radius: 0.5rem;
+
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
   }
@@ -65,6 +64,8 @@
 
     --border:  262.1 73.3% 87.8%;
     --ring: 262.1 73.3% 57.8%;
+    --radius: 0.5rem;
+    
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
   }
@@ -81,23 +82,6 @@ abbr:where([title]) {
   -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
 }
-
-/* h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: inherit;
-  font-weight: inherit;
-  margin: 0;
-} */
-
-/* a {
-  color: inherit;
-  text-decoration: inherit;
-} */
-
 
 /* contacto */
 .ee {
@@ -131,24 +115,12 @@ textarea{
 }
 
 button,
-select {
-  text-transform: none;
-}
-
-button,
 [type='reset'],
 [type='submit'] {
   appearance: button;
-  /* background-color: transparent; */
-  background-image: none;
 }
 
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
+
 /* BOOSTRA */
 
 .container,
@@ -159,8 +131,8 @@ button,
 .container-xl,
 .container-xxl {
   width: 100%;
-  padding-right: var(--bs-gutter-x, 0.75rem);
-  padding-left: var(--bs-gutter-x, 0.75rem);
+  padding-left: 1rem;
+  padding-right: 1rem;
   margin-right: auto;
   margin-left: auto;
 }
@@ -168,7 +140,7 @@ button,
 @media (min-width: 576px) {
   .container,
   .container-sm {
-    max-width: 540px;
+    max-width: 520px;
   }
 }
 
@@ -216,12 +188,10 @@ button,
   }
 }
 
-
-
-  /* body {
-    font-family: Arial, Helvetica, sans-serif;
+/* 
+  body {
+    font-family: 'Inter';
   } */
-
 
 
 @layer base {
@@ -241,10 +211,9 @@ button,
   .animation-delay-4000 {
     animation-delay: 4s;
   }
-   .text-balance {
+  .text-balance {
     text-wrap: balance;
   }
-
 }
 
 @keyframes float {
@@ -396,35 +365,189 @@ Button {
   animation-duration: var(--animation-duration);
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
 
 /* BOTÓN CERRAR MODAL*/
 .close {
-    color: #fff;
-  background-color: transparent;
-
   position: absolute;
   display: flex;
   top: 20px;
   right: 35px;
   scale: 1;
   font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
   transition: 0.3s;
 }
 
 .close:hover {
-  color: #fff;
-  background-color: transparent;
   scale: 1.2;
   cursor: pointer;
 }
 
 
-/* 
-.text-curso {
-  @apply mb-1 text-sm font-medium tracking-widest text-black dark:text-gray-300;
+
+/* CARRUSEL EMBLA */
+.embla {
+  max-width: 48rem;
+  margin: auto;
+  --slide-height: 19rem;
+  --slide-spacing: 1rem;
+  --slide-size: 80%;
 }
 
-.divider {
-  @apply my-6 mb-8 select-none border-b border-gray-900/10 dark:border-gray-100/10;
-} */
+.emblafull {
+  max-width: 60rem;
+  margin: auto;
+  --slide-height: 19rem;
+  --slide-spacing: 1rem;
+  --slide-size: 100%;
+}
+
+.embla__viewport {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+  touch-action: pan-y pinch-zoom;
+  margin-left: calc(var(--slide-spacing) * -1);
+}
+.embla__slide {
+  transform: translate3d(0, 0, 0);
+  flex: 0 0 var(--slide-size);
+  min-width: 0;
+  padding-left: var(--slide-spacing);
+}
+.embla__slide__img {
+  border-radius: 1.8rem;
+  display: block;
+  height: var(--slide-height);
+  width: 100%;
+  object-fit: cover;
+}
+.embla__controls {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  justify-content: space-between;
+  gap: 1.2rem;
+  margin-top: 1.8rem;
+}
+.embla__buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem;
+  align-items: center;
+}
+.embla__button {
+  -webkit-tap-highlight-color: rgba(230, 230, 230, 0.5);
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  touch-action: manipulation;
+  display: inline-flex;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  box-shadow: inset 0 0 0 0.15rem rgba(160, 160, 160, 0.5);
+  width: 2.5rem;
+  height: 2.5rem;
+  z-index: 1;
+  border-radius: 50%;
+  color: rgb(222, 222, 222);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.embla__button:disabled {
+  color: rgb(192, 192, 192);
+}
+.embla__button__svg {
+  width: 35%;
+  height: 35%;
+}
+.embla__dots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: calc((2.6rem - 1.4rem) / 2 * -1);
+}
+.embla__dot {
+  -webkit-tap-highlight-color: rgba(230, 230, 230, 0.5);
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  touch-action: manipulation;
+  display: inline-flex;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  width: 2.6rem;
+  height: 2.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.embla__dot:after {
+  box-shadow: inset 0 0 0 0.2rem rgb(148, 148, 148);
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  content: "";
+}
+.embla__dot--selected:after {
+  box-shadow: inset 0 0 0 0.2rem rgb(96, 67, 226);
+}
+.embla__parallax {
+  border-radius: 1.8rem;
+  height: 100%;
+  overflow: hidden;
+}
+.embla__parallax__layer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.embla__parallax__img {
+  max-width: none;
+  flex: 0 0 calc(115% + (var(--slide-spacing) * 2));
+  object-fit: cover;
+}
+
+.embla__progress {
+  border-radius: 1.3rem;
+  box-shadow: inset 0 0 0 0.15rem rgba(160, 160, 160, 0.5);
+  background-color: rgb(17, 25, 40);
+  position: relative;
+  height: 0.6rem;
+  justify-self: flex-end;
+  align-self: center;
+  width: 13rem;
+  max-width: 90%;
+  overflow: hidden;
+}
+.embla__progress__bar {
+  background-color: rgb(222, 222, 222);
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: -100%;
+}

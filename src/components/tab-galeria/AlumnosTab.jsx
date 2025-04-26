@@ -9,8 +9,8 @@ import ImageComponent from '../ImageComponent';
 
 
 const IMG = {
-  width: 640,
-  height: 480
+  width: 140,
+  height: 180
 }
 
 export function TabAlumnos() {
@@ -23,10 +23,7 @@ export function TabAlumnos() {
 
   const totalPages = Math.ceil(totalItems / itemsPerPage); // Cantidad total de páginas.
   // const imagesUrl = GetUltimasImagenes(totalItems);
-  console.log("totalItems: ", imgSrc);
-  // const imagesUrl = ListImagesSupabase({ imgFirst: 0, imgLimit: totalItems });
   let imagesUrl = ListImagesSupabase({ imgFirst: 0, imgLimit: 6 }); //totalItems
-  console.log("imagesUrl: ", imagesUrl);
   // Calcular las imágenes que se mostrarán en cada pagina.
   const lastItem = imagesUrl.length - (currentPage * itemsPerPage);
   const firstItem = (lastItem - itemsPerPage);
@@ -90,21 +87,20 @@ export function TabAlumnos() {
               <div key={index} className="w-full mx-1.5 md:w-1/2 lg:w-1/4">
                 <div className="mb-3 overflow-hidden rounded-lg">
                   <Grid item xs={4} sm={4} md={4} onClick={() => handleOpen(`${item}`)}>
-                    <ImageComponent key={index} iWidth={320} iHeight={320} iAlt="Alumnos graduados" iSrc={item} loading="lazy" iClassName="cursor-pointer w-full h-[250px] object-cover rounded-md focus:touch-pan-x hover:ease-in-out delay-300 border border-zinc-500 select-none overflow-hidden shadow-sm shadow-gray-300 dark:rounded-md dark:border dark:shadow-sm dark:border-zinc-800 dark:shadow-zinc-800 justify-center" />
+                    <ImageComponent key={index} iWidth={320} iHeight={320} iAlt="Alumnos graduados" iSrc={item} loading="lazy" iClassName="cursor-pointer w-full h-[250px] object-cover rounded-md focus:touch-pan-x hover:ease-in-out delay-300 border border-zinc-500 select-none overflow-hidden shadow-sm shadow-gray-300 dark:rounded-md dark:border dark:shadow-sm dark:showCard dark:border-gray-800  justify-center" />
                   </Grid>
                 </div>
               </div>
             ))}
           </div>
 
-
           <Modal id="myModal" open={open} onClose={handleClose} className="flex flex-wrap justify-center self-center">
             <Sheet className="w-fit h-fit rounded-xl flex" >
-              <ModalClose className="close right-0 dark:bg-[#111928]/70 dark:hover:bg-[#111928]/70" variant='solid' color='neutral'>&times;</ModalClose>
+              <ModalClose className="close right-3 z-100" aria-label="Close" color="none"
+                sx={{ backgroundColor: "rgba(0, 0, 0, 0.70)", color: "#ffff", }}>&times;</ModalClose>
               <ImageComponent iWidth={IMG.width} iHeight={IMG.height} iAlt="Alumnos" id="myImg" iSrc={imgSrc} loading="lazy" iClassName="object-cover rounded-xl focus:touch-pan-x delay-200 border border-zinc-500 select-none dark:rounded-lg dark:border justify-center" />
             </Sheet>
           </Modal>
-
           <div className="bg-white py-10 text-center dark:bg-[#111928]">
             <div className="inline-flex gap-1 rounded-full border border-stroke p-2 dark:border-white/10">
               <ul className="flex items-center gap-1">
