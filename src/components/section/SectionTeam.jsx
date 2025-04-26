@@ -1,6 +1,5 @@
 import React from "react";
 import TitleHeader from "@/components/TitleHeader";
-// import Image from "next/image";
 
 
 const SectionTeam = () => {

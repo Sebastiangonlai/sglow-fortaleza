@@ -3,7 +3,7 @@
 import TitleHeader from "@/components/TitleHeader";
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { ContarImagenesSupabase } from '../admin/imagenes/ImagenService.jsx'
+import { ContarImagenesSupabase } from '@/api/ImagenService.jsx'
 import { useEffect, useState } from "react";
 
 

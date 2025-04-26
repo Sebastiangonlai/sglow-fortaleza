@@ -6,6 +6,7 @@ import ErrorBoundary from "@/routes/ErrorBoundary";
 import NavBar from "@/components/common/NavBar";
 import Footer from "@/components/common/Footer";
 
+
 function App() {
   return (
     <>

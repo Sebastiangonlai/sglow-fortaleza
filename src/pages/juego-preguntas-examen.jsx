@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useRef, useCallback } from "react"
 import { Card, CardContent } from "@/components/game/card"
-// import PageSEO from '@/components/SEO';
 import GameCanvas from "./components/game/GameCanvas"
 import QuestionModal from "./components/game/QuestionModal"
 import questions from "./data/questions"

@@ -4,7 +4,6 @@ import AccordionGroup from '@mui/joy/AccordionGroup';
 import Accordion from '@mui/joy/Accordion';
 import AccordionDetails from '@mui/joy/AccordionDetails';
 import AccordionSummary, { accordionSummaryClasses } from '@mui/joy/AccordionSummary';
-import { Plus } from "lucide-react"
 
 
 const SectionFAQ = () => {

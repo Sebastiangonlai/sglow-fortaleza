@@ -1,112 +1,92 @@
-import React, { useState } from 'react';
-import Button from '@mui/joy/Button'
-import swal from 'sweetalert';
-import { getDatabase, ref, onValue } from "firebase/database";
-import 'firebase/compat/auth';
-import '../../../firebase/firebase';
-import { auth } from "../../../firebase/firebase";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { useState, useEffect } from 'react';
+import { supabase } from '@/api/supabase';
 import AltaImagen from '@/components/admin/imagenes/AltaImagen';
+import swal from 'sweetalert';
+import { X } from "lucide-react";
 
-const adm = import.meta.env.VITE_ADMIN
 
-export default function MyLoginAdmins() {
-  const [isButtonVisible, setIsButtonVisible] = React.useState(false);
-  const [name, setName] = useState('');
+function MyLoginAdmins() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [session, setSession] = useState(null);
 
-  const handleInputChange = (e) => {
-    setName(e.target.value.toLowerCase());
+  useEffect(() => {
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setSession(session);
+    });
+
+    const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
+      setSession(session);
+    });
+
+    return () => listener?.subscription.unsubscribe();
+  }, []);
+
+  const signUp = async () => {
+    const { error } = await supabase.auth.signUp({ email, password });
+    if (error) alert(error.message);
+    else alert('Revisá tu correo para confirmar.');
   };
 
+  const signIn = async () => {
+    const { error } = await supabase.auth.signInWithPassword({ email, password });
 
-  function handleSubmit(e) {
-    e.preventDefault();
-    const form = e.target;
-    const formData = new FormData(form);
-    fetch('/some-api', { method: form.method, body: formData });
-    const formJson = Object.fromEntries(formData.entries());
-    localStorage.clear();
-    correccion(formJson);
-  }
-
-  const correccion = async (event) => {
-    let usrname = event.name;
-
-    try {
-      let userCredential = await signInWithEmailAndPassword(auth, usrname, event.password);
-      if (userCredential.user.photoURL === adm && userCredential.user.email === usrname) {
-        swal("¡Acceso correcto!", "Nombre: " + userCredential.user.displayName, "success", {
-          timer: 3000
-        }).then(() => {
-          setIsButtonVisible(true);
-          ocultar('grupo1')
-        });
-      }
-    } catch (error) {
-      swal("¡Advertencia!", 'Usuario y/o contraseña incorrecta', "error", {
-        timer: 2000
-      });
+    if (error) {
+      swal("¡Advertencia!", 'Usuario y/o contraseña incorrecta', "error", { timer: 2000 });
+    } else {
+      swal({
+        title: "¡Acceso correcto!\n\n",
+        text: "Email: " + email,
+        icon: "success",
+        dangerMode: false,
+        position: "center",
+        timer: 4000
+      })
     }
-  }
+  };
 
+  const signOut = async () => {
+    await supabase.auth.signOut();
+  };
 
   return (
-    <>
-      <div className="tracking-tight text-gray-900 dark:text-gray-100 lg:flex-row-reverse">
-        <br></br>
-        {isButtonVisible && (
-          <AltaImagen />
-        )}
-      </div>
-      <div className="style-session justify-center">
-        <div id="grupo1">
-          <div className="container tracking-tight flex-wrap items-center pb-6 pt-3" style={{ maxWidth: 320, maxHeight: 380 }}>
-            <h1 className="text-center text-4xl font-bold mt-12">Iniciar Sesión</h1>
-            <p className="pb-5 text-center">Acceso exclusivo para funcionarios</p>
-            <form method="post" onSubmit={handleSubmit} >
-              <div className="sm:col-span-4 mt-1">
-                <input id="name" name="name" type="text" autoComplete="name" placeholder="Usuario" value={name} onChange={handleInputChange}
-                  className="w-full rounded-md px-4 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-600/50 border-gray-500 dark:bg-black/50" />
-              </div>
-              <div className="sm:col-span-4 my-2">
-                <input id="password" name="password" type="password" autoComplete="password" placeholder="Contraseña"
-                  className="w-full rounded-md px-4 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-600/50 border-gray-500 dark:bg-black/50" />
-              </div>
+    <div style={{ padding: '12rem' }}>
+      {!session ? (
+        <>
+          <div className="style-session justify-center">
+            <div id="grupo1">
+              <div className="container tracking-tight flex-wrap items-center pb-6 pt-3" style={{ maxWidth: 320, maxHeight: 380 }}>
+                <h1 className="text-center text-4xl font-bold mt-12">Iniciar Sesión</h1>
+                <p className="pb-5 text-center">Acceso exclusivo para funcionarios</p>
 
-              <Button size="sm" type="submit" sx={{ mb: 4, border: 0.01 }} className="text-base mt-3 flex w-full justify-center rounded-md hover:bg-[#4338ca]/50 bg-[#4338ca]/80 font-normal leading-4 border-blue-600 dark:border-[#4338ca] focus:outline-none focus:ring-2 focus:ring-blue-600/50">
-                Inicia sesión
-              </Button>
-            </form>
+                <div className="sm:col-span-4 mt-1">
+                  <input placeholder="Email" onChange={(e) => setEmail(e.target.value)} value={email}
+                    className="w-full rounded-md px-4 focus:outline-none focus:ring-2 focus:ring-violet-400/50 border-gray-500 dark:bg-black/50" />
+                </div>
+                <div className="sm:col-span-4 my-2">
+                  <input placeholder="Contraseña" type="password" onChange={(e) => setPassword(e.target.value)} value={password}
+                    className="w-full rounded-md px-4 focus:outline-none focus:ring-2 focus:ring-violet-400/50 border-gray-500 dark:bg-black/50" />
+                </div>
+
+                <button onClick={signIn} className="text-base py-1 flex w-full justify-center rounded-md hover:bg-[#4338ca]/80 bg-[#4338ca]/90 font-medium border-blue-400 dark:border-[#4338ca] focus:outline-none">
+                  Inicia sesión
+                </button>
+                {/* <button onClick={signUp}>Registrarse</button> */}
+              </div>
+            </div>
+            <br></br>
+            <br></br>
           </div>
-        </div>
-        <br></br>
-        <br></br>
-      </div>
-    </>
-  )
+        </>
+      ) : (
+        <>
+          <AltaImagen />
+          {/* <h2>Sesión iniciada como {session.user.email}</h2> */}
+          <button onClick={signOut} className="text-base p-1 right-5 top-20 fixed flex-col rounded-full ring-1 ring-red-400 "> <X size={18} color='red' /></button>
+        </>
+      )}
+    </div>
+  );
 }
 
-// function mostrar(id) {
-//  elemento = document.getElementById(id);
-// }
-
-function ocultar(id) {
-  const elemento = document.getElementById(id);
-  elemento.style.display = "none";
-}
-
-export function GetAlumnos(id, nombre) {
-  if (typeof window !== 'undefined') {
-    localStorage.setItem("initUser", id);
-    localStorage.setItem("initName", nombre);
-  }
-  const db = getDatabase();
-  const starCountRef = ref(db, 'testonline/');
-  onValue(starCountRef, (snapshot) => {
-    const data = snapshot.val();
-    const largo = data.length;
-    if (typeof window !== 'undefined') {
-      localStorage.setItem("sigId", largo);
-    }
-  });
-}
+export default MyLoginAdmins;

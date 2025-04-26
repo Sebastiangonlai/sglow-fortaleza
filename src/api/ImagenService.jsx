@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { supabase } from '../../utils/supabase';
+import { supabase } from './supabase';
 
 const URL = import.meta.env.VITE_SUPABASE_STORAGE_URL;
 

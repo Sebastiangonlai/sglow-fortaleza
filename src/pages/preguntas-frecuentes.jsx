@@ -1,7 +1,6 @@
 import React from 'react';
 import Breadcrumb from '@/components/Breadcrumb';
 import SectionFAQ from '@/components/section/SectionFAQ';
-// import PageSEO from '@/components/SEO';
 
 
 export default function PreguntasFrecuentes() {

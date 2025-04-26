@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react';
-import { ListImagesSupabase } from '../admin/imagenes/ImagenService';
+import { ListImagesSupabase } from '@/api/ImagenService';
 import Grid from '@mui/joy/Grid';
 import ModalClose from '@mui/joy/ModalClose';
 import Modal from '@mui/joy/Modal';

@@ -12,6 +12,7 @@ const SobreNosotrosIndex = lazy(() => import('@/pages/sobre-nosotros.jsx'));
 const ClasesPracticas = lazy(() => import('@/pages/clases-practicas.jsx'));
 const NuestrosVeiculos = lazy(() => import('@/pages/coche-escuela.jsx'));
 const Contacto = lazy(() => import('@/pages/contacto.jsx'));
+const Admin = lazy(() => import('@/pages/admin.jsx'));
 
 const routes = [
   { path: "/", element: <Home /> },
@@ -26,6 +27,7 @@ const routes = [
   { path: "/clases-practicas", element: <ClasesPracticas /> },
   { path: "/coche-escuela", element: <NuestrosVeiculos /> },
   { path: "/contacto", element: <Contacto /> },
+  { path: "/admin", element: <Admin /> },
 ];
 
 export default routes;

@@ -4,12 +4,11 @@ import { cn } from "@/lib/utils";
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { useOutsideClick } from "@/lib/use-outside-click";
-import { ListImagesSupabase } from "@/components/admin/imagenes/ImagenService";
+import { ListImagesSupabase } from '@/api/ImagenService.jsx'
 import { Modal } from "../../lib/animated-modal";
 import Modals from '@mui/joy/Modal';
 import ModalClose from '@mui/joy/ModalClose';
 import Sheet from '@mui/joy/Sheet';
-import { twMerge } from "tailwind-merge";
 import TitleHeader from "@/components/TitleHeader";
 import ImageComponent from "@/components/ImageComponent";
 import { ScrollAnimation } from "@/components/ScrollAnimation";

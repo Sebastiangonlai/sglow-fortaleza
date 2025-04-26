@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 // import { useInView } from 'react-intersection-observer'
 import Box from '@mui/joy/Box';
-import { ListImagesSupabase } from '../admin/imagenes/ImagenService';
+import { ListImagesSupabase } from '@/api/ImagenService';
 import Grid from '@mui/joy/Grid';
 import ModalClose from '@mui/joy/ModalClose';
 import Modal from '@mui/joy/Modal';

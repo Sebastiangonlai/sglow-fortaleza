@@ -1,19 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { ref, uploadBytesResumable, listAll } from 'firebase/storage';
-import { storage } from '../../../firebase/firebase';
 import Box from '@mui/joy/Box';
 import Button from '@mui/joy/Button';
 import Card from '@mui/joy/Card';
 import Divider from '@mui/joy/Divider';
 import Stack from '@mui/joy/Stack';
-import CloudUploadOutlinedIcon from '@mui/icons-material/CloudUploadOutlined';
 import { styled } from '@mui/joy';
 import swal from 'sweetalert';
 import FormControl from '@mui/joy/FormControl';
 import Typography from '@mui/joy/Typography';
 import AspectRatio from '@mui/joy/AspectRatio';
-import imageCompression from "browser-image-compression";
 import ImageCropper from './ImageCropper';
+import imageCompression from "browser-image-compression";
+import { UploadImageSupabase } from '@/api/ImagenService.jsx'
+import { UploadCloud } from "lucide-react";
 
 
 const VisuallyHiddenInput = styled('input')`
@@ -28,6 +27,7 @@ const VisuallyHiddenInput = styled('input')`
   width: 1px;
 `;
 
+
 const AltaImagen = () => {
 	const [uploadProgress, setUploadProgress] = useState(0);
 	const [outputFileName, setOutputFileName] = useState("");
@@ -36,6 +36,7 @@ const AltaImagen = () => {
 	const [originalLink, setOriginalLink] = useState("");
 	const [originalImage, setOriginalImage] = useState("");
 	const [compressedLink, setCompressedLink] = useState('/static/images/svg/photo.png');
+
 
 	const handleCropComplete = (croppedImage) => {
 		if (croppedImage) {
@@ -47,7 +48,7 @@ const AltaImagen = () => {
 
 	const handleCompressClick = async (e) => {
 		e.preventDefault();
-		if (!originalImage) return; // Verifica si la imagen original está disponible
+		if (!originalImage) return;
 		const options = {
 			maxSizeMB: 1,
 			maxWidthOrHeight: 800,
@@ -75,7 +76,9 @@ const AltaImagen = () => {
 		const files = e.target.files;
 		if (files && files.length > 0) {
 			const selectedFile = files[0];
+			// setOriginalLink(e.target.files[0]);
 			setOriginalLink(URL.createObjectURL(selectedFile));
+			// setFile(e.target.files[0]);
 			setOriginalImage(selectedFile);
 			setOutputFileName(selectedFile);
 			setUploadProgress(0);
@@ -92,14 +95,10 @@ const AltaImagen = () => {
 			// console.error("No se ha comprimido ninguna imagen.");
 			return;
 		}
-		if (!originalImage) return; // Verifica si la imagen original está disponible
+		if (!originalImage) return;
 
 		try {
-			const listRef = ref(storage, "img/");
-			const res = await listAll(listRef);
-			const cantImagenes = res.items.length + 1;
-			const storageRef = ref(storage, `img/alumno${cantImagenes}.webp`); // Crear una referencia al archivo en Firebase Storage
-			const uploadTask = uploadBytesResumable(storageRef, originalImage); // `originalImage` ahora es el archivo comprimido
+			const uploadTask = UploadImageSupabase(originalImage);
 			uploadTask.on(
 				'state_changed',
 				(snapshot) => {
@@ -131,12 +130,11 @@ const AltaImagen = () => {
 		}
 	}, [uploadProgress]);
 
-
 	return (
 		<Box component="form" sx={{ marginTop: 8, display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%', }} onSubmit={handleSubmit}>
 			<Card size='sm' sx={{ border: 0.01, borderColor: '#97c3f0', display: 'flex', alignSelf: 'center', zIndex: '1000', background: '#0d1117' }}>
 				<Box sx={{ margin: 0, alignSelf: 'center' }}>
-					<Typography sx={{ textAlign: 'center', color: 'CaptionText' }} noWrap>Estudiante egresado</Typography>
+					<Typography sx={{ textAlign: 'center', color: 'white' }} noWrap>Estudiante egresado</Typography>
 				</Box>
 				<Divider />
 				<Stack direction="column" sx={{ display: { xs: 'flex', md: 'flex' }, alignSelf: 'center' }}>
@@ -172,7 +170,7 @@ const AltaImagen = () => {
 				)}
 				{originalLink && uploadProgress < 100 && (
 					<Button size="sm" fullWidth sx={{ mt: 0, mb: 0.1, border: 0.01, borderColor: '#3d3d3d' }} className="text-normal mt-3 flex w-full justify-center rounded-md bg-indigo-800 font-normal leading-4 border-indigo-800 dark:border-indigo-700" type="submit"
-						startDecorator={<CloudUploadOutlinedIcon sx={{ width: "25px" }} opacity="80%" />} >
+						startDecorator={<UploadCloud sx={{ width: "20px" }} opacity="80%" />} >
 						Subir imagen
 					</Button>
 				)}

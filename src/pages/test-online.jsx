@@ -15,7 +15,6 @@ import { LuCircleParking, LuConstruction } from "react-icons/lu";
 import { IoDocumentOutline } from "react-icons/io5";
 import { BsSignStop, BsSignStopLights } from "react-icons/bs";
 import { URL_PDF } from '@/data/constants';
-// import PageSEO from '@/components/SEO';
 
 
 const TestOnline = () => {

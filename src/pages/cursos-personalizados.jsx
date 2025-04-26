@@ -1,8 +1,8 @@
 import React from 'react';
 import SectionPricing from '@/components/section/SectionPricing';
 import Breadcrumb from '@/components/Breadcrumb';
-// import PageSEO from '@/components/SEO';
 import StepsToStart from '@/components/StepsToStart';
+
 
 export default function CursosPersonalizados() {
   return (

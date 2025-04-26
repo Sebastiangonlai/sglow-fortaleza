@@ -123,7 +123,7 @@ const LinkGroup = ({ children, header }) => {
           <h4 className="flex mb-1 text-base font-normal cursor-pointer text-[#111928] dark:text-white dark:hover:text-blue-300 justify-center lg:justify-start">
             {header}
           </h4>
-          <ul className="text-sm font-normal  ">{children}</ul>
+           <ul className="text-sm font-normal">{children}</ul>
         </div>
       </div>
     </>
@@ -133,7 +133,7 @@ const LinkGroup = ({ children, header }) => {
 const NavLink = ({ link, label }) => {
   return (
     <li>
-      <a href={link} className="flex lg:w-[200px] justify-center lg:justify-start text-[15px] text-[#637381] dark:hover:text-blue-300 dark:text-[#D1D5DB]" aria-label={label}>
+      <a href={link} className="flex lg:w-[200px] justify-center lg:justify-start text-[15px] pb-[0.5px] text-[#637381] dark:hover:text-blue-300 dark:text-[#D1D5DB]" aria-label={label}>
         {label}
       </a>
     </li>
