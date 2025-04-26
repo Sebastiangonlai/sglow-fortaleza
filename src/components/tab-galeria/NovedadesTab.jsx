@@ -84,21 +84,18 @@ const TabNovedades = ({ cantidad }) => {
               // </motion.div>
             ))}
           </div>
-         
+
           <Modal id="myModal" open={open} onClose={handleClose} className="flex flex-wrap justify-center self-center">
             <Sheet className="w-fit h-fit rounded-xl flex" >
-      
               <ModalClose className="close right-3 z-100" aria-label="Close" color="none"
                 sx={{ backgroundColor: "rgba(0, 0, 0, 0.70)", color: "#ffff", }}>&times;</ModalClose>
               <ImageComponent iWidth={IMG.width} iHeight={IMG.height} iAlt="Alumnos" id="myImg" iSrc={imgSrc} loading="lazy" iClassName="object-cover rounded-xl focus:touch-pan-x delay-200 border border-zinc-500 select-none dark:rounded-lg dark:border justify-center" />
             </Sheet>
           </Modal>
-               </Box>
+        </Box>
       </div>
     </>
   )
 }
 
 export default TabNovedades
-
-
