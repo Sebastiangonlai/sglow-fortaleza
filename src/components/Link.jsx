@@ -1,14 +1,11 @@
-const CustomLink = ({ href, ...rest }) => {
-  const isInternalLink = href && href.startsWith('/');
-  const isAnchorLink = href && href.startsWith('#');
+import React from 'react';
 
-  if (isInternalLink || isAnchorLink) {
-    // Enlaces internos o anclas
-    return <a href={href} {...rest} />;
-  }
-
-  // Enlaces externos
-  return <a target="_blank" rel="noopener noreferrer" href={href} {...rest} />;
+const Link = ({ href, children, ...props }) => {
+  return (
+    <a href={href} {...props}>
+      {children}
+    </a>
+  );
 };
 
-export default CustomLink;
+export default Link;

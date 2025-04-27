@@ -17,7 +17,7 @@ const SectionHeaderFortaleza = () => {
 
 
   return (
-    <section className="flex flex-col select-none items-center overflow-hidden justify-center h-screen">
+    <section className="flex flex-col select-none items-center overflow-hidden justify-center h-screen dark:bg-[#111928]/95">
       {showBackgroundLines && (
         <BackgroundLines className="absolute select-none justify-center items-center top-0 left-0" />
       )}
@@ -80,7 +80,7 @@ const SectionHeaderFortaleza = () => {
         </span>
       )}
 
-      <h1 className="z-[100] -mt-28 lg:pt-4 sm:mt-6">
+      <h1 className="z-[100] -mt-24 lg:pt-8 sm:mt-6">
         <TypewriterEffectSmoothDemo />
       </h1>
       <div className="flex md:flex lg:flex flex-col justify-center items-center overflow-hidden">
@@ -91,7 +91,7 @@ const SectionHeaderFortaleza = () => {
               iAlt="Obtén tu licencia de conducir"
               iWidth={640}
               iHeight={384}
-              iClassName="my-5 -mx-6 pr-28 absolute rounded-3xl inset-0 object-cover transition-transform ease-in-out contrast-150 brightness-100 min-w-full" />
+              iClassName="my-5 -mx-6 pr-28 absolute rounded-3xl inset-0 object-cover transition-transform ease-in-out contrast-150 brightness-100 lg:min-w-3xl" />
           </div>
 
           <div className="anim-leftb">
@@ -100,7 +100,7 @@ const SectionHeaderFortaleza = () => {
               iAlt="Nuestra flota"
               iWidth={640}
               iHeight={384}
-              iClassName="rounded-3xl inset-0 object-cover object-center transition-transform ease-in-out contrast-105 brightness-100" />
+              iClassName="rounded-3xl inset-0 object-cover object-center transition-transform ease-in-out contrast-105 brightness-100 lg:min-w-3xl" />
           </div>
         </div>
       </div>

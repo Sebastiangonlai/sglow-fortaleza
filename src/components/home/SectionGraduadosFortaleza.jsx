@@ -58,10 +58,8 @@ const SectionGraduadosFortaleza = () => {
               ))}
             </motion.div> */}
           {groups.map((group, index) => (
-            <motion.div
-              className={`flex ${index % 2 === 0 ? 'flex-row-reverse space-x-reverse' : 'flex-row'} ml-8 mb-8 lg:ml-8 lg:mb-8`}
-              key={index} // Key único para el grupo
-            >
+            <motion.div className={`flex ${index % 2 === 0 ? 'flex-row-reverse space-x-reverse' : 'flex-row'} ml-8 mb-8 lg:ml-8 lg:mb-8`}
+              key={index}>
               {group.map((product) => (
                 <ProductCard key={product.id} product={product} translate={index % 2 === 0 ? translateX : translateXReverse} />
               ))}

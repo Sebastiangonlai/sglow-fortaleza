@@ -90,6 +90,10 @@ abbr:where([title]) {
 .ep {
   gap: 2.5rem;
 }
+.fontTitle {
+  font-family: 'Segoe UI';
+  font-weight: bolder;
+}
 
 
 input,
@@ -296,7 +300,7 @@ button,
 }
 
 
-Button {
+Button,Link {
   cursor:pointer;
 }
 
