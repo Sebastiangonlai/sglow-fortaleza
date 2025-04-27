@@ -1,12 +1,12 @@
 import SocialIcon from "./SocialIcons";
 
+
 const FooterFortaleza = () => {
   return (
-    <>
-      <footer className="relative z-30 pt-10 pb-1 dark:bg-[#111928] bg-[#F9FAFB] lg:pt-[75px] lg:pb-[5px] select-none leading-tight justify-center lg:justify-center" >
+      <footer className=" overflow-hidden relative z-30 pt-10 pb-1 dark:bg-[#111928] bg-[#F9FAFB] lg:pt-[70px] lg:pb-[5px] select-none leading-tight justify-center lg:justify-center border-t border-violet-200/10" >
         <div className="container flex flex-wrap justify-center max-w-[1200px] pb-6 truncate">
           <div className="lg:w-1/3 md:w-1/3 w-full">
-            <div className="pb-1 text-gray-900 dark:text-gray-200 text-base font-semibold text-center lg:text-left">
+            <div className="container pb-1 text-gray-900 dark:text-gray-200 text-base font-semibold text-center lg:text-left">
               <LinkGroup className="text-base font-bold" header="Enlaces útiles">
                 <NavLink link="/" className="text-base font-semibold text-[#111928] dark:text-white dark:hover:text-blue-300" label="Inicio" />
                 <NavLink link="/cursos-personalizados" label="Nuestros Cursos" />
@@ -19,7 +19,7 @@ const FooterFortaleza = () => {
           </div>
 
           <div className="lg:w-1/3 md:w-1/2 sm:w-1/2 w-full justify-center">
-            <div className="pb-2 text-gray-900 dark:text-gray-200 text-base font-semibold text-center lg:text-left">
+            <div className="container pb-1 text-gray-900 dark:text-gray-200 text-base font-semibold text-center lg:text-left">
               <LinkGroup className="text-base font-bold" header="Información">
                 <NavLink link="/sobre-nosotros" className="flex mb-1 font-semibold text-base cursor-pointer text-[#111928] dark:text-white dark:hover:text-blue-300 justify-center lg:justify-start" label="Sobre Nosotros" />
                 <NavLink link="/nuestros-servicios" label="Nuestros Servicios" />
@@ -32,7 +32,7 @@ const FooterFortaleza = () => {
           </div>
 
           <div className="lg:w-1/3 md:w-1/2 w-full lg:px-0 px-8">
-            <div className="pb-2  text-gray-900 dark:text-gray-200 font-semibold">Suscríbete</div>
+            <div className="pb-2 text-gray-900 dark:text-gray-200 font-semibold">Suscríbete</div>
             <form className="flex flex-col sm:flex-row">
               <div>
                 <label className="sr-only" htmlFor="email-input">
@@ -50,7 +50,7 @@ const FooterFortaleza = () => {
           </div>
         </div>
 
-        <div className="select-none text-xs pt-6 text-gray-400 font-normal text-center">© Copyright {`${new Date().getFullYear()}`}&ensp;Academia Fortaleza&ensp;-<a href="https://sglow.vercel.app/" target="_blank" className="hover:text-gray-200 font-medium text-blue-300" aria-label="Desarrollado por">
+        <div className="select-none text-xs pt-4 text-gray-400 font-normal text-center">© Copyright {`${new Date().getFullYear()}`}&ensp;Academia Fortaleza&ensp;-<a href="https://sglow.vercel.app/" target="_blank" className="hover:text-gray-200 font-medium text-blue-300" aria-label="Desarrollado por">
           &ensp;by Sebastián González
         </a>
         </div>
@@ -80,7 +80,6 @@ const FooterFortaleza = () => {
           </span>
         </div>
       </footer>
-    </>
   );
 };
 
@@ -90,9 +89,9 @@ export default FooterFortaleza;
 const LinkGroup = ({ children, header }) => {
   return (
     <>
-      <div className="w-full md:w-1/2 lg:w-1/3">
-        <div className="w-full">
-          <h4 className="flex mb-2 text-base font-semibold cursor-pointer text-[#111928] dark:text-white dark:hover:text-blue-300 justify-center lg:justify-start">
+      <div className="overflow-hidden w-full md:w-1/2 lg:w-1/3">
+        <div className="overflow-hidden w-full">
+          <h4 className="flex mb-1.5 text-base font-semibold cursor-pointer text-[#111928] dark:text-white dark:hover:text-blue-300 justify-center lg:justify-start">
             {header}
           </h4>
           <ul className="text-sm font-normal">{children}</ul>
@@ -105,7 +104,7 @@ const LinkGroup = ({ children, header }) => {
 const NavLink = ({ link, label }) => {
   return (
     <li>
-      <a href={link} className="flex lg:w-[200px] justify-center lg:justify-start text-base text-[#637381] dark:hover:text-blue-300 dark:text-[#D1D5DB]" aria-label={label}>
+      <a href={link} className="overflow-hidden flex lg:w-[200px] justify-center lg:justify-start text-base/5 text-[#637381] dark:hover:text-blue-300 dark:text-[#D1D5DB]" aria-label={label}>
         {label}
       </a>
     </li>

@@ -18,7 +18,6 @@ export default function Home() {
     <>
       <section id="inicio" className="overflow-hidden">
         <SectionHeader />
-        {/* <ModalImage card={cards} /> */}
       </section>
 
       <section id="nuestros-servicios">

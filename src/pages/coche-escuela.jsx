@@ -37,7 +37,6 @@ const images = [
 const NuestrosVeiculos = () => {
   return (
     <>
-
       <Breadcrumb
         title="Flota de Vehículos"
         subtitle="Flota moderna para una experiencia de aprendizaje óptima."
