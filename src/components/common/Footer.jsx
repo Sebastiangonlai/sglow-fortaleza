@@ -1,9 +1,4 @@
-import React from "react";
-// import Link from "@/components/Link";
-// import { IconosReact } from "@/components/social-icons";
-// import {  SiInstagram, SiWhatsapp } from "react-icons/si";
-// import { TfiEmail } from "react-icons/tfi";
-
+import SocialIcon from "./SocialIcons";
 
 const FooterFortaleza = () => {
   return (
@@ -37,7 +32,7 @@ const FooterFortaleza = () => {
           </div>
 
           <div className="lg:w-1/3 md:w-1/2 w-full lg:px-0 px-8">
-            <div className="pb-2 text-gray-900 dark:text-gray-200 font-semibold">Suscríbete</div>
+            <div className="pb-2  text-gray-900 dark:text-gray-200 font-semibold">Suscríbete</div>
             <form className="flex flex-col sm:flex-row">
               <div>
                 <label className="sr-only" htmlFor="email-input">
@@ -51,30 +46,7 @@ const FooterFortaleza = () => {
                 </button>
               </div>
             </form>
-
-            {/* <div className="-mt-3 text-center lg:text-left text-base font-semibold px-1">
-              Seguinos &ensp;&ensp;
-              <div className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-center">
-                <div className="inline-flex lg:ml-auto lg:mt-2 mt-1 w-full justify-center md:justify-start md:w-auto">
-                  <div className="pt-4 flex justify-center lg:justify-start">
-                    <ul className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-center">
-                      <li className="inline-flex lg:ml-auto lg:mt-2 mt-1 w-full justify-center md:justify-start md:w-auto">
-                        <TfiEmail kind="email" href={`mailto:info@academiafortaleza.com.uy`} aria-label="Email" />
-                      </li>
-                      <li className="inline-flex lg:ml-auto lg:mt-2 mt-1 w-full justify-center md:justify-start md:w-auto">
-                        <SiInstagram kind="instagram" href={import.meta.env.VITE_INSTAGRAM} aria-label="Instagram" />
-                      </li>
-                      <li className="inline-flex lg:ml-auto lg:mt-2 mt-1 w-full justify-center md:justify-start md:w-auto">
-                        <SiWhatsapp kind="facebook" href={import.meta.env.VITE_FACEBOOK} aria-label="Facebook" />
-                      </li>
-                      <li className="inline-flex lg:ml-auto lg:mt-2 mt-1 w-full justify-center md:justify-start md:w-auto">
-                        <SiWhatsapp kind="whatsapp" href={import.meta.env.VITE_API_WHATSAPP} aria-label="WhatsApp" />
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div> */}
+            <SocialIcon />
           </div>
         </div>
 
@@ -123,7 +95,7 @@ const LinkGroup = ({ children, header }) => {
           <h4 className="flex mb-2 text-base font-semibold cursor-pointer text-[#111928] dark:text-white dark:hover:text-blue-300 justify-center lg:justify-start">
             {header}
           </h4>
-           <ul className="text-sm font-normal">{children}</ul>
+          <ul className="text-sm font-normal">{children}</ul>
         </div>
       </div>
     </>
