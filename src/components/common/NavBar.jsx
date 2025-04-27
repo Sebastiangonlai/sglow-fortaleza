@@ -2,7 +2,7 @@
 
 import { useState, useCallback } from "react";
 import { Menu, X } from "lucide-react";
-import { Sheet, SheetContent } from "@/components/Sheet.jsx";
+import { Sheet, SheetContent } from "@/components/sheet";
 import Link from "@/components/Link";
 
 
@@ -80,8 +80,7 @@ const Navbar = () => {
               className="md:hidden text-white hover:text-gray-100 transition-colors hover:scale-110 duration-300"
               aria-expanded={isMenuOpen}
               aria-label={isMenuOpen ? "Cerrar menú" : "Abrir menú"}
-              onClick={() => setIsMenuOpen(!isMenuOpen)} // Alterna el estado aquí
-            >
+              onClick={() => setIsMenuOpen(!isMenuOpen)}>
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
