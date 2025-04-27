@@ -161,7 +161,11 @@ const ExpandableModalCard = () => {
 	const [imgSrc, setImgSrc] = useState('');
 	// const id = useId();
 	const ref = useRef(null);
-	let aux = ListImagesSupabase({ imgFirst: 0, imgLimit: 6 });
+	// let aux = ListImagesSupabase({ imgFirst: 0, imgLimit: 7 });
+
+	const auxList = ListImagesSupabase({ imgFirst: 0, imgLimit: 170 });
+	const aux = auxList.slice(0, 6);
+
 	let imagesFirst = [{ src: aux[0] }, { src: aux[1] }, { src: aux[2] }];
 	let imagesSecond = [{ src: aux[3] }, { src: aux[4] }, { src: aux[5] }];
 

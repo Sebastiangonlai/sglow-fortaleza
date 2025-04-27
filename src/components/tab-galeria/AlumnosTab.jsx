@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ListImagesSupabase } from '@/api/ImagenService';
 import Grid from '@mui/joy/Grid';
 import ModalClose from '@mui/joy/ModalClose';
@@ -19,15 +19,25 @@ export function TabAlumnos() {
 
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 6;  // Items por pagina.
-  const totalItems = 120;  // Cantidad total de imágenes.
+  const totalItems = 170;  // Cantidad total de imágenes.
 
-  const totalPages = Math.ceil(totalItems / itemsPerPage); // Cantidad total de páginas.
-  // const imagesUrl = GetUltimasImagenes(totalItems);
-  let imagesUrl = ListImagesSupabase({ imgFirst: 0, imgLimit: 6 }); //totalItems
+  const totalPages = Math.ceil(totalItems / itemsPerPage); // Cantidad total de páginas. floor
+  // const imagesUrl = ListImagesSupabase();
+  // console.log("imagesUrl: ", imagesUrl);
+
+
+  const imagesUrl = ListImagesSupabase({ imgFirst: 170 });
+
+
   // Calcular las imágenes que se mostrarán en cada pagina.
-  const lastItem = imagesUrl.length - (currentPage * itemsPerPage);
-  const firstItem = (lastItem - itemsPerPage);
-  const showImages = imagesUrl.slice(firstItem + 6, lastItem + 6);
+  // const lastItem = imagesUrl.length - (currentPage * itemsPerPage);
+  // const firstItem = (lastItem - itemsPerPage);
+  // const showImages = imagesUrl.slice(firstItem + 6, lastItem + 6);
+
+  // Calcular las imágenes que se mostrarán en cada pagina.
+  const lastItem = currentPage * itemsPerPage; // Cambiado para evitar que el cálculo de la última imagen se pase.
+  const firstItem = lastItem - itemsPerPage;  // Sumar 1 al primer item también para la indexación correcta.
+  const showImages = imagesUrl.slice(firstItem, lastItem);  // Slice ajustado para mostrar correctamente las imágenes en la última página.
 
 
   const handleOpen = (src) => {
@@ -83,7 +93,7 @@ export function TabAlumnos() {
 
           {/* Mostrar imágenes de la página actual */}
           <div className="flex flex-wrap justify-center ">
-            {showImages.slice().reverse().map((item, index) => (
+            {showImages.slice().map((item, index) => (
               <div key={index} className="w-full mx-1.5 md:w-1/2 lg:w-1/4">
                 <div className="mb-3 overflow-hidden rounded-lg">
                   <Grid item xs={4} sm={4} md={4} onClick={() => handleOpen(`${item}`)}>

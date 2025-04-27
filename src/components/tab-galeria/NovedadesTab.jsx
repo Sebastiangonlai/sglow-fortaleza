@@ -12,8 +12,8 @@ import ImageComponent from '../ImageComponent';
 
 
 const IMG = {
-  width: 400,
-  height: 300
+  width: 140,
+  height: 180
 }
 
 const TabNovedades = ({ cantidad }) => {
@@ -28,8 +28,8 @@ const TabNovedades = ({ cantidad }) => {
   //   rootMargin: '100px 100px 30px 100px'
   // });
 
-  const resp = ListImagesSupabase({ imgFirst: 0, imgLimit: cantidad });
-
+  const respAux = ListImagesSupabase({ imgFirst: 0, imgLimit: 170 });
+  const resp = respAux.slice(0, cantidad);
   const handleOpen = (src, alt) => {
     setImgSrc(src);
     setOpen(true);
@@ -62,7 +62,7 @@ const TabNovedades = ({ cantidad }) => {
         {/* </div> sx={{ width: 270, height: 200, flexGrow: 1, boxShadow: 'sm', borderColor: 'grey' }}> */}
         <Box className="grid gap-x-4 gap-y-3 text-center items-center">
           <div className="flex flex-wrap justify-center ">
-            {resp.slice().reverse().map((item, index) => (
+            {resp.slice().map((item, index) => (
               <div key={index} className="w-full mx-1.5 md:w-1/2 lg:w-1/4">
                 <div className="mb-3 overflow-hidden rounded-lg">
                   <Grid item xs={4} sm={4} md={4} onClick={() => handleOpen(`${item}`)}>
