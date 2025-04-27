@@ -2,7 +2,7 @@
 
 import { useState, useCallback } from "react";
 import { Menu, X } from "lucide-react";
-import { Sheet, SheetContent } from "@/components/Sheet";
+import { Sheet, SheetContent } from "@/components/Sheet.jsx";
 import Link from "@/components/Link";
 
 
