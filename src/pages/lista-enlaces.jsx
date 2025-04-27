@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import siteMetadata from '@/data/siteMetadata'
 import * as Dialog from "@radix-ui/react-dialog";
 
+
 export default function ListaEnlaces() {
 	const [isOpen, setIsOpen] = useState(true);
 

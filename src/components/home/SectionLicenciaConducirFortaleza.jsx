@@ -14,49 +14,27 @@ import ImageComponent from "@/components/ImageComponent";
 import { ScrollAnimation } from "@/components/ScrollAnimation";
 import ButtonSection from "@/components/ButtonSection";
 
-
 const IMG = {
 	width: 80,
 	height: 80
 }
 
-// const Block = ({ className, ...rest }) => {
-// 	return (
-// 		<motion.div
-// 			variants={{
-// 				initial: { scale: 0.5, y: 50, opacity: 0, },
-// 				animate: { scale: 1, y: 0, opacity: 1, },
-// 			}}
-// 			transition={{ type: "spring", mass: 5, stiffness: 400, damping: 80, }}
-// 			className={twMerge(
-// 				"rounded-full bg-transparent p-2 w-fit mx-auto items-center justify-center align-center",
-// 				className,
-// 			)}
-// 			{...rest}
-// 		/>
-// 	);
-// };
-
-
 const SectionLicenciaConducir = () => {
 	const features = [
 		{
 			title: "Nuestros Alumnos",
-			description: "Cientos de licencias obtenidas",
 			className: "col-span-1 lg:col-span-2 lg:w-[640px] ",
-			skeleton: <ExpandableModalCard />,
+			skeleton: <ModalCardAlumnos />,
 		}, {
-			title: "",
-			description: "",
+			title: "Obten tu licencia",
 			className: "col-span-1 lg:col-span-2 w-[350px] lg:w-[400px] mt-10 mx-auto justify-center items-center",
-			skeleton: <SkeletonThree />,
+			skeleton: <CardLicencia />,
 		},
 	];
 
 	return (
 		<section className="pt-20 pb-14 lg:pt-[80px] lg:pb-[30px] dark:bg-transparent bg-gray-200">
 			<div className="container mx-auto">
-
 				<TitleHeader
 					title="Últimos Graduados"
 					subtitle="Ellos lograron su objetivo: obtener la libreta."
@@ -66,14 +44,12 @@ const SectionLicenciaConducir = () => {
 					<div className="grid grid-cols-1 lg:grid-cols-4 -mt-6 rounded-md">
 						{features.map((feature) => (
 							<FeatureCard key={feature.title} className={feature.className}>
-								<div className="min-h-full min-w-full ">{feature.skeleton}</div>
+								<div className="min-h-full min-w-full">{feature.skeleton}</div>
 							</FeatureCard>
 						))}
 					</div>
 				</div>
 			</div>
-			{/* <FeatureTitle>{feature.title}</FeatureTitle> */}
-			{/* <Link href="">{feature.description}</Link> */}
 		</section>
 	);
 }
@@ -90,7 +66,7 @@ const FeatureCard = ({ children, className }) => {
 };
 
 
-export const SkeletonThree = () => {
+export const CardLicencia = () => {
 	const [showCard] = useState("novedades");
 	return (
 		<Modal>
@@ -110,7 +86,7 @@ export const SkeletonThree = () => {
 				delay={0.5}
 				rootMargin="0px 0px -10px 0px"
 				effect={{ initial: { opacity: 0, y: 100 }, animate: { opacity: 1, y: 0 } }}
-				transition={{ duration: 1, delay: 0.5, ease: 'easeInOut' }}
+				transition={{ duration: 0.8, delay: 0.5, ease: 'easeInOut' }}
 			/>
 		</Modal>
 	);
@@ -135,17 +111,6 @@ const PortfolioCard = ({ showCard, category, ImageHref, title, button, buttonHre
 							{category}
 						</span>
 						<h4 className="text-[#111928] dark:text-white mb-3 text-xl font-medium tracking-tight leading-tight">{title}</h4>
-						{/* <a href={buttonHref} aria-label="Más información sobre cómo obtener tu licencia de conducir">
-							<Block className="col-span-1 dark:bg-[#1f2937]bg-transparent md:col-span-1" whileHover={{ rotate: '-2.5deg', scale: 1.1 }}>
-								<button className={`relative flex items-center z-10 cursor-pointer rounded-2xl text-sm text-normal bg-transparent hover:bg-[#4f46e5]/20 py-2 px-3 ring-1 ring-white/10`}>
-									{button}
-									<svg fill="none" height="20" viewBox="0 0 22 22" width="20" xmlns="http://www.w3.org/2000/svg">
-										<path d="M10.75 8.75L14.25 12L10.75 15.25" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
-									</svg>
-								</button>
-							</Block>
-						</a> */}
-
 						<ButtonSection namebtn={button} uri={buttonHref} />
 					</div>
 				</div>
@@ -155,13 +120,11 @@ const PortfolioCard = ({ showCard, category, ImageHref, title, button, buttonHre
 };
 
 
-const ExpandableModalCard = () => {
+const ModalCardAlumnos = () => {
 	const [active, setActive] = useState(null);
 	const [open, setOpen] = useState(false);
 	const [imgSrc, setImgSrc] = useState('');
-	// const id = useId();
 	const ref = useRef(null);
-	// let aux = ListImagesSupabase({ imgFirst: 0, imgLimit: 7 });
 
 	const auxList = ListImagesSupabase({ imgFirst: 0, imgLimit: 170 });
 	const aux = auxList.slice(0, 6);
@@ -193,7 +156,6 @@ const ExpandableModalCard = () => {
 	useOutsideClick(ref, () => setActive(null));
 
 	const handleOpen = (src) => {
-
 		setImgSrc(src);
 		setOpen(true);
 	};
@@ -280,5 +242,4 @@ const ExpandableModalCard = () => {
 		</>
 	);
 }
-
-export { ExpandableModalCard };
+export { ModalCardAlumnos };

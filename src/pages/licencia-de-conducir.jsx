@@ -6,8 +6,6 @@ import ButtonSection from '@/components/ButtonSection';
 import { URL_PDF } from '@/data/constants';
 import Modal from '@mui/joy/Modal';
 
-
-
 const LicenciaDeConducir = () => {
   const [openPdf, setOpenPdf] = useState(false);
   const [activa, setActiva] = useState(false);
@@ -27,7 +25,7 @@ const LicenciaDeConducir = () => {
       </section>
 
       <section className="dark:bg-[#111928] pt-14 pb-4">
-        <div className="wow fadeInUp overflow-hidden" data-wow-delay=".2s" data-wow-duration="2s">
+        <div className="overflow-hidden">
           <div className="flex flex-wrap items-center">
             <div className="mx-auto max-w-7xl w-full px-4 text-left">
               <h1 className="mb-1 text-3xl font-bold text-[#111928] dark:text-white sm:text-4xl md:text-[35px] md:leading-[1]">
@@ -45,7 +43,7 @@ const LicenciaDeConducir = () => {
       <section className="overflow-hidden dark:bg-[#1f2a37] ">
         <div className="max-w-[80rem] px-4 pb-10 pt-20 lg:py-20 sm:px-6 lg:px-8 lg:pt-20 mx-auto overflow-hidden dark:bg-[#1f2a37]">
           <div className="dark:bg-[#1f2a37] pb-6">
-            <div className="wow fadeInUp overflow-hidden" data-wow-delay=".5s" data-wow-duration="3s">
+            <div className=" overflow-hidden">
               <div className="flex flex-wrap items-center -mx-4">
                 <div className="mx-auto max-w-7xl w-full px-4 text-left">
                   <h3 className="mb-1 text-3xl font-bold text-[#111928] dark:text-white sm:text-4xl md:text-[35px] md:leading-[1]">
@@ -59,10 +57,10 @@ const LicenciaDeConducir = () => {
             </div>
           </div>
           <div className="md:grid md:grid-cols-2 md:items-center md:gap-12 xl:gap-32">
-            <div className="wow fadeInLeft overflow-hidden" data-wow-delay=".10s" data-wow-duration="3s">
+            <div className=" overflow-hidden">
               <img className="rounded-xl" src="/static/images/card/servicio_10.webp" alt="Features Image" width={500} height={500} />
             </div>
-            <div className="wow fadeInRight mt-10 sm:mt-10 lg:mt-0 overflow-hidden" data-wow-delay=".10s" data-wow-duration="3s">
+            <div className=" mt-10 sm:mt-10 lg:mt-0 overflow-hidden">
               <div className="space-y-5 sm:space-y-8">
                 <div className="space-y-2 md:space-y-2">
                   <h2 className="font-semibold text-3xl lg:text-3xl text-gray-200 dark:text-neutral-200">
@@ -120,7 +118,7 @@ const LicenciaDeConducir = () => {
       </section>
 
       <section className="dark:bg-[#111928] pt-20">
-        <div className="wow fadeInUp overflow-hidden mb-2" data-wow-delay=".5s" data-wow-duration="1s">
+        <div className=" overflow-hidden mb-2">
           <div className="flex flex-wrap items-center">
             <div className="mx-auto max-w-7xl w-full px-4 text-left">
               <h4 className="mb-1 text-3xl font-bold text-[#111928] dark:text-white sm:text-4xl md:text-[35px] md:leading-[1]">
