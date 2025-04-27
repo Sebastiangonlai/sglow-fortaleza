@@ -36,7 +36,6 @@ const AltaImagen = () => {
 	const [originalLink, setOriginalLink] = useState("");
 	const [originalImage, setOriginalImage] = useState("");
 	const [compressedLink, setCompressedLink] = useState('/static/images/svg/photo.png');
-	const [recibidos, setRecibidos] = useState([]);
 
 
 	const handleCropComplete = (croppedImage) => {
@@ -77,7 +76,6 @@ const AltaImagen = () => {
 		const files = e.target.files;
 		if (files && files.length > 0) {
 			const selectedFile = e.target.files[0];
-			console.log("selectedFile: ", selectedFile);
 			// setOriginalLink(e.target.files[0]);
 			setOriginalLink(URL.createObjectURL(selectedFile));
 			// setFile(e.target.files[0]);
@@ -88,13 +86,7 @@ const AltaImagen = () => {
 		}
 	};
 
-	// useEffect(() => {
-	// 	const fetchDatas = async () => {
-	// 		const resp = await uploadImageSupabase(originalImage);
-	// 		setRecibidos(resp);
-	// 	};
-	// 	fetchDatas();
-	// }, []);
+
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		if (outputFileName && imageBase64) {
@@ -107,28 +99,12 @@ const AltaImagen = () => {
 		if (!originalImage) return;
 
 		try {
-			// const uploadTask = uploadImageSupabase(originalImage);
-
 			const uploadTask = await uploadImageSupabase(originalImage);
-			// setRecibidos(resp);
-			uploadTask.on(
-				'state_changed',
-				(snapshot) => {
-					const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100; // Calcular el porcentaje de subida
-					setUploadProgress(progress); // Actualizar el estado de progreso
-					// console.log(`Subida completada al ${progress}%`);
-				},
-				(error) => {
-					// console.error('Error subiendo la imagen', error);
-				},
-			);
+			setUploadProgress(100); // Actualizar el estado de progreso
 		} catch (error) {
-			// console.error('Error durante el proceso de subida', error);
+			console.error("Error al cargar la imagen:", error);
 		}
-	};
-
-
-	// Mensaje al cargar la imagen (uploadProgress 100%)
+	}
 	useEffect(() => {
 		if (uploadProgress === 100) {
 			swal({
@@ -155,7 +131,7 @@ const AltaImagen = () => {
 						<div className="group crop-container" style={{ width: '300px', height: '100%' }} >
 							{(originalLink && uploadProgress < 100) && (
 								<AspectRatio ratio="1.4/1">
-									<Button mt={0} display="flex" alignItems="center" variant="outlined" color='primary'  onClick={cien}>
+									<Button mt={0} display="flex" alignItems="center" variant="outlined" color='primary' onClick={cien}>
 										<img src={originalLink} value={originalLink} alt="Vista previa" loading="lazy" width={320} height={260} />
 										{/* style={{ maxWidth: '320px', maxHeight: '260px' }} */}
 									</Button>
@@ -166,7 +142,7 @@ const AltaImagen = () => {
 								<Box component="form" sx={{ marginTop: 4, marginBottom: 7, display: 'flex', flexDirection: 'column', alignItems: 'center', }} >
 									<Button variant="none" direction="column" alignItems="center" sx={{ borderRadius: 2, cursor: 'pointer', overflow: 'hidden', }} component="label" onChange={handleFileChange} className="group-hover:opacity-50 group-hover:cursor-pointer">
 										<img className="cursor-pointer " src={'/static/images/svg/photo.png'}
-											loading="lazy" width={96} height={96} alt="Imagen" />						
+											loading="lazy" width={96} height={96} alt="Imagen" />
 										<VisuallyHiddenInput type="file" />
 									</Button>
 								</Box>
