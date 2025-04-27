@@ -1,20 +1,27 @@
 "use client";
 
 import { useState, useCallback } from "react";
-import { Menu, X } from "lucide-react";
 import { Sheet, SheetContent } from "@/components/sheet";
 import Link from "@/components/Link";
+import { Menu, X, ChevronDown, LogOut, UserRoundIcon, UserRoundPen, LayoutDashboard } from "lucide-react"
+import { supabase } from '@/api/supabase';
+import { useAuth } from '@/context/AuthContext';
 
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [userMenuOpen, setUserMenuOpen] = useState(false)
+  const { session } = useAuth();
+  const isAdmin = session?.user?.role === import.meta.env.VITE_ROLE;
+
+  const handleLogout = async () => {
+    await supabase.auth.signOut();
+  };
 
   const handleMenuOpen = useCallback(() => {
-    setIsMenuOpen(true);
     document.body.classList.add("overflow-hidden");
   }, []);
   const handleMenuClose = useCallback(() => {
-    setIsMenuOpen(false);
     document.body.classList.remove("overflow-hidden");
   }, []);
 
@@ -22,7 +29,6 @@ const Navbar = () => {
   const handleSmoothScroll = useCallback((event, targetId) => {
     event.preventDefault();
     const targetElement = document.querySelector(targetId);
-    // Si no estamos en la raíz, redirigimos a la raíz
     if (window.location.pathname !== "/") {
       window.location.href = `/#${targetId.replace("#", "")}`;
       setTimeout(() => {
@@ -37,7 +43,6 @@ const Navbar = () => {
     }
   }, []);
 
-
   const navLinks = [
     { href: '#inicio', title: 'Inicio' },
     { href: '#nuestros-servicios', title: 'Servicios' },
@@ -46,7 +51,7 @@ const Navbar = () => {
     { href: '#contacto', title: 'Contacto' },
   ];
 
-  
+
   return (
     <div className="fixed w-screen top-0 z-50 border-b border-violet-200/10 backdrop-blur-sm dark:bg-[#111928]/95 dark:border-gray-600/20
     supports-[backdrop-filter]:bg-[#020817]/90 text-gray-100 select-none">
@@ -71,13 +76,43 @@ const Navbar = () => {
               {link.title}
             </Link>
           ))}
+
+          {session && (
+            <div className="relative">
+              <button className="flex items-center space-x-1 px-3 py-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800"
+                onClick={() => setUserMenuOpen(!userMenuOpen)}>
+                <div className="avatar">
+                  <UserRoundIcon size={16} className="mr-1" />
+                </div>
+                <span className="text-sm font-medium">{session.user.phone}</span>
+                <ChevronDown size={16} />
+              </button>
+              {userMenuOpen && (
+                <div className="absolute mt-1 w-33 py-1 bg-white dark:bg-slate-800 rounded-md shadow-lg border border-slate-200 dark:border-slate-700 z-50">
+                  {isAdmin && (
+                    <Link href="/admin" className="flex items-center px-4 py-2 text-sm hover:bg-slate-100 dark:hover:bg-slate-700">
+                      <LayoutDashboard size={16} className="mr-2" />
+                      Dashboard
+                    </Link>
+                  )}
+                  <Link href="/nuestros-servicios" className="flex items-center px-4 py-2 text-sm hover:bg-slate-100 dark:hover:bg-slate-700">
+                    <UserRoundPen size={16} className="mr-2" />
+                    Profile
+                  </Link>
+                  <button onClick={handleLogout} className="flex items-center w-full text-left px-4 py-2 text-sm text-red-400 hover:bg-slate-100 dark:hover:bg-slate-700">
+                    <LogOut size={16} className="mr-2" />
+                    Logout
+                  </button>
+                </div>
+              )}
+            </div>
+          )}
         </nav>
 
         {/* Mobile Menu */}
         <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
           <div className="flex right-0 mx-2 justify-end gap-3 md:hidden">
-            <button
-              className="md:hidden text-white hover:text-gray-100 transition-colors hover:scale-110 duration-300"
+            <button className="md:hidden text-white hover:text-gray-100 transition-colors hover:scale-110 duration-300"
               aria-expanded={isMenuOpen}
               aria-label={isMenuOpen ? "Cerrar menú" : "Abrir menú"}
               onClick={() => setIsMenuOpen(!isMenuOpen)}>

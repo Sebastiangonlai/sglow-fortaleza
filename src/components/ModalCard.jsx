@@ -37,7 +37,6 @@ function ModalImage({ card }) {
 	);
 };
 
-
 export { ModalImage, ModalCard }
 
 const ModalAnimatedCard = ({ imageSrc, title, description, checkText, btnHref }) => {
@@ -110,7 +109,6 @@ const ModalAnimatedCard = ({ imageSrc, title, description, checkText, btnHref })
 		</>
 	);
 };
-
 
 
 const ModalAnimatedImage = ({ imageSrc, title }) => {

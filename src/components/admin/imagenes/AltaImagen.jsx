@@ -37,7 +37,6 @@ const AltaImagen = () => {
 	const [originalImage, setOriginalImage] = useState("");
 	const [compressedLink, setCompressedLink] = useState('/static/images/svg/photo.png');
 
-
 	const handleCropComplete = (croppedImage) => {
 		if (croppedImage) {
 			setOriginalLink(URL.createObjectURL(croppedImage));
@@ -139,11 +138,11 @@ const AltaImagen = () => {
 				<Divider />
 				<Stack direction="column" sx={{ display: { xs: 'flex', md: 'flex' }, alignSelf: 'center' }}>
 
-					<FormControl sx={{ display: { sm: 'flex', md: 'flex' }, gap: 0.8 }}>
-						<div className="crop-container" style={{ width: '300px', height: '100%' }} >
+					<FormControl sx={{ display: { sm: 'flex', md: 'flex' }, gap: 0.8 }}  >
+						<div className="group crop-container" style={{ width: '300px', height: '100%' }} >
 							{(originalLink && uploadProgress < 100) && (
 								<AspectRatio ratio="1.4/1">
-									<Button mt={0} display="flex" alignItems="center" variant="outlined" color='primary' className="dark:hover:bg-gray-900/10 cursor-pointer" onClick={cien}>
+									<Button mt={0} display="flex" alignItems="center" variant="outlined" color='primary'  onClick={cien}>
 										<img src={originalLink} value={originalLink} alt="Vista previa" loading="lazy" width={320} height={260} />
 										{/* style={{ maxWidth: '320px', maxHeight: '260px' }} */}
 									</Button>
@@ -152,15 +151,12 @@ const AltaImagen = () => {
 
 							{(!originalLink || uploadProgress >= 100) && (
 								<Box component="form" sx={{ marginTop: 4, marginBottom: 7, display: 'flex', flexDirection: 'column', alignItems: 'center', }} >
-									<Button variant="none" direction="column" alignItems="center" sx={{ borderRadius: 2, cursor: 'pointer', overflow: 'hidden', '&:hover': { opacity: 0.6, } }} component="label" onChange={handleFileChange} >
-										<img className="cursor-pointer" src={'/static/images/svg/photo.png'}
-											loading="lazy" width={96} height={96} alt="Imagen" />
-										{/* <Image className="cursor-pointer" src={'/images/svg/photo.png'}
-											loading="lazy" width={96} height={96} style={{ maxWidth: "96px", alignItems: "center", opacity: "95%" }} alt="Imagen" /> */}
+									<Button variant="none" direction="column" alignItems="center" sx={{ borderRadius: 2, cursor: 'pointer', overflow: 'hidden', }} component="label" onChange={handleFileChange} className="group-hover:opacity-50 group-hover:cursor-pointer">
+										<img className="cursor-pointer " src={'/static/images/svg/photo.png'}
+											loading="lazy" width={96} height={96} alt="Imagen" />						
 										<VisuallyHiddenInput type="file" />
 									</Button>
 								</Box>
-
 							)}
 						</div>
 					</FormControl>

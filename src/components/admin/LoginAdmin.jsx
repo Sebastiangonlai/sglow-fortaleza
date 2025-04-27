@@ -1,26 +1,15 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import { useAuth } from '@/context/AuthContext';
 import { supabase } from '@/api/supabase';
 import AltaImagen from '@/components/admin/imagenes/AltaImagen';
 import swal from 'sweetalert';
-import { X } from "lucide-react";
+
 
 
 function MyLoginAdmins() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [session, setSession] = useState(null);
-
-  useEffect(() => {
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setSession(session);
-    });
-
-    const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
-      setSession(session);
-    });
-
-    return () => listener?.subscription.unsubscribe();
-  }, []);
+  const { session } = useAuth();
 
   const signUp = async () => {
     const { error } = await supabase.auth.signUp({ email, password });
@@ -43,10 +32,6 @@ function MyLoginAdmins() {
         timer: 4000
       })
     }
-  };
-
-  const signOut = async () => {
-    await supabase.auth.signOut();
   };
 
   return (
@@ -81,8 +66,6 @@ function MyLoginAdmins() {
       ) : (
         <>
           <AltaImagen />
-          {/* <h2>Sesión iniciada como {session.user.email}</h2> */}
-          <button onClick={signOut} className="text-base p-1 right-5 top-20 fixed flex-col rounded-full ring-1 ring-red-400 "> <X size={18} color='red' /></button>
         </>
       )}
     </div>

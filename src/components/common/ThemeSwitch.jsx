@@ -5,7 +5,6 @@ const ThemeSwitch = () => {
   const [mounted, setMounted] = useState(false)
   const { theme, setTheme, resolvedTheme } = useTheme()
 
-  // Cuando se monta en el cliente, ahora podemos mostrar la interfaz de usuario
   useEffect(() => setMounted(true), [])
 
   return (
