@@ -60,7 +60,7 @@ export const InfiniteMovingCards = ({ items, direction = "left", speed = "fast",
                     <img src={item.imgQua} alt={item.author} className="h-[50px] w-[50px] rounded-full" />
                   </div>
                   <div>
-                    <h3 className="text-sm font-semibold text-[#111928] dark:text-white">{item.author}</h3>
+                    <p className="text-sm font-semibold text-[#111928] dark:text-white">{item.author}</p>
                   </div>
                 </a>
               </div>

@@ -91,7 +91,7 @@ const LinkGroup = ({ children, header }) => {
     <>
       <div className="overflow-hidden w-full md:w-1/2 lg:w-1/3">
         <div className="overflow-hidden w-full">
-          <h4 className="flex mb-1.5 text-base font-semibold cursor-pointer text-[#111928] dark:text-white dark:hover:text-blue-300 justify-center lg:justify-start">
+          <h4 className="flex mb-2 text-base font-semibold cursor-pointer text-[#111928] dark:text-white dark:hover:text-blue-300 justify-center lg:justify-start">
             {header}
           </h4>
           <ul className="text-sm font-normal">{children}</ul>
