@@ -2,13 +2,6 @@ import React from 'react';
 
 
 const SectionPricing = () => {
-  // const [showCard, setShowCard] = useState(true);
-  // const [buttonColor, setButtonColor] = useState('bg-indigo-500'); // color original
-  // const handleClassesClick = () => {
-  //   setShowCard(false);
-  //   setButtonColor('bg-indigo-100'); // nuevo color
-  // };
-
   const itemCursos = [
     { desc: "15 clases + 1 de regalo." },
     { desc: "Trámites en IMM." },

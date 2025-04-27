@@ -21,18 +21,8 @@ export function TabAlumnos() {
   const itemsPerPage = 6;  // Items por pagina.
   const totalItems = 170;  // Cantidad total de imágenes.
 
-  const totalPages = Math.ceil(totalItems / itemsPerPage); // Cantidad total de páginas. floor
-  // const imagesUrl = ListImagesSupabase();
-  // console.log("imagesUrl: ", imagesUrl);
-
-
+  const totalPages = Math.ceil(totalItems / itemsPerPage);
   const imagesUrl = ListImagesSupabase({ imgFirst: 170 });
-
-
-  // Calcular las imágenes que se mostrarán en cada pagina.
-  // const lastItem = imagesUrl.length - (currentPage * itemsPerPage);
-  // const firstItem = (lastItem - itemsPerPage);
-  // const showImages = imagesUrl.slice(firstItem + 6, lastItem + 6);
 
   // Calcular las imágenes que se mostrarán en cada pagina.
   const lastItem = currentPage * itemsPerPage; // Cambiado para evitar que el cálculo de la última imagen se pase.
@@ -94,7 +84,7 @@ export function TabAlumnos() {
           {/* Mostrar imágenes de la página actual */}
           <div className="flex flex-wrap justify-center ">
             {showImages.slice().map((item, index) => (
-              <div key={index} className="w-full mx-1.5 md:w-1/2 lg:w-1/4">
+              <div key={index} className="w-full mx-1.5 md:w-1/2 lg:w-1/4 ">
                 <div className="mb-3 overflow-hidden rounded-lg">
                   <Grid item xs={4} sm={4} md={4} onClick={() => handleOpen(`${item}`)}>
                     <ImageComponent key={index} iWidth={320} iHeight={320} iAlt="Alumnos graduados" iSrc={item} loading="lazy" iClassName="cursor-pointer w-full h-[250px] object-cover rounded-md focus:touch-pan-x hover:ease-in-out delay-300 border border-zinc-500 select-none overflow-hidden shadow-sm shadow-gray-300 dark:rounded-md dark:border dark:shadow-sm dark:showCard dark:border-gray-800  justify-center" />
@@ -108,23 +98,23 @@ export function TabAlumnos() {
             <Sheet className="w-fit h-fit rounded-xl flex" >
               <ModalClose className="close right-3 z-100" aria-label="Close" color="none"
                 sx={{ backgroundColor: "rgba(0, 0, 0, 0.70)", color: "#ffff", }}>&times;</ModalClose>
-              <ImageComponent iWidth={IMG.width} iHeight={IMG.height} iAlt="Alumnos" id="myImg" iSrc={imgSrc} loading="lazy" iClassName="object-cover rounded-xl focus:touch-pan-x delay-200 border border-zinc-500 select-none dark:rounded-lg dark:border justify-center" />
+              <ImageComponent iWidth={IMG.width} iHeight={IMG.height} iAlt="Alumnos" id="myImg" iSrc={imgSrc} loading="lazy" iClassName="max-w-[720px] max-h-[640px]object-cover rounded-xl focus:touch-pan-x delay-200 border border-zinc-500 select-none dark:rounded-lg dark:border justify-center" />
             </Sheet>
           </Modal>
-          <div className="bg-white py-10 text-center dark:bg-[#111928]">
-            <div className="inline-flex gap-1 rounded-full border border-stroke p-2 dark:border-white/10">
+          <div className="bg-white py-9 text-center dark:bg-[#111928]">
+            <div className="inline-flex gap-1 rounded-full border border-stroke p-1.5 dark:border-white/10">
               <ul className="flex items-center gap-1">
 
                 {/* Botón para ir a la primera página */}
                 <li className='hidden sm:hidden md:flex lg:flex'>
-                  <button className="flex h-10 min-w-10 items-center justify-center rounded-full px-2 text-[#111928] hover:bg-blue-2 dark:text-white dark:hover:bg-blue/20" onClick={() => handlePageChange(1)} disabled={currentPage === 1}>
+                  <button className="flex h-10 min-w-10 items-center justify-center rounded-full px-2 text-[#111928] hover:bg-blue-700 dark:text-white dark:hover:bg-blue-500/20" onClick={() => handlePageChange(1)} disabled={currentPage === 1}>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="-0.5 -0.5 16 16" fill="none" stroke="white" strokeLinecap="round" strokeLinejoin="round" id="Chevron-Left-Pipe--Streamline-Tabler" height="22" width="22"><path d="M4.375 3.75v7.5" strokeWidth="1.2"></path><path d="m11.25 3.75 -3.75 3.75 3.75 3.75" strokeWidth="1.2"></path></svg>
                   </button>
                 </li>
 
                 {/* Botón para retroceder una página */}
                 <li>
-                  <button className="flex h-10 min-w-10 items-center justify-center rounded-full px-2 text-[#111928] hover:bg-blue-2 dark:text-white dark:hover:bg-blue/20" onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1}>
+                  <button className="flex h-10 min-w-10 items-center justify-center rounded-full px-2 text-[#111928] hover:bg-blue-2 dark:text-white dark:hover:bg-blue-500/20" onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1}>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="-0.5 -0.5 16 16" fill="none" stroke="white" strokeLinecap="round" strokeLinejoin="round" id="Chevron-Left--Streamline-Tabler" height="22" width="22"><path d="m9.375 3.75 -3.75 3.75 3.75 3.75" strokeWidth="1.2"></path>
                     </svg>
                   </button>
@@ -134,7 +124,7 @@ export function TabAlumnos() {
                 {getPageNumbers().map((pageNumber) => (
                   <li key={pageNumber}>
                     <button onClick={() => handlePageChange(pageNumber)}
-                      className={`flex h-10 min-w-10 items-center justify-center rounded-full px-2 text-[#111928] hover:bg-blue dark:text-white dark:hover:bg-blue/20 ${currentPage === pageNumber ? 'dark:bg-blue/20 dark:font-semibold' : 'text-[#637381] dark:text-[#9CA3AF]'}`}>
+                      className={`flex h-10 w-10 items-center justify-center rounded-full text-[#111928] hover:bg-blue-700 dark:text-white dark:hover:bg-blue-500/20 ${currentPage === pageNumber ? 'dark:bg-blue-600/20 dark:font-semibold' : 'text-[#637381] dark:text-[#9CA3AF]'}`}>
                       {pageNumber}
                     </button>
                   </li>
@@ -143,7 +133,7 @@ export function TabAlumnos() {
                 {/* Botón para avanzar una página */}
                 <li>
                   <button onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === totalPages}
-                    className="flex h-10 min-w-10 items-center justify-center rounded-full px-2 text-[#111928] hover:bg-[#F3F4F6] dark:text-white dark:hover:bg-blue/20">
+                    className="flex h-10 min-w-10 items-center justify-center rounded-full px-2 text-[#111928] hover:bg-[#F3F4F6] dark:text-white dark:hover:bg-blue-500/20">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="-0.5 -0.5 16 16" fill="none" stroke="white" strokeLinecap="round" strokeLinejoin="round" id="Chevron-Right-Pipe--Streamline-Tabler" height="22" width="22"><path d="m5.625 3.75 3.75 3.75 -3.75 3.75" strokeWidth="1.2"></path>
                     </svg>
                   </button>
@@ -152,7 +142,7 @@ export function TabAlumnos() {
                 {/* Botón para ir a la última página */}
                 <li className='hidden sm:hidden md:flex lg:flex'>
                   <button onClick={() => handlePageChange(totalPages)} disabled={currentPage === totalPages}
-                    className="flex h-10 min-w-10 items-center justify-center rounded-full px-2 text-[#111928] hover:bg-blue-2 dark:text-white dark:hover:bg-blue/20">
+                    className="flex h-10 min-w-10 items-center justify-center rounded-full px-2 text-[#111928] hover:bg-blue-700 dark:text-white dark:hover:bg-blue-500/20">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="-0.5 -0.5 16 16" fill="none" stroke="white" strokeLinecap="round" strokeLinejoin="round" id="Chevron-Right-Pipe--Streamline-Tabler" height="22" width="22"><path d="m3.75 3.75 3.75 3.75 -3.75 3.75" strokeWidth="1.2"></path><path d="M10.625 3.125v8.125" strokeWidth="1.2"></path>
                     </svg>
                   </button>

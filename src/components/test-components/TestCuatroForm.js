@@ -12,8 +12,7 @@ import FormControl from '@mui/joy/FormControl';
 import Modal from '@mui/joy/Modal';
 import { CssVarsProvider, useColorScheme } from '@mui/joy/styles';
 import Sheet from '@mui/joy/Sheet';
-import { getDatabase, ref, onValue, set } from "firebase/database";
-import '../../firebase/firebase';
+
 import ImageComponent from '../ImageComponent';
 
 const o = [];
@@ -217,22 +216,22 @@ function datosPrueba(frm) {
     }
   }
 
-  const db = getDatabase();
-  const starCountRef = ref(db, 'testonline/');
-  onValue(starCountRef, (snapshot) => {
-    const data = snapshot.val();
-    const largo = data.length;
-    if (typeof window !== 'undefined')
-      localStorage.setItem("sigId", largo);
-  });
+  // const db = getDatabase();
+  // const starCountRef = ref(db, 'testonline/');
+  // onValue(starCountRef, (snapshot) => {
+  //   const data = snapshot.val();
+  //   const largo = data.length;
+  //   if (typeof window !== 'undefined')
+  //     localStorage.setItem("sigId", largo);
+  // });
 
-  const userLogin = localStorage.getItem('initUser')
-  const nameLogin = localStorage.getItem('initName')
-  const nextId = localStorage.getItem('sigId')
+  // const userLogin = localStorage.getItem('initUser')
+  // const nameLogin = localStorage.getItem('initName')
+  // const nextId = localStorage.getItem('sigId')
 
-  if (userLogin === null) {
-    // return window.location.href = '/test-online';
-  }
+  // if (userLogin === null) {
+  //   // return window.location.href = '/test-online';
+  // }
 
 
   for (let i = 0; i < ops.length; i++) {
@@ -255,7 +254,7 @@ function datosPrueba(frm) {
 
   if (!opnes) {
     if (contar > 24) {
-      addTest(nextId, a, userLogin, nameLogin, "APRUEBA");
+      // addTest(a, "APRUEBA");
       swal({
         title: "¡Aprobado!",
         text: "Tu puntaje es: " + contar + "/30",
@@ -264,7 +263,7 @@ function datosPrueba(frm) {
         timer: 3000,
       })
     } else {
-      addTest(nextId, a, userLogin, nameLogin, "REPRUEBA");
+      // addTest(a, "REPRUEBA");
       swal({
         title: "¡Reprobado!",
         text: "Tu puntaje es: " + contar + "/30",
@@ -278,14 +277,14 @@ function datosPrueba(frm) {
   }
 }
 
-function addTest(sigId, resp, userLogin, nameLogin, strnota) { // S67
-  const db = getDatabase();
-  set(ref(db, 'testonline/' + sigId), {
-    id: sigId,
-    iduser: userLogin,
-    name: nameLogin,
-    nrotest: '4',
-    responde: resp,
-    resultado: strnota
-  });
-}
+// function addTest(sigId, resp, userLogin, nameLogin, strnota) { // S67
+//   const db = getDatabase();
+//   set(ref(db, 'testonline/' + sigId), {
+//     id: sigId,
+//     iduser: userLogin,
+//     name: nameLogin,
+//     nrotest: '4',
+//     responde: resp,
+//     resultado: strnota
+//   });
+// }

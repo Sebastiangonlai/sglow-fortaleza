@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
-// import Image from 'next/image'
 import siteMetadata from '@/data/siteMetadata'
 import * as Dialog from "@radix-ui/react-dialog";
-// import PageSEO from '@/components/SEO'
-
 
 export default function ListaEnlaces() {
 	const [isOpen, setIsOpen] = useState(true);

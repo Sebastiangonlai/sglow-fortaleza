@@ -12,8 +12,7 @@ import FormControl from '@mui/joy/FormControl';
 import Modal from '@mui/joy/Modal';
 import { CssVarsProvider, useColorScheme } from '@mui/joy/styles';
 import Sheet from '@mui/joy/Sheet';
-import { getDatabase, ref, onValue, set } from "firebase/database";
-import '../../firebase/firebase';
+
 
 const o = [];
 const a = [];
@@ -206,14 +205,14 @@ function datosPrueba(frm) {
     }
   }
 
-  const db = getDatabase();
-  const starCountRef = ref(db, 'testonline/');
-  onValue(starCountRef, (snapshot) => {
-    const data = snapshot.val();
-    const largo = data.length;
-    if (typeof window !== 'undefined')
-      localStorage.setItem("sigId", largo);
-  });
+  // const db = getDatabase();
+  // const starCountRef = ref(db, 'testonline/');
+  // onValue(starCountRef, (snapshot) => {
+  //   const data = snapshot.val();
+  //   const largo = data.length;
+  //   if (typeof window !== 'undefined')
+  //     localStorage.setItem("sigId", largo);
+  // });
 
   const userLogin = localStorage.getItem('initUser')
   const nameLogin = localStorage.getItem('initName')
@@ -245,7 +244,7 @@ function datosPrueba(frm) {
 
   if (!opnes) {
     if (contar > 24) {
-      addTest(nextId, a, userLogin, nameLogin, "APRUEBA");
+      // addTest(nextId, a, userLogin, nameLogin, "APRUEBA");
       swal({
         title: "¡Aprobado!",
         text: "Tu puntaje es: " + contar + "/30",
@@ -254,7 +253,7 @@ function datosPrueba(frm) {
         timer: 3000,
       })
     } else {
-      addTest(nextId, a, userLogin, nameLogin, "REPRUEBA");
+      // addTest(nextId, a, userLogin, nameLogin, "REPRUEBA");
       swal({
         title: "¡Reprobado!",
         text: "Tu puntaje es: " + contar + "/30",
@@ -268,17 +267,17 @@ function datosPrueba(frm) {
   }
 }
 
-function addTest(sigId, resp, userLogin, nameLogin, strnota) { // S67
-  const db = getDatabase();
-  set(ref(db, 'testonline/' + sigId), {
-    id: sigId,
-    iduser: userLogin,
-    name: nameLogin,
-    nrotest: '1',
-    responde: resp,
-    resultado: strnota
-  });
-}
+// function addTest(sigId, resp, userLogin, nameLogin, strnota) { // S67
+//   const db = getDatabase();
+//   set(ref(db, 'testonline/' + sigId), {
+//     id: sigId,
+//     iduser: userLogin,
+//     name: nameLogin,
+//     nrotest: '1',
+//     responde: resp,
+//     resultado: strnota
+//   });
+// }
 
 
 const handleAtras = () => {

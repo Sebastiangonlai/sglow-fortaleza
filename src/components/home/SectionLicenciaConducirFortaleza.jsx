@@ -205,11 +205,11 @@ const ExpandableModalCard = () => {
 	return (
 		<>
 			<div>
-				<Modals id="myModal" open={open} onClose={handleClose} className="flex flex-wrap justify-center self-center py-2 px-2">
+				<Modals id="myModal" open={open} onClose={handleClose} className="flex justify-center self-center px-2">
 					<Sheet className="w-fit h-fit rounded-xl flex " >
 						<ModalClose className="close right-3 z-100" aria-label="Close" color="none"
 							sx={{ backgroundColor: "rgba(0, 0, 0, 0.70)", color: "#ffff", }}>&times;</ModalClose>
-						<ImageComponent iSrc={imgSrc.src} iWidth={IMG.width} iHeight={IMG.height} iAlt="Alumnos Academia de manejo" id="myImg" loading="lazy" iClassName="w-full h-full object-cover rounded-xl focus:touch-pan-x delay-200 border border-zinc-900 select-none dark:rounded-lg dark:border dark:border-zinc-600/90 justify-center" />
+						<ImageComponent iSrc={imgSrc.src} iWidth={IMG.width} iHeight={IMG.height} iAlt="Alumnos Academia de manejo" id="myImg" loading="lazy" iClassName="w-full max-h-[640px] object-cover rounded-xl focus:touch-pan-x delay-200 border border-zinc-900 select-none dark:rounded-lg dark:border dark:border-zinc-600/90 justify-center" />
 					</Sheet>
 				</Modals>
 			</div>

@@ -19,15 +19,6 @@ const IMG = {
 const TabNovedades = ({ cantidad }) => {
   const [open, setOpen] = useState(false);
   const [imgSrc, setImgSrc] = useState('');
-
-  // const [refGid, inViewGid] = useInView({
-  //   threshold: 0,
-  //   triggerOnce: true,
-  //   initialInView: true,
-  //   scale: [1, 1.5, 1],
-  //   rootMargin: '100px 100px 30px 100px'
-  // });
-
   const respAux = ListImagesSupabase({ imgFirst: 0, imgLimit: 170 });
   const resp = respAux.slice(0, cantidad);
   const handleOpen = (src, alt) => {
@@ -66,34 +57,22 @@ const TabNovedades = ({ cantidad }) => {
               <div key={index} className="w-full mx-1.5 md:w-1/2 lg:w-1/4">
                 <div className="mb-3 overflow-hidden rounded-lg">
                   <Grid item xs={4} sm={4} md={4} onClick={() => handleOpen(`${item}`)}>
-                    <ImageComponent key={index} iWidth={320} iHeight={320} iAlt={item} iSrc={item} loading="lazy" iClassName="cursor-pointer w-full h-[250px] object-cover rounded-md focus:touch-pan-x hover:ease-in-out delay-300 border border-zinc-500 select-none overflow-hidden shadow-sm shadow-gray-300 dark:rounded-md dark:border dark:shadow-sm dark:border-zinc-800 dark:shadow-zinc-800 justify-center" />
+                    <ImageComponent key={index} iWidth={140} iHeight={180} iAlt={item} iSrc={item} loading="lazy" iClassName="cursor-pointer object-cover rounded-md focus:touch-pan-x hover:ease-in-out delay-300 border border-zinc-500 select-none overflow-hidden shadow-sm shadow-gray-300 dark:rounded-md dark:border dark:shadow-sm dark:border-zinc-800 dark:shadow-zinc-800 justify-center" />
                   </Grid>
                 </div>
               </div>
-              // <motion.div key={item} ref={refGid}
-              //   initial="hidden" animate={inViewGid ? "visible" : "hidden"}
-              //   whileInView={{ scale: 1 }} whileHover={{ scale: 1.05 }} whileTap={{ scale: 1.05 }}
-              //   transition={{ type: 'keyframes', times: [0, 0.5, 1], duration: 0.5 }}
-              //   variants={{ hidden: { opacity: 1, y: 0, scale: 1 }, visible: { opacity: 1, y: 0, scale: 1 } }}
-              //   className="select-none flex flex-col">
-
-              //   <Grid item xs={4} sm={4} md={4} onClick={() => handleOpen(`${item}`, "Mensaje caption!!!")}>
-              //     <ImageComponent key={index} iWidth={320} iHeight={320} iAlt="Alumnos" iSrc={item} loading="lazy"
-              //       iClassName="object-cover rounded-md focus:touch-pan-x hover:ease-in-out delay-300 border border-zinc-500 select-none overflow-hidden shadow-sm shadow-gray-300 dark:rounded-md dark:border dark:shadow-sm dark:border-zinc-800 dark:shadow-zinc-800 justify-center" />
-              //   </Grid>
-              // </motion.div>
             ))}
           </div>
 
-          <Modal id="myModal" open={open} onClose={handleClose} className="flex flex-wrap justify-center self-center">
-            <Sheet className="w-fit h-fit rounded-xl flex" >
+          <Modal id="myModal" open={open} onClose={handleClose} className="flex flex-wrap justify-center self-center items-center">
+            <Sheet className=" rounded-xl flex" >
               <ModalClose className="close right-3 z-100" aria-label="Close" color="none"
                 sx={{ backgroundColor: "rgba(0, 0, 0, 0.70)", color: "#ffff", }}>&times;</ModalClose>
-              <ImageComponent iWidth={IMG.width} iHeight={IMG.height} iAlt="Alumnos" id="myImg" iSrc={imgSrc} loading="lazy" iClassName="object-cover rounded-xl focus:touch-pan-x delay-200 border border-zinc-500 select-none dark:rounded-lg dark:border justify-center" />
+              <ImageComponent iWidth={IMG.width} iHeight={IMG.height} iAlt="Alumnos" id="myImg" iSrc={imgSrc} loading="lazy" iClassName="max-w-[720px] max-h-[640px]object-cover rounded-xl focus:touch-pan-x delay-200 border border-zinc-500 select-none dark:rounded-lg dark:border justify-center" />
             </Sheet>
           </Modal>
         </Box>
-      </div>
+                </div>
     </>
   )
 }
