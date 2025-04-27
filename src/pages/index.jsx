@@ -16,47 +16,48 @@ import SectionNuestrosServicios from '@/components/home/SectionNuestrosServicios
 export default function Home() {
   return (
     <>
-        <section id="inicio" className="overflow-hidden">
-          <SectionHeader />
-        </section>
+      <section id="inicio" className="overflow-hidden">
+        <SectionHeader />
+        {/* <ModalImage card={cards} /> */}
+      </section>
 
-        <section id="nuestros-servicios">
-          <SectionNuestrosServicios />
-        </section>
+      <section id="nuestros-servicios">
+        <SectionNuestrosServicios />
+      </section>
 
-        <section id="que-ofrecemos" >
-          <SectionOfrecemos />
-        </section>
+      <section id="que-ofrecemos" >
+        <SectionOfrecemos />
+      </section>
 
-        <section id="elegirnos">
-          <SectionElegirnos />
-        </section>
+      <section id="elegirnos">
+        <SectionElegirnos />
+      </section>
 
-        <section id="licencia-de-conducir" className="overflow-hidden">
-          <SectionLicenciaDeConducir />
-        </section >
+      <section id="licencia-de-conducir" className="overflow-hidden">
+        <SectionLicenciaDeConducir />
+      </section >
 
-        <section id="graduados">
-          <SectionGraduados />
-        </section>
+      <section id="graduados">
+        <SectionGraduados />
+      </section>
 
-        <section id="testimonio">
-          <SectionTestimonial />
-        </section>
+      <section id="testimonio">
+        <SectionTestimonial />
+      </section>
 
-        <section id="redes-sociales">
-          <SectionRedes />
-        </section>
+      <section id="redes-sociales">
+        <SectionRedes />
+      </section>
 
-        <section id="preguntas-frecuentes" className="overflow-hidden">
-          <SectionPreguntasFrecuentes />
-        </section>
+      <section id="preguntas-frecuentes" className="overflow-hidden">
+        <SectionPreguntasFrecuentes />
+      </section>
 
-        <section id="contacto">
-          <SectionContact />
-        </section>
+      <section id="contacto">
+        <SectionContact />
+      </section>
 
-        {/* <section id="trabaja-con-nosotros">
+      {/* <section id="trabaja-con-nosotros">
         <SectionTrabajaConNosotros />
       </section> */}
     </>

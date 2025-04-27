@@ -16,7 +16,6 @@ const NuestrosServicios = () => {
       {/* <PageSEO title="Nuestros Servicios - Academia Fortaleza" description="Descubre los servicios de Academia Fortaleza: clases prácticas, teóricas, trámites de licencia y más." /> */}
 
       <section className="dark:bg-[#111928]">
-
         <Breadcrumb
           title="Nuestros Servicios"
           subtitle="Información sobre la licencia de conducir."

@@ -11,15 +11,15 @@ import { ScrollAnimation } from "@/components/ScrollAnimation";
 
 const SectionNuestrosServiciosFortaleza = () => {
 	return (
-		<section className="pt-16 pb-2 lg:pb-[1px] dark:bg-[#1f2a37]" >
-			<div className="max-w-[1200px] justify-center mx-auto relative z-20 overflow-hidden bg-transparent dark:bg-transparent pt-[10px] lg:pt-[40px] pb-[42px] lg:pb-[52px] select-none">
+		<section className="pt-12 lg:pb-[1px] dark:bg-[#1f2a37]" >
+			<div className="max-w-[1200px] justify-center mx-auto relative z-20 overflow-hidden bg-transparent dark:bg-transparent pt-[10px] lg:pt-[40px] pb-[40px] lg:pb-[52px] select-none">
 
 				<TitleHeader
 					title="Nuestros Servicios"
 					subtitle="Descubre todos los servicios que ofrecemos para ayudarte a obtener tu licencia de conducir."
 					uri="nuestros-servicios" />
 
-				<div className="flex flex-wrap -my-4  mx-auto" >
+				<div className="flex flex-wrap -my-4 pb-6 mx-auto" >
 					{serviceData.map((d) => (
 						<div className="w-full lg:px-4 px-8 md:w-1/2 lg:w-1/3" key={d.title}>
 							<ScrollAnimation
@@ -56,11 +56,11 @@ const SectionNuestrosServiciosFortaleza = () => {
 						</div>
 					))}
 				</div>
+				<ButtonSection
+					namebtn="Ver todos los servicios"
+					uri="./nuestros-servicios" />
 			</div>
 
-			<ButtonSection
-				namebtn="Ver todos los servicios"
-				uri="./nuestros-servicios" />
 		</section>
 	);
 };

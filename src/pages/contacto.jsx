@@ -1,6 +1,6 @@
 import React from 'react';
 import Breadcrumb from "@/components/Breadcrumb";
-import ContactBlock from '@/components/ContactBlock';
+import ContactBlock from '@/components/section/SectionContactBlock';
 
 
 export default function Contacto() {

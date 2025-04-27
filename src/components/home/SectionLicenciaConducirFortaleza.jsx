@@ -3,21 +3,20 @@
 import { cn } from "@/lib/utils";
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { useOutsideClick } from "@/lib/use-outside-click";
-import { ListImagesSupabase } from '@/api/ImagenService.jsx'
-import { Modal } from "../../lib/animated-modal";
+import { useOutsideClick } from "@/lib/use-outside-click"; // Hook para fuera de clic
+import { ListImagesSupabase } from "@/api/ImagenService";
 import Modals from '@mui/joy/Modal';
-import ModalClose from '@mui/joy/ModalClose';
-import Sheet from '@mui/joy/Sheet';
-import TitleHeader from "@/components/TitleHeader";
-import ImageComponent from "@/components/ImageComponent";
 import { ScrollAnimation } from "@/components/ScrollAnimation";
+import ModalClose from "@mui/joy/ModalClose";
+import ImageComponent from "@/components/ImageComponent";
+import TitleHeader from "@/components/TitleHeader";
 import ButtonSection from "@/components/ButtonSection";
+import Sheet from '@mui/joy/Sheet';
 
 const IMG = {
 	width: 80,
 	height: 80
-}
+};
 
 const SectionLicenciaConducir = () => {
 	const features = [
@@ -31,7 +30,6 @@ const SectionLicenciaConducir = () => {
 			skeleton: <CardLicencia />,
 		},
 	];
-
 	return (
 		<section className="pt-20 pb-14 lg:pt-[80px] lg:pb-[30px] dark:bg-transparent bg-gray-200">
 			<div className="container mx-auto">
@@ -39,7 +37,6 @@ const SectionLicenciaConducir = () => {
 					title="Últimos Graduados"
 					subtitle="Ellos lograron su objetivo: obtener la libreta."
 					uri="galeria-media" />
-
 				<div className="relative h-full" >
 					<div className="grid grid-cols-1 lg:grid-cols-4 -mt-6 rounded-md">
 						{features.map((feature) => (
@@ -54,6 +51,7 @@ const SectionLicenciaConducir = () => {
 	);
 }
 
+
 export default SectionLicenciaConducir;
 
 
@@ -67,55 +65,32 @@ const FeatureCard = ({ children, className }) => {
 
 
 export const CardLicencia = () => {
-	const [showCard] = useState("novedades");
 	return (
-		<Modal>
-			<ScrollAnimation
-				description={
-					<div className="flex flex-wrap -mx-6" aria-label="Más información sobre cómo obtener tu licencia de conducir">
-						<PortfolioCard
-							ImageHref="/static/images/card/servicio_18hd.webp"
-							category=""
-							title="¿Querés aprender a manejar de verdad?"
-							button="Obtén tu licencia"
-							buttonHref="/licencia-de-conducir"
-							showCard={showCard} />
-					</div>
-				}
-				duration={1}
-				delay={0.5}
-				rootMargin="0px 0px -10px 0px"
-				effect={{ initial: { opacity: 0, y: 100 }, animate: { opacity: 1, y: 0 } }}
-				transition={{ duration: 0.8, delay: 0.5, ease: 'easeInOut' }}
-			/>
-		</Modal>
-	);
-};
-
-
-const PortfolioCard = ({ showCard, category, ImageHref, title, button, buttonHref }) => {
-	return (
-		<>
-			<div className={`w-full h-full justify-center px-4 ${showCard === "novedades" || showCard === category.toLowerCase() ? "block" : "hidden"}`}>
-				<div className="mb-1">
-					<div className="overflow-hidden rounded-[10px]">
+		<ScrollAnimation
+			description={
+				<div className="flex flex-wrap -mx-6" aria-label="Más información sobre cómo obtener tu licencia de conducir">
+					<div className={`overflow-hidden w-full h-full justify-center px-4`}>
 						<ImageComponent
-							iSrc={ImageHref}
+							iSrc="/static/images/card/servicio_18hd.webp"
 							iAlt="portfolio"
 							iWidth={IMG.width}
 							iHeight={IMG.height}
 							iClassName="aspect-square object-cover object-center blur-none group-hover/img:blur-sm transition-all duration-200 rounded-xl" />
-					</div>
-					<div className="relative mx-7 -mt-20 rounded-[10px] bg-white dark:bg-[#1F2A37] py-[20px] px-3 text-center shadow-portfolio dark:shadow-box-[#111928]">
-						<span className="text-primary mb-2 block text-sm font-medium">
-							{category}
-						</span>
-						<h4 className="text-[#111928] dark:text-white mb-3 text-xl font-medium tracking-tight leading-tight">{title}</h4>
-						<ButtonSection namebtn={button} uri={buttonHref} />
+						<div className="relative mx-7 -mt-20 rounded-[10px] bg-white dark:bg-[#1F2A37] py-[20px] px-3 text-center shadow-portfolio dark:shadow-box-[#111928]">
+							<h4 className="text-[#111928] dark:text-white mb-3 text-xl font-medium tracking-tight leading-tight">
+								{"¿Querés aprender a manejar de verdad?"}
+							</h4>
+							<ButtonSection namebtn={"Obtén tu licencia"} uri={"/licencia-de-conducir"} />
+						</div>
 					</div>
 				</div>
-			</div>
-		</>
+			}
+			duration={1}
+			delay={0.5}
+			rootMargin="0px 0px -10px 0px"
+			effect={{ initial: { opacity: 0, y: 100 }, animate: { opacity: 1, y: 0 } }}
+			transition={{ duration: 0.8, delay: 0.5, ease: 'easeInOut' }}
+		/>
 	);
 };
 
@@ -186,7 +161,6 @@ const ModalCardAlumnos = () => {
 									style={{ rotate: Math.random() * 20 - 10, }}
 									whileHover="whileHover"
 									whileTap="whileTap"
-									// onClick={() => setActive(img)}
 									onClick={() => handleOpen(img)}
 									variants={imageVariants}
 									className="rounded-xl mt-7 p-0.5 bg-white dark:bg-blue-600/40 dark:border-blue-500/40 border border-neutral-100 flex-shrink-0 overflow-hidden">
@@ -217,7 +191,6 @@ const ModalCardAlumnos = () => {
 									style={{ rotate: Math.random() * 20 - 10, }}
 									whileHover="whileHover"
 									whileTap="whileTap"
-									// onClick={() => setActive(img)}
 									onClick={() => handleOpen(img)}
 									variants={imageVariants}
 									className="rounded-xl mb-6 p-0.5 bg-white dark:bg-blue-600/40 dark:border-blue-500/40 border border-neutral-100 flex-shrink-0 overflow-hidden">
@@ -242,4 +215,5 @@ const ModalCardAlumnos = () => {
 		</>
 	);
 }
+
 export { ModalCardAlumnos };

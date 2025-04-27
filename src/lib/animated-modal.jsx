@@ -108,7 +108,7 @@ const Overlay = ({ className }) => {
 const CloseIcon = () => {
 	const { setOpen } = useModal();
 	return (
-		<button onClick={() => setOpen(false)} className="absolute top-4 right-4 group">
+		<button onClick={() => setOpen(false)} className="absolute top-3.5 right-3.5 group ">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				width="24"
@@ -116,10 +116,10 @@ const CloseIcon = () => {
 				viewBox="0 0 24 24"
 				fill="none"
 				stroke="currentColor"
-				strokeWidth="2"
+				strokeWidth="2.5"
 				strokeLinecap="round"
 				strokeLinejoin="round"
-				className="text-black dark:text-white h-4 w-4 group-hover:scale-125 group-hover:rotate-3 transition duration-200">
+				className="text-black dark:text-white h-5 w-5 group-hover:scale-125 group-hover:rotate-3 transition duration-200">
 				<path stroke="none" d="M0 0h24v24H0z" fill="none" />
 				<path d="M18 6l-12 12" />
 				<path d="M6 6l12 12" />

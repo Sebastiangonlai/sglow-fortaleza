@@ -6,7 +6,7 @@ import { ScrollAnimation } from '@/components/ScrollAnimation'
 const TitleHeader = ({ title, subtitle, uri }) => {
   return (
     <div className="-mx-4 flex flex-wrap pt-8">
-      <div className="w-full px-4 z-[100]" >
+      <div className="w-full px-4 z-[40]" >
         <ScrollAnimation
           description={
             <div className="mx-auto mb-[50px] max-w-[520px] text-center">

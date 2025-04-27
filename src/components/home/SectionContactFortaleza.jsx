@@ -1,6 +1,6 @@
 'use client'
 
-import ContactBlock from "../ContactBlock";
+import ContactBlock from "@/components/section/SectionContactBlock";
 import TitleHeader from "../TitleHeader";
 
 
