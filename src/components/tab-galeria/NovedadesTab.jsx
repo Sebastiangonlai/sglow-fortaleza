@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 // import { useInView } from 'react-intersection-observer'
 import Box from '@mui/joy/Box';
-import { ListImagesSupabase } from '@/api/ImagenService';
+import { listImagesSupabase } from '@/api/ImagenService';
 import Grid from '@mui/joy/Grid';
 import ModalClose from '@mui/joy/ModalClose';
 import Modal from '@mui/joy/Modal';
@@ -19,8 +19,18 @@ const IMG = {
 const TabNovedades = ({ cantidad }) => {
   const [open, setOpen] = useState(false);
   const [imgSrc, setImgSrc] = useState('');
-  const respAux = ListImagesSupabase({ imgFirst: 0, imgLimit: 170 });
-  const resp = respAux.slice(0, cantidad);
+  const [recibidos, setRecibidos] = useState([]);
+
+  useEffect(() => {
+    const fetchDatas = async () => {
+      const resp = await listImagesSupabase({ imgFirst: 0, imgLimit: 1000 });
+      setRecibidos(resp);
+    };
+    fetchDatas();
+  }, []);
+
+  const resp = recibidos.slice(0, cantidad);
+
   const handleOpen = (src, alt) => {
     setImgSrc(src);
     setOpen(true);
@@ -72,7 +82,7 @@ const TabNovedades = ({ cantidad }) => {
             </Sheet>
           </Modal>
         </Box>
-                </div>
+      </div>
     </>
   )
 }

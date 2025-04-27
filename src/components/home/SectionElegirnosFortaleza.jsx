@@ -3,7 +3,7 @@
 import TitleHeader from "@/components/TitleHeader";
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { ContarImagenesSupabase } from '@/api/ImagenService.jsx'
+import { contarImagesSupabase } from '@/api/ImagenService.jsx'
 import { useEffect, useState } from "react";
 
 
@@ -12,7 +12,7 @@ const SectionElegirnosFortaleza = () => {
 
 	useEffect(() => {
 		const fetchDatas = async () => {
-			const resp = await ContarImagenesSupabase() + 204
+			const resp = await contarImagesSupabase() + 204;
 			setRecibidos(resp);
 		};
 		fetchDatas();

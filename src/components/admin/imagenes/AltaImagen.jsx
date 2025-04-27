@@ -11,7 +11,7 @@ import Typography from '@mui/joy/Typography';
 import AspectRatio from '@mui/joy/AspectRatio';
 import ImageCropper from './ImageCropper';
 import imageCompression from "browser-image-compression";
-import { UploadImageSupabase } from '@/api/ImagenService.jsx'
+import { uploadImageSupabase } from '@/api/ImagenService.jsx'
 import { UploadCloud } from "lucide-react";
 
 
@@ -36,6 +36,8 @@ const AltaImagen = () => {
 	const [originalLink, setOriginalLink] = useState("");
 	const [originalImage, setOriginalImage] = useState("");
 	const [compressedLink, setCompressedLink] = useState('/static/images/svg/photo.png');
+	const [recibidos, setRecibidos] = useState([]);
+
 
 	const handleCropComplete = (croppedImage) => {
 		if (croppedImage) {
@@ -74,7 +76,8 @@ const AltaImagen = () => {
 	const handleFileChange = (e) => {
 		const files = e.target.files;
 		if (files && files.length > 0) {
-			const selectedFile = files[0];
+			const selectedFile = e.target.files[0];
+			console.log("selectedFile: ", selectedFile);
 			// setOriginalLink(e.target.files[0]);
 			setOriginalLink(URL.createObjectURL(selectedFile));
 			// setFile(e.target.files[0]);
@@ -85,6 +88,13 @@ const AltaImagen = () => {
 		}
 	};
 
+	// useEffect(() => {
+	// 	const fetchDatas = async () => {
+	// 		const resp = await uploadImageSupabase(originalImage);
+	// 		setRecibidos(resp);
+	// 	};
+	// 	fetchDatas();
+	// }, []);
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		if (outputFileName && imageBase64) {
@@ -97,7 +107,10 @@ const AltaImagen = () => {
 		if (!originalImage) return;
 
 		try {
-			const uploadTask = UploadImageSupabase(originalImage);
+			// const uploadTask = uploadImageSupabase(originalImage);
+
+			const uploadTask = await uploadImageSupabase(originalImage);
+			// setRecibidos(resp);
 			uploadTask.on(
 				'state_changed',
 				(snapshot) => {

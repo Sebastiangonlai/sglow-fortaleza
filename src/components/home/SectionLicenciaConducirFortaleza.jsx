@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { useOutsideClick } from "@/lib/use-outside-click"; // Hook para fuera de clic
-import { ListImagesSupabase } from "@/api/ImagenService";
+import { listImagesSupabase } from "@/api/ImagenService";
 import Modals from '@mui/joy/Modal';
 import { ScrollAnimation } from "@/components/ScrollAnimation";
 import ModalClose from "@mui/joy/ModalClose";
@@ -100,9 +100,17 @@ const ModalCardAlumnos = () => {
 	const [open, setOpen] = useState(false);
 	const [imgSrc, setImgSrc] = useState('');
 	const ref = useRef(null);
+	const [recibidos, setRecibidos] = useState([]);
 
-	const auxList = ListImagesSupabase({ imgFirst: 0, imgLimit: 170 });
-	const aux = auxList.slice(0, 6);
+	useEffect(() => {
+		const fetchDatas = async () => {
+			const resp = await listImagesSupabase({ imgFirst: 0, imgLimit: 1000 });
+			setRecibidos(resp);
+		};
+		fetchDatas();
+	}, []);
+
+	const aux = recibidos.slice(0, 6);
 
 	let imagesFirst = [{ src: aux[0] }, { src: aux[1] }, { src: aux[2] }];
 	let imagesSecond = [{ src: aux[3] }, { src: aux[4] }, { src: aux[5] }];
