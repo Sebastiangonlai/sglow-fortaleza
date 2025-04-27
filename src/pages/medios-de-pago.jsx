@@ -18,7 +18,7 @@ export default function MediosDePago() {
 
 
       {/* NUESTROS CONVENIOS */}
-      <div className="container pb-[40px] pt-14">
+      <div className="container pb-[40px] pt-14 ">
         <div className="flex flex-wrap items-center">
           <div className="w-full px-4 text-center">
             <h1 className="pb-10 text-3xl font-bold text-[#111928] dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]">
@@ -28,14 +28,14 @@ export default function MediosDePago() {
         </div>
         <div className="justify-center flex flex-wrap sm:-m-4 mb-10 md:space-y-6 space-y-6">
           {[{
-            src: "/static/images/convenios/inefop.png", alt: "inefop", width: 62, height: 50, title: "INEFOP",
+            src: "/static/images/convenios/inefop.webp", alt: "inefop", width: 62, height: 50, title: "INEFOP",
             description: "15% de descuento en tu curso si estás realizando capacitación a través de INEFOP.",
             link: "https://academiafortaleza.com.uy",
           }, {
-            src: "/static/images/convenios/carup.png", alt: "carup", width: 70, height: 55, title: "CarUp",
+            src: "/static/images/convenios/carup.webp", alt: "carup", width: 70, height: 55, title: "CarUp",
             description: "Plan Academia: 3 clases gratis. Clientes CarUp: 15% de descuento en el curso completo.", link: "https://carup.com.uy/afiliaciones/",
           }, {
-            src: "/static/images/convenios/inju.png", alt: "inju", width: 78, height: 50, title: "INJU",
+            src: "/static/images/convenios/inju.webp", alt: "inju", width: 78, height: 50, title: "INJU",
             description: "Con tu Tarjeta Joven accedes a un 15% de descuento en el costo total de nuestros cursos.", link: "https://www.gub.uy/ministerio-desarrollo-social/politicas-y-gestion/convenios/academia-choferes-fortaleza",
           },
           ].map(({ src, alt, width, height, title, description, link }, index) => (
