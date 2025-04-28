@@ -3,7 +3,7 @@
 import { cn } from "@/lib/utils";
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { useOutsideClick } from "@/lib/use-outside-click"; // Hook para fuera de clic
+import { useOutsideClick } from "@/lib/use-outside-click"; 
 import { listImagesSupabase } from "@/api/ImagenService";
 import Modals from '@mui/joy/Modal';
 import { ScrollAnimation } from "@/components/ScrollAnimation";
@@ -12,6 +12,7 @@ import ImageComponent from "@/components/ImageComponent";
 import TitleHeader from "@/components/TitleHeader";
 import ButtonSection from "@/components/ButtonSection";
 import Sheet from '@mui/joy/Sheet';
+
 
 const IMG = {
 	width: 80,

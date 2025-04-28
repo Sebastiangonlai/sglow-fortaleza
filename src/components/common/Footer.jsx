@@ -104,7 +104,7 @@ const LinkGroup = ({ children, header }) => {
 const NavLink = ({ link, label }) => {
   return (
     <li>
-      <a href={link} className="overflow-hidden flex lg:w-[200px] justify-center lg:justify-start text-base/5 text-[#637381] dark:hover:text-blue-300 dark:text-[#D1D5DB]" aria-label={label}>
+      <a href={link} className="overflow-hidden flex lg:w-[200px] justify-center lg:justify-start text-base/6 text-[#637381] dark:hover:text-blue-300 dark:text-[#D1D5DB]" aria-label={label}>
         {label}
       </a>
     </li>

@@ -5,13 +5,11 @@ const steps = [
     title: 'Coordina el Horario',
     description: 'Contacta con nosotros para coordinar el horario de tus clases.',
     icon: '📅',
-  },
-  {
+  }, {
     title: 'Presenta la Documentación',
     description: 'Asegúrate de tener toda la documentación necesaria para comenzar.',
     icon: '📄',
-  },
-  {
+  }, {
     title: 'Comienza tus Clases',
     description: 'Inicia tus clases teóricas y prácticas con nuestros instructores.',
     icon: '🚗',
