@@ -29,7 +29,7 @@ const ButtonSection = ({ namebtn, uri }) => {
   const ariaLabel = `Más información sobre ${namebtn}`;
 
   return (
-    <a href={uri} passHref aria-label={ariaLabel}>
+    <a href={uri} aria-label={ariaLabel}>
       <Block className="col-span-1 md:col-span-1" whileHover={{ rotate: "-2deg", scale: 1.05 }}>
         <button className={twMerge(buttonStyles)}>
           <p className={twMerge(textStyles)}>{namebtn}</p>

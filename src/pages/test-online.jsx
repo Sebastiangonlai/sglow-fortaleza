@@ -33,7 +33,7 @@ const TestOnline = () => {
     <>
       {/* <PageSEO title="Test Online - Academia Fortaleza" description="Practica con nuestro test online y prepárate para el examen teórico de la licencia de conducir." /> */}
 
-      <div className="dark:bg-[#111928]">
+      <div className="dark:bg-[#111928] pb-10">
         <StrictMode>
           <StyledEngineProvider injectFirst>
 
@@ -51,28 +51,28 @@ const TestOnline = () => {
                     <p className="lg:w-2/3 mx-auto text-base text-gray-800 dark:text-gray-300">Selecciona una versión para comenzar.</p>
                     <div className="flex flex-col text-center mb-3 pt-1"></div>
                     <div className="select-none flex space-x-1 mx-auto w-full justify-center overflow-hidden ">
-                      <button className="flex w-[105px] h-[40px] cursor-pointer rounded-lg border-[0.1rem] border-slate-300 transition-colors hover:border-blue-600 dark:border-slate-300/20 dark:bg-[#111928] dark:hover:border-blue-600 text-sm items-center justify-center " onClick={() => window.location.href = '/pruebas/prueba-teorico'}
+                      <button className="flex w-[105px] h-[40px] cursor-pointer rounded-lg border-[0.1rem] border-slate-300 transition-colors hover:border-blue-500/20 dark:border-slate-300/20 dark:bg-[#111928] dark:hover:border-blue-500/20 text-sm items-center justify-center " onClick={() => window.location.href = '/pruebas/prueba-teorico'}
                       >
                         Versión 1
-                        <a className="rotate-90 h-5 w-4 rounded-full cursor-pointer flex justify-center hover:scale-110">
+                        <a className="rotate-90 h-5 w-4 rounded-full cursor-pointer flex justify-center">
                           <Icon />
                         </a>
                       </button>
-                      <button className="flex w-[105px] h-[40px] cursor-pointer rounded-lg border-[0.1rem] border-slate-300 transition-colors hover:border-blue-600 dark:border-slate-300/20 dark:bg-[#111928] dark:hover:border-blue-600 text-sm items-center justify-center " onClick={() => window.location.href = '/pruebas/prueba-teorico-dos'}>
+                      <button className="flex w-[105px] h-[40px] cursor-pointer rounded-lg border-[0.1rem] border-slate-300 transition-colors hover:border-blue-500/20 dark:border-slate-300/20 dark:bg-[#111928] dark:hover:border-blue-500/20 text-sm items-center justify-center " onClick={() => window.location.href = '/pruebas/prueba-teorico-dos'}>
                         Versión 2
-                        <a className="rotate-90 h-5 w-4 rounded-full cursor-pointer flex justify-center hover:scale-110">
+                        <a className="rotate-90 h-5 w-4 rounded-full cursor-pointer flex justify-center">
                           <Icon />
                         </a>
                       </button>
-                      <button className="flex w-[105px] h-[40px] cursor-pointer rounded-lg border-[0.1rem] border-slate-300 transition-colors hover:border-blue-600 dark:border-slate-300/20 dark:bg-[#111928] dark:hover:border-blue-600 text-sm items-center justify-center " onClick={() => window.location.href = '/pruebas/prueba-teorico-tres'}>
+                      <button className="flex w-[105px] h-[40px] cursor-pointer rounded-lg border-[0.1rem] border-slate-300 transition-colors hover:border-blue-500/20 dark:border-slate-300/20 dark:bg-[#111928] dark:hover:border-blue-500/20 text-sm items-center justify-center " onClick={() => window.location.href = '/pruebas/prueba-teorico-tres'}>
                         Versión 3
-                        <a className="rotate-90 h-5 w-4 rounded-full cursor-pointer flex justify-center hover:scale-110">
+                        <a className="rotate-90 h-5 w-4 rounded-full cursor-pointer flex justify-center">
                           <Icon />
                         </a>
                       </button>
-                      <button className="flex w-[105px] h-[40px] cursor-pointer rounded-lg border-[0.1rem] border-slate-300 transition-colors hover:border-blue-600 dark:border-slate-300/20 dark:bg-[#111928] dark:hover:border-blue-600 text-sm items-center justify-center " onClick={() => window.location.href = '/pruebas/prueba-teorico-cuatro'}>
+                      <button className="flex w-[105px] h-[40px] cursor-pointer rounded-lg border-[0.1rem] border-slate-300 transition-colors hover:border-blue-500/20 dark:border-slate-300/20 dark:bg-[#111928] dark:hover:border-blue-500/20 text-sm items-center justify-center " onClick={() => window.location.href = '/pruebas/prueba-teorico-cuatro'}>
                         Versión 4
-                        <a className="rotate-90 h-5 w-4 rounded-full cursor-pointer flex justify-center hover:scale-110">
+                        <a className="rotate-90 h-5 w-4 rounded-full cursor-pointer flex justify-center">
                           <Icon />
                         </a>
                       </button>
@@ -86,7 +86,7 @@ const TestOnline = () => {
                 <Stack className="mx-auto justify-center" direction={{ xs: 'column', sm: 'row' }} spacing={{ xs: 2, sm: 3, md: 4 }}>
                   <Grid container className="justify-center space-x-2">
                     <button onClick={() => { setOpenPdf(URL_PDF.teoricoAcademia), handleOpen(true) }}>
-                      <Card className="bg-[#111928]/10 dark:hover:border dark:hover:border-blue-600 dark:text-white dark:border-slate-300/20" orientation="horizontal" variant="outlined" sx={{ width: 340 }}>
+                      <Card className="bg-[#111928]/10 dark:hover:border dark:hover:border-blue-500/20 dark:text-white dark:border-slate-300/20" orientation="horizontal" variant="outlined" sx={{ width: 340 }}>
                         <CardOverflow>
                           <AspectRatio ratio="1" sx={{ width: 90 }}>
                             <ImageComponent iSrc="/static/doc/portada.webp" iAlt="Téorico IMM" loading="lazy" iWidth={100} iHeight={100} />
@@ -102,7 +102,7 @@ const TestOnline = () => {
 
                   <Grid container className="justify-center space-x-2">
                     <button onClick={() => { setOpenPdf(URL_PDF.protocoloActuacion), handleOpen(true) }}>
-                      <Card className="bg-[#111928]/10 dark:hover:border dark:hover:border-blue-600 dark:text-white dark:border-slate-300/20" orientation="horizontal" variant="outlined" sx={{ width: 340 }}>
+                      <Card className="bg-[#111928]/10 dark:hover:border dark:hover:border-blue-500/20 dark:text-white dark:border-slate-300/20" orientation="horizontal" variant="outlined" sx={{ width: 340 }}>
                         <CardOverflow>
                           <AspectRatio ratio="1" sx={{ width: 90 }}>
                             <ImageComponent iSrc="/static/images/card/servicio_2.webp" iAlt="Examen Practico" loading="lazy" iWidth={100} iHeight={100} />
@@ -120,12 +120,11 @@ const TestOnline = () => {
 
               <section className="text-blue-200 body-font wow fadeInUp">
                 <div className="lg:w-2/2 md:w-1/1 mx-auto px-4 pt-8 justify-center items-center">
-                  {/* <Stack className="mx-auto justify-center" direction={{ xs: 'column', sm: 'column' }} spacing={{ xs: 2, sm: 4, md: 5 }}> */}
-                  <Stack className="mx-auto justify-center" direction={{ xs: 'column', sm: 'row' }} spacing={{ xs: 2, sm: 3, md: 4 }}>
+                                 <Stack className="mx-auto justify-center" direction={{ xs: 'column', sm: 'row' }} spacing={{ xs: 2, sm: 3, md: 4 }}>
                     <div className="text-center space-y-3">
                       <h1 className='text-xl font-semibold'>Material de apoyo</h1>
                       <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                        <button className="max-w-md h-[64px] cursor-pointer rounded-lg border-[0.1rem] border-slate-300 transition-colors hover:border-blue-600 dark:border-slate-300/20 dark:bg-[#111928] dark:hover:border-blue-600" onClick={() => { setOpenPdf(URL_PDF.senalesReglamentarias), handleOpen(true) }}>
+                        <button className="max-w-md h-[64px] cursor-pointer rounded-lg border-[0.1rem] border-slate-300 transition-colors hover:border-blue-500/20 dark:border-slate-300/20 dark:bg-[#111928] dark:hover:border-blue-500/20" onClick={() => { setOpenPdf(URL_PDF.senalesReglamentarias), handleOpen(true) }}>
                           <div className="flex w-full items-center justify-between px-4 py-5">
                             <div className="flex items-center justify-start gap-2 text-slate-900 dark:text-slate-200">
                               <BsSignStopLights className="text-gray-200 h-6 w-6 -mt-0.5" />
@@ -137,7 +136,7 @@ const TestOnline = () => {
                           </div>
                         </button>
 
-                        <button className="max-w-md h-[64px] cursor-pointer rounded-lg border-[0.1rem] border-slate-300 transition-colors hover:border-blue-600 dark:border-slate-300/20 dark:bg-[#111928] dark:hover:border-blue-600" onClick={() => { setOpenPdf(URL_PDF.factoresRiesgo), handleOpen(true) }}>
+                        <button className="max-w-md h-[64px] cursor-pointer rounded-lg border-[0.1rem] border-slate-300 transition-colors hover:border-blue-500/20 dark:border-slate-300/20 dark:bg-[#111928] dark:hover:border-blue-500/20" onClick={() => { setOpenPdf(URL_PDF.factoresRiesgo), handleOpen(true) }}>
                           <div className="flex w-full items-center justify-between px-4 py-5">
                             <div className="flex items-center justify-start gap-2 text-slate-900 dark:text-slate-200">
                               <RiSteering2Fill className="text-gray-200 h-6 w-6 -mt-0.5" />
@@ -149,7 +148,7 @@ const TestOnline = () => {
                           </div>
                         </button>
 
-                        <button className="max-w-md h-[64px] cursor-pointer rounded-lg border-[0.1rem] border-slate-300 transition-colors hover:border-blue-600 dark:border-slate-300/20 dark:bg-[#111928] dark:hover:border-blue-600" onClick={() => { setOpenPdf(URL_PDF.estacionarSeguro), handleOpen(true) }}>
+                        <button className="max-w-md h-[64px] cursor-pointer rounded-lg border-[0.1rem] border-slate-300 transition-colors hover:border-blue-500/20 dark:border-slate-300/20 dark:bg-[#111928] dark:hover:border-blue-500/20" onClick={() => { setOpenPdf(URL_PDF.estacionarSeguro), handleOpen(true) }}>
                           <div className="flex w-full items-center justify-between px-4 py-5">
                             <div className="flex items-center justify-start gap-2 text-slate-900 dark:text-slate-200">
                               <LuConstruction className="text-gray-200 h-6 w-6 -mt-0.5" />
@@ -161,7 +160,7 @@ const TestOnline = () => {
                           </div>
                         </button>
 
-                        <button className="max-w-md h-[64px] cursor-pointer rounded-lg border-[0.1rem] border-slate-300 transition-colors hover:border-blue-600 dark:border-slate-300/20 dark:bg-[#111928] dark:hover:border-blue-600" onClick={() => { setOpenPdf(URL_PDF.teoricoAcademia), handleOpen(true) }}>
+                        <button className="max-w-md h-[64px] cursor-pointer rounded-lg border-[0.1rem] border-slate-300 transition-colors hover:border-blue-500/20 dark:border-slate-300/20 dark:bg-[#111928] dark:hover:border-blue-500/20" onClick={() => { setOpenPdf(URL_PDF.teoricoAcademia), handleOpen(true) }}>
                           <div className="flex w-full items-center justify-between px-4 py-5">
                             <div className="flex items-center justify-start gap-2 text-slate-900 dark:text-slate-200">
                               <LuCircleParking className="text-gray-200 h-6 w-6 -mt-0.5" />
@@ -173,7 +172,7 @@ const TestOnline = () => {
                           </div>
                         </button>
 
-                        <button className="max-w-md h-[64px] cursor-pointer rounded-lg border-[0.1rem] border-slate-300 transition-colors hover:border-blue-600 dark:border-slate-300/20 dark:bg-[#111928] dark:hover:border-blue-600" onClick={() => { setOpenPdf(URL_PDF.senalesAnexo), handleOpen(true) }}>
+                        <button className="max-w-md h-[64px] cursor-pointer rounded-lg border-[0.1rem] border-slate-300 transition-colors hover:border-blue-500/20 dark:border-slate-300/20 dark:bg-[#111928] dark:hover:border-blue-500/20" onClick={() => { setOpenPdf(URL_PDF.senalesAnexo), handleOpen(true) }}>
                           <div className="flex w-full items-center justify-between px-4 py-5">
                             <div className="flex items-center justify-start gap-2 text-slate-900 dark:text-slate-200">
                               <BsSignStop className="text-gray-200 h-6 w-6 -mt-0.5" />
@@ -185,7 +184,7 @@ const TestOnline = () => {
                           </div>
                         </button>
 
-                        <button className="max-w-md h-[64px] cursor-pointer rounded-lg border-[0.1rem] border-slate-300 transition-colors hover:border-blue-600 dark:border-slate-300/20 dark:bg-[#111928] dark:hover:border-blue-600" onClick={() => { setOpenPdf(URL_PDF.glosario), handleOpen(true) }}>
+                        <button className="max-w-md h-[64px] cursor-pointer rounded-lg border-[0.1rem] border-slate-300 transition-colors hover:border-blue-500/20 dark:border-slate-300/20 dark:bg-[#111928] dark:hover:border-blue-500/20" onClick={() => { setOpenPdf(URL_PDF.glosario), handleOpen(true) }}>
                           <div className="flex w-full items-center justify-between px-4 py-5">
                             <div className="flex items-center justify-start gap-2 text-slate-900 dark:text-slate-200">
                               <IoDocumentOutline className="text-gray-200 h-6 w-6 -mt-0.5" />
@@ -208,7 +207,7 @@ const TestOnline = () => {
                 <h1 className='text-xl font-semibold text-blue-200 text-center mb-3'>Aprende Jugando</h1>
                 <Grid container className="justify-center">
                   <button onClick={() => window.location.href = '/juego-preguntas-examen'} >
-                    <Card className="bg-[#111928]/10 dark:hover:border dark:hover:border-blue-600 dark:text-white dark:border-slate-300/20" orientation="horizontal" variant="outlined" sx={{ width: 340 }}>
+                    <Card className="bg-[#111928]/10 dark:hover:border dark:hover:border-blue-500/20 dark:text-white dark:border-slate-300/20" orientation="horizontal" variant="outlined" sx={{ width: 340 }}>
                       <CardOverflow>
                         <AspectRatio ratio="1" sx={{ width: 90 }}>
                           <ImageComponent

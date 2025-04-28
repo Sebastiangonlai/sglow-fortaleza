@@ -15,7 +15,7 @@ export default function PreguntasFrecuentes() {
         href="preguntas-frecuentes" />
 
       <div className="container">
-        <div className="animate__animated animate__fadeInUp lg:mt-[30px] mt-10">
+        <div className="lg:mt-[30px] mt-10">
           <div className="-mx-2 flex flex-wrap items-center">
             <div className="w-full px-2 lg:w-6/12">
               <div className="flex items-center -mx-0 sm:-mx-4 pb-8 lg:pb-0">

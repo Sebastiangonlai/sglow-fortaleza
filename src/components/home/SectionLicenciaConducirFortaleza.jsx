@@ -3,7 +3,7 @@
 import { cn } from "@/lib/utils";
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { useOutsideClick } from "@/lib/use-outside-click"; 
+import { useOutsideClick } from "@/lib/use-outside-click";
 import { listImagesSupabase } from "@/api/ImagenService";
 import Modals from '@mui/joy/Modal';
 import { ScrollAnimation } from "@/components/ScrollAnimation";
@@ -14,8 +14,9 @@ import ButtonSection from "@/components/ButtonSection";
 import Sheet from '@mui/joy/Sheet';
 
 
+
 const IMG = {
-	width: 80,
+	width: 180,
 	height: 80
 };
 
@@ -150,7 +151,7 @@ const ModalCardAlumnos = () => {
 
 	return (
 		<>
-			<div>
+				<div>
 				<Modals id="myModal" open={open} onClose={handleClose} className="flex justify-center self-center px-2">
 					<Sheet className="w-fit h-fit rounded-xl flex " >
 						<ModalClose className="close right-3 z-100" aria-label="Close" color="none"

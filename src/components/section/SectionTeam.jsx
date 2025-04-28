@@ -4,7 +4,7 @@ import TitleHeader from "@/components/TitleHeader";
 
 const SectionTeam = () => {
     return (
-        <section id="team" className="overflow-hidden bg-[#F9FAFB] pb-10 pt-20 dark:bg-[#1f2a37] lg:pb-[60px] lg:pt-[100px]">
+        <section id="team" className="overflow-hidden bg-[#F9FAFB] pb-10 pt-20 dark:bg-[#1f2a37] lg:pb-[60px] lg:pt-[70px]">
             <div className="container-xl mx-auto">
                 <TitleHeader
                     title="Instructores"

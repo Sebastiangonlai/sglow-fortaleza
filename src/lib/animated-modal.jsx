@@ -3,6 +3,7 @@ import { cn } from "./utils";
 import { AnimatePresence, motion } from "framer-motion";
 import React, { createContext, useContext, useEffect, useRef, useState } from "react";
 
+
 const ModalContext = createContext(undefined);
 
 export const ModalProvider = ({ children }) => {
@@ -58,12 +59,12 @@ export const ModalBody = ({ children, className }) => {
 					initial={{ opacity: 0, }}
 					animate={{ opacity: 1, backdropFilter: "blur(10px)", }}
 					exit={{ opacity: 0, backdropFilter: "blur(0px)", }}
-					className="fixed [perspective:800px] [transform-style:preserve-3d] inset-0 h-full w-full flex items-center justify-center z-50">
+					className="fixed [perspective:800px] [transform-style:preserve-3d] inset-0 h-full w-full flex items-center justify-center z-150">
 					<Overlay />
 
 					<motion.div
 						ref={modalRef}
-						className={cn("min-h-[40%] max-h-[60%] md:max-w-[30%] mx-4 bg-white dark:bg-neutral-950 border border-transparent dark:border-neutral-800 md:rounded-2xl rounded-2xl relative z-50 flex flex-col flex-1 overflow-hidden", className)}
+						className={cn("min-h-[40%] max-h-[60%] md:max-w-[30%] mx-4 bg-white dark:bg-neutral-950 border border-transparent dark:border-neutral-800 md:rounded-2xl rounded-2xl relative flex flex-col flex-1 overflow-hidden ", className)}
 						initial={{ opacity: 0, scale: 0.5, rotateX: 40, y: 40, }}
 						animate={{ opacity: 1, scale: 1, rotateX: 0, y: 0, }}
 						exit={{ opacity: 0, scale: 0.8, rotateX: 10, }}
@@ -80,7 +81,7 @@ export const ModalBody = ({ children, className }) => {
 
 export const ModalContent = ({ children, className }) => {
 	return (
-		<div className={cn("flex flex-col flex-1 p-2 md:p-8", className)}>
+		<div className={cn("flex flex-col flex-1 p-2 md:p-8 ", className)}>
 			{children}
 		</div>
 	);
@@ -88,7 +89,7 @@ export const ModalContent = ({ children, className }) => {
 
 export const ModalFooter = ({ children, className }) => {
 	return (
-		<div className={cn("flex justify-end p-3 bg-gray-100 dark:bg-neutral-900", className)}>
+		<div className={cn("flex justify-end p-3 bg-gray-100 dark:bg-neutral-900 ", className)}>
 			{children}
 		</div>
 	);
@@ -100,7 +101,7 @@ const Overlay = ({ className }) => {
 			initial={{ opacity: 0, }}
 			animate={{ opacity: 1, backdropFilter: "blur(10px)", }}
 			exit={{ opacity: 0, backdropFilter: "blur(0px)", }}
-			className={`fixed inset-0 h-full w-full bg-black/60 z-50 ${className}`}>
+			className={`fixed inset-0 h-full w-full bg-black/60 ${className}`}>
 		</motion.div>
 	);
 };
@@ -119,7 +120,7 @@ const CloseIcon = () => {
 				strokeWidth="2.5"
 				strokeLinecap="round"
 				strokeLinejoin="round"
-				className="text-black dark:text-white h-5 w-5 group-hover:scale-125 group-hover:rotate-3 transition duration-200">
+				className="text-black dark:text-white h-5 w-5 group-hover:scale-125 group-hover:rotate-3 transition duration-200 ">
 				<path stroke="none" d="M0 0h24v24H0z" fill="none" />
 				<path d="M18 6l-12 12" />
 				<path d="M6 6l12 12" />

@@ -11,8 +11,8 @@ import { ScrollAnimation } from "@/components/ScrollAnimation";
 
 const SectionNuestrosServiciosFortaleza = () => {
 	return (
-		<section className="pt-12 lg:pb-[1px] dark:bg-[#1f2a37]" >
-			<div className="max-w-[1200px] justify-center mx-auto relative z-20 overflow-hidden bg-transparent dark:bg-transparent pt-[10px] lg:pt-[40px] pb-[40px] lg:pb-[52px] select-none">
+		<section className="pt-12 lg:pb-[1px] dark:bg-[#1f2a37]">
+			<div className="max-w-[1200px] justify-center mx-auto relative overflow-hidden bg-transparent dark:bg-transparent pt-[10px] lg:pt-[40px] pb-[40px] lg:pb-[52px] select-none">
 
 				<TitleHeader
 					title="Nuestros Servicios"

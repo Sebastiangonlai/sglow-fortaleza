@@ -39,7 +39,6 @@ const SectionGraduadosFortaleza = () => {
   };
   const translateX = useSpring(useTransform(scrollYProgress, [0, 0.5], [0, 400]), springConfig);
   const translateXReverse = useSpring(useTransform(scrollYProgress, [0, 0.5], [0, -400]), springConfig);
-  // const rotateX = useSpring(useTransform(scrollYProgress, [0, 0.2], [15, 0]), springConfig);
   const opacity = useSpring(useTransform(scrollYProgress, [0, 0.2], [0.3, 0.5]), springConfig);
   const rotateZ = useSpring(useTransform(scrollYProgress, [0, 0.2], [20, 0]), springConfig);
   const translateY = useSpring(useTransform(scrollYProgress, [0, 0.2], [-100, 0]), springConfig);
@@ -49,14 +48,6 @@ const SectionGraduadosFortaleza = () => {
       <div ref={ref} className="h-full pb-4 py-5 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]">
         <Header />
         <motion.div style={{ rotateZ, translateY, opacity }}>
-          {/* {groups.map((group, index) => (
-            <motion.div
-              className={`flex ${index % 2 === 0 ? 'flex-row-reverse space-x-reverse' : 'flex-row'} ml-8 mb-8 lg:ml-8 lg:mb-8`}
-              key={index}>
-              {group.map((product, idx) => (
-                <ProductCard key={idx.srcalum} product={product} translate={index % 2 === 0 ? translateX : translateXReverse} />
-              ))}
-            </motion.div> */}
           {groups.map((group, index) => (
             <motion.div className={`flex ${index % 2 === 0 ? 'flex-row-reverse space-x-reverse' : 'flex-row'} ml-8 mb-8 lg:ml-8 lg:mb-8`}
               key={index}>

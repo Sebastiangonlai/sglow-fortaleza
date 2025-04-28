@@ -4,7 +4,7 @@ import ImageComponent from "./ImageComponent";
 import { Modal, ModalBody, ModalContent, ModalTrigger, ModalFooter } from "@/lib/animated-modal";
 
 
-function ModalCard({ card }) {
+function ModalCard({ card, showCard = "Novedades" }) {
 	return (
 		<section className="w-screen min-h-screen flex flex-col justify-center items-center">
 			<div className="container flex flex-wrap">
@@ -15,7 +15,9 @@ function ModalCard({ card }) {
 						description={d.description}
 						checkText={d.checkText !== "" ? d.checkText : ""}
 						btnHref={d.href}
-						className="block md:hidden text-ellipsis"
+						showCard={showCard}
+						category={d.category}
+						className="block md:hidden text-ellipsis "
 					/>
 				))}
 			</div>
@@ -25,7 +27,7 @@ function ModalCard({ card }) {
 
 function ModalImage({ card }) {
 	return (
-		<section className="container grid grid-cols-4 mx-auto justify-center items-center">
+		<section className="container grid min-h-full min-w-full grid-cols-4 mx-auto justify-center items-center">
 			{card.map((d) => (
 				<ModalAnimatedImage
 					imageSrc={d.src}
@@ -39,11 +41,12 @@ function ModalImage({ card }) {
 
 export { ModalImage, ModalCard }
 
-const ModalAnimatedCard = ({ imageSrc, title, description, checkText, btnHref }) => {
+
+const ModalAnimatedCard = ({ imageSrc, title, description, checkText, btnHref, showCard = "Novedades", category = "Nosotros" }) => {
 	return (
 		<>
-			<Modal className='lg:w-[100px] inset-0 z-100'>
-				<div className={`mx-auto w-1/1 md:w-1/2 xl:w-1/4`}>
+			<Modal className='lg:w-[100px] inset-0'>
+				<div className={`mx-auto w-1/1 md:w-1/2 xl:w-1/4 ${showCard === "Novedades" || showCard === category ? "block" : "hidden"}`}>
 					<ModalTrigger className="relative mb-4">
 						<div className="w-full" key={title}>
 							<div className="mb-2 overflow-hidden rounded-[5px] shadow-[0_8px_16px_rgb(0_0_0/0.2)] bg-black">
@@ -61,7 +64,7 @@ const ModalAnimatedCard = ({ imageSrc, title, description, checkText, btnHref })
 				<ModalBody>
 					<ModalContent>
 						<>
-							<h4 className="text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-1 mt-4 lg:mb-6 lg:mt-2">
+							<h4 className="text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-1 mt-4 lg:mb-6 lg:mt-2 z-150">
 								<span className="px-2 py-1.5 rounded-md bg-gray-100 dark:bg-neutral-500/30 dark:border-neutral-700 border border-gray-200">
 									{title}
 								</span>
@@ -100,7 +103,7 @@ const ModalAnimatedCard = ({ imageSrc, title, description, checkText, btnHref })
 						</div>
 					</ModalContent>
 					<ModalFooter className="gap-4">
-						<a href={btnHref} className="px-3 py-1.5 bg-gray-200 text-black dark:bg-black/80 dark:border-black dark:hover:bg-black dark:text-white border border-gray-300 rounded-md text-sm font-medium w-38" aria-label="mas informacion">
+						<a href={btnHref} className="px-3 py-1.5 bg-gray-200 text-black dark:bg-black/80 dark:border-black dark:hover:bg-black dark:text-white border border-gray-300 rounded-md text-sm font-medium w-38" aria-label="Mas informacion">
 							Más información
 						</a>
 					</ModalFooter>
@@ -115,7 +118,7 @@ const ModalAnimatedImage = ({ imageSrc, title }) => {
 	return (
 		<>
 			<Modal className='lg:w-[100px] inset-0 z-100'>
-				<ModalTrigger className="relative mb-4">
+				<ModalTrigger className="relative mb-4 ">
 					<div className="mb-2 overflow-hidden rounded-[5px] shadow-[0_8px_16px_rgb(0_0_0/0.3)] ">
 						<ImageComponent iSrc={imageSrc} iAlt={title} iClassName="h-full w-full rounded-[5px] transition group-hover:rotate-6deg group-hover:scale-125" iWidth={500} iHeight={500} />
 					</div>
@@ -133,6 +136,7 @@ const ModalAnimatedImage = ({ imageSrc, title }) => {
 	);
 };
 
+export { ModalAnimatedImage }
 
 
 // const cards = [

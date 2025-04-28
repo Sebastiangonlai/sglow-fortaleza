@@ -87,7 +87,7 @@ const SectionElegirnosFortaleza = () => {
 									className="select-none flex flex-col">
 									<a href={d.estHref} aria-label={d.title}>
 										<div className="group mb-1 rounded-xl bg-[#0d1117]/20 px-[50px] pb-[22px] pt-[22px] shadow-testimonial dark:bg-[#111928] dark:shadow-none">
-											<svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="text-cyan-800 w-20 h-20 inline-block" viewBox="0 0 25 26">
+											<svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="text-[#0b76b7] w-20 h-20 inline-block" viewBox="0 0 25 26">
 												<path d={d.iconSvg}></path>
 											</svg>
 											<p className="text-4xl font-bold dark:text-white text-gray-800 pt-2">{d.desc}</p>

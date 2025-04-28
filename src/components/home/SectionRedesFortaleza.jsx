@@ -93,7 +93,7 @@ const SectionRedesFortaleza = () => {
                       duration={1} delay={0.5}
                       // rootMargin="0px 0px -10px 0px"
                       effect={{ initial: { opacity: 0, x: 100 }, animate: { opacity: 1, x: 0 } }}
-                      transition={{ duration: 0.9, delay: 0.5, ease: 'easeInOut' }} />
+                      transition={{ duration: 0.9, delay: 0.2, ease: 'easeInOut' }} />
                   </div>
 
                   <ScrollAnimation
