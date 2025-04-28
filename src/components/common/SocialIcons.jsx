@@ -19,7 +19,7 @@ const SocialIcons = () => {
           {icons.map(({ href, label, Icon }, index) => (
             <li key={index}>
               <a
-                aria-label={label}
+                aria-label={index}
                 className="overflow-visible flex h-8 w-8 items-center justify-center rounded-full border border-stroke text-[#111928] hover:border-primary hover:bg-blue-600/10 dark:border-[#1F2A37] dark:text-white dark:hover:border-blue-400/40 text-sm transition hover:text-gray-600"
                 target="_blank"
                 rel="noopener noreferrer"

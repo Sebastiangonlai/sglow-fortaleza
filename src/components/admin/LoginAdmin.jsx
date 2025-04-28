@@ -5,7 +5,6 @@ import AltaImagen from '@/components/admin/imagenes/AltaImagen';
 import swal from 'sweetalert';
 
 
-
 function MyLoginAdmins() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');

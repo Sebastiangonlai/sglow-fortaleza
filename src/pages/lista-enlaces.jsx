@@ -21,7 +21,7 @@ export default function ListaEnlaces() {
 											<div className="flex flex-col text-center w-full">
 												<img className="col-span-2 mb-3 max-h-20 w-full object-contain lg:col-span-4"
 													src="/static/favicons/logo.webp" alt="Academia Fortaleza" width={128} height={48} />
-												<h2 className="text-3xl text-cyan-900 font-bold" >Academia Fortaleza</h2>
+												<h1 className="text-3xl text-cyan-900 font-bold" >Academia Fortaleza</h1>
 											</div>
 											<div className="mt-8 grid space-y-2">
 												<button aria-label="internet" className="group h-12 px-6 border border-zinc-600 rounded-full transition duration-300

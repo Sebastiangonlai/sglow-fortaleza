@@ -97,16 +97,16 @@ const ServiceCard = ({ icon: Icon, title, description, href }) => {
 	return (
 		<div className=" mb-11 flex lg:mb-[50px]">
 			<div className="group mb-16">
-				<h2 className="relative z-10 mb-4 flex h-[60px] w-[60px] lg:h-[60px] lg:w-[60px] sm:h-[60px] sm:w-[60px] items-center justify-center rounded-[14px] bg-[#3758f9]" href={href} aria-label={`Ir a ${title}`}>
+				<div className="relative z-10 mb-4 flex h-[60px] w-[60px] lg:h-[60px] lg:w-[60px] sm:h-[60px] sm:w-[60px] items-center justify-center rounded-[14px] bg-[#3758f9]" href={href} aria-label={`Ir a ${title}`}>
 					<span className="absolute left-0 top-0 -z-[1] mb-6 flex h-[50px] w-[50px] lg:h-[60px] lg:w-[60px] sm:h-[60px] sm:w-[60px] rotate-[25deg] items-center justify-center rounded-[14px] bg-[#3758f9] opacity-20 duration-300 group-hover:rotate-45">
 					</span>
 					<Icon size='36px' />
-				</h2>
+				</div>
 			</div>
 			<div className="w-full px-4">
-				<h3 className="mb-2 text-xl font-bold text-[#111928] dark:text-white sm:text-2xl lg:text-xl xl:text-2xl leading-tight tracking-tight">
+				<h2 className="mb-2 text-xl font-bold text-[#111928] dark:text-white sm:text-2xl lg:text-xl xl:text-2xl leading-tight tracking-tight">
 					{title}
-				</h3>
+				</h2>
 				<p className="text-base text-[#637381] dark:text-[#9CA3AF] leading-tight tracking-tight">
 					{description}
 				</p>

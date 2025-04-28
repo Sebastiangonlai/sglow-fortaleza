@@ -28,9 +28,9 @@ const SectionTrabajaConNosotrosFortaleza = () => {
             <div className="overflow-hidden">
               <div className="flex flex-wrap items-center">
                 <div className="mx-auto max-w-7xl w-full lg:px-2 lg:text-left text-center">
-                  <h1 className="pb-2 text-2xl font-bold text-[#111928] dark:text-white sm:text-3xl md:text-[35px] md:leading-[1]">
+                  <p className="pb-2 text-2xl font-bold text-[#111928] dark:text-white sm:text-3xl md:text-[35px] md:leading-[1]">
                     Trabaja con nosotros
-                  </h1>
+                  </p>
                   <p className="lg:text-left text-center text-base text-[#637381] dark:text-[#9CA3AF] leading-tight">
                     ¿Querés unirte a nuestro equipo de instructores? Completá el siguiente formulario y adjuntá tu CV.
                   </p>

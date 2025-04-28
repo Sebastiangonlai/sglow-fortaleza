@@ -87,13 +87,13 @@ const PortfolioCard = ({ imageSrc, category, title, description, checkText, butt
             <div className="w-full" key={title}>
               <div className="fadeInUp mb-2">
                 <div className="mb-2 overflow-hidden rounded-[5px] shadow-[0_8px_16px_rgb(0_0_0/0.2)] bg-black transition duration-700">
-                  <a aria-label={title} className="block">
-                    <ImageComponent iSrc={imageSrc} iAlt="image" iClassName="h-full w-full rounded-[5px] transition hover:rotate-6 hover:scale-125" iWidth={500} iHeight={500} />
-                  </a>
+                  <div className="block">
+                    <ImageComponent iSrc={imageSrc} iAlt={title} iClassName="h-full w-full rounded-[5px] transition hover:rotate-6 hover:scale-125" iWidth={500} iHeight={500} />
+                  </div>
                 </div>
-                <a aria-label={title} className="mb-0.5 inline-block text-base font-semibold text-[#111928] hover:text-primary dark:text-white dark:hover:text-indigo-400 sm:text-2xl lg:text-base xl:text-base leading-tight tracking-tight">
+                <div className="mb-0.5 inline-block text-base font-semibold text-[#111928] hover:text-primary dark:text-white dark:hover:text-indigo-400 sm:text-2xl lg:text-base xl:text-base leading-tight tracking-tight">
                   {title}
-                </a>
+                </div>
               </div>
             </div>
           </ModalTrigger>

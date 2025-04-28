@@ -29,11 +29,11 @@ const AnimatedText = ({ title, time, uri }) => {
 
   return (
     <div className="container relative">
-      <a className="main" href={uri}>
-        <div className={`mb-2 text-3xl sm:text-4xl md:text-2xl lg:text-4xl font-bold leading-tight tracking-tight cursor-pointer hover:text-blue-700 dark:hover:text-blue-300 transition-all duration-700 ease-in-out transform ${visible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
+      <a className="main" href={uri} aria-label={uri}>
+        <h2 className={`mb-2 text-3xl sm:text-4xl md:text-2xl lg:text-4xl font-bold leading-tight tracking-tight cursor-pointer hover:text-blue-700 dark:hover:text-blue-300 transition-all duration-700 ease-in-out transform ${visible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
           } ${color}`}>
           {title}
-        </div>
+        </h2>
       </a>
     </div>
   );

@@ -120,17 +120,17 @@ const FormBlock = () => (
 const ContactoBlock = () => (
   <Block className="z-[100] col-span-12 row-span-2 md:col-span-6 flex flex-col justify-center items-left">
     <div className="mb-6 items-center">
-      <h4 className="text-xl leading-tight font-medium">Horario</h4>
-      <p><a href={import.meta.env.VITE_GOOGLE_REVIEW} className="dark:hover:text-blue-300 flex items-center gap-[10px] text-base font-medium text-gray-400 whitespace-nowrap">Lunes a sábado de 7 a 21hs</a></p>
+      <p className="text-xl leading-tight font-medium">Horario</p>
+      <p><a href={import.meta.env.VITE_GOOGLE_REVIEW} aria-label="Horario" className="dark:hover:text-blue-300 flex items-center gap-[10px] text-base font-medium text-gray-400 whitespace-nowrap">Lunes a sábado de 7 a 21hs</a></p>
     </div>
 
     <div className="mb-6">
-      <h4 className="text-xl leading-tight font-medium">Email</h4>
-      <p><a href={`mailto:info@academiafortaleza.com.uy`} className="flex items-center gap-[10px] text-base font-medium text-gray-400 dark:hover:text-blue-300 whitespace-nowrap">{import.meta.env.VITE_EMAILINFO}</a></p>
+      <p className="text-xl leading-tight font-medium">Email</p>
+      <p><a href={`mailto:info@academiafortaleza.com.uy`} className="flex items-center gap-[10px] text-base font-medium text-gray-400 dark:hover:text-blue-300 whitespace-nowrap" aria-label="Email">{import.meta.env.VITE_EMAILINFO}</a></p>
     </div>
 
     <div className="mb-1">
-      <h4 className="text-xl leading-tight font-medium">Teléfono</h4>
+      <p className="text-xl leading-tight font-medium">Teléfono</p>
       <a aria-label="Whatsapp" href={import.meta.env.VITE_API_WHATSAPP} className="flex items-center gap-[10px] text-base font-medium text-gray-400 dark:hover:text-blue-300 whitespace-nowrap">
         {import.meta.env.VITE_PHONE}
       </a>

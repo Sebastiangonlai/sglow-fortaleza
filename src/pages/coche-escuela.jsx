@@ -61,9 +61,9 @@ const NuestrosVeiculos = () => {
                       {item.icon}
                     </div>
                     <div>
-                      <h4 className="text-lg text-gray-100 font-semibold">
+                      <h2 className="text-lg text-gray-100 font-semibold">
                         {item.title}
-                      </h4>
+                      </h2>
                       <p className="mt-1 text-sm">
                         {item.desc}
                       </p>

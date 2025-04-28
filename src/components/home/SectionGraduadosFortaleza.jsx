@@ -80,9 +80,9 @@ export default SectionGraduadosFortaleza;
 export const Header = () => {
   return (
     <div className="max-w-7xl absolute mx-auto py-40 md:py-40 px-4 w-full left-0 top-0 z-[100]">
-      <h1 className="text-4xl md:text-6xl font-bold dark:text-white text-shadow-sm/50">
+      <p className="text-4xl md:text-6xl font-bold dark:text-white text-shadow-sm/50">
         Nuestros <br /> Graduados
-      </h1>
+      </p>
       <p className="max-w-2xl text-base md:text-xl mt-3 lg:mt-4 dark:text-neutral-300 tracking-tight leading-tight text-shadow-sm/50">
         Nuestro mayor orgullo es ver a nuestros alumnos obtener su libreta y cumplir su meta.
       </p>

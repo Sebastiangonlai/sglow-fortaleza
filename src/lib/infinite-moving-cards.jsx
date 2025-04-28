@@ -57,7 +57,7 @@ export const InfiniteMovingCards = ({ items, direction = "left", speed = "fast",
                 </p>
                 <a href="#" className="flex items-center gap-4" aria-label={item.author}>
                   <div className="h-[50px] w-[50px] overflow-hidden rounded-full">
-                    <img src={item.imgQua} alt={item.author} className="h-[50px] w-[50px] rounded-full" />
+                    <img src={item.imgQua} alt={item.altQua} className="h-[50px] w-[50px] rounded-full" />
                   </div>
                   <div>
                     <p className="text-sm font-semibold text-[#111928] dark:text-white">{item.author}</p>

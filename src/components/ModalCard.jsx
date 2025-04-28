@@ -47,13 +47,13 @@ const ModalAnimatedCard = ({ imageSrc, title, description, checkText, btnHref })
 					<ModalTrigger className="relative mb-4">
 						<div className="w-full" key={title}>
 							<div className="mb-2 overflow-hidden rounded-[5px] shadow-[0_8px_16px_rgb(0_0_0/0.2)] bg-black">
-								<a aria-label="servicios" className="block">
+								<div className="block">
 									<ImageComponent iSrc={imageSrc} iAlt="image" iClassName="h-full w-full rounded-[5px] transition group-hover:rotate-6deg group-hover:scale-125" iWidth={500} iHeight={500} />
-								</a>
+								</div>
 							</div>
-							<a aria-label="nuestros servicios" className="mb-0.5 inline-block text-base font-semibold text-[#111928] hover:text-primary dark:text-white dark:hover:text-indigo-400 sm:text-2xl lg:text-base xl:text-base leading-tight tracking-tight">
+							<div className="mb-0.5 inline-block text-base font-semibold text-[#111928] hover:text-primary dark:text-white dark:hover:text-indigo-400 sm:text-2xl lg:text-base xl:text-base leading-tight tracking-tight">
 								{title}
-							</a>
+							</div>
 						</div>
 					</ModalTrigger>
 				</div>

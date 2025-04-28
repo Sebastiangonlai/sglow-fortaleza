@@ -77,9 +77,9 @@ export const CardLicencia = () => {
 							iHeight={IMG.height}
 							iClassName="aspect-square object-cover object-center blur-none group-hover/img:blur-sm transition-all duration-200 rounded-xl" />
 						<div className="relative mx-7 -mt-20 rounded-[10px] bg-white dark:bg-[#1F2A37] py-[22px] px-3 text-center shadow-portfolio dark:shadow-box-[#111928]">
-							<h4 className="text-[#111928] dark:text-white mb-3 text-xl leading-tight">
+							<h2 className="text-[#111928] dark:text-white mb-3 text-xl leading-tight">
 								{"¿Querés aprender a manejar de verdad?"}
-							</h4>
+							</h2>
 							<ButtonSection namebtn={"Obtén tu licencia"} uri={"/licencia-de-conducir"} />
 						</div>
 					</div>

@@ -80,9 +80,9 @@ const SectionHeaderFortaleza = () => {
         </span>
       )}
 
-      <h1 className="z-[40] -mt-24 lg:pt-8 sm:mt-6 text-shadow-sm/60">
+      <div className="z-[40] -mt-24 lg:pt-8 sm:mt-6 text-shadow-sm/60">
         <TypewriterEffectSmoothDemo />
-      </h1>
+      </div>
       <div className="flex md:flex lg:flex flex-col justify-center items-center overflow-hidden">
         <div className="bg-transparent relative dark:bg-transparent rounded-xl">
           <div className="anim-left">
