@@ -89,12 +89,12 @@ const Navbar = () => {
               </button>
               {userMenuOpen && (
                 <div className="absolute mt-1 w-33 py-1 bg-white dark:bg-slate-800 rounded-md shadow-lg border border-slate-200 dark:border-slate-700 z-50">
-               
-                    <Link href="/admin" className="flex items-center px-4 py-2 text-sm hover:bg-slate-100 dark:hover:bg-slate-700">
-                      <LayoutDashboard size={16} className="mr-2" />
-                      Dashboard
-                    </Link>
-                
+
+                  <Link href="/admin" className="flex items-center px-4 py-2 text-sm hover:bg-slate-100 dark:hover:bg-slate-700">
+                    <LayoutDashboard size={16} className="mr-2" />
+                    Dashboard
+                  </Link>
+
                   <Link href="/nuestros-servicios" className="flex items-center px-4 py-2 text-sm hover:bg-slate-100 dark:hover:bg-slate-700">
                     <UserRoundPen size={16} className="mr-2" />
                     Profile
