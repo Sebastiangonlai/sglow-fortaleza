@@ -24,23 +24,24 @@ const SectionLicenciaConducir = () => {
 	const features = [
 		{
 			title: "Nuestros Alumnos",
-			className: "col-span-1 lg:col-span-2 lg:w-[640px] ",
+			className: "min-w-full ",
 			skeleton: <ModalCardAlumnos />,
-		}, {
+		},
+		{
 			title: "Obten tu licencia",
-			className: "col-span-1 lg:col-span-2 w-[350px] lg:w-[400px] mt-10 mx-auto justify-center items-center",
+			className: " mt-1 mx-auto justify-center items-center",
 			skeleton: <CardLicencia />,
 		},
 	];
 	return (
-		<section className="pt-20 pb-14 lg:pt-[80px] lg:pb-[30px] dark:bg-transparent bg-gray-200">
-			<div className="container mx-auto">
+		<section className="lg:px-10 pt-20 pb-14 lg:pt-[80px] lg:pb-[30px] dark:bg-transparent bg-gray-200">
+			<div className="mx-auto">
 				<TitleHeader
 					title="Últimos Graduados"
 					subtitle="Ellos lograron su objetivo: obtener la libreta."
 					uri="galeria-media" />
 				<div className="relative h-full" >
-					<div className="grid grid-cols-1 lg:grid-cols-4 -mt-6 rounded-md">
+					<div className="grid grid-cols-1 lg:grid-cols-2 -mt-6 rounded-md">
 						{features.map((feature) => (
 							<FeatureCard key={feature.title} className={feature.className}>
 								<div className="min-h-full min-w-full">{feature.skeleton}</div>
@@ -70,15 +71,15 @@ export const CardLicencia = () => {
 	return (
 		<ScrollAnimation
 			description={
-				<div className="flex flex-wrap -mx-6" aria-label="Más información sobre cómo obtener tu licencia de conducir">
-					<div className={`overflow-hidden w-full h-full justify-center px-4`}>
+				<div className=" flex flex-wrap" aria-label="Más información sobre cómo obtener tu licencia de conducir">
+					<div className={`overflow-hidden w-full lg:w-[380px] h-full justify-center pt-4 px-4`}>
 						<ImageComponent
 							iSrc="/static/images/card/servicio_18hd.webp"
 							iAlt="portfolio"
 							iWidth={IMG.width}
 							iHeight={IMG.height}
 							iClassName="aspect-square object-cover object-center blur-none group-hover/img:blur-sm transition-all duration-200 rounded-xl" />
-						<div className="relative mx-7 -mt-20 rounded-[10px] bg-white dark:bg-[#1F2A37] py-[22px] px-3 text-center shadow-portfolio dark:shadow-box-[#111928]">
+						<div className="relative mx-6 -mt-20 rounded-[10px] bg-white dark:bg-[#1F2A37] py-[22px] px-3 text-center shadow-portfolio dark:shadow-box-[#111928]">
 							<h2 className="text-[#111928] dark:text-white mb-3 text-xl leading-tight">
 								{"¿Querés aprender a manejar de verdad?"}
 							</h2>
@@ -112,10 +113,9 @@ const ModalCardAlumnos = () => {
 		fetchDatas();
 	}, []);
 
-	const aux = recibidos.slice(0, 6);
-
-	let imagesFirst = [{ src: aux[0] }, { src: aux[1] }, { src: aux[2] }];
-	let imagesSecond = [{ src: aux[3] }, { src: aux[4] }, { src: aux[5] }];
+	const aux = recibidos.slice(0, 8);
+	let imagesFirst = [{ src: aux[0] }, { src: aux[1] }, { src: aux[2] }, { src: aux[6] }];
+	let imagesSecond = [{ src: aux[3] }, { src: aux[4] }, { src: aux[5] }, { src: aux[7] }];
 
 	const imageVariants = {
 		whileHover: { scale: 1.2, rotate: 0, zIndex: 100, },
@@ -161,7 +161,7 @@ const ModalCardAlumnos = () => {
 				</Modals>
 			</div>
 
-			<div className="relative flex flex-col p-2 gap-10 w-full overflow-hidden cursor-pointer mx-auto items-center justify-center">
+			<div className=" flex flex-col p-2 gap-10 w-full overflow-hidden cursor-pointer mx-auto items-center justify-center">
 				<ScrollAnimation
 					description={
 						<div className="flex flex-row">

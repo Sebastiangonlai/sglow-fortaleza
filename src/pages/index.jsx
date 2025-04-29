@@ -11,12 +11,12 @@ import SectionPreguntasFrecuentes from '@/components/home/SectionFAQFortaleza';
 import SectionLicenciaDeConducir from '@/components/home/SectionLicenciaConducirFortaleza';
 import SectionNuestrosServicios from '@/components/home/SectionNuestrosServiciosFortaleza';
 // import SectionTrabajaConNosotros from '@/components/home/SectionTrabajaConNosotrosFortaleza';
-import  ScrollProgress  from "@/components/common/ScrollProgress"
+import ScrollProgress from "@/components/common/ScrollProgress"
 
 export default function Home() {
   return (
     <>
-        <ScrollProgress color="bg-violet-400/60"/>
+      <ScrollProgress color="bg-violet-400/60" />
       <section id="inicio" className="overflow-hidden">
         <SectionHeader />
       </section>

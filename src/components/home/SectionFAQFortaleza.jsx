@@ -33,24 +33,32 @@ const SectionFaqFortaleza = () => {
                       <div className="w-full px-6 sm:px-6 xl:w-1/2">
                         <div className="relative z-10">
                           <ImageComponent iSrc="/static/images/web/mano-semaforo.webp" iAlt="FAQ" iWidth={350} iHeight={350} iClassName="w-full rounded-2xl" />
-                     
+
                         </div>
                       </div>
                     </div>
+                    //   }
+                    //   duration={1} delay={0.5}
+                    //   effect={{ initial: { opacity: 0, x: -100 }, animate: { opacity: 1, x: 0 } }}
+                    //   transition={{ duration: 1, delay: 0.4, ease: 'easeInOut' }}
+                    // />
                   }
                   duration={1} delay={0.5}
+                  // rootMargin="0px 0px -10px 0px"
                   effect={{ initial: { opacity: 0, x: -100 }, animate: { opacity: 1, x: 0 } }}
-                  transition={{ duration: 1, delay: 0.4, ease: 'easeInOut' }}
-                />
+                  transition={{ duration: 0.9, delay: 0.2, ease: 'easeInOut' }} />
               </div>
 
               <div className="w-full px-4 lg:w-1/2">
                 <div className="mb-2 max-w-[540px] lg:mb-0">
                   <ScrollAnimation
-                    description={<SectionFAQ />}
+                    description={
+                      <SectionFAQ />
+                    }
                     duration={1} delay={0.5}
+                    // rootMargin="0px 0px -10px 0px"
                     effect={{ initial: { opacity: 0, x: 100 }, animate: { opacity: 1, x: 0 } }}
-                    transition={{ duration: 1, delay: 0.5, ease: 'easeInOut' }}
+                    transition={{ duration: 0.9, delay: 0.5, ease: 'easeInOut' }}
                   />
                 </div>
               </div>

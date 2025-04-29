@@ -8,7 +8,7 @@ function ScrollAnimation({ description, duration = 0.8, delay = 0.3, rootMargin 
   const [ref, inView] = useInView({
     initialInView: false,
     triggerOnce: true, // La animación se activa solo una vez
-    threshold: 0.1, // El componente debe estar al menos un 10% visible
+    threshold: 0.2, // El componente debe estar al menos un 10% visible
     rootMargin: rootMargin
   });
 
