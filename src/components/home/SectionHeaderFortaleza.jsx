@@ -77,7 +77,7 @@ const SectionHeaderFortaleza = () => {
     );
 
   return (
-    <section className="flex flex-col select-none items-center overflow-hidden justify-center h-screen dark:bg-[#111928]/95 pt-10">
+    <section className="flex flex-col select-none items-center overflow-hidden justify-center h-screen  pt-10">
       {/* Líneas de fondo */}
       {showBackgroundLines && (
         <BackgroundLines className="absolute select-none justify-center items-center top-0 left-0" />

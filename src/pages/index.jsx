@@ -2,8 +2,8 @@
 
 import SectionHeader from '@/components/home/SectionHeaderFortaleza';
 import SectionNuestrosServicios from '@/components/home/SectionNuestrosServiciosFortaleza';
-// import SectionOfrecemos from '@/components/home/SectionOfrecemosFortaleza';
-// import SectionElegirnos from '@/components/home/SectionElegirnosFortaleza';
+import SectionOfrecemos from '@/components/home/SectionOfrecemosFortaleza';
+import SectionElegirnos from '@/components/home/SectionElegirnosFortaleza';
 // import SectionGraduados from '@/components/home/SectionGraduadosFortaleza';
 // import SectionRedes from '@/components/home/SectionRedesFortaleza';
 // import SectionContact from '@/components/home/SectionContactFortaleza';
@@ -18,31 +18,31 @@ export default function Home() {
   return (
     <>
       {/* <ScrollProgress color="bg-violet-400/60" /> */}
-      <section id="inicio" className="overflow-hidden  bg-(--color-section-3)">
+      <section id="inicio" className="overflow-hidden bg-(--color-section-3)">
         <SectionHeader />
       </section>
 
-      <section id="nuestros-servicios" className="min-h-screen bg-(--color-section-2)">
+      <section id="nuestros-servicios" className="bg-(--color-section-2)">
         <SectionNuestrosServicios />
       </section>
 
-      <section id="que-ofrecemos" className="min-h-screen bg-(--color-section-3)">
-        {/* <SectionOfrecemos /> */}
+      <section id="que-ofrecemos "className="overflow-hidden bg-(--color-section-3)">
+        <SectionOfrecemos />
       </section>
 
-      <section id="elegirnos" className="min-h-screen bg-(--color-section-3)">
-        {/* <SectionElegirnos /> */}
+      <section id="elegirnos" className="bg-(--color-section-3)">
+        <SectionElegirnos />
       </section>
 
       <section id="licencia-de-conducir" className="overflow-hidden bg-(--color-section-3)">
         {/* <SectionLicenciaDeConducir /> */}
       </section >
 
-      <section id="graduados" className="min-h-screen bg-(--color-section-3)">
+      <section id="graduados" className=" bg-(--color-section-3)">
         {/* <SectionGraduados /> */}
       </section>
 
-      <section id="testimonio" className="min-h-screen bg-(--color-section-2)">
+      <section id="testimonio" className=" bg-(--color-section-2)">
         {/* <SectionTestimonial /> */}
       </section>
 

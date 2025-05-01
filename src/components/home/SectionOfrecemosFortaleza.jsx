@@ -38,9 +38,9 @@ const services = [
 const SectionOfrecemosFortaleza = () => {
 	return (
 		<>
-			<section className="bg-white relative z-20 overflow-hidden dark:bg-transparent pt-[60px] lg:pt-[70px] pb-[30px] lg:pb-[30px] select-none">
+			<div className="relative z-20 overflow-hidden w-screen h-full select-none bg-(--color-section-3)">
 				<div>
-					<span className="absolute left-0 bottom-0">
+					<span className="absolute left-0 bottom-0" >
 						<svg width="495" height="470" viewBox="0 0 495 470" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<circle cx="55" cy="442" r="138" stroke="white" strokeOpacity="0.04" strokeWidth="50" />
 							<circle cx="446" cy="180" r="39" stroke="white" strokeOpacity="0.04" strokeWidth="20" />
@@ -57,7 +57,7 @@ const SectionOfrecemosFortaleza = () => {
 					</span>
 				</div>
 
-				<div className="container mx-auto">
+				<section className="container mx-auto ">
 					<TitleHeader
 						title="Qué Ofrecemos"
 						subtitle="Ofrecemos una formación completa para conductores, sin importar su nivel de experiencia."
@@ -84,8 +84,8 @@ const SectionOfrecemosFortaleza = () => {
 							</div>
 						))}
 					</div>
-				</div>
-			</section>
+				</section>
+			</div>
 		</>
 	);
 };

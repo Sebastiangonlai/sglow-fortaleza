@@ -44,7 +44,7 @@ const SectionElegirnosFortaleza = () => {
 
 
 	return (
-		<section className="container overflow-hidden bg-[#F9FAFB] dark:bg-[#1F2A37] pt-[60px] pb-[60px] lg:pt-[40px] lg:pb-[80px] lg:mx-[5%] lg:rounded-2xl select-none">
+		<section className="container overflow-hidden bg-[#F9FAFB] dark:bg-[#1F2A37]  lg:rounded-2xl select-none">
 			<TitleHeader
 				title="Por qué Elegirnos"
 				subtitle="Formando conductores responsables y seguros."
