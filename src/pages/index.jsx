@@ -11,7 +11,7 @@ import SectionPreguntasFrecuentes from '@/components/home/SectionFAQFortaleza';
 import SectionLicenciaDeConducir from '@/components/home/SectionLicenciaConducirFortaleza';
 import SectionNuestrosServicios from '@/components/home/SectionNuestrosServiciosFortaleza';
 // import Demo from '@/components/animations/Demo.jsx';
-// import SectionTrabajaConNosotros from '@/components/home/SectionTrabajaConNosotrosFortaleza';
+import SectionTrabajaConNosotros from '@/components/home/SectionTrabajaConNosotrosFortaleza';
 import ScrollProgress from "@/components/common/ScrollProgress"
 
 export default function Home() {
@@ -21,6 +21,7 @@ export default function Home() {
       <section id="inicio" className="overflow-hidden">
         <SectionHeader />
       </section>
+
       <section id="nuestros-servicios">
         <SectionNuestrosServicios />
       </section>
@@ -57,9 +58,9 @@ export default function Home() {
         <SectionContact />
       </section>
 
-      {/* <section id="trabaja-con-nosotros">
+      <section id="trabaja-con-nosotros">
         <SectionTrabajaConNosotros />
-      </section> */}
+      </section>
     </>
   );
 }

@@ -11,20 +11,6 @@ const SectionHeaderFortaleza = () => {
   const [showBackgroundLines, setShowBackgroundLines] = useState(false);
   const animations = ['anim-left', 'anim-leftb'];
 
-
-
-  // Actualiza el tamaño de la ventana dinámicamente
-  // useEffect(() => {
-  //   const updateWindowSize = () => {
-  //     setWindowSize({ width: window.innerWidth, height: window.innerHeight });
-  //   };
-
-  //   updateWindowSize(); // Inicializa el tamaño de la ventana
-  //   window.addEventListener("resize", updateWindowSize);
-
-  //   return () => window.removeEventListener("resize", updateWindowSize); // Limpia el listener
-  // }, []);
-
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowBackgroundLines(true);
@@ -35,7 +21,7 @@ const SectionHeaderFortaleza = () => {
 
   const svgContent =
     windowSize.width >= 786 ? (
-      <svg fill="none" height="701" viewBox="0 0 500 250" width="1364" xmlns="http://www.w3.org/2000/svg" aria-label="Decoración de fondo grande"      >
+      <svg fill="none" height="701" viewBox="0 0 500 250" width="1364" xmlns="http://www.w3.org/2000/svg" aria-label="Fondo grande">
         <linearGradient id="a">
           <stop offset="0" stopColor="#4a6cf7" stopOpacity="0" />
           <stop offset="0.5" stopColor="#4a6cf7" />
@@ -63,7 +49,7 @@ const SectionHeaderFortaleza = () => {
     ) : (
       <svg fill="none" height="701" viewBox="0 0 864 301" width="1364"
         xmlns="http://www.w3.org/2000/svg"
-        aria-label="Decoración de fondo pequeño">
+        aria-label="Fondo pequeño">
         <linearGradient id="a">
           <stop offset="0" stopColor="#4a6cf7" stopOpacity="0" />
           <stop offset="0.5" stopColor="#4a6cf7" />

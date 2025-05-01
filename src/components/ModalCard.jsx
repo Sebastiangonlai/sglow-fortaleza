@@ -137,37 +137,3 @@ const ModalAnimatedImage = ({ imageSrc, title }) => {
 };
 
 export { ModalAnimatedImage }
-
-
-// const cards = [
-//   {
-//     src: '/static/images/card/servicio_0.webp',
-//     title: 'Promociones y Descuentos',
-//     description: `Descubre promociones y descuentos especiales que hemos preparado para ti.`,
-//     checkText: '',
-//     href: '/medios-de-pago',
-//   },
-//   {
-//     src: '/static/images/card/servicio_10.webp',
-//     title: "Licencia de Conducir",
-//     description: "Información y apoyo en el proceso de obtención de licencias de conducción.",
-//     checkText: ['Cursos a tu medida', 'Requisitos', 'Caracteristicas'],
-//     href: '/licencia-de-conducir',
-//   },
-//   {
-//     src: "/static/images/card/servicio_7.webp",
-//     title: "Academia habilitada",
-//     description: "Estamos habilitados por la Intendencia de Montevideo, cumpliendo con todas las normativas y requisitos necesarios.",
-//     checkText: ['Convenios institucionales', 'Promoción 15 + 1', 'Paquetes con descuento'],
-//     textBtn: "",
-//     href: "/nuestros-servicios",
-//   },
-//   {
-//     src: "/static/images/card/servicio_11.webp",
-//     title: "Auto para examen",
-//     description: "Nuestros vehículos están equipados con tecnología de seguridad avanzada para garantizar tu bienestar.",
-//     checkText: ['Convenios institucionales', 'Promoción 15 + 1', 'Paquetes con descuento'],
-//     textBtn: "Ver más",
-//     href: "/coche-escuela",
-//   },
-// ];

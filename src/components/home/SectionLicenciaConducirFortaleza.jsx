@@ -14,7 +14,6 @@ import ButtonSection from "@/components/ButtonSection";
 import Sheet from '@mui/joy/Sheet';
 
 
-
 const IMG = {
 	width: 180,
 	height: 80
@@ -53,7 +52,6 @@ const SectionLicenciaConducir = () => {
 		</section>
 	);
 }
-
 
 export default SectionLicenciaConducir;
 

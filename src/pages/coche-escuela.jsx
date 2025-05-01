@@ -43,7 +43,6 @@ const NuestrosVeiculos = () => {
         nameUri="Flota de Vehículos"
         href="coche-escuela" />
 
-
       <section className="pt-16">
         <div className="max-w-screen-xl mx-auto px-4 text-gray-200 gap-16 justify-center md:px-8 lg:flex">
           <div>

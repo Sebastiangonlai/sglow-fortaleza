@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
 
+
 export default function ScrollProgress({
   color = "bg-primary",
   height = 4,
@@ -45,9 +46,7 @@ export default function ScrollProgress({
         }}
       />
       {showPercentage && (
-        <div
-          className={`absolute ${percentagePositionClass} -mt-8 bg-background/80 backdrop-blur-sm px-2 py-1 rounded text-sm font-medium`}
-        >
+        <div className={`absolute ${percentagePositionClass} -mt-8 bg-background/80 backdrop-blur-sm px-2 py-1 rounded text-sm font-medium`}>
           {percentage}%
         </div>
       )}

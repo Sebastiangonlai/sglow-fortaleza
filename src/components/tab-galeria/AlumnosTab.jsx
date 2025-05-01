@@ -103,10 +103,10 @@ export function TabAlumnos() {
           </div>
 
           <Modal id="myModal" open={open} onClose={handleClose} className="flex flex-wrap justify-center self-center">
-            <Sheet className="w-fit h-fit rounded-xl flex" >
+            <Sheet className="w-fit h-fit rounded-xl flex my-2 mx-2" >
               <ModalClose className="close right-3 z-100" aria-label="Close" color="none"
                 sx={{ backgroundColor: "rgba(0, 0, 0, 0.70)", color: "#ffff", }}>&times;</ModalClose>
-              <ImageComponent iWidth={IMG.width} iHeight={IMG.height} iAlt="Alumnos" id="myImg" iSrc={imgSrc} loading="lazy" iClassName="max-w-[720px] max-h-[640px]object-cover rounded-xl focus:touch-pan-x delay-200 border border-zinc-500 select-none dark:rounded-lg dark:border justify-center" />
+              <ImageComponent iWidth={IMG.width} iHeight={IMG.height} iAlt="Alumnos" id="myImg" iSrc={imgSrc} loading="lazy" iClassName="max-w-full max-h-[640px]object-cover rounded-xl focus:touch-pan-x delay-200 border border-zinc-500 select-none dark:rounded-lg dark:border justify-center" />
             </Sheet>
           </Modal>
           <div className="bg-white py-9 text-center dark:bg-[#111928]">

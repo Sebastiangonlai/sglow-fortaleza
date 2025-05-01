@@ -22,24 +22,21 @@ const SectionTrabajaConNosotrosFortaleza = () => {
 
   return (
     <>
-      <section className="bg-white py-[20px] lg:py-[50px] px-2 dark:bg-[#182341] border-t border-b border-stroke dark:border-[#1F2A37]/30 ">
+      <section className="bg-white py-[20px] lg:py-[50px] px-2 dark:bg-[#182341] border-t border-b border-stroke dark:border-[#1F2A37]/30 select-none">
         <div className="flex mx-auto justify-center items-center px-1 sm:container">
           <div className="items-center justify-between lg:border-b border-stroke dark:border-slate-600/80 md:flex py-2">
-            <div className="overflow-hidden">
-              <div className="flex flex-wrap items-center">
-                <div className="mx-auto max-w-7xl w-full lg:px-2 lg:text-left text-center">
-                  <p className="pb-2 text-2xl font-bold text-[#111928] dark:text-white sm:text-3xl md:text-[35px] md:leading-[1]">
-                    Trabaja con nosotros
-                  </p>
-                  <p className="lg:text-left text-center text-base text-[#637381] dark:text-[#9CA3AF] leading-tight">
-                    ¿Querés unirte a nuestro equipo de instructores? Completá el siguiente formulario y adjuntá tu CV.
-                  </p>
-                </div>
+            <div className="flex flex-wrap items-center">
+              <div className="mx-auto max-w-7xl w-full lg:px-2 lg:text-left text-center">
+                <p className="pb-1.5 text-2xl font-bold text-[#111928] dark:text-white sm:text-3xl md:text-[35px] md:leading-[1]">
+                  Trabaja con nosotros
+                </p>
+                <p className="lg:text-left text-center text-base text-[#637381] dark:text-[#9CA3AF] leading-tight">
+                  ¿Querés unirte a nuestro equipo de instructores? Completá el siguiente formulario y adjuntá tu CV.
+                </p>
               </div>
             </div>
-
             <div className="lg:flex-none flex mx-auto justify-center items-center pt-5 lg:pt-4  lg:flex  pl-2 md:mt-0 ">
-              <button aria-label="Postulate" onClick={handleOpen} className="inline-block py-2 lg:py-2 px-5 lg:mr-6 text-white text-[14px] font-medium bg-[#4338ca]/70 duration-150 hover:bg-[#4338ca]/50 rounded-full shadow hover:shadow-sm whitespace-nowrap items-center">
+              <button aria-label="Postulate" onClick={handleOpen} className="inline-block py-2 lg:py-2 px-5 lg:mr-6 text-white text-[14px] bg-[#4338ca]/70 duration-150 hover:bg-[#4338ca]/50 rounded-2xl shadow hover:shadow-sm whitespace-nowrap items-center">
                 Enviar postulación
               </button>
             </div>
@@ -53,7 +50,7 @@ const SectionTrabajaConNosotrosFortaleza = () => {
             <ModalClose className="right-3 dark:bg-[#0d1117]/70 dark:hover:bg-[#111928]/70 z-100" variant='solid' color='neutral'>&times;</ModalClose>
             <Blocks className="dark:bg-[#0d1117] md:min-w-[440px] p-4 col-span-12 row-span-2 md:col-span-6">
               <h3 className="text-[17px] mx-auto text-center text-white">Formulario de postulación</h3>
-              <form method="POST" action={import.meta.env.VITE_FORMSUBMIT} enctype="multipart/form-data" onSubmit={UploadButton}>
+              <form method="POST" action={`import.meta.env.VITE_FORMSUBMIT`} enctype="multipart/form-data" onSubmit={UploadButton}>
 
                 <div className="relative mb-1.5 pt-3">
                   <input id="name" name="Nombre" type="text" placeholder="Nombre*" className="w-full text-white rounded-md border-zinc-600 px-4 focus:border-transparent focus:outline-hidden focus:ring-2 focus:ring-blue-600/50 dark:bg-[#0d1117]" required />

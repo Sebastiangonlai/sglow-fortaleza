@@ -74,11 +74,11 @@ const TabNovedades = ({ cantidad }) => {
             ))}
           </div>
 
-          <Modal id="myModal" open={open} onClose={handleClose} className="flex flex-wrap justify-center self-center items-center">
-            <Sheet className=" rounded-xl flex" >
-              <ModalClose className="close right-3 z-100" aria-label="Close" color="none"
+          <Modal id="myModal" open={open} onClose={handleClose} className="flex  justify-center self-center items-center p">
+            <Sheet className="w-fit h-fit rounded-xl flex mx-2 my-2" >
+              <ModalClose className="close right-3 z-100 " aria-label="Close" color="none"
                 sx={{ backgroundColor: "rgba(0, 0, 0, 0.70)", color: "#ffff", }}>&times;</ModalClose>
-              <ImageComponent iWidth={IMG.width} iHeight={IMG.height} iAlt="Alumnos" id="myImg" iSrc={imgSrc} loading="lazy" iClassName="max-w-[720px] max-h-[640px]object-cover rounded-xl focus:touch-pan-x delay-200 border border-zinc-500 select-none dark:rounded-lg dark:border justify-center" />
+              <ImageComponent iWidth={IMG.width} iHeight={IMG.height} iAlt="Alumnos" id="myImg" iSrc={imgSrc} loading="lazy" iClassName="max-h-full object-cover rounded-xl focus:touch-pan-x delay-200 border border-zinc-500 select-none dark:rounded-lg dark:border justify-center" />
             </Sheet>
           </Modal>
         </Box>

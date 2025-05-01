@@ -60,7 +60,6 @@ const SectionNuestrosServiciosFortaleza = () => {
 					namebtn="Ver todos los servicios"
 					uri="./nuestros-servicios" />
 			</div>
-
 		</section>
 	);
 };
