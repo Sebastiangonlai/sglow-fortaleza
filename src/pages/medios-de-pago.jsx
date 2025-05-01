@@ -40,10 +40,10 @@ export default function MediosDePago() {
           },
           ].map(({ src, alt, width, height, title, description, link }, index) => (
             <div className="p-1 md:w-1/3 flex flex-col text-center items-center" key={index}>
-              <div className="w-20 h-20 inline-flex items-center justify-center rounded-full border-6 border-gray-100 shadow-md bg-white text-indigo-400 mb-5 flex-shrink-0">
+              <div className="w-20 h-20 inline-flex items-center justify-center rounded-full border-6 border-gray-100 shadow-md bg-white text-indigo-400 mb-5 shrink-0">
                 <ImageComponent iSrc={src} iClassName="rounded-3xl" iWidth={width} iHeight={height} iAlt={alt} />
               </div>
-              <div className="flex-grow tracking-wides">
+              <div className="grow tracking-wides">
                 <h2 className="text-black dark:text-white text-xl title-font font-medium mb-3">
                   {title}
                 </h2>

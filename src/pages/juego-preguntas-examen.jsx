@@ -288,7 +288,7 @@ export default function DrivingGame() {
   const RankingModal = () => {
     let sliceScore = "";
     return (
-      <div className="absolute inset-0 flex items-center justify-center bg-[#111928] bg-opacity-50 z-10">
+      <div className="absolute inset-0 flex items-center justify-center bg-[#111928]/50 z-10">
         <div className="bg-[#111928] p-4 rounded-lg max-w-sm w-full text-center relative">
           <button className="absolute top-2 right-2 scale-90 flex"
             onClick={() => setShowRankingModal(false)}>✖️</button>
@@ -326,7 +326,7 @@ export default function DrivingGame() {
 
   const NewScoreModal = () => {
     return (
-      <form className="absolute inset-0 flex items-center justify-center bg-[#111928] bg-opacity-50 z-10" onSubmit={handleSubmit} >
+      <form className="absolute inset-0 flex items-center justify-center bg-[#111928]/50 z-10" onSubmit={handleSubmit} >
         <div className="bg-[#111928] p-4 rounded-lg max-w-xs w-full text-center relative">
           <button className="absolute top-2 right-2 scale-90 flex"
             onClick={() => setShowNewScoreModal(false)}>✖️</button>
@@ -346,7 +346,7 @@ export default function DrivingGame() {
 
   const StartModal = () => {
     return (
-      <div className="absolute inset-0 flex items-center justify-center bg-[#111928] bg-opacity-50 z-10">
+      <div className="absolute inset-0 flex items-center justify-center bg-[#111928]/50 z-10">
         <div className="bg-[#111928] p-6 rounded-lg max-w-xs w-full text-center">
           <ImageComponent iSrc="/static/images/game/faviconAcademia.ico" iAlt="Juego Academia Fortaleza" loading="lazy"
             iWidth={100} iHeight={100} iClassName="mx-auto w-22 mb-3" />
@@ -360,7 +360,7 @@ export default function DrivingGame() {
 
   const RestartModal = () => {
     return (
-      <div className="absolute inset-0 flex items-center justify-center bg-[#111928] bg-opacity-50 z-10">
+      <div className="absolute inset-0 flex items-center justify-center bg-[#111928]/50 z-10">
         <div className="bg-[#111928] p-6 rounded-lg max-w-xs w-full text-center">
           <h2 className="text-xl font-bold mb-4">¡Juego terminado!</h2>
           <p className="text-sm font-medium">Calificación: {score}/{questions.length}</p>
@@ -386,7 +386,7 @@ export default function DrivingGame() {
             <MenuItems
               transition
               anchor="bottom end"
-              className="w-37origin-top-right rounded-xl border border-white/5 bg-[#111928] p-1 text-sm/6 text-white transition duration-100 ease-out [--anchor-gap:var(--spacing-1)] focus:outline-none data-[closed]:scale-95 data-[closed]:opacity-0">
+              className="w-37 origin-top-right rounded-xl border border-white/5 bg-[#111928] p-1 text-sm/6 text-white transition duration-100 ease-out [--anchor-gap:var(--spacing-1)] focus:outline-hidden data-[closed]:scale-95 data-[closed]:opacity-0">
               <MenuItem>
                 <button className="group text-sm flex w-full items-center gap-2 rounded-lg py-1.5 px-3 data-[focus]:bg-blue/10" onClick={() => setShowHelpModal(true)}>
                   <QuestionMarkCircleIcon className="size-4 fill-white/20" />
@@ -416,7 +416,7 @@ export default function DrivingGame() {
             </MenuItems>
           </Menu>
         </div>
-        <div className="absolute top-2 left-2 bg-[#111928] bg-opacity-80 p-1.5 rounded text-sm font-medium">
+        <div className="absolute top-2 left-2 bg-[#111928]/80 p-1.5 rounded text-sm font-medium">
           <Timer ref={timerRef} />
           Puntuación: {score}/{questions.length}
         </div>

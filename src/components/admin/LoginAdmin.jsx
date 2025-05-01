@@ -46,14 +46,14 @@ function MyLoginAdmins() {
 
                 <div className="sm:col-span-4 mt-1">
                   <input placeholder="Email" onChange={(e) => setEmail(e.target.value)} value={email}
-                    className="w-full rounded-md px-4 focus:outline-none focus:ring-2 focus:ring-violet-400/50 border-gray-500 dark:bg-black/50" />
+                    className="w-full rounded-md px-4 focus:outline-hidden focus:ring-2 focus:ring-violet-400/50 border-gray-500 dark:bg-black/50" />
                 </div>
                 <div className="sm:col-span-4 my-2">
                   <input placeholder="Contraseña" type="password" onChange={(e) => setPassword(e.target.value)} value={password}
-                    className="w-full rounded-md px-4 focus:outline-none focus:ring-2 focus:ring-violet-400/50 border-gray-500 dark:bg-black/50" />
+                    className="w-full rounded-md px-4 focus:outline-hidden focus:ring-2 focus:ring-violet-400/50 border-gray-500 dark:bg-black/50" />
                 </div>
 
-                <button onClick={signIn} className="text-base py-1 flex w-full justify-center rounded-md hover:bg-[#4338ca]/80 bg-[#4338ca]/90 font-medium border-blue-400 dark:border-[#4338ca] focus:outline-none">
+                <button onClick={signIn} className="text-base py-1 flex w-full justify-center rounded-md hover:bg-[#4338ca]/80 bg-[#4338ca]/90 font-medium border-blue-400 dark:border-[#4338ca] focus:outline-hidden">
                   Inicia sesión
                 </button>
                 {/* <button onClick={signUp}>Registrarse</button> */}

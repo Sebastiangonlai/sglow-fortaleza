@@ -171,11 +171,11 @@ export default function TestCuatroForm() {
                 </FormControl>
               )
             ))}
-            <Button className="rounded-md dark:bg-primary-800 px-4 text-base font-semibold text-white shadow-sm dark:hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 dark:focus-visible:outline-indigo-600"
+            <Button className="rounded-md dark:bg-primary-800 px-4 text-base font-semibold text-white shadow dark:hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 dark:focus-visible:outline-indigo-600"
               onClick={() => window.location.href = '/pruebas/prueba-teorico-cuatro'}>
               Reintentar
             </Button>
-            <Button className="py-2 my-2 rounded-md dark:bg-rose-900 px-4 text-base font-semibold text-white shadow-sm dark:hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 dark:focus-visible:outline-indigo-600"
+            <Button className="py-2 my-2 rounded-md dark:bg-rose-900 px-4 text-base font-semibold text-white shadow dark:hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 dark:focus-visible:outline-indigo-600"
               onClick={() => window.location.href = '/test-online'}>
               Finalizar
             </Button>

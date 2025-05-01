@@ -81,7 +81,7 @@ const TestOnline = () => {
                 </div>
               </section>
 
-              <section className="body-font text-center space-y-3 pt-5 wow fadeInUp">
+              <section className="body-font text-center space-y-3 pt-5">
                 <h1 className='text-xl font-semibold text-blue-200'>Material IMM</h1>
                 <Stack className="mx-auto justify-center" direction={{ xs: 'column', sm: 'row' }} spacing={{ xs: 2, sm: 3, md: 4 }}>
                   <Grid container className="justify-center space-x-2">
@@ -118,9 +118,9 @@ const TestOnline = () => {
                 </Stack>
               </section>
 
-              <section className="text-blue-200 body-font wow fadeInUp">
+              <section className="text-blue-200 body-font">
                 <div className="lg:w-2/2 md:w-1/1 mx-auto px-4 pt-8 justify-center items-center">
-                                 <Stack className="mx-auto justify-center" direction={{ xs: 'column', sm: 'row' }} spacing={{ xs: 2, sm: 3, md: 4 }}>
+                  <Stack className="mx-auto justify-center" direction={{ xs: 'column', sm: 'row' }} spacing={{ xs: 2, sm: 3, md: 4 }}>
                     <div className="text-center space-y-3">
                       <h1 className='text-xl font-semibold'>Material de apoyo</h1>
                       <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -197,8 +197,6 @@ const TestOnline = () => {
                         </button>
                       </div>
                     </div>
-
-
                   </Stack>
                 </div>
               </section>

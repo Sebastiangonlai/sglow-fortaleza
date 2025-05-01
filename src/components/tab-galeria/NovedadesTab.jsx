@@ -43,7 +43,7 @@ const TabNovedades = ({ cantidad }) => {
   return (
     <>
       <section className="dark:bg-[#111928] pt-8">
-        <div className="wow fadeIn overflow-hidden" data-wow-delay=".30s" data-wow-duration="3s">
+        <div className="overflow-hidden">
           <div className="flex flex-wrap items-center -mx-4">
             <div className="w-full px-4">
               <div className="text-center">
@@ -67,7 +67,7 @@ const TabNovedades = ({ cantidad }) => {
               <div key={index} className="w-full mx-1.5 md:w-1/2 lg:w-1/4">
                 <div className="mb-3 overflow-hidden rounded-lg">
                   <Grid item xs={4} sm={4} md={4} onClick={() => handleOpen(`${item}`)}>
-                    <ImageComponent key={index} iWidth={140} iHeight={180} iAlt={item} iSrc={item} loading="lazy" iClassName="cursor-pointer object-cover rounded-md focus:touch-pan-x hover:ease-in-out delay-300 border border-zinc-500 select-none overflow-hidden shadow-sm shadow-gray-300 dark:rounded-md dark:border dark:shadow-sm dark:border-zinc-800 dark:shadow-zinc-800 justify-center" />
+                    <ImageComponent key={index} iWidth={140} iHeight={180} iAlt={item} iSrc={item} loading="lazy" iClassName="cursor-pointer object-cover rounded-md focus:touch-pan-x hover:ease-in-out delay-300 border border-zinc-500 select-none overflow-hidden shadow shadow-gray-300 dark:rounded-md dark:border dark:shadow dark:border-zinc-800 dark:shadow-zinc-800 justify-center" />
                   </Grid>
                 </div>
               </div>

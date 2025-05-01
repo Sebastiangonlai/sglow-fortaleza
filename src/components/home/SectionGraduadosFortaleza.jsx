@@ -77,7 +77,7 @@ export const Header = () => {
       <p className="max-w-2xl text-base md:text-xl mt-3 lg:mt-4 dark:text-neutral-300 tracking-tight leading-tight text-shadow-sm/50">
         Nuestro mayor orgullo es ver a nuestros alumnos obtener su libreta y cumplir su meta.
       </p>
-      <Link className="inline-flex items-center gap-x-2 text-blue-500 decoration-2 dark:hover:text-blue-300 focus:outline-none font-medium dark:text-blue-300 text-[20px]" href="/galeria-media">
+      <Link className="inline-flex items-center gap-x-2 text-blue-500 decoration-2 dark:hover:text-blue-300 focus:outline-hidden font-medium dark:text-blue-300 text-[20px]" href="/galeria-media">
         Ver más <Icon />
       </Link>
     </div>
@@ -92,7 +92,7 @@ export const ProductCard = ({ product, translate }) => {
       transition={{ duration: 1 }}
       // whileHover={{ y: -20, }}
       key={product}
-      className=" h-[17rem] w-[20rem] lg:h-90 lg:w-[40rem] ml-6 relative flex-shrink-0">
+      className=" h-[17rem] w-[20rem] lg:h-90 lg:w-[40rem] ml-6 relative shrink-0">
       <ImageComponent iSrc={product.srcalum} iClassName="object-cover object-left-top absolute h-full w-full inset-0 rounded-3xl" iAlt="Licencia de conducir" iWidth={30} iHeight={30} />
     </motion.div>
   );

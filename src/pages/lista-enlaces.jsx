@@ -16,7 +16,7 @@ export default function ListaEnlaces() {
 						<div className="mx-auto">
 							<div className="lista-enl relative container m-auto py-4 px-6 text-gray-800 md:px-12 xl:px-40">
 								<div className="m-auto md:w-8/12 lg:w-6/10 xl:w-10/12">
-									<div className="rounded-xl bg-zinc-100 shadow-sm shadow-zinc-900 border border-cyan-900">
+									<div className="rounded-xl bg-zinc-100 shadow shadow-zinc-900 border border-cyan-900">
 										<div className="p-4 sm:p-8">
 											<div className="flex flex-col text-center w-full">
 												<img className="col-span-2 mb-3 max-h-20 w-full object-contain lg:col-span-4"

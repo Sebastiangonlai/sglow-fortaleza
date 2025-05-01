@@ -28,7 +28,7 @@ const SectionPricing = () => {
 
   return (
     <>
-      <div className="wow fadeInUp bg-slate-50 dark:bg-[#111928] pb-10 pt-2" data-wow-delay=".10s" data-wow-duration="3s">
+      <div className="bg-slate-50 dark:bg-[#111928] pb-10 pt-2">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="isolate mx-auto mt-10 grid max-w-md grid-cols-1 gap-y-8 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-4">
             <div className="flex flex-col justify-between rounded-3xl bg-slate-50 p-8 text-slate-900 ring-1 ring-slate-300 dark:bg-[#111928] dark:text-slate-200 dark:ring-slate-300/20 xl:p-10">
@@ -108,7 +108,7 @@ const SectionPricing = () => {
                   </ul>
                 </ul>
               </div>
-              <a href="./licencia-de-conducir" aria-describedby="tier-pro" className="mt-8 block rounded-md bg-blue-500 px-3 py-2 text-center text-sm font-semibold leading-6 text-gray-100 shadow-sm hover:bg-blue-600">Más información</a>
+              <a href="./licencia-de-conducir" aria-describedby="tier-pro" className="mt-8 block rounded-md bg-blue-500 px-3 py-2 text-center text-sm font-semibold leading-6 text-gray-100 shadow hover:bg-blue-600">Más información</a>
             </div>
             <div className="flex flex-col justify-between rounded-3xl bg-slate-50 p-8 text-slate-900 ring-1 ring-slate-300 dark:bg-[#111928] dark:text-slate-200 dark:ring-slate-300/20 xl:p-10">
               <div>

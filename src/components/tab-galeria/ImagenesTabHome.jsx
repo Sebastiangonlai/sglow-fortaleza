@@ -11,7 +11,7 @@ const ImagenesTabHome = () => {
 	return (
 		<>
 			<section className="pt-8">
-				<div className="wow fadeIn overflow-hidden" data-wow-delay=".30s" data-wow-duration="3s">
+				<div className="overflow-hidden">
 					<div className="flex flex-wrap items-center -mx-4">
 						<div className="w-full px-4">
 							<div className="text-center">

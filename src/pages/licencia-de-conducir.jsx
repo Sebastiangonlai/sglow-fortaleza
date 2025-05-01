@@ -127,7 +127,7 @@ const LicenciaDeConducir = () => {
 
                 <ul className="space-y-2 sm:space-y-4">
                   <li className="flex gap-x-3">
-                    <span className="mt-0.5 h-5 w-5 flex-shrink-0 flex justify-center items-center rounded-full bg-[#334a61] text-blue-600 dark:bg-blue-600/40 dark:text-blue-400">
+                    <span className="mt-0.5 h-5 w-5 shrink-0 flex justify-center items-center rounded-full bg-[#334a61] text-blue-600 dark:bg-blue-600/40 dark:text-blue-400">
                       <svg className="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 -1 24 24">
                         <polyline points="20 6 9 17 4 12" />
                       </svg>
@@ -140,7 +140,7 @@ const LicenciaDeConducir = () => {
                   </li>
 
                   <li className="flex gap-x-3">
-                    <span className="mt-0.5 h-5 w-5 flex-shrink-0 flex justify-center items-center rounded-full bg-[#334a61] text-blue-600 dark:bg-blue-600/40 dark:text-blue-400">
+                    <span className="mt-0.5 h-5 w-5 shrink-0 flex justify-center items-center rounded-full bg-[#334a61] text-blue-600 dark:bg-blue-600/40 dark:text-blue-400">
                       <svg className="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 -1 24 24">
                         <polyline points="20 6 9 17 4 12" />
                       </svg>
@@ -153,7 +153,7 @@ const LicenciaDeConducir = () => {
                   </li>
 
                   <li className="flex gap-x-3">
-                    <span className="mt-0.5 h-5 w-5 flex-shrink-0 flex justify-center items-center rounded-full bg-[#334a61] text-blue-600 dark:bg-blue-600/40 dark:text-blue-400">
+                    <span className="mt-0.5 h-5 w-5 shrink-0 flex justify-center items-center rounded-full bg-[#334a61] text-blue-600 dark:bg-blue-600/40 dark:text-blue-400">
                       <svg className="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 -1 24 24">
                         <polyline points="20 6 9 17 4 12" />
                       </svg>

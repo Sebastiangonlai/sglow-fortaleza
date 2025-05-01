@@ -53,7 +53,7 @@ const Navbar = () => {
 
 
   return (
-    <div className="fixed w-screen top-0 z-120 border-b border-violet-200/10 backdrop-blur-sm dark:bg-[#111928]/95 dark:border-gray-600/20
+    <div className="fixed w-screen top-0 z-120 border-b border-violet-200/10 backdrop-blur dark:bg-[#111928]/95 dark:border-gray-600/20
     supports-[backdrop-filter]:bg-[#020817]/90 text-gray-100 select-none">
       <div className="container flex h-16 items-center justify-between">
         {/* Logo */}

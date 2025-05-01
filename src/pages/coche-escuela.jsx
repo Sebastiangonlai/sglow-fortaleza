@@ -44,7 +44,7 @@ const NuestrosVeiculos = () => {
         href="coche-escuela" />
 
 
-      <section className="wow fadeInUp pt-16 " data-wow-delay=".10s" data-wow-duration="3s">
+      <section className="pt-16">
         <div className="max-w-screen-xl mx-auto px-4 text-gray-200 gap-16 justify-center md:px-8 lg:flex">
           <div>
             <div className="max-w-xl space-y-3">
@@ -56,7 +56,7 @@ const NuestrosVeiculos = () => {
             <div className="mt-8 max-w-lg lg:max-w-none">
               <ul className="space-y-4">
                 {features2.map((item, idx) => (
-                  <li key={idx} className="flex gap-x-4 wow fadeInUp">
+                  <li key={idx} className="flex gap-x-4">
                     <div className="flex-none w-12 h-12 bg-black/20 border border-gray-100/20 text-gray-900 dark:text-gray-100 rounded-lg flex items-center justify-center tracking-tight leading-tight">
                       {item.icon}
                     </div>

@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import { NextButton, PrevButton, usePrevNextButtons } from './EmblaCarouselArrowButtons'
-// import Image from 'next/image'
+
 
 const EmblaCarouselVideos = (props) => {
     const [isVideoPoppedUp, setVideoPopUp] = useState(false)
@@ -63,10 +63,10 @@ const EmblaCarouselVideos = (props) => {
 
             {/**************  PopUp Video  **************/}
             {isVideoPoppedUp ? (
-                <div className="fixed inset-0 w-full h-full flex items-center justify-center z-[100]">
+                <div className="fixed inset-0 w-full h-full flex items-center justify-center z-[200]">
                     <div className="absolute inset-0 w-full h-full bg-black/50" onClick={() => setVideoPopUp(false)}></div>
                     <div className="px-4 relative">
-                        <button className="w-10 h-10 mb-4 rounded-full duration-150 bg-zinc-900/90 hover:bg-zinc-900/90 hover:ring text-white/90 text-white" onClick={() => setVideoPopUp(false)}>
+                        <button className="w-10 h-10 mb-4 rounded-full duration-150 bg-zinc-900/90 hover:bg-zinc-900/90 hover:ring text-white/90" onClick={() => setVideoPopUp(false)}>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 m-auto">
                                 <path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
                             </svg>

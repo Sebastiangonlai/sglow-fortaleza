@@ -20,7 +20,7 @@ const Block = ({ className, whileHover, ...rest }) => {
 };
 
 
-const buttonStyles = "group relative flex items-center z-10 cursor-pointer rounded-2xl text-sm shadow-sm bg-transparent hover:bg-[#4f46e5]/20 text-white/80 py-2 px-3 ring-1 ring-[#8265ac]/20";
+const buttonStyles = "group relative flex items-center z-10 cursor-pointer rounded-2xl text-sm shadow bg-transparent hover:bg-[#4f46e5]/20 text-white/80 py-2 px-3 ring-1 ring-[#8265ac]/20";
 const textStyles = "text-sm font-medium text-[#4f46e5] dark:text-white/80 text-shadow-sm";
 const svgStyles = "transition-transform duration-200 ease-in-out group-hover:translate-x-1";
 

@@ -173,14 +173,14 @@ const ModalCardAlumnos = () => {
 									whileTap="whileTap"
 									onClick={() => handleOpen(img)}
 									variants={imageVariants}
-									className="rounded-xl mt-7 p-0.5 bg-white dark:bg-blue-600/40 dark:border-blue-500/40 border border-neutral-100 flex-shrink-0 overflow-hidden">
+									className="rounded-xl mt-7 p-0.5 bg-white dark:bg-blue-600/80 dark:border-blue-500/80 border border-neutral-100 shrink-0 overflow-hidden">
 									{img.src != undefined &&
 										<ImageComponent
 											iSrc={img.src}
 											iAlt="Alumnos Academia Fortaleza"
 											iWidth={IMG.width}
 											iHeight={IMG.height}
-											iClassName="rounded-lg max-h-[110px] xl:max-w-[160px] xl:max-h-[160px] max-w-[110px] md:h-52 md:w-52 object-cover flex-shrink-0" />}
+											iClassName="rounded-lg max-h-[110px] xl:max-w-[160px] xl:max-h-[160px] max-w-[110px] md:h-52 md:w-52 object-cover shrink-0" />}
 								</motion.div>
 							))}
 						</div>
@@ -203,14 +203,14 @@ const ModalCardAlumnos = () => {
 									whileTap="whileTap"
 									onClick={() => handleOpen(img)}
 									variants={imageVariants}
-									className="rounded-xl mb-6 p-0.5 bg-white dark:bg-blue-600/40 dark:border-blue-500/40 border border-neutral-100 flex-shrink-0 overflow-hidden">
+									className="rounded-xl mb-6 p-0.5 bg-white dark:bg-blue-600/80 dark:border-blue-500/80 border border-neutral-100 shrink-0 overflow-hidden">
 									{img.src != undefined &&
 										<ImageComponent
 											iSrc={img.src}
 											iAlt="Licencia de conducir - Alumnos Graduados"
 											iWidth={IMG.width}
 											iHeight={IMG.height}
-											iClassName="rounded-lg max-h-[110px] xl:max-w-[160px] xl:max-h-[160px] max-w-[110px] md:h-52 md:w-52 object-cover flex-shrink-0" />}
+											iClassName="rounded-lg max-h-[110px] xl:max-w-[160px] xl:max-h-[160px] max-w-[110px] md:h-52 md:w-52 object-cover shrink-0" />}
 								</motion.div>
 							))}
 						</div>

@@ -141,7 +141,7 @@ const Pruebas = () => {
             <div className="relative">
               <input
                 id="chat-input"
-                className="block w-full resize-none dark:border-none bg-slate-200 p-0.5 pl-2 pr-2 text-sm text-slate-900 dark:bg-slate-900 dark:text-slate-200 sm:text-base dark:focus:outline-none border-none focus:ring-0  dark:placeholder-slate-400 "
+                className="block w-full resize-none dark:border-none bg-slate-200 p-0.5 pl-2 pr-2 text-sm text-slate-900 dark:bg-slate-900 dark:text-slate-200 sm:text-base dark:focus:outline-hidden border-none focus:ring-0  dark:placeholder-slate-400 "
                 placeholder="Ingrese su mensaje"
                 rows="1"
                 value={inputText}

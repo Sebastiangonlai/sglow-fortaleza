@@ -29,7 +29,7 @@ export default function GaleriaMedia() {
 					nameUri="Galería Multimedia"
 					href="nuestros-servicios" />
 
-				<div className="wow fadeIn overflow-hidden pt-10 " data-wow-delay=".60s" data-wow-duration="3s">
+				<div className="overflow-hidden pt-10">
 					<Tabs.Root className="max-w-screen-2xl mt-2 mx-auto px-4 md:px-8" value={selectedTab} onValueChange={(val) => setSelectedTab(val)}>
 
 						{/* desktop */}
@@ -43,7 +43,7 @@ export default function GaleriaMedia() {
 
 						{/* mobile */}
 						<div className="relative text-blue-100 dark:text-blue sm:hidden">
-							<select value={selectedTab} className="py-2 px-3 w-full bg-transparent appearance-none outline-none border rounded-lg border-indigo-600 dark:border-[#111928]-4/70 dark:text-base text-base text-white dark:text-white dark:bg-[#111928]" onChange={(e) => setSelectedTab(e.target.value)}>
+							<select value={selectedTab} className="py-2 px-3 w-full bg-transparent appearance-none outline-hidden border rounded-lg border-indigo-600 dark:border-[#111928]-4/70 dark:text-base text-base text-white dark:text-white dark:bg-[#111928]" onChange={(e) => setSelectedTab(e.target.value)}>
 								{tabItems.map((item, idx) => (
 									<option key={idx} id={idx} >
 										{item}

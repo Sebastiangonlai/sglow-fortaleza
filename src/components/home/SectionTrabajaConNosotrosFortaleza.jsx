@@ -39,7 +39,7 @@ const SectionTrabajaConNosotrosFortaleza = () => {
             </div>
 
             <div className="lg:flex-none flex mx-auto justify-center items-center pt-5 lg:pt-4  lg:flex  pl-2 md:mt-0 ">
-              <button aria-label="Postulate" onClick={handleOpen} className="inline-block py-2 lg:py-2 px-5 lg:mr-6 text-white text-[14px] font-medium bg-[#4338ca]/70 duration-150 hover:bg-[#4338ca]/50 rounded-full shadow-sm hover:shadow-sm whitespace-nowrap items-center">
+              <button aria-label="Postulate" onClick={handleOpen} className="inline-block py-2 lg:py-2 px-5 lg:mr-6 text-white text-[14px] font-medium bg-[#4338ca]/70 duration-150 hover:bg-[#4338ca]/50 rounded-full shadow hover:shadow-sm whitespace-nowrap items-center">
                 Enviar postulación
               </button>
             </div>
@@ -56,24 +56,24 @@ const SectionTrabajaConNosotrosFortaleza = () => {
               <form method="POST" action={import.meta.env.VITE_FORMSUBMIT} enctype="multipart/form-data" onSubmit={UploadButton}>
 
                 <div className="relative mb-1.5 pt-3">
-                  <input id="name" name="Nombre" type="text" placeholder="Nombre*" className="w-full text-white rounded-md border-zinc-600 px-4 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-600/50 dark:bg-[#0d1117]" required />
+                  <input id="name" name="Nombre" type="text" placeholder="Nombre*" className="w-full text-white rounded-md border-zinc-600 px-4 focus:border-transparent focus:outline-hidden focus:ring-2 focus:ring-blue-600/50 dark:bg-[#0d1117]" required />
                 </div>
 
                 <div className="relative mb-1.5">
                   <input id="telefono" name="Telefono" type="text" placeholder="Telefono*"
-                    className="w-full text-white rounded-md border-zinc-600 focus:border-transparent px-4 focus:outline-none focus:ring-2 focus:ring-blue-600/50 dark:bg-[#0d1117]" required />
+                    className="w-full text-white rounded-md border-zinc-600 focus:border-transparent px-4 focus:outline-hidden focus:ring-2 focus:ring-blue-600/50 dark:bg-[#0d1117]" required />
                 </div>
 
                 <div className="relative mb-1.5">
-                  <input id="email" name="Email" type="email" placeholder="Email*" autoComplete="email" className="w-full text-white rounded-md  border-zinc-600 px-4 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-600/50 dark:bg-[#0d1117]" required />
+                  <input id="email" name="Email" type="email" placeholder="Email*" autoComplete="email" className="w-full text-white rounded-md  border-zinc-600 px-4 focus:border-transparent focus:outline-hidden focus:ring-2 focus:ring-blue-600/50 dark:bg-[#0d1117]" required />
                 </div>
 
                 <div className="relative mb-1.5">
-                  <input type='file' name="Curriculum" accept=".pdf" className='w-full cursor-pointer rounded-md text-sm file:text-base border border-zinc-600 text-gray-500 outline-none transition file:mr-5 file:border-collapse file:cursor-pointer file:border-0 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-600/50 file:border-r file:border-solid file:border-zinc-600 dark:file:border-zinc-600 dark:file:bg-[#0d1117] file:py-1.5 file:px-4 file:text-gray-500 dark:file:text-gray-500' required />
+                  <input type='file' name="Curriculum" accept=".pdf" className='w-full cursor-pointer rounded-md text-sm file:text-base border border-zinc-600 text-gray-500 outline-hidden transition file:mr-5 file:border-collapse file:cursor-pointer file:border-0 focus:border-transparent focus:outline-hidden focus:ring-2 focus:ring-blue-600/50 file:border-r file:border-solid file:border-zinc-600 dark:file:border-zinc-600 dark:file:bg-[#0d1117] file:py-1.5 file:px-4 file:text-gray-500 dark:file:text-gray-500' required />
                 </div>
 
                 <div className="relative mb-1">
-                  <textarea id="message" name="Mensaje" type="text" placeholder="Mensaje" className="w-full rounded-md border-zinc-600 text-white px-4 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-600/50 dark:bg-[#0d1117]" />
+                  <textarea id="message" name="Mensaje" type="text" placeholder="Mensaje" className="w-full rounded-md border-zinc-600 text-white px-4 focus:border-transparent focus:outline-hidden focus:ring-2 focus:ring-blue-600/50 dark:bg-[#0d1117]" />
                 </div>
 
                 <div className="relative mb-1.5 pt-1">

@@ -88,20 +88,20 @@ const FormBlock = () => (
 
     <form method="POST" action={import.meta.env.VITE_FORMSUBMIT}>
       <div className="relative mb-1.5">
-        <input id="name" name="Nombre" type="text" placeholder="Nombre" className="w-full rounded-md border-zinc-600 px-4 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-600/50 dark:bg-[#111928]" required />
+        <input id="name" name="Nombre" type="text" placeholder="Nombre" className="w-full rounded-md border-zinc-600 px-4 focus:border-transparent focus:outline-hidden focus:ring-2 focus:ring-blue-600/50 dark:bg-[#111928]" required />
       </div>
 
       <div className="relative mb-1.5">
         <input id="telefono" name="Telefono" type="text" placeholder="Telefono"
-          className="w-full rounded-md border-zinc-600 px-4 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-600/50 dark:bg-[#111928]" required />
+          className="w-full rounded-md border-zinc-600 px-4 focus:border-transparent focus:outline-hidden focus:ring-2 focus:ring-blue-600/50 dark:bg-[#111928]" required />
       </div>
 
       <div className="relative mb-1.5">
-        <input id="email" name="Email" type="email" placeholder="Email" autoComplete="email" className="w-full rounded-md border-zinc-600 px-4 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-600/50 dark:bg-[#111928]" required />
+        <input id="email" name="Email" type="email" placeholder="Email" autoComplete="email" className="w-full rounded-md border-zinc-600 px-4 focus:border-transparent focus:outline-hidden focus:ring-2 focus:ring-blue-600/50 dark:bg-[#111928]" required />
       </div>
 
       <div className="relative mb-1">
-        <textarea id="message" name="Mensaje" type="text" placeholder="Mensaje" className="w-full rounded-md border-zinc-600 px-4 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-600/50 dark:bg-[#111928]" />
+        <textarea id="message" name="Mensaje" type="text" placeholder="Mensaje" className="w-full rounded-md border-zinc-600 px-4 focus:border-transparent focus:outline-hidden focus:ring-2 focus:ring-blue-600/50 dark:bg-[#111928]" />
       </div>
       <div className="relative pt-1">
         <button type="submit" className="w-full flex mx-auto justify-center items-center gap-2 whitespace-nowrap rounded-md border border-zinc-600 px-3 py-1.5 text-[16px] font-normal text-zinc-200 transition-colors hover:bg-blue-600/40">

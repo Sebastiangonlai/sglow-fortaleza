@@ -39,10 +39,10 @@ const FooterFortaleza = () => {
               <label className="sr-only" htmlFor="email-input">
                 Email
               </label>
-              <input id="email-input" autoComplete="email-input" className="w-full sm:w-64 rounded-md px-4 py-2 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-teal-600 dark:bg-transparent" name="email" placeholder='Ingresa tu correo electrónico' required type="email" />
+              <input id="email-input" autoComplete="email-input" className="w-full sm:w-64 rounded-md px-4 py-2 focus:border-transparent focus:outline-hidden focus:ring-2 focus:ring-teal-600 dark:bg-transparent" name="email" placeholder='Ingresa tu correo electrónico' required type="email" />
             </div>
-            <div className="mt-2 rounded-md shadow-sm sm:ml-3 sm:mt-0">
-              <button className={`w-full rounded-md bg-teal-700 dark:bg-teal-700 hover:bg-teal-800 dark:hover:bg-teal-600 px-2 py-2 font-medium text-white sm:py-2.5 sm:w-28 ${`subscribed ? 'cursor-default' : 'hover:bg-teal-700 dark:hover:bg-teal-400'`} focus:outline-none focus:ring-2 focus:ring-teal-700 focus:ring-offset-2 dark:ring-offset-black `} type="submit">
+            <div className="mt-2 rounded-md shadow sm:ml-3 sm:mt-0">
+              <button className={`w-full rounded-md bg-teal-700 dark:bg-teal-700 hover:bg-teal-800 dark:hover:bg-teal-600 px-2 py-2 font-medium text-white sm:py-2.5 sm:w-28 ${`subscribed ? 'cursor-default' : 'hover:bg-teal-700 dark:hover:bg-teal-400'`} focus:outline-hidden focus:ring-2 focus:ring-teal-700 focus:ring-offset-2 dark:ring-offset-black `} type="submit">
                 Inscribirse
               </button>
             </div>
