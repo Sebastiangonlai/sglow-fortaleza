@@ -25,10 +25,6 @@ export default function Home() {
         <SectionNuestrosServicios />
       </section>
 
-      {/* <section>
-        <Demo />
-      </section> */}
-
       <section id="que-ofrecemos" >
         <SectionOfrecemos />
       </section>
