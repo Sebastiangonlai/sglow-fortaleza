@@ -1,31 +1,31 @@
 'use client'
 
-import SectionHeader from '@/components/home/SectionHeaderFortaleza';
-import SectionOfrecemos from '@/components/home/SectionOfrecemosFortaleza';
-import SectionElegirnos from '@/components/home/SectionElegirnosFortaleza';
-import SectionGraduados from '@/components/home/SectionGraduadosFortaleza';
-import SectionRedes from '@/components/home/SectionRedesFortaleza';
-import SectionContact from '@/components/home/SectionContactFortaleza';
-import SectionTestimonial from '@/components/home/SectionTestimonialFortaleza';
-import SectionPreguntasFrecuentes from '@/components/home/SectionFAQFortaleza';
-import SectionLicenciaDeConducir from '@/components/home/SectionLicenciaConducirFortaleza';
-import SectionNuestrosServicios from '@/components/home/SectionNuestrosServiciosFortaleza';
+// import SectionHeader from '@/components/home/SectionHeaderFortaleza';
+// import SectionOfrecemos from '@/components/home/SectionOfrecemosFortaleza';
+// import SectionElegirnos from '@/components/home/SectionElegirnosFortaleza';
+// import SectionGraduados from '@/components/home/SectionGraduadosFortaleza';
+// import SectionRedes from '@/components/home/SectionRedesFortaleza';
+// import SectionContact from '@/components/home/SectionContactFortaleza';
+// import SectionTestimonial from '@/components/home/SectionTestimonialFortaleza';
+// import SectionPreguntasFrecuentes from '@/components/home/SectionFAQFortaleza';
+// import SectionLicenciaDeConducir from '@/components/home/SectionLicenciaConducirFortaleza';
+// import SectionNuestrosServicios from '@/components/home/SectionNuestrosServiciosFortaleza';
 // import Demo from '@/components/animations/Demo.jsx';
-import SectionTrabajaConNosotros from '@/components/home/SectionTrabajaConNosotrosFortaleza';
-import ScrollProgress from "@/components/common/ScrollProgress"
+// import SectionTrabajaConNosotros from '@/components/home/SectionTrabajaConNosotrosFortaleza';
+// import ScrollProgress from "@/components/common/ScrollProgress"
 
 export default function Home() {
   return (
     <>
-      <ScrollProgress color="bg-violet-400/60" />
-      <section id="inicio" className="overflow-hidden">
+      {/* <ScrollProgress color="bg-violet-400/60" /> */}
+      {/* <section id="inicio" className="overflow-hidden">
         <SectionHeader />
       </section>
 
       <section id="nuestros-servicios">
         <SectionNuestrosServicios />
-      </section>
-
+      </section> */}
+{/* 
       <section id="que-ofrecemos" >
         <SectionOfrecemos />
       </section>
@@ -60,7 +60,7 @@ export default function Home() {
 
       <section id="trabaja-con-nosotros">
         <SectionTrabajaConNosotros />
-      </section>
+      </section> */}
     </>
   );
 }

@@ -1,13 +1,12 @@
-import React from "react";
+import { Component } from "react";
 
 
-class ErrorBoundary extends React.Component {
+class ErrorBoundary extends Component {
 
   constructor(props) {
     super(props);
     this.state = { hasError: false, error: null, errorInfo: null };
   }
-
 
   static getDerivedStateFromError(error) {
     return { hasError: true };
@@ -18,7 +17,6 @@ class ErrorBoundary extends React.Component {
     console.error("ERRORINFO capturado:", errorInfo);
     this.setState({ error, errorInfo });
   }
-
 
   render() {
     if (this.state.hasError) {
