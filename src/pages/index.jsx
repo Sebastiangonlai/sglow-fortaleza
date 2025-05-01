@@ -1,6 +1,7 @@
 'use client'
 
-// import SectionHeader from '@/components/home/SectionHeaderFortaleza';
+import SectionHeader from '@/components/home/SectionHeaderFortaleza';
+import SectionNuestrosServicios from '@/components/home/SectionNuestrosServiciosFortaleza';
 // import SectionOfrecemos from '@/components/home/SectionOfrecemosFortaleza';
 // import SectionElegirnos from '@/components/home/SectionElegirnosFortaleza';
 // import SectionGraduados from '@/components/home/SectionGraduadosFortaleza';
@@ -9,7 +10,6 @@
 // import SectionTestimonial from '@/components/home/SectionTestimonialFortaleza';
 // import SectionPreguntasFrecuentes from '@/components/home/SectionFAQFortaleza';
 // import SectionLicenciaDeConducir from '@/components/home/SectionLicenciaConducirFortaleza';
-// import SectionNuestrosServicios from '@/components/home/SectionNuestrosServiciosFortaleza';
 // import Demo from '@/components/animations/Demo.jsx';
 // import SectionTrabajaConNosotros from '@/components/home/SectionTrabajaConNosotrosFortaleza';
 // import ScrollProgress from "@/components/common/ScrollProgress"
@@ -18,49 +18,49 @@ export default function Home() {
   return (
     <>
       {/* <ScrollProgress color="bg-violet-400/60" /> */}
-      {/* <section id="inicio" className="overflow-hidden">
+      <section id="inicio" className="overflow-hidden  bg-(--color-section-3)">
         <SectionHeader />
       </section>
 
-      <section id="nuestros-servicios">
+      <section id="nuestros-servicios" className="min-h-screen bg-(--color-section-2)">
         <SectionNuestrosServicios />
-      </section> */}
-{/* 
-      <section id="que-ofrecemos" >
-        <SectionOfrecemos />
       </section>
 
-      <section id="elegirnos">
-        <SectionElegirnos />
+      <section id="que-ofrecemos" className="min-h-screen bg-(--color-section-3)">
+        {/* <SectionOfrecemos /> */}
       </section>
 
-      <section id="licencia-de-conducir" className="overflow-hidden">
-        <SectionLicenciaDeConducir />
+      <section id="elegirnos" className="min-h-screen bg-(--color-section-3)">
+        {/* <SectionElegirnos /> */}
+      </section>
+
+      <section id="licencia-de-conducir" className="overflow-hidden bg-(--color-section-3)">
+        {/* <SectionLicenciaDeConducir /> */}
       </section >
 
-      <section id="graduados">
-        <SectionGraduados />
+      <section id="graduados" className="min-h-screen bg-(--color-section-3)">
+        {/* <SectionGraduados /> */}
       </section>
 
-      <section id="testimonio">
-        <SectionTestimonial />
+      <section id="testimonio" className="min-h-screen bg-(--color-section-2)">
+        {/* <SectionTestimonial /> */}
       </section>
 
-      <section id="redes-sociales">
-        <SectionRedes />
+      <section id="redes-sociales" className="min-h-screen bg-(--color-section-1)">
+        {/* <SectionRedes /> */}
       </section>
 
-      <section id="preguntas-frecuentes" className="overflow-hidden">
-        <SectionPreguntasFrecuentes />
+      <section id="preguntas-frecuentes" className="overflow-hidden min-h-screen bg-(--color-section-3)">
+        {/* <SectionPreguntasFrecuentes /> */}
       </section>
 
-      <section id="contacto">
-        <SectionContact />
+      <section id="contacto" className="min-h-screen bg-(--color-section-2)">
+        {/* <SectionContact /> */}
       </section>
 
-      <section id="trabaja-con-nosotros">
-        <SectionTrabajaConNosotros />
-      </section> */}
+      <section id="trabaja-con-nosotros" className="min-h-screen bg-(--color-section-1)">
+        {/* <SectionTrabajaConNosotros /> */}
+      </section>
     </>
   );
 }

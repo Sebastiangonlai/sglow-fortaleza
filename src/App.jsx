@@ -1,5 +1,5 @@
-// import { Routes, Route } from "react-router-dom";
-// import routes from '@/routes/routes';
+import { Routes, Route } from "react-router-dom";
+import routes from '@/routes/routes';
 import ErrorBoundary from "@/routes/ErrorBoundary";
 
 import NavBar from "@/components/common/NavBar";
@@ -13,11 +13,11 @@ function App() {
       <AuthProvider>
         <ErrorBoundary>
           <NavBar />
-          {/* <Routes>
+          <Routes>
             {routes.map((route) => (
               <Route key={route.path} path={route.path} element={route.element} />
             ))}
-          </Routes> */}
+          </Routes>
           {/* <Footer /> */}
         </ErrorBoundary>
       </AuthProvider>
