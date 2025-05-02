@@ -8,7 +8,7 @@ import TitleHeader from "@/components/TitleHeader";
 
 const SectionTestimonialFortaleza = () => {
   return (
-    <section className="dark:bg-[#1F2A37] text-gray-900 dark:text-gray-500 pt-[80px] pb-[20px] lg:pt-[80px] lg:pb-[20px] select-none overflow-hidden bg-[#F9FAFB] mx-auto justify-center">
+    <section className="dark:bg-[#1F2A37] text-gray-900 dark:text-gray-500 pt-[80px] pb-[20px] lg:pt-[80px] lg:pb-[20px] overflow-hidden bg-[#F9FAFB] mx-auto justify-center">
 
       <TitleHeader
         title="Testimonios de Alumnos"

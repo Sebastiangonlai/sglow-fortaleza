@@ -121,6 +121,9 @@ const ModalCardAlumnos = () => {
 		whileFocus: { scale: 1, rotate: 0, zIndex: 100, },
 	};
 
+	const imgClassName = "rounded-lg max-h-[110px] xl:max-w-[160px] xl:max-h-[160px] max-w-[110px] md:h-52 md:w-52 object-cover shrink-0 z-500"
+	const motionClassName = "rounded-xl mt-5 p-0.5 bg-white dark:bg-blue-600/80 dark:border-blue-500/80 border border-neutral-100 shrink-0 overflow-hidden";
+
 	useEffect(() => {
 		function onKeyDown(event) {
 			if (event.key === "Escape") {
@@ -149,17 +152,17 @@ const ModalCardAlumnos = () => {
 
 	return (
 		<>
-				<div>
+			<div>
 				<Modals id="myModal" open={open} onClose={handleClose} className="flex justify-center self-center px-2">
 					<Sheet className="w-fit h-fit rounded-xl flex " >
 						<ModalClose className="close right-3 z-100" aria-label="Close" color="none"
 							sx={{ backgroundColor: "rgba(0, 0, 0, 0.70)", color: "#ffff", }}>&times;</ModalClose>
-						<ImageComponent iSrc={imgSrc.src} iWidth={IMG.width} iHeight={IMG.height} iAlt="Alumnos Academia de manejo" id="myImg" loading="lazy" iClassName="w-full max-h-[640px] object-cover rounded-xl focus:touch-pan-x delay-200 border border-zinc-900 select-none dark:rounded-lg dark:border dark:border-zinc-600/90 justify-center" />
+						<ImageComponent iSrc={imgSrc.src} iWidth={IMG.width} iHeight={IMG.height} iAlt="Alumnos Academia de manejo" id="myImg" loading="lazy" iClassName="w-full max-h-[640px] object-cover rounded-xl focus:touch-pan-x delay-200 border border-zinc-900 dark:rounded-lg dark:border dark:border-zinc-600/90 justify-center" />
 					</Sheet>
 				</Modals>
 			</div>
 
-			<div className=" flex flex-col p-2 gap-10 w-full overflow-hidden cursor-pointer mx-auto items-center justify-center">
+			<div className="flex flex-col p-2 gap-8 w-full overflow-visible cursor-pointer mx-auto items-center justify-center">
 				<ScrollAnimation
 					description={
 						<div className="flex flex-row">
@@ -171,14 +174,14 @@ const ModalCardAlumnos = () => {
 									whileTap="whileTap"
 									onClick={() => handleOpen(img)}
 									variants={imageVariants}
-									className="rounded-xl mt-7 p-0.5 bg-white dark:bg-blue-600/80 dark:border-blue-500/80 border border-neutral-100 shrink-0 overflow-hidden">
+									className={motionClassName}>
 									{img.src != undefined &&
 										<ImageComponent
 											iSrc={img.src}
-											iAlt="Alumnos Academia Fortaleza"
+											iAlt="Alumnos Graduados Academia Fortaleza"
 											iWidth={IMG.width}
 											iHeight={IMG.height}
-											iClassName="rounded-lg max-h-[110px] xl:max-w-[160px] xl:max-h-[160px] max-w-[110px] md:h-52 md:w-52 object-cover shrink-0" />}
+											iClassName={imgClassName} />}
 								</motion.div>
 							))}
 						</div>
@@ -187,7 +190,7 @@ const ModalCardAlumnos = () => {
 					delay={0.5}
 					rootMargin="0px 0px -10px 0px"
 					effect={{ initial: { opacity: 0, x: 100 }, animate: { opacity: 1, x: 0 } }}
-					transition={{ duration: 1, delay: 0.5, ease: 'easeInOut' }}
+					transition={{ duration: 0.8, delay: 0.5, ease: 'easeInOut' }}
 				/>
 
 				<ScrollAnimation
@@ -201,14 +204,14 @@ const ModalCardAlumnos = () => {
 									whileTap="whileTap"
 									onClick={() => handleOpen(img)}
 									variants={imageVariants}
-									className="rounded-xl mb-6 p-0.5 bg-white dark:bg-blue-600/80 dark:border-blue-500/80 border border-neutral-100 shrink-0 overflow-hidden">
+									className={motionClassName}>
 									{img.src != undefined &&
 										<ImageComponent
 											iSrc={img.src}
-											iAlt="Licencia de conducir - Alumnos Graduados"
+											iAlt="Licencia de conducir"
 											iWidth={IMG.width}
 											iHeight={IMG.height}
-											iClassName="rounded-lg max-h-[110px] xl:max-w-[160px] xl:max-h-[160px] max-w-[110px] md:h-52 md:w-52 object-cover shrink-0" />}
+											iClassName={imgClassName} />}
 								</motion.div>
 							))}
 						</div>
@@ -217,7 +220,7 @@ const ModalCardAlumnos = () => {
 					delay={0.5}
 					rootMargin="0px 0px -10px 0px"
 					effect={{ initial: { opacity: 0, x: -100 }, animate: { opacity: 1, x: 0 } }}
-					transition={{ duration: 1, delay: 0.5, ease: 'easeInOut' }}
+					transition={{ duration: 0.8, delay: 0.5, ease: 'easeInOut' }}
 				/>
 			</div>
 		</>

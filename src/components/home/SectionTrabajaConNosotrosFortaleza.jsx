@@ -22,7 +22,7 @@ const SectionTrabajaConNosotrosFortaleza = () => {
 
   return (
     <>
-      <section className="bg-white py-[20px] lg:py-[50px] px-2 dark:bg-[#182341] border-t border-b border-stroke dark:border-[#1F2A37]/30 select-none">
+      <section className="bg-white py-[20px] lg:py-[50px] px-2 dark:bg-[#182341] border-t border-b border-stroke dark:border-[#1F2A37]/30">
         <div className="flex mx-auto justify-center items-center px-1 sm:container">
           <div className="items-center justify-between lg:border-b border-stroke dark:border-slate-600/80 md:flex py-2">
             <div className="flex flex-wrap items-center">

@@ -12,9 +12,9 @@ const SocialIcons = () => {
   ];
 
   return (
-    <div className=" text-center lg:text-left text-base font-semibold px-1">
+    <div className=" text-center lg:text-left text-base font-medium px-1">
       Seguinos &ensp;&ensp;
-      <div className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-center">
+      <div className="inline-flex sm:ml-auto sm:mt-0 justify-center sm:justify-center">
         <ul className="flex flex-wrap justify-center md:justify-start gap-2 pt-4">
           {icons.map(({ href, label, Icon }, index) => (
             <li key={index}>

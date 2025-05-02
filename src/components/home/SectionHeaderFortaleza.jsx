@@ -77,10 +77,10 @@ const SectionHeaderFortaleza = () => {
     );
 
   return (
-    <section className="flex flex-col select-none items-center overflow-hidden justify-center h-screen  pt-10">
+    <section className="flex flex-col items-center overflow-hidden justify-center h-screen  pt-10">
       {/* Líneas de fondo */}
       {showBackgroundLines && (
-        <BackgroundLines className="absolute select-none justify-center items-center top-0 left-0" />
+        <BackgroundLines className="absolute justify-center items-center top-0 left-0" />
       )}
 
       {/* SVG dinámico */}

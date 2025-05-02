@@ -2,7 +2,7 @@ import React, { lazy } from 'react';
 
 const Home = lazy(() => import('@/pages/index.jsx'));
 // const GaleriaMedia = lazy(() => import('@/pages/galeria-media.jsx'));
-// const NuestrosServicios = lazy(() => import('@/pages/nuestros-servicios.jsx'));
+const NuestrosServicios = lazy(() => import('@/pages/nuestros-servicios.jsx'));
 // const PreguntasFrecuentes = lazy(() => import('@/pages/preguntas-frecuentes.jsx'));
 // const CursosPersonalizados = lazy(() => import('@/pages/cursos-personalizados.jsx'));
 // const LicenciaDeConducir = lazy(() => import('@/pages/licencia-de-conducir.jsx'));
@@ -17,7 +17,7 @@ const Home = lazy(() => import('@/pages/index.jsx'));
 const routes = [
   { path: "/", element: <Home /> },
   // { path: "/galeria-media", element: <GaleriaMedia /> },
-  // { path: "/nuestros-servicios", element: <NuestrosServicios /> },
+  { path: "/nuestros-servicios", element: <NuestrosServicios /> },
   // { path: "/preguntas-frecuentes", element: <PreguntasFrecuentes /> },
   // { path: "/cursos-personalizados", element: <CursosPersonalizados /> },
   // { path: "/licencia-de-conducir", element: <LicenciaDeConducir /> },

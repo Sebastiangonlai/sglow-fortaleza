@@ -44,7 +44,7 @@ const SectionElegirnosFortaleza = () => {
 
 
 	return (
-		<section className="container overflow-hidden bg-[#F9FAFB] dark:bg-[#1F2A37]  lg:rounded-2xl select-none">
+		<section className="container overflow-hidden bg-[#F9FAFB] dark:bg-[#1F2A37] rounded-2xl my-10">
 			<TitleHeader
 				title="Por qué Elegirnos"
 				subtitle="Formando conductores responsables y seguros."
@@ -71,7 +71,7 @@ const SectionElegirnosFortaleza = () => {
 			</span>
 
 			<div className="-mx-4 flex flex-wrap justify-center">
-				<div className="select-none py-1 my-1">
+				<div className="py-1 my-1">
 					<div className="cursor-pointer py-2 px-1 tracking-tight dark:text-gray-100 text-gray-900">
 						<div className="gap-x-1 gap-y-1 text-center items-center grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4">
 							{itemData.map((d) => (
@@ -84,7 +84,7 @@ const SectionElegirnosFortaleza = () => {
 									whileTap={{ scale: 1 }}
 									transition={{ type: 'keyframes', times: [0, 0.5, 1], duration: 0.5 }}
 									variants={{ hidden: { opacity: 1, y: 10, scale: 0.7 }, visible: { opacity: 1, y: 0, scale: 0.95 } }}
-									className="select-none flex flex-col">
+									className="flex flex-col">
 									<a href={d.estHref} aria-label={d.title}>
 										<div className="group mb-1 rounded-xl bg-[#0d1117]/20 px-[50px] pb-[22px] pt-[22px] shadow-testimonial dark:bg-[#111928] dark:shadow-none">
 											<svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="text-[#0b76b7] w-20 h-20 inline-block" viewBox="0 0 25 26">
