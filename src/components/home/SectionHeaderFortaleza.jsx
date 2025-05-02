@@ -1,11 +1,9 @@
 "use client";
-import { TypewriterEffectSmooth } from "@/lib/typewriter-effect";
+
 import React, { useEffect, useState } from 'react';
 import { BackgroundLines } from "@/lib/background-lines";
 import ImageComponent from "@/components/ImageComponent";
 import "@/components/animations/animations.css";
-import AnimatedBox from "@/components/animations/AnimatedBox";
-import { WavyBackground } from "@/lib/wavy-background";
 
 
 const SectionHeaderFortaleza = () => {
@@ -84,7 +82,6 @@ const SectionHeaderFortaleza = () => {
         <BackgroundLines className="absolute justify-center items-center top-0 left-0" />
       )}
 
-
       <span className="absolute button-0 left-0 opacity-60 max-w-full overflow-hidden">
 
         {svgContent}
@@ -120,15 +117,3 @@ const SectionHeaderFortaleza = () => {
 };
 
 export default SectionHeaderFortaleza;
-
-
-// export function TypewriterEffectSmoothDemo() {
-//   const title = [
-//     { text: `Academia Fortaleza` },
-//   ];
-//   return (
-//     <div className="flex flex-col items-center justify-center mx-auto">
-//       <TypewriterEffectSmooth words={title} />
-//     </div>
-//   );
-// }
