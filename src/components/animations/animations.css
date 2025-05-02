@@ -23,8 +23,7 @@
   }
 
   .animate-float {
-    animation: float 15s ease-in-out infinite;
-    opacity: 0;
+    animation: float 10s ease-in-out infinite;
     animation-delay: 0.3s;
   }
 
@@ -99,20 +98,24 @@
 
   @keyframes float {
     0% {
-      transform: translateY(280px) rotate(var(--rotate, 15deg));
+      transform: translateY(180px) rotate(var(--rotate, 0deg));
       scale: 1;
       opacity: 0;
     }
 
-    50% {
-      transform: translateY(0px) rotate(var(--rotate, 0deg));
+    25% {
+      transform: translateY(0px) rotate(var(--rotate, 5deg));
+      scale: 1.1;
       opacity: 1;
-      scale: 1.3;
     }
-
+    75% {
+      transform: translateY(0px) rotate(var(--rotate, -5deg));
+      scale: 1.1;
+      opacity: 1;
+    }
     100% {
-      transform: translateY(280px) rotate(var(--rotate, -20deg));
-      scale: 0.9;
+      transform: translateY(180px) rotate(var(--rotate, 0deg));
+      scale: 1;
       opacity: 0;
     }
   }
@@ -214,3 +217,5 @@
   }
 
 }
+
+

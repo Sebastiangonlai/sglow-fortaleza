@@ -4,6 +4,8 @@ import React, { useEffect, useState } from 'react';
 import { BackgroundLines } from "@/lib/background-lines";
 import ImageComponent from "@/components/ImageComponent";
 import "@/components/animations/animations.css";
+import AnimatedBox from "@/components/animations/AnimatedBox";
+import { WavyBackground } from "@/lib/wavy-background";
 
 
 const SectionHeaderFortaleza = () => {
@@ -17,8 +19,6 @@ const SectionHeaderFortaleza = () => {
     }, 1800);
     return () => clearTimeout(timer);
   }, []);
-
-
   const svgContent =
     windowSize.width >= 786 ? (
       <svg fill="none" height="701" viewBox="0 0 500 250" width="1364" xmlns="http://www.w3.org/2000/svg" aria-label="Fondo grande">
@@ -47,7 +47,7 @@ const SectionHeaderFortaleza = () => {
         <circle cx="220" cy="63" fill="url(#g)" r="43" />
       </svg>
     ) : (
-      <svg fill="none" height="701" viewBox="0 0 864 301" width="1364"
+      <svg fill="none" height="701" viewBox="0 0 664 201" width="1364"
         xmlns="http://www.w3.org/2000/svg"
         aria-label="Fondo pequeño">
         <linearGradient id="a">
@@ -76,42 +76,41 @@ const SectionHeaderFortaleza = () => {
       </svg>
     );
 
+
   return (
-    <div className="flex flex-col  select-none items-center overflow-hidden justify-center h-screen pt-1">
-      {/* Líneas de fondo */}
+    <div className="flex flex-col select-none items-center overflow-hidden justify-center h-screen pt-1">
+
       {showBackgroundLines && (
         <BackgroundLines className="absolute justify-center items-center top-0 left-0" />
       )}
 
-      {/* SVG dinámico */}
+
       <span className="absolute button-0 left-0 opacity-60 max-w-full overflow-hidden">
+
         {svgContent}
       </span>
 
-      <div className="z-[40] -mt-24 lg:pt-8 sm:mt-6 text-shadow-sm/60">
-        {/* <TypewriterEffectSmoothDemo /> */}
-      </div>
-
-      <div className="flex flex-col justify-center items-center overflow-hidden">
+      <div className="flex flex-col justify-center items-center ">
         <div className="bg-transparent relative dark:bg-transparent rounded-xl">
-        <h1 className="animate-float text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-gray-900 dark:text-gray-100">
-        Academia Fortaleza
-        </h1>
+          <h1 className="animate-float text-3xl md:text-4xl lg:text-6xl text-white font-bold inter-var text-center mb-20 pt-4 lg:mb-0 text-shadow-sm/50">
+            Academia Fortaleza
+          </h1>
+
           {animations.map((animation, index) => (
             <div key={index} className={animation}>
               <ImageComponent
                 iSrc={`/static/images/carousel/auto-${index === 0 ? 'gris' : 'azulb'}.webp`}
                 iAlt={index === 0 ? 'Obtén tu licencia de conducir' : 'Nuestra flota'}
-                iWidth={640}
-                iHeight={384}
-                iClassName={`${index === 0 ? 'my-5 -mx-6 pr-28 absolute contrast-150 lg:min-w-3xl' : ' object-center contrast-105 '} min-w-full transition-transform ease-in-out object-cover inset-0 brightness-100 lg:min-w-3xl`}
+                iWidth={680}
+                iHeight={584}
+                iClassName={`${index === 0 ? 'my-5 -mx-8 pr-28 absolute contrast-150 lg:min-w-3xl' : ' object-center contrast-105 '} min-w-full transition-transform ease-in-out object-cover inset-0 brightness-100 lg:min-w-3xl`}
               />
             </div>
           ))}
         </div>
       </div>
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
-        <span className="text-sm font-[400] text-gray-200 dark:text-gray-400 mb-1.5 -pl-1">Scroll</span>
+        <span className="text-sm font-[500] text-gray-400 dark:text-gray-500 mb-1.5 -pl-1.5">Scroll</span>
         <div className="w-6 h-10 border-2 border-gray-400 dark:border-gray-600 rounded-full flex justify-center">
           <div className="w-1.5 h-3 bg-gray-400 dark:bg-gray-600 rounded-full mt-2 animate-scroll-down"></div>
         </div>
@@ -123,13 +122,13 @@ const SectionHeaderFortaleza = () => {
 export default SectionHeaderFortaleza;
 
 
-export function TypewriterEffectSmoothDemo() {
-  const title = [
-    { text: `Academia Fortaleza` },
-  ];
-  return (
-    <div className="flex flex-col items-center justify-center mx-auto">
-      <TypewriterEffectSmooth words={title} />
-    </div>
-  );
-}
+// export function TypewriterEffectSmoothDemo() {
+//   const title = [
+//     { text: `Academia Fortaleza` },
+//   ];
+//   return (
+//     <div className="flex flex-col items-center justify-center mx-auto">
+//       <TypewriterEffectSmooth words={title} />
+//     </div>
+//   );
+// }
