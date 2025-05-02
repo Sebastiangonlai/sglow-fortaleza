@@ -55,7 +55,7 @@ const Navbar = () => {
   return (
     <div className="fixed w-screen top-0 z-120 border-b border-violet-200/10 backdrop-blur dark:bg-(--color-section-3)/90 dark:border-gray-600/20
      text-gray-100 ">
-      <div className="px-[5%] sm:px-[5%] lg:px-[10%] flex h-16 items-center justify-between">
+      <div className="container px-[5%] sm:px-[5%] lg:px-[10%] flex h-16 items-center justify-between">
         {/* Logo */}
         <a href="/" onClick={(e) => { handleMenuClose(); handleSmoothScroll(e, "#inicio"); }}
           className="flex items-center px-4" aria-label="Inicio">
@@ -111,7 +111,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
-          <div className="flex right-0 mx-2 justify-end gap-3 md:hidden">
+          <div className="flex right-0 mx-2 justify-end gap-3 md:hidden ">
             <button className="md:hidden text-white hover:text-gray-100 transition-colors hover:scale-110 duration-300"
               aria-expanded={isMenuOpen}
               aria-label={isMenuOpen ? "Cerrar menú" : "Abrir menú"}
@@ -120,7 +120,7 @@ const Navbar = () => {
             </button>
           </div>
 
-          <SheetContent side="right" className="min-w-full h-full z-[150] backdrop-blur supports-[backdrop-filter]:bg-[#131624]/60 text-gray-300 border-none" onCloseAutoFocus={handleMenuClose}>
+          <SheetContent side="right" className="min-w-full min-h-full z-[150] backdrop-blur supports-[backdrop-filter]:bg-[#131624]/60 text-gray-300 border-none" onCloseAutoFocus={handleMenuClose}>
             <div className="flex flex-col h-full">
               <nav className="flex flex-col space-y-6 pt-8">
                 {navLinks.map(({ href, title }) => (

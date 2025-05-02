@@ -50,19 +50,6 @@
     }
   }
 
-  input,
-  optgroup,
-  select,
-  textarea {
-    /* font-family: inherit;
-    font-feature-settings: inherit;
-    font-variation-settings: inherit;
-    font-size: 100%;
-    font-weight: inherit;
-    line-height: inherit; */
-    /* color: white; */
-     /* border-radius: 0.5rem; */
-    /* border: 1px solid rgba(241, 241, 241, 0.23); */
-  }
+
 
 }

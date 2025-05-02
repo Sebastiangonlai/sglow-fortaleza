@@ -20,30 +20,31 @@ const NuestrosServicios = () => {
     <>
       {/* <PageSEO title="Nuestros Servicios - Academia Fortaleza" description="Descubre los servicios de Academia Fortaleza: clases prácticas, teóricas, trámites de licencia y más." /> */}
 
-      <div className="bg-(--color-section-3)">
-        <Breadcrumb
-          title="Nuestros Servicios"
-          subtitle="Información sobre la licencia de conducir."
-          nameUri="Servicios"
-          href="nuestros-servicios" />
-          <div className="w-full flex flex-wrap justify-center pt-14">
-            <div className="w-full ">
-              <ul className="flex flex-wrap justify-center space-x-2">       
-                {options.map((item) => (
-                  <li key={item} className="mb-1">
-                    <button onClick={() => handleProject(item)} className={getButtonClasses(item)}>
-                      {item}
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+      <Breadcrumb
+        title="Nuestros Servicios"
+        subtitle="Información sobre la licencia de conducir."
+        nameUri="Servicios"
+        href="nuestros-servicios" />
 
-          <div className="flex flex-wrap">    
-            <ModalCard card={nuestrosServiciosData} showCard={showCard} />
-          </div>
+      <div className="bg-(--color-section-3)">
+        <div className="w-full flex flex-wrap justify-center pt-10 sm:pb-4 lg:pb-0">
+          {/* <div className="w-full "> */}
+          <ul className="flex flex-wrap justify-center space-x-2">
+            {options.map((item) => (
+              <li key={item} className="mb-4 lg:mb-0">
+                <button onClick={() => handleProject(item)} className={getButtonClasses(item)}>
+                  {item}
+                </button>
+              </li>
+            ))}
+          </ul>
+          {/* </div> */}
         </div>
+
+        <div className="flex flex-wrap">
+          <ModalCard card={nuestrosServiciosData} showCard={showCard} />
+        </div>
+      </div>
     </>
   );
 };

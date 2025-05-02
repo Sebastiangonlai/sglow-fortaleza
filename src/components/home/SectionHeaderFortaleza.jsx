@@ -77,7 +77,7 @@ const SectionHeaderFortaleza = () => {
     );
 
   return (
-    <section className="flex flex-col items-center overflow-hidden justify-center h-screen  pt-10">
+    <section className="flex flex-col items-center overflow-hidden justify-center h-screen pt-1">
       {/* Líneas de fondo */}
       {showBackgroundLines && (
         <BackgroundLines className="absolute justify-center items-center top-0 left-0" />
@@ -107,6 +107,12 @@ const SectionHeaderFortaleza = () => {
               </div>
             </>
           ))}
+        </div>
+      </div>
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
+        <span className="text-sm font-[400] text-gray-200 dark:text-gray-400 mb-1.5 -pl-1">Scroll</span>
+        <div className="w-6 h-10 border-2 border-gray-400 dark:border-gray-600 rounded-full flex justify-center">
+          <div className="w-1.5 h-3 bg-gray-400 dark:bg-gray-600 rounded-full mt-2 animate-scroll-down"></div>
         </div>
       </div>
     </section>

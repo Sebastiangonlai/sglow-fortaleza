@@ -2,13 +2,12 @@ import React from 'react'
 
 
 const Breadcrumb = ({ title, subtitle, nameUri, uri }) => {
-  if (uri === undefined) {
-    uri = "";
-  }
-  const url = "../#" + uri;
+  const url = uri ? `../#${uri}` : "../#";
+
 
   return (
-    <div className="relative z-10 overflow-hidden pt-[50px] pb-[50px] md:pt-[80px] lg:pt-[100px] dark:bg-[#111928]">
+    <div className="relative z-10 overflow-hidden pt-[100px] pb-[50px] md:pt-[80px] lg:pt-[100px] dark:bg-[#111928]">
+      {/* <div id="breadcrumb" className="relative pt-26 md:pt-20 lg:pt-24"> */}
       <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-[#DFE4EA]/0 via-stroke dark:via-[#374151] to-[#DFE4EA]/0">
       </div>
       <div className="container">

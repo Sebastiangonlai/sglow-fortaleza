@@ -3,7 +3,7 @@ import SocialIcon from "./SocialIcons";
 
 const FooterFortaleza = () => {
   return (
-    <footer className="relative z-30 pt-2 pb-3 px-4 dark:bg-[#111928] bg-[#F9FAFB] lg:pt-[70px] lg:pb-[5px] border-t border-violet-200/10">
+    <footer className="relative z-30 pt-8 pb-3 px-4 dark:bg-[#111928] bg-[#F9FAFB] lg:pt-[70px] lg:pb-[5px] border-t border-violet-200/10">
       <div className="flex flex-wrap justify-center items-start gap-8 max-w-[1200px] mx-auto pb-6">
 
         <div className="lg:w-1/4 md:w-1/2 w-full">
