@@ -89,11 +89,14 @@ const SectionHeaderFortaleza = () => {
       </span>
 
       <div className="z-[40] -mt-24 lg:pt-8 sm:mt-6 text-shadow-sm/60">
-        <TypewriterEffectSmoothDemo />
+        {/* <TypewriterEffectSmoothDemo /> */}
       </div>
 
       <div className="flex flex-col justify-center items-center overflow-hidden">
         <div className="bg-transparent relative dark:bg-transparent rounded-xl">
+        <h1 className="animate-float text-3xl sm:text-4xl lg:text-5xl font-bold text-center text-gray-900 dark:text-gray-100">
+        Academia Fortaleza
+        </h1>
           {animations.map((animation, index) => (
             <div key={index} className={animation}>
               <ImageComponent

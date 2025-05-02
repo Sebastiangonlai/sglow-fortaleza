@@ -23,7 +23,9 @@
   }
 
   .animate-float {
-    animation: float 6s ease-in-out infinite;
+    animation: float 15s ease-in-out infinite;
+    opacity: 0;
+    animation-delay: 0.3s;
   }
 
   .animate-blob {
@@ -97,15 +99,21 @@
 
   @keyframes float {
     0% {
-      transform: translateY(0px) rotate(var(--rotate, 0deg));
+      transform: translateY(280px) rotate(var(--rotate, 15deg));
+      scale: 1;
+      opacity: 0;
     }
 
     50% {
-      transform: translateY(-20px) rotate(var(--rotate, 0deg));
+      transform: translateY(0px) rotate(var(--rotate, 0deg));
+      opacity: 1;
+      scale: 1.3;
     }
 
     100% {
-      transform: translateY(0px) rotate(var(--rotate, 0deg));
+      transform: translateY(280px) rotate(var(--rotate, -20deg));
+      scale: 0.9;
+      opacity: 0;
     }
   }
 
@@ -167,42 +175,42 @@
   }
 
 
-    @keyframes anim-left {
-      from {
-        opacity: 0;
-        transform: translateX(100px) scale(0.9);
-      }
-  
-      to {
-        opacity: 1;
-        transform: translateX(0) scale(1);
-      }
+  @keyframes anim-left {
+    from {
+      opacity: 0;
+      transform: translateX(100px) scale(0.9);
     }
-  
-    @keyframes anim-leftb {
-      from {
-        opacity: 0;
-        transform: translateX(110px) scale(0.9);
-      }
-  
-      to {
-        opacity: 1;
-        transform: translateX(0) scale(1);
-      }
+
+    to {
+      opacity: 1;
+      transform: translateX(0) scale(1);
     }
-  
-    .anim-left {
-      animation-name: anim-left;
-      animation-delay: 0.5s;
-      animation-duration: 1s;
-      animation-fill-mode: both;
+  }
+
+  @keyframes anim-leftb {
+    from {
+      opacity: 0;
+      transform: translateX(110px) scale(0.9);
     }
-  
-    .anim-leftb {
-      animation-name: anim-leftb;
-      animation-delay: 1s;
-      animation-duration: 1s;
-      animation-fill-mode: both;
+
+    to {
+      opacity: 1;
+      transform: translateX(0) scale(1);
     }
-    
+  }
+
+  .anim-left {
+    animation-name: anim-left;
+    animation-delay: 0.5s;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+
+  .anim-leftb {
+    animation-name: anim-leftb;
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+
 }
