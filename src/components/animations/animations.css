@@ -24,7 +24,8 @@
 
   .animate-float {
     animation: float 10s ease-in-out infinite;
-    animation-delay: 0.3s;
+    opacity: 0;
+    animation-delay: 1s;
   }
 
   .animate-blob {
@@ -98,7 +99,7 @@
 
   @keyframes float {
     0% {
-      transform: translateY(180px) rotate(var(--rotate, 0deg));
+      transform: translateY(150px) rotate(var(--rotate, 0deg));
       scale: 1;
       opacity: 0;
     }
@@ -114,7 +115,7 @@
       opacity: 1;
     }
     100% {
-      transform: translateY(180px) rotate(var(--rotate, 0deg));
+      transform: translateY(150px) rotate(var(--rotate, 0deg));
       scale: 1;
       opacity: 0;
     }

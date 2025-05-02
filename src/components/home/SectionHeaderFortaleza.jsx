@@ -92,7 +92,7 @@ const SectionHeaderFortaleza = () => {
 
       <div className="flex flex-col justify-center items-center ">
         <div className="bg-transparent relative dark:bg-transparent rounded-xl">
-          <h1 className="animate-float text-3xl md:text-4xl lg:text-6xl text-white font-bold inter-var text-center mb-20 pt-4 lg:mb-0 text-shadow-sm/50">
+          <h1 className="animate-float text-3xl md:text-4xl lg:text-6xl text-white font-bold inter-var text-center mb-10 pt-4 lg:mb-0 text-shadow-sm/50">
             Academia Fortaleza
           </h1>
 
