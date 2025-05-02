@@ -29,11 +29,11 @@
     padding-inline: 0.5rem;
 
     @media (min-width: 640px) {
-      padding-inline: 0.2rem;
+      padding-inline: 0.1rem;
     }
 
     @media (min-width: 1024px) {
-      padding-inline: 4rem;
+      padding-inline: 2rem;
     }
   }
 

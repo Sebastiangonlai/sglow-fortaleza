@@ -55,7 +55,7 @@ const Navbar = () => {
   return (
     <div className="fixed w-screen top-0 z-120 border-b border-violet-200/10 backdrop-blur dark:bg-(--color-section-3)/90 dark:border-gray-600/20
      text-gray-100 ">
-      <div className="container px-[5%] sm:px-[5%] lg:px-[10%] flex h-16 items-center justify-between">
+      <div className="container px-[4%] sm:px-[4%] md:px-[2%] lg:px-[10%] flex h-16 items-center justify-between">
         {/* Logo */}
         <a href="/" onClick={(e) => { handleMenuClose(); handleSmoothScroll(e, "#inicio"); }}
           className="flex items-center px-4" aria-label="Inicio">

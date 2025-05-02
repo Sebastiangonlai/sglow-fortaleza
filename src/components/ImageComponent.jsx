@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 
-const ImageComponent = ({ iSrc, iAlt="Imagenes Academia de conducir", iWidth = 20, iHeight = 20, iClassName, iPriority }) => {
+const ImageComponent = ({ iSrc, iAlt = "Imagenes Academia de conducir", iWidth = 120, iHeight = 120, iClassName = "", iPriority = false }) => {
 	return (
 		<img
 			src={iSrc}

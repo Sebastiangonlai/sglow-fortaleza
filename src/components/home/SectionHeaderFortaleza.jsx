@@ -77,7 +77,7 @@ const SectionHeaderFortaleza = () => {
     );
 
   return (
-    <section className="flex flex-col items-center overflow-hidden justify-center h-screen pt-1">
+    <div className="flex flex-col  select-none items-center overflow-hidden justify-center h-screen pt-1">
       {/* Líneas de fondo */}
       {showBackgroundLines && (
         <BackgroundLines className="absolute justify-center items-center top-0 left-0" />
@@ -95,17 +95,15 @@ const SectionHeaderFortaleza = () => {
       <div className="flex flex-col justify-center items-center overflow-hidden">
         <div className="bg-transparent relative dark:bg-transparent rounded-xl">
           {animations.map((animation, index) => (
-            <>
-              <div key={index} className={animation}>
-                <ImageComponent
-                  iSrc={`/static/images/carousel/auto-${index === 0 ? 'gris' : 'azulb'}.webp`}
-                  iAlt={index === 0 ? 'Obtén tu licencia de conducir' : 'Nuestra flota'}
-                  iWidth={640}
-                  iHeight={384}
-                  iClassName={`${index === 0 ? 'my-5 -mx-6 pr-28 absolute contrast-150 lg:min-w-3xl' : ' object-center contrast-105 '} min-w-full transition-transform ease-in-out object-cover inset-0 brightness-100 lg:min-w-3xl`}
-                />
-              </div>
-            </>
+            <div key={index} className={animation}>
+              <ImageComponent
+                iSrc={`/static/images/carousel/auto-${index === 0 ? 'gris' : 'azulb'}.webp`}
+                iAlt={index === 0 ? 'Obtén tu licencia de conducir' : 'Nuestra flota'}
+                iWidth={640}
+                iHeight={384}
+                iClassName={`${index === 0 ? 'my-5 -mx-6 pr-28 absolute contrast-150 lg:min-w-3xl' : ' object-center contrast-105 '} min-w-full transition-transform ease-in-out object-cover inset-0 brightness-100 lg:min-w-3xl`}
+              />
+            </div>
           ))}
         </div>
       </div>
@@ -115,7 +113,7 @@ const SectionHeaderFortaleza = () => {
           <div className="w-1.5 h-3 bg-gray-400 dark:bg-gray-600 rounded-full mt-2 animate-scroll-down"></div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
@@ -127,7 +125,7 @@ export function TypewriterEffectSmoothDemo() {
     { text: `Academia Fortaleza` },
   ];
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center mx-auto">
       <TypewriterEffectSmooth words={title} />
     </div>
   );
