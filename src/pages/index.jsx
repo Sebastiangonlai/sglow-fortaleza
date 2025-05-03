@@ -19,8 +19,7 @@ export default function Home() {
     <>
         <ScrollProgress  />
       <section id="inicio" className="overflow-hidden bg-(--color-section-3) touch-action: manipulation">
-        <SectionHeader />
-   
+        <SectionHeader />    
       </section>
 
       <section id="nuestros-servicios" className="bg-(--color-section-2) touch-action: manipulation">
