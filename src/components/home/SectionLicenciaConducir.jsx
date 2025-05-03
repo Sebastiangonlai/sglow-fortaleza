@@ -12,7 +12,6 @@ import ImageComponent from "@/components/ImageComponent";
 import TitleHeader from "@/components/TitleHeader";
 import ButtonSection from "@/components/ButtonSection";
 import Sheet from '@mui/joy/Sheet';
-import { Button } from "@/components/button";
 
 
 const IMG = {
@@ -100,9 +99,9 @@ export const BackgroundAttachment = () => {
 	return (
 		<div className="relative bg-[url('/static/images/vehiculo/flota-fortaleza2.webp')] bg-fixed bg-center bg-cover rounded-xl min-h-[240px] lg:min-h-[420px] w-full transition-all duration-200 group hover:opacity-80">
 			<div className="absolute inset-0 bg-black/40 rounded-xl flex items-center justify-center py-8 px-4">
-				<Button className="font-semibold py-2 px-4 rounded-2xl">
+				<button className="font-semibold py-2 px-4 rounded-2xl">
 					Obten tu licencia
-				</Button>
+				</button>
 			</div>
 		</div>
 	);
