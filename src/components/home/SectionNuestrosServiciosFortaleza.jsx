@@ -7,6 +7,7 @@ import { FiChevronRight } from "react-icons/fi";
 import ImageComponent from '@/components/ImageComponent';
 import { ScrollAnimation } from "@/components/ScrollAnimation";
 import { cn } from "@/lib/utils";
+import { contrast, opacity, saturation } from '@cloudinary/url-gen/actions/adjust';
 
 
 const SectionNuestrosServiciosFortaleza = () => {
@@ -51,8 +52,8 @@ const SectionNuestrosServiciosFortaleza = () => {
 								delay={0.1}
 								rootMargin="0px 0px -10px 0px"
 								effect={{ initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 } }}
-								transition={{ duration: 0.4, delay: 0.2, ease: 'easeInOut' }}
-								hoverEffect={{ scale: 1.05 }}
+								transition={{ duration: 0.4, delay: 0.1, ease: 'easeInOut' }}
+								hoverEffect={{ delay: 0, opacity: 0.8}}
 							/>
 						</div>
 					))}

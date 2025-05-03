@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 
+
 function ScrollAnimation({
   description,
   duration = 1,
-  delay = 0.2,
+  delay = 0,
   effect,
   transition,
   hoverEffect,
