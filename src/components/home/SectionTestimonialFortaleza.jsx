@@ -8,7 +8,7 @@ import TitleHeader from "@/components/TitleHeader";
 
 const SectionTestimonialFortaleza = () => {
   return (
-    <section className="dark:bg-[#1F2A37] text-gray-900 dark:text-gray-500 pt-[80px] pb-[20px] lg:pt-[80px] lg:pb-[20px] overflow-hidden bg-[#F9FAFB] mx-auto justify-center">
+    <div className="dark:bg-[#1F2A37] text-gray-900 dark:text-gray-500 pt-[80px] pb-[20px] lg:pt-[80px] lg:pb-[20px] overflow-hidden bg-[#F9FAFB] mx-auto justify-center">
 
       <TitleHeader
         title="Testimonios de Alumnos"
@@ -25,7 +25,7 @@ const SectionTestimonialFortaleza = () => {
       <ButtonSection
         namebtn="Comparte tu experiencia"
         uri={import.meta.env.VITE_GOOGLE_REVIEW} />
-    </section>
+    </div>
   );
 };
 

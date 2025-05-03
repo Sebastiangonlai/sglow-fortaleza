@@ -45,7 +45,7 @@ const SectionGraduadosFortaleza = () => {
 
   return (
     <>
-      <div ref={ref} className="h-full pb-4 py-5 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]">
+      <div ref={ref} className="w-screen h-screen pb-4 py-5 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]">
         <Header />
         <motion.div style={{ rotateZ, translateY, opacity }}>
           {groups.map((group, index) => (
@@ -70,7 +70,7 @@ export default SectionGraduadosFortaleza;
 
 export const Header = () => {
   return (
-    <div className="max-w-7xl absolute mx-auto py-40 md:py-40 px-4 w-full left-0 top-0 z-[100]">
+    <div className="max-w-7xl absolute mx-auto py-40 md:py-50 px-4 w-full left-0 top-0 z-[100]">
       <p className="text-4xl md:text-6xl font-bold dark:text-white text-shadow-sm/50">
         Nuestros <br /> Graduados
       </p>

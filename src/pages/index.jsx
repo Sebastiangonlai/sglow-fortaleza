@@ -5,28 +5,29 @@ import SectionNuestrosServicios from '@/components/home/SectionNuestrosServicios
 import SectionOfrecemos from '@/components/home/SectionOfrecemosFortaleza';
 import SectionElegirnos from '@/components/home/SectionElegirnosFortaleza';
 import SectionLicenciaDeConducir from '@/components/home/SectionLicenciaConducirFortaleza';
-// import SectionGraduados from '@/components/home/SectionGraduadosFortaleza';
+import SectionGraduados from '@/components/home/SectionGraduadosFortaleza';
+import SectionTestimonial from '@/components/home/SectionTestimonialFortaleza';
 // import SectionRedes from '@/components/home/SectionRedesFortaleza';
 // import SectionContact from '@/components/home/SectionContactFortaleza';
-// import SectionTestimonial from '@/components/home/SectionTestimonialFortaleza';
 // import SectionPreguntasFrecuentes from '@/components/home/SectionFAQFortaleza';
 // import Demo from '@/components/animations/Demo.jsx';
 // import SectionTrabajaConNosotros from '@/components/home/SectionTrabajaConNosotrosFortaleza';
-// import ScrollProgress from "@/components/common/ScrollProgress"
+import ScrollProgress from "@/components/common/ScrollProgress"
 
 export default function Home() {
   return (
     <>
-      {/* <ScrollProgress color="bg-violet-400/60" /> */}
-      <section id="inicio" className="overflow-hidden bg-(--color-section-3)">
+        <ScrollProgress  />
+      <section id="inicio" className="overflow-hidden bg-(--color-section-3) touch-action: manipulation">
         <SectionHeader />
+   
       </section>
 
-      <section id="nuestros-servicios" className="bg-(--color-section-2)">
+      <section id="nuestros-servicios" className="bg-(--color-section-2) touch-action: manipulation">
         <SectionNuestrosServicios />
       </section>
 
-      <section id="que-ofrecemos "className="overflow-hidden bg-(--color-section-3)">
+      <section id="que-ofrecemos " className="overflow-hidden bg-(--color-section-3)">
         <SectionOfrecemos />
       </section>
 
@@ -34,16 +35,16 @@ export default function Home() {
         <SectionElegirnos />
       </section>
 
-      <section id="licencia-de-conducir" className="overflow-hidden bg-(--color-section-3)">
+      <section id="licencia-de-conducir" className="overflow-hidden bg-(--color-section-3) touch-action: manipulation">
         <SectionLicenciaDeConducir />
       </section >
 
-      <section id="graduados" className=" bg-(--color-section-3)">
-        {/* <SectionGraduados /> */}
+      <section id="graduados" className="overflow-hidden bg-(--color-section-3)">
+        <SectionGraduados />
       </section>
 
-      <section id="testimonio" className=" bg-(--color-section-2)">
-        {/* <SectionTestimonial /> */}
+      <section id="testimonio" className="overflow-hidden bg-(--color-section-2)">
+        <SectionTestimonial />
       </section>
 
       <section id="redes-sociales" className="min-h-screen bg-(--color-section-1)">
