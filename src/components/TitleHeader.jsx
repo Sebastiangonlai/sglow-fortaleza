@@ -1,4 +1,3 @@
-import React from 'react'
 import TextAnimation from '@/components/AnimatedText'
 import { ScrollAnimation } from '@/components/ScrollAnimation'
 

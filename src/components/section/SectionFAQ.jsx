@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { accordionDetailsClasses } from '@mui/joy/AccordionDetails';
 import AccordionGroup from '@mui/joy/AccordionGroup';
 import Accordion from '@mui/joy/Accordion';

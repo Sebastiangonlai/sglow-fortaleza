@@ -1,4 +1,4 @@
-import React, { StrictMode, useState } from 'react';
+import { StrictMode, useState } from 'react';
 import { StyledEngineProvider, CssVarsProvider } from '@mui/joy/styles'
 import Typography from '@mui/joy/Typography';
 import Stack from '@mui/joy/Stack';

@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 // import { useInView } from 'react-intersection-observer'
 import Box from '@mui/joy/Box';
 import { listImagesSupabase } from '@/api/ImagenService';

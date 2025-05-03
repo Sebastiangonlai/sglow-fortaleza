@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Breadcrumb from '@/components/Breadcrumb';
 import SectionPricing from '@/components/section/SectionPricing';
 import ButtonSection from '@/components/ButtonSection';

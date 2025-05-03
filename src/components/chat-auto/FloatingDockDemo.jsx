@@ -1,9 +1,6 @@
-import React from "react";
 import { FloatingDock } from "../../lib/floating-dock";
 import { SiWhatsapp } from "react-icons/si";
 import ChatAuto from '@/components/chat-auto/ChatAuto';
-// import Link from "next/link";
-
 import Link from "../Link";
 
 
@@ -30,7 +27,6 @@ export function FloatingDockDemo() {
   return (
     <div className=" ">
       <FloatingDock
-        // only for demo, remove for production
         // mobileClassName=" fixed flex-col  left-5 bottom-4 w-full"
         mobileClassName='z-[10] right-5 bottom-20 fixed flex-col  '
         items={links} />

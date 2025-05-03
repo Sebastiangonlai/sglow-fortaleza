@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { BackgroundLines } from "@/lib/background-lines";
 import ImageComponent from "@/components/ImageComponent";
 import "@/components/animations/animations.css";

@@ -1,4 +1,3 @@
-import React from 'react'
 import LoginAdm from '@/components/admin/LoginAdmin'
 import { StrictMode } from 'react'
 import { StyledEngineProvider, CssVarsProvider } from '@mui/joy/styles'

@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import ImageComponent from "./ImageComponent";
 import { Modal, ModalBody, ModalContent, ModalTrigger, ModalFooter } from "@/lib/animated-modal";
 

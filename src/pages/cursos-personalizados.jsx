@@ -1,4 +1,3 @@
-import React from 'react';
 import SectionPricing from '@/components/section/SectionPricing';
 import Breadcrumb from '@/components/Breadcrumb';
 import StepsToStart from '@/components/StepsToStart';

@@ -1,4 +1,3 @@
-import React from 'react';
 import { MyImagesGrid } from '@/components/MyImgGrid';
 import Breadcrumb from '@/components/Breadcrumb';
 import ImageComponent from '@/components/ImageComponent';

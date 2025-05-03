@@ -1,9 +1,6 @@
-import React from 'react'
-
 
 const Breadcrumb = ({ title, subtitle, nameUri, uri }) => {
   const url = uri ? `../#${uri}` : "../#";
-
 
   return (
     <div className="relative z-10 overflow-hidden pt-[100px] pb-[50px] md:pt-[80px] lg:pt-[100px] dark:bg-[#111928]">

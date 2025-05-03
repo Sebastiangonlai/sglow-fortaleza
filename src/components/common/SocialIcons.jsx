@@ -1,3 +1,5 @@
+"use client"
+
 import Mail from "@/components/social-icons/mail.svg?react";
 import Whatsapp from "@/components/social-icons/whatsapp.svg?react";
 import Instagram from "@/components/social-icons/instagram.svg?react";

@@ -11,9 +11,16 @@
   }
 
   body {
-    /* font-family: "Inter"; */
     color: white;
     overflow-x: hidden;
+  }
+
+  :focus-visible {
+    outline: none;
+  }
+
+  :focus:not(:focus-visible) {
+    outline: none;
   }
 
   section {

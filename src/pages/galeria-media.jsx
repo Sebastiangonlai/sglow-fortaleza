@@ -1,4 +1,3 @@
-import React from "react";
 import { useState } from "react";
 import * as Tabs from "@radix-ui/react-tabs";
 import Breadcrumb from "@/components/Breadcrumb";

@@ -1,4 +1,4 @@
-import React, { lazy } from 'react';
+import { lazy } from 'react';
 
 const Home = lazy(() => import('@/pages/index.jsx'));
 // const GaleriaMedia = lazy(() => import('@/pages/galeria-media.jsx'));

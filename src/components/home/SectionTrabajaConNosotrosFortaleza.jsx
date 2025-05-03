@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { twMerge } from "tailwind-merge";
 import Modals from '@mui/joy/Modal';
 import ModalClose from '@mui/joy/ModalClose';

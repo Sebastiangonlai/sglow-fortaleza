@@ -1,4 +1,3 @@
-import React from 'react';
 import ImageComponent from "@/components/ImageComponent";
 import Breadcrumb from '@/components/Breadcrumb';
 import SectionTeam from '@/components/section/SectionTeam';
