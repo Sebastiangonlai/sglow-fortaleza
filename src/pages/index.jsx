@@ -6,7 +6,7 @@ import SectionNuestrosServicios from '@/components/home/SectionNuestrosServicios
 import SectionOfrecemos from '@/components/home/SectionOfrecemos';
 import SectionElegirnos from '@/components/home/SectionElegirnos';
 
-import SectionLicenciaDeConducir from '@/components/home/SectionLicenciaConducirFortaleza';
+import SectionLicenciaDeConducir from '@/components/home/SectionLicenciaConducir';
 import SectionGraduados from '@/components/home/SectionGraduadosFortaleza';
 import SectionTestimonial from '@/components/home/SectionTestimonialFortaleza';
 // import SectionRedes from '@/components/home/SectionRedesFortaleza';
