@@ -2,6 +2,8 @@ import { useState } from "react";
 import Breadcrumb from "@/components/Breadcrumb";
 import nuestrosServiciosData from '@/data/nuestrosServiciosData'
 import { ModalCard } from '@/components/ModalCard';
+import "../components/animations/animations.css";
+import { useInViewAnimation } from "@/components/animations/useInViewAnimation";
 
 
 const NuestrosServicios = () => {
@@ -10,6 +12,10 @@ const NuestrosServicios = () => {
     setShowCard(category);
   };
 
+  const animationClass = "animate-fade-in";
+  const delay = "0.4s";
+
+  const { ref, className } = useInViewAnimation({ animationClass, delay });
   const options = ["Novedades", "Cursos", "Nosotros"];
   const getButtonClasses = (item) =>
     `inline-block rounded-md py-2 px-3 text-center text-base font-semibold transition md:py-2 lg:px-4 ${showCard === item
@@ -19,30 +25,31 @@ const NuestrosServicios = () => {
   return (
     <>
       {/* <PageSEO title="Nuestros Servicios - Academia Fortaleza" description="Descubre los servicios de Academia Fortaleza: clases prácticas, teóricas, trámites de licencia y más." /> */}
+      <div className={`pt-12 lg:pb-[1px] bg-(--color-section-3) `}>
+        <Breadcrumb
+          title="Nuestros Servicios"
+          subtitle="Información sobre la licencia de conducir."
+          nameUri="Servicios"
+          href="nuestros-servicios" />
 
-      <Breadcrumb
-        title="Nuestros Servicios"
-        subtitle="Información sobre la licencia de conducir."
-        nameUri="Servicios"
-        href="nuestros-servicios" />
+        <div className={`pt-12 lg:pb-[1px] ${className}`}>
+          <div className={`w-full flex flex-wrap justify-center pt-10 sm:pb-4 lg:pb-0 `} ref={ref}>
+            {/* <div className="w-full "> */}
+            <ul className="flex flex-wrap justify-center space-x-2">
+              {options.map((item) => (
+                <li key={item} className="mb-4 lg:mb-0 ">
+                  <button onClick={() => handleProject(item)} className={getButtonClasses(item)}>
+                    {item}
+                  </button>
+                </li>
+              ))}
+            </ul>
+            {/* </div> */}
+          </div>
 
-      <div className="bg-(--color-section-3)">
-        <div className="w-full flex flex-wrap justify-center pt-10 sm:pb-4 lg:pb-0">
-          {/* <div className="w-full "> */}
-          <ul className="flex flex-wrap justify-center space-x-2">
-            {options.map((item) => (
-              <li key={item} className="mb-4 lg:mb-0">
-                <button onClick={() => handleProject(item)} className={getButtonClasses(item)}>
-                  {item}
-                </button>
-              </li>
-            ))}
-          </ul>
-          {/* </div> */}
-        </div>
-
-        <div className="flex flex-wrap">
-          <ModalCard card={nuestrosServiciosData} showCard={showCard} />
+          <div className="flex flex-wrap "  >
+            <ModalCard card={nuestrosServiciosData} showCard={showCard} />
+          </div>
         </div>
       </div>
     </>

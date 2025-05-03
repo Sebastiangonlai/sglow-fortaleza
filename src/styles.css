@@ -19,10 +19,6 @@
     outline: none;
   }
 
-  :focus:not(:focus-visible) {
-    outline: none;
-  }
-
   section {
     min-height: 100vh;
     min-height: 100dvh;

@@ -100,6 +100,7 @@ const SectionElegirnosFortaleza = () => {
 					</div>
 				</div>
 			</div>
+			
 		</section>
 	);
 };

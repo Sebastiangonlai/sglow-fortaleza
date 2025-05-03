@@ -37,13 +37,27 @@
   }
 
   .animate-fade-in {
-    animation: fadeIn 1s ease-in-out forwards;
+    animation: fadeIn 2s ease-in-out forwards;
+    animation-duration: 2s;
   }
 
   .animate-slide-up {
-    animation: slideUp 1s ease-in-out forwards;
+    animation: fadeInUp 1s ease-in-out forwards;
   }
 
+  .anim-left {
+    animation-name: anim-left;
+    animation-delay: 0.5s;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+
+  .anim-leftb {
+    animation-name: anim-leftb;
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
 
   @keyframes fadeInUp {
     from {
@@ -92,10 +106,6 @@
       transform: scale(1);
     }
   }
-
-  /* new a bajo */
-
-
 
   @keyframes float {
     0% {
@@ -168,18 +178,6 @@
     }
   }
 
-  @keyframes slideUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
 
   @keyframes anim-left {
     from {
@@ -204,19 +202,4 @@
       transform: translateX(0) scale(1);
     }
   }
-
-  .anim-left {
-    animation-name: anim-left;
-    animation-delay: 0.5s;
-    animation-duration: 1s;
-    animation-fill-mode: both;
-  }
-
-  .anim-leftb {
-    animation-name: anim-leftb;
-    animation-delay: 1s;
-    animation-duration: 1s;
-    animation-fill-mode: both;
-  }
-
 }
