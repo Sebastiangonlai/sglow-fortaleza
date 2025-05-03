@@ -23,7 +23,7 @@
   }
 
   .animate-float {
-    animation: float 15s ease-in infinite;
+    animation: float 20s ease-in infinite;
     opacity: 0;
     animation-delay: 1s;
   }
@@ -99,25 +99,25 @@
 
   @keyframes float {
     0% {
-      transform: translateY(150px) rotate(var(--rotate, 0deg));
+      transform: translateY(50px) rotate(var(--rotate, 0deg));
       scale: 1;
       opacity: 0;
     }
 
     25% {
-      transform: translate(-150px, 150px) rotate(var(--rotate, 8deg));
+      transform: translateY(50px) rotate(var(--rotate, 8deg));
       scale: 1.1;
       opacity: 1;
     }
 
     75% {
-      transform: translate(0px, 250px) rotate(var(--rotate, -8deg));
+      transform: translateY(50px) rotate(var(--rotate, -8deg));
       scale: 1.1;
       opacity: 1;
     }
 
     100% {
-      transform: translate(-250px, -250px) rotate(var(--rotate, 0deg));
+      transform: translateY(-50px) rotate(var(--rotate, 0deg));
       scale: 1;
       opacity: 0;
     }
@@ -220,9 +220,8 @@
   }
 
   .sun {
-    opacity: 0;
+
     animation:
-      sun-first 2s ease-in-out forwards,
       sun-rise 10s ease-in-out 3s infinite alternate;
   }
 
@@ -248,15 +247,4 @@
     }
   }
 
-  @keyframes sun-first {
-    0% {
-      opacity: 0;
-      transform: translateY(5px) scale(0) rotate(0deg);
-    }
-
-    100% {
-      opacity: 1;
-      transform: translateY(10px) scale(1) rotate(-5deg);
-    }
-  }
 }

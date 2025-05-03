@@ -21,7 +21,6 @@ const imgalumnos = [
 const SectionGraduadosFortaleza = () => {
   const groups = [];
 
-  // Divide los productos en grupos de 3
   for (let i = 0; i < imgalumnos.length; i += 3) {
     groups.push(imgalumnos.slice(i, i + 3));
   }
@@ -32,9 +31,7 @@ const SectionGraduadosFortaleza = () => {
     offset: ['start start', 'end start'],
   });
 
-  // Ajustar la configuración del resorte para un desplazamiento más fluido
   const springConfig = {
-    // stiffness: 300, damping: 50, bounce: 10, mass: 2,
     stiffness: 100, damping: 20,
   };
   const translateX = useSpring(useTransform(scrollYProgress, [0, 0.5], [0, 400]), springConfig);
