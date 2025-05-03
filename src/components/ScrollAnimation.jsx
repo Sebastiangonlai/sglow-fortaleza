@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 
-
 function ScrollAnimation({
   description,
   duration = 1,
   delay = 0.2,
   effect,
   transition,
+  hoverEffect,
   className = '',
 }) {
   return (
@@ -15,9 +15,9 @@ function ScrollAnimation({
       <motion.div
         initial={effect.initial}
         whileInView={effect.animate}
-        whileHover={effect}
-        whileTap={effect}
-        whileFocus={effect}
+        whileHover={hoverEffect}
+        whileTap={hoverEffect}
+        whileFocus={hoverEffect}
         viewport={{ once: true, amount: 0.2 }}
         transition={transition || { duration, delay, ease: 'easeInOut' }}>
         {description}

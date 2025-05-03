@@ -25,7 +25,7 @@ const SectionNuestrosServiciosFortaleza = () => {
 							<ScrollAnimation
 								description={
 									<div className="mb-8">
-										<div className="mb-2 overflow-hidden rounded-[5px] shadow-[0_8px_16px_rgb(0_0_0/0.2)] bg-black">
+										<div className="mb-2 overflow-hidden rounded-[10px] shadow-[0_8px_16px_rgb(0_0_0/0.1)] ">
 											<a href={d.href} className="block" aria-label="Academia Fortaleza" >
 												<ImageComponent iSrc={d.imgSrc} iAlt={d.alt} iWidth={400} iHeight={400} iClassName="h-full w-full rounded-[5px] transition hover:rotate-6 hover:scale-125" />
 											</a>
@@ -52,6 +52,7 @@ const SectionNuestrosServiciosFortaleza = () => {
 								rootMargin="0px 0px -10px 0px"
 								effect={{ initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 } }}
 								transition={{ duration: 0.4, delay: 0.2, ease: 'easeInOut' }}
+								hoverEffect={{ scale: 1.05 }}
 							/>
 						</div>
 					))}

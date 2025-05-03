@@ -1,6 +1,6 @@
 'use client'
 
-import SectionHeader from '@/components/home/SectionHeaderFortaleza';
+import SectionHeader from '@/components/home/SectionHeader';
 import SectionNuestrosServicios from '@/components/home/SectionNuestrosServiciosFortaleza';
 import SectionOfrecemos from '@/components/home/SectionOfrecemosFortaleza';
 import SectionElegirnos from '@/components/home/SectionElegirnosFortaleza';
