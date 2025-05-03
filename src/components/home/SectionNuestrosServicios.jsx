@@ -7,10 +7,9 @@ import { FiChevronRight } from "react-icons/fi";
 import ImageComponent from '@/components/ImageComponent';
 import { ScrollAnimation } from "@/components/ScrollAnimation";
 import { cn } from "@/lib/utils";
-import { contrast, opacity, saturation } from '@cloudinary/url-gen/actions/adjust';
 
 
-const SectionNuestrosServiciosFortaleza = () => {
+const SectionNuestrosServicios = () => {
 	return (
 		<section className="pt-12 lg:pb-[1px]">
 			<div className="max-w-[1200px] justify-center mx-auto relative overflow-hidden bg-transparent dark:bg-transparent pt-[10px] lg:pt-[40px] pb-[40px] lg:pb-[52px]">
@@ -35,8 +34,7 @@ const SectionNuestrosServiciosFortaleza = () => {
 											<a aria-label="Nuestros servicios" href={d.href} className="inline-block text-xl font-bold text-[#111928] hover:text-primary dark:text-white dark:hover:text-blue-300 sm:text-xl lg:text-xl xl:text-xl leading-tight tracking-tight">
 												{d.title}
 											</a>
-											<a href={d.href} aria-label="Mas informacion" className="text-[12px] dark:text-blue-300 dark:hover:text-blue-300 rounded-xl cursor-pointer flex px-1 pt-1 justify-center items-center">
-												Ver más{` `}<FiChevronRight size='14px' />
+											<a href={d.href} aria-label="Mas informacion" className="text-[12px] dark:text-blue-300 dark:hover:text-blue-300 rounded-xl cursor-pointer flex px-1 pt-1 justify-center items-center">Ver más{` `}<FiChevronRight size='14px' />
 											</a>
 										</div>
 										<div className="mx-auto flex flex-col">
@@ -53,7 +51,7 @@ const SectionNuestrosServiciosFortaleza = () => {
 								rootMargin="0px 0px -10px 0px"
 								effect={{ initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 } }}
 								transition={{ duration: 0.4, delay: 0.1, ease: 'easeInOut' }}
-								hoverEffect={{ delay: 0, opacity: 0.8}}
+								hoverEffect={{ delay: 0, opacity: 0.8 }}
 							/>
 						</div>
 					))}
@@ -67,8 +65,7 @@ const SectionNuestrosServiciosFortaleza = () => {
 	);
 };
 
-export default SectionNuestrosServiciosFortaleza;
-
+export default SectionNuestrosServicios;
 
 
 export const DescriptionCard = ({ className, children }) => {

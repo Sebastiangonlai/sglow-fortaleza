@@ -7,7 +7,7 @@ import { contarImagesSupabase } from '@/api/ImagenService.jsx'
 import { useEffect, useState } from "react";
 
 
-const SectionElegirnosFortaleza = () => {
+const SectionElegirnos = () => {
 	const [recibidos, setRecibidos] = useState(0);
 
 	useEffect(() => {
@@ -72,7 +72,7 @@ const SectionElegirnosFortaleza = () => {
 
 			<div className="-mx-4 flex flex-wrap justify-center">
 				<div className="py-1 my-1">
-					<div className="cursor-pointer py-2 px-1 tracking-tight dark:text-gray-100 text-gray-900">
+					<div className="py-2 px-1 tracking-tight dark:text-gray-100 text-gray-900">
 						<div className="gap-x-1 gap-y-1 text-center items-center grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4">
 							{itemData.map((d) => (
 								<motion.div key={d.title}
@@ -100,9 +100,8 @@ const SectionElegirnosFortaleza = () => {
 					</div>
 				</div>
 			</div>
-			
 		</section>
 	);
 };
 
-export default SectionElegirnosFortaleza;
+export default SectionElegirnos;

@@ -6,7 +6,7 @@ import ImageComponent from "@/components/ImageComponent";
 import "@/components/animations/animations.css";
 
 
-const SectionHeaderFortaleza = () => {
+const SectionHeader = () => {
   const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
   const [showBackgroundLines, setShowBackgroundLines] = useState(false);
   const animations = ['anim-left', 'anim-leftb'];
@@ -87,4 +87,4 @@ const SectionHeaderFortaleza = () => {
   );
 };
 
-export default SectionHeaderFortaleza;
+export default SectionHeader;

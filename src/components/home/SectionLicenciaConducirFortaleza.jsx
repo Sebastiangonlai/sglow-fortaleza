@@ -12,6 +12,7 @@ import ImageComponent from "@/components/ImageComponent";
 import TitleHeader from "@/components/TitleHeader";
 import ButtonSection from "@/components/ButtonSection";
 import Sheet from '@mui/joy/Sheet';
+import { Button } from "@/components/button";
 
 
 const IMG = {
@@ -28,8 +29,8 @@ const SectionLicenciaConducir = () => {
 		},
 		{
 			title: "Obten tu licencia",
-			className: " mt-1 mx-auto justify-center items-center",
-			skeleton: <CardLicencia />,
+			className: "mx-8 my-2 justify-center items-center",
+			skeleton: <BackgroundAttachment />,
 		},
 	];
 	return (
@@ -95,6 +96,18 @@ export const CardLicencia = () => {
 	);
 };
 
+export const BackgroundAttachment = () => {
+	return (
+		<div className="relative bg-[url('/static/images/vehiculo/flota-fortaleza2.webp')] bg-fixed bg-center bg-cover rounded-xl min-h-[240px] lg:min-h-[420px] w-full transition-all duration-200 group hover:opacity-80">
+			<div className="absolute inset-0 bg-black/40 rounded-xl flex items-center justify-center py-8 px-4">
+				<Button className="font-semibold py-2 px-4 rounded-2xl" onClick={() => window.open("/licencia-de-conducir", "_self")}>
+					Obten tu licencia
+				</Button>
+			</div>
+		</div>
+	);
+};
+
 
 const ModalCardAlumnos = () => {
 	const [active, setActive] = useState(null);
@@ -154,7 +167,7 @@ const ModalCardAlumnos = () => {
 		<>
 			<div>
 				<Modals id="myModal" open={open} onClose={handleClose} className="flex justify-center self-center px-2">
-					<Sheet className="w-fit h-fit rounded-xl flex " >
+					<Sheet className="w-fit h-fit rounded-xl flex" >
 						<ModalClose className="close right-3 z-100" aria-label="Close" color="none"
 							sx={{ backgroundColor: "rgba(0, 0, 0, 0.70)", color: "#ffff", }}>&times;</ModalClose>
 						<ImageComponent iSrc={imgSrc.src} iWidth={IMG.width} iHeight={IMG.height} iAlt="Alumnos Academia de manejo" id="myImg" loading="lazy" iClassName="w-full max-h-[640px] object-cover rounded-xl focus:touch-pan-x delay-200 border border-zinc-900 dark:rounded-lg dark:border dark:border-zinc-600/90 justify-center" />
@@ -162,7 +175,7 @@ const ModalCardAlumnos = () => {
 				</Modals>
 			</div>
 
-			<div className="flex flex-col p-2 gap-8 w-full overflow-visible cursor-pointer mx-auto items-center justify-center">
+			<div className="flex flex-col p-2 gap-8 w-full overflow-visible mx-auto items-center justify-center">
 				<ScrollAnimation
 					description={
 						<div className="flex flex-row">

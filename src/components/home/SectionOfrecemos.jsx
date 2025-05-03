@@ -45,14 +45,14 @@ const services = [
 ];
 
 
-const SectionOfrecemosFortaleza = () => {
+const SectionOfrecemos = () => {
 	return (
 		<>
-			<div className="relative z-20 overflow-hidden w-screen h-full bg-(--color-section-3) ">
+			<div className="relative z-20 overflow-hidden w-screen h-full bg-(--color-section-3)">
 				<SvgShape className="absolute bottom-0 left-0 rotate-180" />
 				<SvgShape className="absolute top-0 right-0" />
 
-					<section className="container mx-auto ">
+				<section className="container mx-auto">
 					<TitleHeader
 						title="Qué Ofrecemos"
 						subtitle="Ofrecemos una formación completa para conductores, sin importar su nivel de experiencia."
@@ -63,7 +63,7 @@ const SectionOfrecemosFortaleza = () => {
 							<div key={index} className="w-full px-4 lg:w-1/2">
 								<ScrollAnimation
 									description={
-										<ServiceCard
+										<ServiceItems
 											icon={service.icon}
 											title={service.title}
 											description={service.description}
@@ -85,7 +85,7 @@ const SectionOfrecemosFortaleza = () => {
 	);
 };
 
-export default SectionOfrecemosFortaleza;
+export default SectionOfrecemos;
 
 
 const SvgShape = ({ className }) => {
@@ -100,7 +100,7 @@ const SvgShape = ({ className }) => {
 	)
 };
 
-const ServiceCard = ({ icon: Icon, title, description, href }) => {
+const ServiceItems = ({ icon: Icon, title, description, href }) => {
 	return (
 		<div className="mb-11 flex lg:mb-[50px]">
 			<div className="group mb-16">
@@ -122,11 +122,11 @@ const ServiceCard = ({ icon: Icon, title, description, href }) => {
 	);
 };
 
-ServiceCard.propTypes = {
+ServiceItems.propTypes = {
 	icon: PropTypes.elementType.isRequired,
 	title: PropTypes.string.isRequired,
 	description: PropTypes.string.isRequired,
 	href: PropTypes.string.isRequired,
 };
 
-export { ServiceCard };
+export { ServiceItems };
