@@ -8,14 +8,14 @@ import TitleHeader from "@/components/TitleHeader";
 
 const SectionTestimonialFortaleza = () => {
   return (
-    <div className="dark:bg-[#1F2A37] text-gray-900 dark:text-gray-500 pt-[80px] pb-[20px] lg:pt-[80px] lg:pb-[20px] overflow-hidden bg-[#F9FAFB] mx-auto justify-center">
+    <div className="h-full w-full">
+      <div className="py-6 flex flex-wrap mx-auto justify-center" >
 
-      <TitleHeader
-        title="Testimonios de Alumnos"
-        subtitle="Opiniones de nuestros alumnos sobre su experiencia."
-        uri={import.meta.env.VITE_GOOGLE_REVIEW} />
+        <TitleHeader
+          title="Testimonios de Alumnos"
+          subtitle="Opiniones de nuestros alumnos sobre su experiencia."
+          uri={import.meta.env.VITE_GOOGLE_REVIEW} />
 
-      <div className="-mx-4 py-6 flex flex-wrap" >
         <div className="swiper testimonial-carousel common-carousel p-5">
           <InfiniteMovingCards items={quotes} direction="right" speed="slow">
           </InfiniteMovingCards>

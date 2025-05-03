@@ -111,9 +111,9 @@ const ModalCardAlumnos = () => {
 		fetchDatas();
 	}, []);
 
-	const aux = recibidos.slice(0, 8);
-	let imagesFirst = [{ src: aux[0] }, { src: aux[1] }, { src: aux[2] }, { src: aux[6] }];
-	let imagesSecond = [{ src: aux[3] }, { src: aux[4] }, { src: aux[5] }, { src: aux[7] }];
+	const aux = recibidos.slice(0, 6);
+	let imagesFirst = [{ src: aux[0] }, { src: aux[1] }, { src: aux[2] }];
+	let imagesSecond = [{ src: aux[3] }, { src: aux[4] }, { src: aux[5] }];
 
 	const imageVariants = {
 		whileHover: { scale: 1.2, rotate: 0, zIndex: 100, },

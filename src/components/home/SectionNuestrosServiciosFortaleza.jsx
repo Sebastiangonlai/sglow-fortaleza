@@ -1,12 +1,12 @@
 'use client'
 
 import serviceData from '@/data/serviceDataIndex'
-import { GlowingStarsDescription } from "@/lib/glowing-stars";
 import ButtonSection from "@/components/ButtonSection";
 import TitleHeader from "@/components/TitleHeader";
 import { FiChevronRight } from "react-icons/fi";
 import ImageComponent from '@/components/ImageComponent';
 import { ScrollAnimation } from "@/components/ScrollAnimation";
+import { cn } from "@/lib/utils";
 
 
 const SectionNuestrosServiciosFortaleza = () => {
@@ -40,9 +40,9 @@ const SectionNuestrosServiciosFortaleza = () => {
 										</div>
 										<div className="mx-auto flex flex-col">
 											<div className="flex justify-between items-end">
-												<GlowingStarsDescription className="max-w-[400px] text-base text-[#637381] dark:text-[#9CA3AF] leading-tight tracking-tight">
+												<DescriptionCard className="max-w-[400px] text-base text-[#637381] dark:text-[#9CA3AF] leading-tight tracking-tight">
 													{d.description}
-												</GlowingStarsDescription>
+												</DescriptionCard>
 											</div>
 										</div>
 									</div>
@@ -56,7 +56,7 @@ const SectionNuestrosServiciosFortaleza = () => {
 						</div>
 					))}
 				</div>
-				
+
 				<ButtonSection
 					namebtn="Ver todos los servicios"
 					uri="./nuestros-servicios" />
@@ -66,3 +66,13 @@ const SectionNuestrosServiciosFortaleza = () => {
 };
 
 export default SectionNuestrosServiciosFortaleza;
+
+
+
+export const DescriptionCard = ({ className, children }) => {
+	return (
+		<p className={cn("text-base text-white max-w-[16rem]", className)}>
+			{children}
+		</p>
+	);
+};

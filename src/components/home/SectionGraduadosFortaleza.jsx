@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import ButtonSection from '@/components/ButtonSection';
 import ImageComponent from '@/components/ImageComponent';
@@ -25,7 +25,7 @@ const SectionGraduadosFortaleza = () => {
     groups.push(imgalumnos.slice(i, i + 3));
   }
 
-  const ref = React.useRef(null);
+  const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ['start start', 'end start'],
