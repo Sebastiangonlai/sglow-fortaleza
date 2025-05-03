@@ -12,7 +12,7 @@ import { ScrollAnimation } from "@/components/ScrollAnimation";
 const SectionNuestrosServiciosFortaleza = () => {
 	return (
 		<section className="pt-12 lg:pb-[1px]">
-			<div className="max-w-[1200px] justify-center mx-auto relative overflow-hidden bg-transparent dark:bg-transparent pt-[10px] lg:pt-[40px] pb-[40px] lg:pb-[52px]">
+			<div className="max-w-[1200px] justify-center mx-auto relative  bg-transparent dark:bg-transparent pt-[10px] lg:pt-[40px] pb-[40px] lg:pb-[52px]">
 
 				<TitleHeader
 					title="Nuestros Servicios"
@@ -25,7 +25,7 @@ const SectionNuestrosServiciosFortaleza = () => {
 							<ScrollAnimation
 								description={
 									<div className="mb-8">
-										<div className="mb-2 overflow-hidden rounded-[5px] shadow-[0_8px_16px_rgb(0_0_0/0.2)] bg-black">
+										<div className="mb-2 rounded-[5px] shadow-[0_8px_16px_rgb(0_0_0/0.2)] bg-black">
 											<a href={d.href} className="block" aria-label="Academia Fortaleza" >
 												<ImageComponent iSrc={d.imgSrc} iAlt={d.alt} iWidth={400} iHeight={400} iClassName="h-full w-full rounded-[5px] transition hover:rotate-6 hover:scale-125" />
 											</a>
