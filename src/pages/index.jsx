@@ -7,10 +7,10 @@ import SectionOfrecemos from '@/components/home/SectionOfrecemos';
 import SectionElegirnos from '@/components/home/SectionElegirnos';
 import SectionLicenciaDeConducir from '@/components/home/SectionLicenciaConducir';
 import SectionGraduados from '@/components/home/SectionGraduados';
-import SectionTestimonial from '@/components/home/SectionTestimonialFortaleza';
+import SectionTestimonial from '@/components/home/SectionTestimonial';
 import SectionRedes from '@/components/home/SectionRedes';
+import SectionPreguntasFrecuentes from '@/components/home/SectionFAQ';
 // import SectionContact from '@/components/home/SectionContactFortaleza';
-// import SectionPreguntasFrecuentes from '@/components/home/SectionFAQFortaleza';
 // import Demo from '@/components/motion/Demo.jsx';
 // import SectionTrabajaConNosotros from '@/components/home/SectionTrabajaConNosotrosFortaleza';
 // import  ScrollTriggerSection  from "../lib/scroll-trigger-section"
@@ -54,7 +54,7 @@ export default function Home() {
       </section>
 
       <section id="preguntas-frecuentes" className="overflow-hidden bg-(--color-section-3)">
-        {/* <SectionPreguntasFrecuentes /> */}
+        <SectionPreguntasFrecuentes />
       </section>
 
       <section id="contacto" className=" bg-(--color-section-2)">

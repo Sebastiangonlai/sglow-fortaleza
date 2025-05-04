@@ -6,7 +6,7 @@ import ButtonSection from "@/components/ButtonSection";
 import TitleHeader from "@/components/TitleHeader";
 
 
-const SectionTestimonialFortaleza = () => {
+const SectionTestimonial = () => {
   return (
     <div className="h-full w-full">
       <div className="py-6 flex flex-wrap mx-auto justify-center" >
@@ -29,4 +29,4 @@ const SectionTestimonialFortaleza = () => {
   );
 };
 
-export default SectionTestimonialFortaleza;
+export default SectionTestimonial;

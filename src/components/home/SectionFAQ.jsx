@@ -1,11 +1,11 @@
 'use client'
 import TitleHeader from "@/components/TitleHeader";
 import SectionFAQ from '@/components/section/SectionFAQ';
-import ImageComponent from '../../components/ImageComponent';
+import ImageComponent from '../ImageComponent';
 import { ScrollAnimation } from "@/components/animations/ScrollAnimation";
 
 
-const SectionFaqFortaleza = () => {
+const SectionFaq = () => {
   return (
     <>
       <section className="dark:bg-[#111928] bg-[#F9FAFB] text-gray-900 dark:text-gray-500 md:space-y-2 pt-[60px] lg:pt-[60px] pb-[30px] lg:pb-[40px] select-none ">
@@ -70,4 +70,4 @@ const SectionFaqFortaleza = () => {
   )
 }
 
-export default SectionFaqFortaleza
+export default SectionFaq
