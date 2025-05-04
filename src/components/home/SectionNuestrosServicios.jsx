@@ -25,10 +25,10 @@ const SectionNuestrosServicios = () => {
 						<div className="w-full lg:px-4 px-8 md:w-1/2 lg:w-1/3" key={d.title}>
 							<SlideIn duration={400} delay={100} once={true}>
 								<div className="mb-8">
-									<div className="mb-2 overflow-hidden rounded-[10px] shadow-[0_8px_10px_rgb(0_0_0/0.2)] ">
-										<div href={d.href} className="block" aria-label="Academia Fortaleza" >
+									<div className="mb-2 overflow-hidden rounded-[12px] shadow-[0_6px_8px_rgb(0_0_0/0.2)] ">
+										<div href={d.href} className="block cursor-pointer" aria-label="Academia Fortaleza" >
 											<motion.div
-												initial={{ opacity: 0, scale: 1 }}
+												initial={{ opacity: 1, scale: 1 }}
 												whileTap={{ scale: 1.25, rotate: 6 }}
 												whileHover={{ scale: 1.25, rotate: 6 }}
 												transition={{ duration: 0.2 }}>
