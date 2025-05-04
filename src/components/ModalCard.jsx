@@ -1,5 +1,6 @@
 "use client";
 import ImageComponent from "./ImageComponent";
+import React from "react";
 import { Modal, ModalBody, ModalContent, ModalTrigger, ModalFooter } from "@/lib/animated-modal";
 
 
@@ -7,8 +8,9 @@ function ModalCard({ card, showCard = "Novedades" }) {
 	return (
 		<section className="w-screen min-h-screen flex flex-col justify-center items-center">
 			<div className="container flex flex-wrap">
-				{card.map((d) => (
+				{card.map((d, index) => (
 					<ModalAnimatedCard
+						key={d.title || index}
 						imageSrc={d.src}
 						title={d.title}
 						description={d.description}
@@ -47,7 +49,7 @@ const ModalAnimatedCard = ({ imageSrc, title, description, checkText, btnHref, s
 			<Modal className='lg:w-[100px] inset-0'>
 				<div className={`mx-auto w-1/1 md:w-1/2 xl:w-1/4 ${showCard === "Novedades" || showCard === category ? "block" : "hidden"}`}>
 					<ModalTrigger className="relative mb-4">
-						<div className="w-full" key={title}>
+						<div className="w-full" key={title} >
 							<div className="mb-2 overflow-hidden rounded-[5px] shadow-[0_8px_16px_rgb(0_0_0/0.2)] bg-black">
 								<div className="block">
 									<ImageComponent iSrc={imageSrc} iAlt="image" iClassName="h-full w-full rounded-[5px] transition group-hover:rotate-6deg group-hover:scale-125" iWidth={500} iHeight={500} />

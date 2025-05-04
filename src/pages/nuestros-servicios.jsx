@@ -2,7 +2,7 @@ import { useState } from "react";
 import Breadcrumb from "@/components/Breadcrumb";
 import nuestrosServiciosData from '@/data/nuestrosServiciosData'
 import { ModalCard } from '@/components/ModalCard';
-import "../css/animations.css";
+
 import { SlideIn } from "@/components/motion/SlideIn";
 
 
@@ -41,12 +41,11 @@ const NuestrosServicios = () => {
               ))}
             </ul>
           </div>
-
-          {/* <SlideIn delay={100} duration={1000} direction="up"> */}
-          <SlideIn delay={100} duration={1000} direction="up" once={true} className="flex flex-wrap overflow-hidden">
-            <ModalCard card={nuestrosServiciosData} showCard={showCard}  />
+          <SlideIn delay={500} duration={1000} direction="up">
+            <div className="flex flex-wrap "  >
+              <ModalCard card={nuestrosServiciosData} showCard={"Novedades"} />
+            </div>
           </SlideIn>
-          {/* </SlideIn> */}
         </div>
       </div>
     </>

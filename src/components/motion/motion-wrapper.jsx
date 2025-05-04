@@ -1,6 +1,5 @@
 "use client"
-import { motion, useInView } from "framer-motion"
-import { useRef } from "react"
+import { motion } from "framer-motion"
 
 
 export const MotionWrapper = ({
@@ -9,13 +8,11 @@ export const MotionWrapper = ({
   direction = "up",
   duration = 400,
   delay = 200,
-  threshold = 0.4,
+  threshold = 0.1,
   once = false,
   loop = false,
   className = "",
 }) => {
-  const ref = useRef(null)
-  const inView = useInView(ref, { once, amount: threshold })
 
   const baseTransition = {
     duration: duration / 1000,
@@ -48,8 +45,6 @@ export const MotionWrapper = ({
         transition: {
           ...baseTransition,
           duration: 1.5,
-          repeat: Infinity,
-          repeatType: "loop",
         },
       },
     },
@@ -68,12 +63,13 @@ export const MotionWrapper = ({
 
   return (
     <motion.div
-      ref={ref}
       className={className}
       initial="hidden"
-      animate={inView ? "visible" : "hidden"}
-      variants={variants[animation]}>
+      whileInView="visible"
+      viewport={{ once, amount: threshold }}
+      variants={variants[animation]} >
       {children}
     </motion.div>
+
   )
 }
