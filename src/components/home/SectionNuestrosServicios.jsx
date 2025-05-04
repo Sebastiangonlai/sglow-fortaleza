@@ -26,7 +26,7 @@ const SectionNuestrosServicios = () => {
 						<div className="w-full lg:px-4 px-8 md:w-1/2 lg:w-1/3" key={d.title}>
 							{/* <ScrollAnimation
 								description={ */}
-							<SlideIn duration={500} delay={100} once={true}>
+							<SlideIn duration={400} delay={100} once={true}>
 
 								<div className="mb-8">
 									<div className="mb-2 overflow-hidden rounded-[10px] shadow-[0_8px_10px_rgb(0_0_0/0.2)] ">
@@ -37,8 +37,8 @@ const SectionNuestrosServicios = () => {
 												whileTap={{ scale: 1.25, rotate: 6 }}
 												whileHover={{ scale: 1.25, rotate: 6 }}
 												whileFocus={{ scale: 1.25, rotate: 6 }}
-												transition={{ duration: 0.4, delay: 0.1 }}
-											
+												transition={{ duration: 0.3}}
+												className="transition-all"
 											>
 												<ImageComponent iSrc={d.imgSrc} iAlt={d.alt} iWidth={400} iHeight={400} iClassName="h-full w-full rounded-[5px] " />
 											</motion.div>
