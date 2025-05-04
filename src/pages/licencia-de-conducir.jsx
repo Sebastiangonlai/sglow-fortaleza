@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Breadcrumb from '@/components/Breadcrumb';
 import SectionPricing from '@/components/section/SectionPricing';
-import ButtonSection from '@/components/ButtonSection';
+import ButtonSection from '@/components/ui/ButtonSection';
 import { URL_PDF } from '@/data/constants';
 import { ModalCard } from '@/components/ModalCard';
 import Modal from '@mui/joy/Modal';

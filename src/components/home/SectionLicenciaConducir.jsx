@@ -9,7 +9,7 @@ import Modals from '@mui/joy/Modal';
 import ModalClose from "@mui/joy/ModalClose";
 import ImageComponent from "@/components/ImageComponent";
 import TitleHeader from "@/components/TitleHeader";
-import ButtonSection from "@/components/ButtonSection";
+import ButtonSection from "@/components/ui/ButtonSection";
 import Sheet from '@mui/joy/Sheet';
 import { SlideIn } from "@/components/motion/SlideIn";
 

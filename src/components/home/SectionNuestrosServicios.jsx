@@ -1,13 +1,13 @@
 'use client'
 
 import serviceData from '@/data/serviceDataIndex'
-import ButtonSection from "@/components/ButtonSection";
 import TitleHeader from "@/components/TitleHeader";
 import { FiChevronRight } from "react-icons/fi";
 import ImageComponent from '@/components/ImageComponent';
 import { cn } from "@/lib/utils";
 import { SlideIn } from "@/components/motion/SlideIn";
 import { motion } from "framer-motion";
+import ButtonTailwind from '@/components/ui/ButtonTailwind';
 
 
 const SectionNuestrosServicios = () => {
@@ -54,11 +54,8 @@ const SectionNuestrosServicios = () => {
 							</SlideIn>
 						</div>
 					))}
+					<ButtonTailwind name="Ver todos los servicios" uri="./nuestros-servicios" />
 				</div>
-
-				<ButtonSection
-					namebtn="Ver todos los servicios"
-					uri="./nuestros-servicios" />
 			</div>
 		</section>
 	);

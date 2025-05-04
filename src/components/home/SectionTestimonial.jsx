@@ -2,14 +2,14 @@
 
 import { InfiniteMovingCards } from "@/lib/infinite-moving-cards";
 import { quotes } from "@/data/quotesData";
-import ButtonSection from "@/components/ButtonSection";
 import TitleHeader from "@/components/TitleHeader";
+import ButtonTailwind from "../ui/ButtonTailwind";
 
 
 const SectionTestimonial = () => {
   return (
     <div className="h-full w-full">
-      <div className="py-6 flex flex-wrap mx-auto justify-center" >
+      <div className="flex flex-wrap mx-auto justify-center" >
 
         <TitleHeader
           title="Testimonios de Alumnos"
@@ -20,11 +20,8 @@ const SectionTestimonial = () => {
           <InfiniteMovingCards items={quotes} direction="right" speed="slow">
           </InfiniteMovingCards>
         </div>
+        <ButtonTailwind name="Comparte tu experiencia" color="--color-section-3" uri={import.meta.env.VITE_GOOGLE_REVIEW} />
       </div>
-
-      <ButtonSection
-        namebtn="Comparte tu experiencia"
-        uri={import.meta.env.VITE_GOOGLE_REVIEW} />
     </div>
   );
 };

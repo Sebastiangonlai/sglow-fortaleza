@@ -9,12 +9,11 @@ import SectionLicenciaDeConducir from '@/components/home/SectionLicenciaConducir
 import SectionGraduados from '@/components/home/SectionGraduados';
 import SectionTestimonial from '@/components/home/SectionTestimonial';
 import SectionRedes from '@/components/home/SectionRedes';
-import SectionPreguntasFrecuentes from '@/components/home/SectionFAQ';
+import SectionPreguntasFrecuentes from '@/components/section/SectionFAQ';
 // import SectionContact from '@/components/home/SectionContactFortaleza';
 // import Demo from '@/components/motion/Demo.jsx';
 // import SectionTrabajaConNosotros from '@/components/home/SectionTrabajaConNosotrosFortaleza';
-// import  ScrollTriggerSection  from "../lib/scroll-trigger-section"
-// import  ParallaxScroll  from "../lib/parallax-scroll";
+
 
 export default function Home() {
   return (

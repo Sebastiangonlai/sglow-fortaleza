@@ -54,14 +54,3 @@ const ButtonSection = ({ namebtn, uri }) => {
 };
 
 export default ButtonSection;
-
-
-
-{/* <motion.button
-  className="w-48 h-12 rounded-xl bg-blue-600 text-white text-lg font-semibold shadow-md focus:outline-none transition-colors"
-  whileTap={{ scale: 0.95, rotate: -2 }}
-  whileFocus={{ scale: 0.95, rotate: -2 }}
-  transition={{ type: "spring", stiffness: 300, damping: 20 }}
->
-  Tocá acá
-</motion.button> */}

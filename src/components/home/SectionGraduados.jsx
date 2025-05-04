@@ -1,7 +1,7 @@
 'use client';
 import { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
-import ButtonSection from '@/components/ButtonSection';
+import ButtonSection from '@/components/ui/ButtonSection';
 import ImageComponent from '@/components/ImageComponent';
 import Link from '@/components/Link';
 

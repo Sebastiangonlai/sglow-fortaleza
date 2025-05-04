@@ -42,13 +42,13 @@
   button {
     cursor: pointer;
 
-    &:hover {
+    /* &:hover {
       transform: translateY(-1px);
     }
 
     &:active {
       transform: translateY(1px);
-    }
+    } */
   }
 
 

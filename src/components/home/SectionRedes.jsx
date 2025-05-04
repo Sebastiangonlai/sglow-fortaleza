@@ -55,7 +55,7 @@ const SectionRedes = () => {
               <div className="lg:w-fit">
                 <div className="relative z-[10] lg:grid lg:grid-cols-2 lg:gap-6 lg:items-center">
                   <div className="mb-8 mt-4 lg:mb-0 lg:col-span-6 lg:col-start-4 lg:order-2 z-[1000]">
-                    <SlideIn duration={500} delay={400} once={false} direction="left">
+                    <SlideIn duration={500} delay={400} once={true} direction="left">
                       <nav className="grid gap-2 mt-4 md:mt-10 justify-center" aria-label="Tabs" role="tablist" aria-orientation="vertical">
                         {redes.map((item, index) => (
                           <button key={index} aria-label="Redes"
@@ -81,7 +81,7 @@ const SectionRedes = () => {
                     </SlideIn>
                   </div>
 
-                  <SlideIn duration={500} delay={400} once={false} direction="right">
+                  <SlideIn duration={500} delay={400} once={true} direction="right">
                     <div className="relative mx-auto lg:col-span-5">
                       <div className="flex justify-center items-center mx-auto">
                         <div id="tabs-with-card-1" className={activeTab === "tabs-with-card-1" || activeTab === "tabs-with-card-0" ? "" : "hidden"} role="tabpanel" aria-labelledby="tabs-with-card-item-1">

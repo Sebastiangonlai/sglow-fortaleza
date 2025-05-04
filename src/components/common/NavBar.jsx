@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useCallback } from "react";
-import { Sheet, SheetContent } from "@/components/sheet";
+import { Sheet, SheetContent } from "@/components/ui/sheet";
 import Link from "@/components/Link";
 import { Menu, X, ChevronDown, LogOut, UserRoundIcon, UserRoundPen, LayoutDashboard } from "lucide-react"
 import { supabase } from '@/api/supabase';
