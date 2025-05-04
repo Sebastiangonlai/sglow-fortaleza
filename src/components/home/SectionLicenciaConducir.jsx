@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 import { useOutsideClick } from "@/lib/use-outside-click";
 import { listImagesSupabase } from "@/api/ImagenService";
 import Modals from '@mui/joy/Modal';
-// import { ScrollAnimation } from "@/components/ScrollAnimation";
 import ModalClose from "@mui/joy/ModalClose";
 import ImageComponent from "@/components/ImageComponent";
 import TitleHeader from "@/components/TitleHeader";
