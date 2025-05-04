@@ -6,12 +6,13 @@ import { motion } from "framer-motion";
 import { useOutsideClick } from "@/lib/use-outside-click";
 import { listImagesSupabase } from "@/api/ImagenService";
 import Modals from '@mui/joy/Modal';
-import { ScrollAnimation } from "@/components/ScrollAnimation";
+import { ScrollAnimation } from "@/components/animations/ScrollAnimation";
 import ModalClose from "@mui/joy/ModalClose";
 import ImageComponent from "@/components/ImageComponent";
 import TitleHeader from "@/components/TitleHeader";
 import ButtonSection from "@/components/ButtonSection";
 import Sheet from '@mui/joy/Sheet';
+import { SlideIn } from "../motion/SlideIn";
 
 
 const IMG = {
@@ -25,11 +26,10 @@ const SectionLicenciaConducir = () => {
 			title: "Nuestros Alumnos",
 			className: "min-w-full ",
 			skeleton: <ModalCardAlumnos />,
-		},
-		{
+		}, {
 			title: "Obten tu licencia",
 			className: "mx-8 my-2 justify-center items-center",
-			skeleton: <BackgroundAttachment />,
+			skeleton: <CardLicencia />,
 		},
 	];
 	return (
@@ -67,31 +67,24 @@ const FeatureCard = ({ children, className }) => {
 
 export const CardLicencia = () => {
 	return (
-		<ScrollAnimation
-			description={
-				<div className=" flex flex-wrap" aria-label="Más información sobre cómo obtener tu licencia de conducir">
-					<div className={`overflow-hidden w-full lg:w-[380px] h-full justify-center pt-4 px-4`}>
-						<ImageComponent
-							iSrc="/static/images/card/servicio_18hd.webp"
-							iAlt="portfolio"
-							iWidth={IMG.width}
-							iHeight={IMG.height}
-							iClassName="aspect-square object-cover object-center blur-none group-hover/img:blur-sm transition-all duration-200 rounded-xl" />
-						<div className="relative mx-6 -mt-20 rounded-[10px] bg-white dark:bg-[#1F2A37] py-[22px] px-3 text-center shadow-portfolio dark:shadow-box-[#111928]">
-							<h2 className="text-[#111928] dark:text-white mb-3 text-xl leading-tight">
-								{"¿Querés aprender a manejar de verdad?"}
-							</h2>
-							<ButtonSection namebtn={"Obtén tu licencia"} uri={"/licencia-de-conducir"} />
-						</div>
+		<SlideIn duration={800} delay={800} direction="up">
+			<div className="flex flex-wrap" aria-label="Más información sobre cómo obtener tu licencia de conducir">
+				<div className={`overflow-hidden w-full lg:w-[380px] h-full justify-center pt-4 px-4`}>
+					<ImageComponent
+						iSrc="/static/images/card/servicio_18hd.webp"
+						iAlt="portfolio"
+						iWidth={IMG.width}
+						iHeight={IMG.height}
+						iClassName="aspect-square object-cover object-center blur-none group-hover/img:blur-sm transition-all duration-200 rounded-xl" />
+					<div className="relative mx-6 -mt-20 rounded-[10px] bg-white dark:bg-[#1F2A37] py-[22px] px-3 text-center shadow-portfolio dark:shadow-box-[#111928]">
+						<h2 className="text-[#111928] dark:text-white mb-3 text-xl leading-tight">
+							{"¿Querés aprender a manejar de verdad?"}
+						</h2>
+						<ButtonSection namebtn={"Obtén tu licencia"} uri={"/licencia-de-conducir"} />
 					</div>
 				</div>
-			}
-			duration={1}
-			delay={0.5}
-			rootMargin="0px 0px -10px 0px"
-			effect={{ initial: { opacity: 0, y: 100 }, animate: { opacity: 1, y: 0 } }}
-			transition={{ duration: 0.8, delay: 0.5, ease: 'easeInOut' }}
-		/>
+			</div>
+		</SlideIn>
 	);
 };
 
@@ -175,65 +168,51 @@ const ModalCardAlumnos = () => {
 			</div>
 
 			<div className="flex flex-col p-2 gap-8 w-full overflow-visible mx-auto items-center justify-center">
-				<ScrollAnimation
-					description={
-						<div className="flex flex-row">
-							{imagesFirst.map((img, idx) => (
-								<motion.div
-									key={"images-first" + idx}
-									style={{ rotate: Math.random() * 20 - 10, }}
-									whileHover="whileHover"
-									whileTap="whileTap"
-									onClick={() => handleOpen(img)}
-									variants={imageVariants}
-									className={motionClassName}>
-									{img.src != undefined &&
-										<ImageComponent
-											iSrc={img.src}
-											iAlt="Alumnos Graduados Academia Fortaleza"
-											iWidth={IMG.width}
-											iHeight={IMG.height}
-											iClassName={imgClassName} />}
-								</motion.div>
-							))}
-						</div>
-					}
-					duration={1}
-					delay={0.5}
-					rootMargin="0px 0px -10px 0px"
-					effect={{ initial: { opacity: 0, x: 100 }, animate: { opacity: 1, x: 0 } }}
-					transition={{ duration: 0.8, delay: 0.5, ease: 'easeInOut' }}
-				/>
+				<SlideIn duration={900} delay={200} direction="left">
+					<div className="flex flex-row">
+						{imagesFirst.map((img, idx) => (
+							<motion.div
+								key={"images-first" + idx}
+								style={{ rotate: Math.random() * 20 - 10, }}
+								whileHover="whileHover"
+								whileTap="whileTap"
+								onClick={() => handleOpen(img)}
+								variants={imageVariants}
+								className={motionClassName}>
+								{img.src != undefined &&
+									<ImageComponent
+										iSrc={img.src}
+										iAlt="Alumnos Graduados Academia Fortaleza"
+										iWidth={IMG.width}
+										iHeight={IMG.height}
+										iClassName={imgClassName} />}
+							</motion.div>
+						))}
+					</div>
+				</SlideIn>
 
-				<ScrollAnimation
-					description={
-						<div className="flex flex-row">
-							{imagesSecond.map((img, idx) => (
-								<motion.div
-									key={"images-second" + idx}
-									style={{ rotate: Math.random() * 20 - 10, }}
-									whileHover="whileHover"
-									whileTap="whileTap"
-									onClick={() => handleOpen(img)}
-									variants={imageVariants}
-									className={motionClassName}>
-									{img.src != undefined &&
-										<ImageComponent
-											iSrc={img.src}
-											iAlt="Licencia de conducir"
-											iWidth={IMG.width}
-											iHeight={IMG.height}
-											iClassName={imgClassName} />}
-								</motion.div>
-							))}
-						</div>
-					}
-					duration={1}
-					delay={0.5}
-					rootMargin="0px 0px -10px 0px"
-					effect={{ initial: { opacity: 0, x: -100 }, animate: { opacity: 1, x: 0 } }}
-					transition={{ duration: 0.8, delay: 0.5, ease: 'easeInOut' }}
-				/>
+				<SlideIn duration={900} delay={200} direction="right">
+					<div className="flex flex-row">
+						{imagesSecond.map((img, idx) => (
+							<motion.div
+								key={"images-second" + idx}
+								style={{ rotate: Math.random() * 20 - 10, }}
+								whileHover="whileHover"
+								whileTap="whileTap"
+								onClick={() => handleOpen(img)}
+								variants={imageVariants}
+								className={motionClassName}>
+								{img.src != undefined &&
+									<ImageComponent
+										iSrc={img.src}
+										iAlt="Licencia de conducir"
+										iWidth={IMG.width}
+										iHeight={IMG.height}
+										iClassName={imgClassName} />}
+							</motion.div>
+						))}
+					</div>
+				</SlideIn>
 			</div>
 		</>
 	);

@@ -1,4 +1,4 @@
-import "@/components/animations/animations.css";
+import "@/css/animations.css";
 
 import { useInViewAnimation } from "./useInViewAnimation";
 

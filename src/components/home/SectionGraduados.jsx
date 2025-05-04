@@ -18,7 +18,7 @@ const imgalumnos = [
   { id: 9, srcalum: "/static/images/alumnos/alumno28.webp" },
 ];
 
-const SectionGraduadosFortaleza = () => {
+const SectionGraduados = () => {
   const groups = [];
 
   for (let i = 0; i < imgalumnos.length; i += 3) {
@@ -62,7 +62,7 @@ const SectionGraduadosFortaleza = () => {
   );
 };
 
-export default SectionGraduadosFortaleza;
+export default SectionGraduados;
 
 
 export const Header = () => {

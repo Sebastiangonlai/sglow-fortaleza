@@ -4,7 +4,7 @@ import { useState } from "react";
 import TitleHeader from "@/components/TitleHeader";
 import { IoLogoInstagram, IoLogoFacebook, IoLogoYoutube } from "react-icons/io5";
 import { PiEyeBold } from "react-icons/pi";
-import { ScrollAnimation } from "@/components/ScrollAnimation";
+import { ScrollAnimation } from "@/components/animations/ScrollAnimation";
 import ImageComponent from "@/components/ImageComponent";
 import Cono from "@/components/social-icons/cono.svg?react";
 
@@ -30,7 +30,7 @@ const redes = [
   }
 ]
 
-const SectionRedesFortaleza = () => {
+const SectionRedes = () => {
   const [activeTab, setActiveTab] = useState("tabs-with-card-0");
 
   const handleTabClick = (tabId) => {
@@ -115,4 +115,4 @@ const SectionRedesFortaleza = () => {
   );
 };
 
-export default SectionRedesFortaleza;
+export default SectionRedes;

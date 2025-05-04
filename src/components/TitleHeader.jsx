@@ -1,5 +1,5 @@
-import TextAnimation from '@/components/AnimatedText'
-import { ScrollAnimation } from '@/components/ScrollAnimation'
+import TextAnimation from '@/components/animations/AnimatedText'
+import { ScrollAnimation } from '@/components/animations/ScrollAnimation'
 
 
 const TitleHeader = ({ title, subtitle, uri }) => {

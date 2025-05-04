@@ -2,7 +2,7 @@
 import TitleHeader from "@/components/TitleHeader";
 import SectionFAQ from '@/components/section/SectionFAQ';
 import ImageComponent from '../../components/ImageComponent';
-import { ScrollAnimation } from "@/components/ScrollAnimation";
+import { ScrollAnimation } from "@/components/animations/ScrollAnimation";
 
 
 const SectionFaqFortaleza = () => {

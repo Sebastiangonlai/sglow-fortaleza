@@ -2,7 +2,7 @@ import { useState } from "react";
 import Breadcrumb from "@/components/Breadcrumb";
 import nuestrosServiciosData from '@/data/nuestrosServiciosData'
 import { ModalCard } from '@/components/ModalCard';
-import "../components/animations/animations.css";
+import "../css/animations.css";
 import { useInViewAnimation } from "@/components/animations/useInViewAnimation";
 
 

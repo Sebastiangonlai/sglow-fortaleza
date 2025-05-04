@@ -5,7 +5,7 @@ import ButtonSection from "@/components/ButtonSection";
 import TitleHeader from "@/components/TitleHeader";
 import { FiChevronRight } from "react-icons/fi";
 import ImageComponent from '@/components/ImageComponent';
-import { ScrollAnimation } from "@/components/ScrollAnimation";
+import { ScrollAnimation } from "@/components/animations/ScrollAnimation";
 import { cn } from "@/lib/utils";
 
 

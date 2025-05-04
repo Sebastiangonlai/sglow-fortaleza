@@ -26,5 +26,6 @@ dist-ssr
 *.sw?
 
 /.bkp
+*./src/components/motion/Demo.jsx
 
 /.vscode
