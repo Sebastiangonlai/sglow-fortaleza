@@ -12,7 +12,6 @@ const NuestrosServicios = () => {
     setShowCard(category);
   };
 
-
   const options = ["Novedades", "Cursos", "Nosotros"];
   const getButtonClasses = (item) =>
     `inline-block rounded-md py-2 px-3 text-center text-base font-semibold transition md:py-2 lg:px-4 ${showCard === item

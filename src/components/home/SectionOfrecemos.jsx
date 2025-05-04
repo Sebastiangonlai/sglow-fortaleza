@@ -3,18 +3,7 @@
 import { RiUserStarLine, RiCarLine, RiSteering2Fill, RiIdCardLine } from "react-icons/ri";
 import TitleHeader from "@/components/TitleHeader";
 import PropTypes from 'prop-types';
-import { ScrollAnimation } from "@/components/animations/ScrollAnimation";
-
-
-const leftAnimation = {
-	initial: { opacity: 0, x: -100 },
-	animate: { opacity: 1, x: 0 }
-};
-
-const rightAnimation = {
-	initial: { opacity: 0, x: 100 },
-	animate: { opacity: 1, x: 0 }
-};
+import { SlideIn } from "@/components/motion/SlideIn";
 
 const services = [
 	{
@@ -22,25 +11,26 @@ const services = [
 		title: "Clases teóricas y prácticas",
 		description: "Combinamos ambos enfoques para que adquieras todas las habilidades necesarias y manejes con seguridad y confianza.",
 		href: "/clases-practicas",
-		animation: leftAnimation
+		animation: "right"
 	}, {
 		icon: RiUserStarLine,
 		title: "Instructores calificados",
 		description: "Instructores altamente capacitados para brindarte una enseñanza de calidad, adaptada a tus necesidades y ritmo de aprendizaje.",
 		href: "/sobre-nosotros",
-		animation: rightAnimation
+		animation: "left"
 	}, {
 		icon: RiSteering2Fill,
 		title: "Clases personalizadas",
 		description: "Diseñada para conductores principiantes, intermedios y avanzados. Nos adaptamos a tu nivel para garantizar un aprendizaje eficiente.",
 		href: "/cursos-personalizados",
-		animation: leftAnimation
+		animation: "right"
+
 	}, {
 		icon: RiCarLine,
 		title: "Vehículos Modernos",
 		description: "Contamos con vehículos 0km en perfecto estado y con las habilitaciones exigidas por la ley.",
 		href: "/coche-escuela",
-		animation: rightAnimation
+		animation: "left"
 	}
 ];
 
@@ -61,21 +51,14 @@ const SectionOfrecemos = () => {
 					<div className="flex flex-wrap lg:flex-row max-w-[1100px] mx-auto pl-2">
 						{services.map((service, index) => (
 							<div key={index} className="w-full px-4 lg:w-1/2">
-								<ScrollAnimation
-									description={
-										<ServiceItems
-											icon={service.icon}
-											title={service.title}
-											description={service.description}
-											href={service.href}
-										/>
-									}
-									duration={1}
-									delay={0.5}
-									rootMargin="0px 0px -10px 0px"
-									effect={service.animation}
-									transition={{ duration: 1, delay: 0.5, ease: 'easeInOut' }}
-								/>
+								<SlideIn duration={500} delay={400} once={true} direction={service.animation} >
+									<ServiceItems
+										icon={service.icon}
+										title={service.title}
+										description={service.description}
+										href={service.href}
+									/>
+								</SlideIn>
 							</div>
 						))}
 					</div>

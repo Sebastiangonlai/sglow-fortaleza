@@ -1,10 +1,9 @@
 'use client'
 
 import TitleHeader from "@/components/TitleHeader";
-import { motion } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
 import { contarImagesSupabase } from '@/api/ImagenService.jsx'
 import { useEffect, useState } from "react";
+import { Flip } from '@/components/motion/Flip';
 
 
 const SectionElegirnos = () => {
@@ -33,15 +32,6 @@ const SectionElegirnos = () => {
 		iconSvg: "M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z", estHref: "/medios-de-pago"
 	},
 	]
-
-	const [ref3, inView3] = useInView({
-		threshold: 0.1,
-		triggerOnce: true,
-		initialInView: true,
-		scale: [1, 1.5, 1],
-		rootMargin: '100px 100px 30px 100px'
-	});
-
 
 	return (
 		<section className="container overflow-hidden bg-[#F9FAFB] dark:bg-[#1F2A37] lg:rounded-2xl py-10">
@@ -75,26 +65,19 @@ const SectionElegirnos = () => {
 					<div className="py-2 px-1 tracking-tight dark:text-gray-100 text-gray-900">
 						<div className="gap-x-1 gap-y-1 text-center items-center grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4">
 							{itemData.map((d) => (
-								<motion.div key={d.title}
-									ref={ref3}
-									initial="hidden"
-									animate={inView3 ? "visible" : "hidden"}
-									whileInView={{ scale: 0.95 }}
-									whileHover={{ scale: 1 }}
-									whileTap={{ scale: 1 }}
-									transition={{ type: 'keyframes', times: [0, 0.5, 1], duration: 0.5 }}
-									variants={{ hidden: { opacity: 1, y: 10, scale: 0.7 }, visible: { opacity: 1, y: 0, scale: 0.95 } }}
-									className="flex flex-col">
-									<a href={d.estHref} aria-label={d.title}>
-										<div className="group mb-1 rounded-xl bg-[#0d1117]/20 px-[50px] pb-[22px] pt-[22px] shadow-testimonial dark:bg-[#111928] dark:shadow-none">
-											<svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="text-[#0b76b7] w-20 h-20 inline-block" viewBox="0 0 25 26">
-												<path d={d.iconSvg}></path>
-											</svg>
-											<p className="text-4xl font-bold dark:text-white text-gray-800 pt-2">{d.desc}</p>
-											<p className="text-[14px] font-medium text-gray-800 dark:text-gray-300">{d.title}</p>
-										</div>
-									</a>
-								</motion.div>
+								<div style={{ perspective: 1000 }}>
+									<Flip duration={800} delay={500} once={true}>
+										<a href={d.estHref} aria-label={d.title}>
+											<div className="group mb-1 rounded-xl bg-[#0d1117]/20 px-[50px] pb-[22px] pt-[22px] shadow-testimonial dark:bg-[#111928] dark:shadow-none">
+												<svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="text-[#0b76b7] w-20 h-20 inline-block" viewBox="0 0 25 26">
+													<path d={d.iconSvg}></path>
+												</svg>
+												<p className="text-4xl font-bold dark:text-white text-gray-800 pt-2">{d.desc}</p>
+												<p className="text-[14px] font-medium text-gray-800 dark:text-gray-300">{d.title}</p>
+											</div>
+										</a>
+									</Flip>
+								</div>
 							))}
 						</div>
 					</div>

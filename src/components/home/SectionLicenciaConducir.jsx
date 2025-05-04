@@ -66,7 +66,7 @@ const FeatureCard = ({ children, className }) => {
 
 export const CardLicencia = () => {
 	return (
-		<SlideIn duration={700} delay={400} direction="up">
+		<SlideIn duration={700} delay={400} direction="up" once={true}>
 			<div className=" flex flex-wrap" aria-label="Más información sobre cómo obtener tu licencia de conducir">
 				<div className={`overflow-hidden w-full lg:w-[380px] h-full justify-center pt-4 px-4`}>
 					<ImageComponent
@@ -87,17 +87,17 @@ export const CardLicencia = () => {
 	);
 };
 
-export const BackgroundAttachment = () => {
-	return (
-		<div className="relative bg-[url('/static/images/vehiculo/flota-fortaleza2.webp')] bg-fixed bg-center bg-cover rounded-xl min-h-[240px] lg:min-h-[420px] w-full transition-all duration-200 group hover:opacity-80">
-			<div className="absolute inset-0 bg-black/40 rounded-xl flex items-center justify-center py-8 px-4">
-				<button className="font-semibold py-2 px-4 rounded-2xl">
-					Obten tu licencia
-				</button>
-			</div>
-		</div>
-	);
-};
+// export const BackgroundAttachment = () => {
+// 	return (
+// 		<div className="relative bg-[url('/static/images/vehiculo/flota-fortaleza2.webp')] bg-fixed bg-center bg-cover rounded-xl min-h-[240px] lg:min-h-[420px] w-full transition-all duration-200 group hover:opacity-80">
+// 			<div className="absolute inset-0 bg-black/40 rounded-xl flex items-center justify-center py-8 px-4">
+// 				<button className="font-semibold py-2 px-4 rounded-2xl">
+// 					Obten tu licencia
+// 				</button>
+// 			</div>
+// 		</div>
+// 	);
+// };
 
 
 const ModalCardAlumnos = () => {
@@ -116,14 +116,29 @@ const ModalCardAlumnos = () => {
 	}, []);
 
 	const aux = recibidos.slice(0, 6);
-	let imagesFirst = [{ src: aux[0] }, { src: aux[1] }, { src: aux[2] }];
-	let imagesSecond = [{ src: aux[3] }, { src: aux[4] }, { src: aux[5] }];
 
 	const imageVariants = {
 		whileHover: { scale: 1.2, rotate: 0, zIndex: 100, },
 		whileTap: { scale: 1, rotate: 0, zIndex: 100, },
 		whileFocus: { scale: 1, rotate: 0, zIndex: 100, },
 	};
+
+
+	const direction = [
+		{
+			animation: "right"
+		}, {
+			animation: "right"
+		}, {
+			animation: "right"
+		}, {
+			animation: "left"
+		}, {
+			animation: "left"
+		}, {
+			animation: "left"
+		}
+	];
 
 	const imgClassName = "rounded-lg max-h-[110px] xl:max-w-[160px] xl:max-h-[160px] max-w-[110px] md:h-52 md:w-52 object-cover shrink-0 z-500"
 	const motionClassName = "rounded-xl mt-5 p-0.5 bg-white dark:bg-blue-600/80 dark:border-blue-500/80 border border-neutral-100 shrink-0 overflow-hidden";
@@ -161,57 +176,34 @@ const ModalCardAlumnos = () => {
 					<Sheet className="w-fit h-fit rounded-xl flex" >
 						<ModalClose className="close right-3 z-100" aria-label="Close" color="none"
 							sx={{ backgroundColor: "rgba(0, 0, 0, 0.70)", color: "#ffff", }}>&times;</ModalClose>
-						<ImageComponent iSrc={imgSrc.src} iWidth={IMG.width} iHeight={IMG.height} iAlt="Alumnos Academia de manejo" id="myImg" loading="lazy" iClassName="w-full max-h-[640px] object-cover rounded-xl focus:touch-pan-x delay-200 border border-zinc-900 dark:rounded-lg dark:border dark:border-zinc-600/90 justify-center" />
+						<ImageComponent iSrc={imgSrc} iWidth={IMG.width} iHeight={IMG.height} iAlt="Alumnos Academia de manejo" id="myImg" loading="lazy" iClassName="w-full max-h-[640px] object-cover rounded-xl focus:touch-pan-x delay-200 border border-zinc-900 dark:rounded-lg dark:border dark:border-zinc-600/90 justify-center" />
 					</Sheet>
 				</Modals>
 			</div>
 
 			<div className="flex flex-col p-2 gap-8 w-full overflow-visible mx-auto items-center justify-center">
-				<SlideIn duration={800} delay={300} direction="left">
-					<div className="flex flex-row">
-						{imagesFirst.map((img, idx) => (
+				<div className="grid grid-cols-3 cursor-pointer">
+					{aux.map((img, idx) => (
+						<SlideIn duration={800} delay={600} direction={direction[idx].animation} once={true}>
 							<motion.div
-								key={"images-first" + idx}
+								key={"images" + idx}
 								style={{ rotate: Math.random() * 20 - 10, }}
 								whileHover="whileHover"
 								whileTap="whileTap"
 								onClick={() => handleOpen(img)}
 								variants={imageVariants}
 								className={motionClassName}>
-								{img.src != undefined &&
+								{img != undefined &&
 									<ImageComponent
-										iSrc={img.src}
+										iSrc={img}
 										iAlt="Alumnos Graduados Academia Fortaleza"
 										iWidth={IMG.width}
 										iHeight={IMG.height}
 										iClassName={imgClassName} />}
 							</motion.div>
-						))}
-					</div>
-				</SlideIn>
-
-				<SlideIn duration={800} delay={300} direction="right">
-					<div className="flex flex-row">
-						{imagesSecond.map((img, idx) => (
-							<motion.div
-								key={"images-second" + idx}
-								style={{ rotate: Math.random() * 20 - 10, }}
-								whileHover="whileHover"
-								whileTap="whileTap"
-								onClick={() => handleOpen(img)}
-								variants={imageVariants}
-								className={motionClassName}>
-								{img.src != undefined &&
-									<ImageComponent
-										iSrc={img.src}
-										iAlt="Licencia de conducir"
-										iWidth={IMG.width}
-										iHeight={IMG.height}
-										iClassName={imgClassName} />}
-							</motion.div>
-						))}
-					</div>
-				</SlideIn>
+						</SlideIn>
+					))}
+				</div>
 			</div>
 		</>
 	);
