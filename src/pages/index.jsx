@@ -5,11 +5,10 @@ import SectionHeader from '@/components/home/SectionHeader';
 import SectionNuestrosServicios from '@/components/home/SectionNuestrosServicios';
 import SectionOfrecemos from '@/components/home/SectionOfrecemos';
 import SectionElegirnos from '@/components/home/SectionElegirnos';
-
 import SectionLicenciaDeConducir from '@/components/home/SectionLicenciaConducir';
 import SectionGraduados from '@/components/home/SectionGraduados';
 import SectionTestimonial from '@/components/home/SectionTestimonialFortaleza';
-// import SectionRedes from '@/components/home/SectionRedesFortaleza';
+import SectionRedes from '@/components/home/SectionRedes';
 // import SectionContact from '@/components/home/SectionContactFortaleza';
 // import SectionPreguntasFrecuentes from '@/components/home/SectionFAQFortaleza';
 // import Demo from '@/components/motion/Demo.jsx';
@@ -50,8 +49,8 @@ export default function Home() {
         <SectionTestimonial />
       </section>
 
-      <section id="redes-sociales" className=" bg-(--color-section-1)">
-        {/* <SectionRedes /> */}
+      <section id="redes-sociales" className="bg-(--color-section-1)">
+        <SectionRedes />
       </section>
 
       <section id="preguntas-frecuentes" className="overflow-hidden bg-(--color-section-3)">
