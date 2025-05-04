@@ -10,9 +10,9 @@ import SectionGraduados from '@/components/home/SectionGraduados';
 import SectionTestimonial from '@/components/home/SectionTestimonial';
 import SectionRedes from '@/components/home/SectionRedes';
 import SectionPreguntasFrecuentes from '@/components/section/SectionFAQ';
+import SectionTrabajaConNosotros from '@/components/home/SectionTrabajaConNosotros';
 import SectionContact from '@/components/home/SectionContact';
 // import Demo from '@/components/motion/Demo.jsx';
-// import SectionTrabajaConNosotros from '@/components/home/SectionTrabajaConNosotrosFortaleza';
 
 
 export default function Home() {
@@ -56,13 +56,12 @@ export default function Home() {
         <SectionPreguntasFrecuentes />
       </section>
 
-      <section id="contacto" className=" bg-(--color-section-2)">
+      <section id="contacto" className="overflow-hidden bg-(--color-section-2)">
         <SectionContact />
+      
+          <SectionTrabajaConNosotros />
       </section>
 
-      <section id="trabaja-con-nosotros" className="bg-(--color-section-1)">
-        {/* <SectionTrabajaConNosotros /> */}
-      </section>
     </>
   );
 }

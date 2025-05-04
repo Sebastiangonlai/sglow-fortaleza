@@ -60,7 +60,6 @@ const TabNovedades = ({ cantidad }) => {
       </section>
 
       <div className="select-none cursor-pointer flex flex-wrap py-4 space-y-6 justify-center" >
-        {/* </div> sx={{ width: 270, height: 200, flexGrow: 1, boxShadow: 'sm', borderColor: 'grey' }}> */}
         <Box className="grid gap-x-4 gap-y-3 text-center items-center">
           <div className="flex flex-wrap justify-center ">
             {resp.slice().map((item, index) => (

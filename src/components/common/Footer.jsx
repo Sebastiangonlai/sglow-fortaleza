@@ -6,7 +6,7 @@ const FooterFortaleza = () => {
     <footer className="relative z-30 pt-8 pb-3 px-4 dark:bg-[#111928] bg-[#F9FAFB] lg:pt-[70px] lg:pb-[5px] border-t border-violet-200/10">
       <div className="flex flex-wrap justify-center items-start gap-8 max-w-[1200px] mx-auto pb-6">
 
-        <div className="lg:w-1/4 md:w-1/2 w-full">
+        <div className="lg:w-1/3 md:w-1/2 w-full">
           <div className="w-full text-center lg:text-left text-gray-900 dark:text-gray-200 font-semibold">
             <LinkGroup className="text-base font-bold" header="Enlaces útiles">
               <NavLink link="/" label="Inicio" />
@@ -19,7 +19,7 @@ const FooterFortaleza = () => {
           </div>
         </div>
 
-        <div className="lg:w-1/4 md:w-1/2 w-full">
+        <div className="lg:w-1/3 md:w-1/2 w-full">
           <div className="w-full text-center lg:text-left text-gray-900 dark:text-gray-200 font-semibold">
             <LinkGroup className="text-base" header="Información">
               <NavLink link="/sobre-nosotros" label="Sobre Nosotros" />
@@ -32,7 +32,7 @@ const FooterFortaleza = () => {
           </div>
         </div>
 
-        <div className="lg:w-1/4 md:w-1/2 w-full text-left lg:text-left mx-6">
+        <div className="lg:w-1/4 md:w-1/2 w-full text-left lg:text-left mx-4">
           <div className="pb-2 text-gray-900 dark:text-gray-200 font-medium">Suscríbete</div>
           <form className="flex flex-col sm:flex-row items-center w-full">
             <input id="email-input" autoComplete="email-input" className="sm:w-64 w-full rounded-md px-2 py-2.5 border border-gray-500/70 focus:outline-none focus:ring-2 focus:ring-teal-600" name="email" placeholder="Ingresa tu correo electrónico" required type="email" />
@@ -88,7 +88,7 @@ export default FooterFortaleza;
 
 const LinkGroup = ({ children, header }) => (
   <div className="w-full">
-    <p className="mb-1 text-base font-semibold text-[#111928] dark:text-white text-center lg:text-left">
+    <p className="mb-1.5 text-base font-semibold text-[#111928] dark:text-white text-center lg:text-left">
       {header}
     </p>
     <ul className="text-sm font-normal">{children}</ul>
@@ -97,7 +97,7 @@ const LinkGroup = ({ children, header }) => (
 
 const NavLink = ({ link, label }) => (
   <li>
-    <a href={link} className="block text-[15px] text-[#637381] dark:text-[#D1D5DB] dark:hover:text-(--color-purple-1)  text-center lg:text-left" aria-label={label}>
+    <a href={link} className="block text-[15px]/5.5 text-[#637381] dark:text-[#D1D5DB] dark:hover:text-(--color-purple-1) text-center lg:text-left" aria-label={label}>
       {label}
     </a>
   </li>
