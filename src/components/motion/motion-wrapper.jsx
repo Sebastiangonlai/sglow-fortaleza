@@ -6,14 +6,18 @@ export const MotionWrapper = ({
   children,
   animation = "slide", // slide | zoom | bounce | flip
   direction = "up",
-  duration = 400,
-  delay = 200,
+  duration = 700,
+  delay = 500,
   threshold = 0.1,
   once = false,
   loop = false,
   className = "",
 }) => {
 
+  const scalevar = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: { opacity: 1, scale: 1.2 },
+  }
   const baseTransition = {
     duration: duration / 1000,
     delay: delay / 1000,
@@ -70,6 +74,10 @@ export const MotionWrapper = ({
       variants={variants[animation]} >
       {children}
     </motion.div>
-
   )
 }
+
+
+// whileHover={scalevar.visible} // desktop
+// whileFocus={scalevar.visible} // mobile
+// whileTap={scalevar.visible} // mobile press

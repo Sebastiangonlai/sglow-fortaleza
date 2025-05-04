@@ -12,7 +12,7 @@ import SectionTestimonial from '@/components/home/SectionTestimonialFortaleza';
 // import SectionRedes from '@/components/home/SectionRedesFortaleza';
 // import SectionContact from '@/components/home/SectionContactFortaleza';
 // import SectionPreguntasFrecuentes from '@/components/home/SectionFAQFortaleza';
-// import Demo from '@/components/animations/Demo.jsx';
+// import Demo from '@/components/motion/Demo.jsx';
 // import SectionTrabajaConNosotros from '@/components/home/SectionTrabajaConNosotrosFortaleza';
 // import  ScrollTriggerSection  from "../lib/scroll-trigger-section"
 // import  ParallaxScroll  from "../lib/parallax-scroll";
@@ -26,6 +26,7 @@ export default function Home() {
       </section>
 
       <section id="nuestros-servicios" className="bg-(--color-section-2)">
+        {/* <Demo /> */}
         <SectionNuestrosServicios />
       </section>
 

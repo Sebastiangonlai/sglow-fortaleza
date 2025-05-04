@@ -66,7 +66,7 @@ const FeatureCard = ({ children, className }) => {
 
 export const CardLicencia = () => {
 	return (
-		<SlideIn duration={700} delay={800} direction="up">
+		<SlideIn duration={700} delay={400} direction="up">
 			<div className=" flex flex-wrap" aria-label="Más información sobre cómo obtener tu licencia de conducir">
 				<div className={`overflow-hidden w-full lg:w-[380px] h-full justify-center pt-4 px-4`}>
 					<ImageComponent
@@ -167,7 +167,7 @@ const ModalCardAlumnos = () => {
 			</div>
 
 			<div className="flex flex-col p-2 gap-8 w-full overflow-visible mx-auto items-center justify-center">
-				<SlideIn duration={900} delay={500} direction="left">
+				<SlideIn duration={800} delay={300} direction="left">
 					<div className="flex flex-row">
 						{imagesFirst.map((img, idx) => (
 							<motion.div
@@ -190,7 +190,7 @@ const ModalCardAlumnos = () => {
 					</div>
 				</SlideIn>
 
-				<SlideIn duration={900} delay={500} direction="right">
+				<SlideIn duration={800} delay={300} direction="right">
 					<div className="flex flex-row">
 						{imagesSecond.map((img, idx) => (
 							<motion.div
