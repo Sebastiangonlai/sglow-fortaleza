@@ -87,19 +87,6 @@ export const CardLicencia = () => {
 	);
 };
 
-// export const BackgroundAttachment = () => {
-// 	return (
-// 		<div className="relative bg-[url('/static/images/vehiculo/flota-fortaleza2.webp')] bg-fixed bg-center bg-cover rounded-xl min-h-[240px] lg:min-h-[420px] w-full transition-all duration-200 group hover:opacity-80">
-// 			<div className="absolute inset-0 bg-black/40 rounded-xl flex items-center justify-center py-8 px-4">
-// 				<button className="font-semibold py-2 px-4 rounded-2xl">
-// 					Obten tu licencia
-// 				</button>
-// 			</div>
-// 		</div>
-// 	);
-// };
-
-
 const ModalCardAlumnos = () => {
 	const [active, setActive] = useState(null);
 	const [open, setOpen] = useState(false);
@@ -122,7 +109,6 @@ const ModalCardAlumnos = () => {
 		whileTap: { scale: 1, rotate: 0, zIndex: 100, },
 		whileFocus: { scale: 1, rotate: 0, zIndex: 100, },
 	};
-
 
 	const direction = [
 		{

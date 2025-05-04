@@ -4,7 +4,7 @@ import ContactBlock from "@/components/section/SectionContactBlock";
 import TitleHeader from "../TitleHeader";
 
 
-const SectionContactFortaleza = () => {
+const SectionContact = () => {
   return (
     <>
       <section className="relative z-10 overflow-hidden pb-8 pt-0 dark:bg-[#1f2a37] bg-[#F9FAFB] lg:pb-[50px] lg:pt-[0px] delay-500">
@@ -28,4 +28,4 @@ const SectionContactFortaleza = () => {
   );
 };
 
-export default SectionContactFortaleza;
+export default SectionContact;

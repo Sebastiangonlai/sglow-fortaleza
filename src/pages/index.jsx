@@ -10,7 +10,7 @@ import SectionGraduados from '@/components/home/SectionGraduados';
 import SectionTestimonial from '@/components/home/SectionTestimonial';
 import SectionRedes from '@/components/home/SectionRedes';
 import SectionPreguntasFrecuentes from '@/components/section/SectionFAQ';
-// import SectionContact from '@/components/home/SectionContactFortaleza';
+import SectionContact from '@/components/home/SectionContact';
 // import Demo from '@/components/motion/Demo.jsx';
 // import SectionTrabajaConNosotros from '@/components/home/SectionTrabajaConNosotrosFortaleza';
 
@@ -57,7 +57,7 @@ export default function Home() {
       </section>
 
       <section id="contacto" className=" bg-(--color-section-2)">
-        {/* <SectionContact /> */}
+        <SectionContact />
       </section>
 
       <section id="trabaja-con-nosotros" className="bg-(--color-section-1)">
