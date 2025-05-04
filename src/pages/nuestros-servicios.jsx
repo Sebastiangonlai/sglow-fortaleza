@@ -3,6 +3,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import nuestrosServiciosData from '@/data/nuestrosServiciosData'
 import { ModalCard } from '@/components/ModalCard';
 import "../css/animations.css";
+import { SlideIn } from "@/components/motion/SlideIn";
 
 
 const NuestrosServicios = () => {
@@ -21,16 +22,15 @@ const NuestrosServicios = () => {
   return (
     <>
       {/* <PageSEO title="Nuestros Servicios - Academia Fortaleza" description="Descubre los servicios de Academia Fortaleza: clases prácticas, teóricas, trámites de licencia y más." /> */}
-      <div className={`pt-12 lg:pb-[1px] bg-(--color-section-3) `}>
+      <div className="pt-12 lg:pb-[1px] bg-(--color-section-3)">
         <Breadcrumb
           title="Nuestros Servicios"
           subtitle="Información sobre la licencia de conducir."
           nameUri="Servicios"
           href="nuestros-servicios" />
 
-        <div className={`pt-12 lg:pb-[1px]`}>
-          <div className={`w-full flex flex-wrap justify-center pt-10 sm:pb-4 lg:pb-0`}>
-            {/* <div className="w-full "> */}
+        <div className="pt-12 lg:pb-[1px]">
+          <div className="w-full flex flex-wrap justify-center pt-10 sm:pb-4 lg:pb-0">
             <ul className="flex flex-wrap justify-center space-x-2">
               {options.map((item) => (
                 <li key={item} className="mb-4 lg:mb-0 ">
@@ -40,12 +40,13 @@ const NuestrosServicios = () => {
                 </li>
               ))}
             </ul>
-            {/* </div> */}
           </div>
 
-          <div className="flex flex-wrap" >
-            <ModalCard card={nuestrosServiciosData} showCard={showCard} />
-          </div>
+          {/* <SlideIn delay={100} duration={1000} direction="up"> */}
+          <SlideIn delay={100} duration={1000} direction="up" once={true} className="flex flex-wrap overflow-hidden">
+            <ModalCard card={nuestrosServiciosData} showCard={showCard}  />
+          </SlideIn>
+          {/* </SlideIn> */}
         </div>
       </div>
     </>

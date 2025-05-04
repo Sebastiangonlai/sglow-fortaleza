@@ -16,7 +16,7 @@ function ModalCard({ card, showCard = "Novedades" }) {
 						btnHref={d.href}
 						showCard={showCard}
 						category={d.category}
-						className="block md:hidden text-ellipsis "
+						className="block md:hidden text-ellipsis"
 					/>
 				))}
 			</div>
