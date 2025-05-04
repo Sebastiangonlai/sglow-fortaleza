@@ -5,7 +5,6 @@ import ButtonSection from "@/components/ButtonSection";
 import TitleHeader from "@/components/TitleHeader";
 import { FiChevronRight } from "react-icons/fi";
 import ImageComponent from '@/components/ImageComponent';
-// import { ScrollAnimation } from "@/components/animations/ScrollAnimation";
 import { cn } from "@/lib/utils";
 import { SlideIn } from "@/components/motion/SlideIn";
 import { motion } from "framer-motion";
@@ -24,21 +23,15 @@ const SectionNuestrosServicios = () => {
 				<div className="flex flex-wrap -my-4 pb-6 mx-auto" >
 					{serviceData.map((d) => (
 						<div className="w-full lg:px-4 px-8 md:w-1/2 lg:w-1/3" key={d.title}>
-							{/* <ScrollAnimation
-								description={ */}
 							<SlideIn duration={400} delay={100} once={true}>
-
 								<div className="mb-8">
 									<div className="mb-2 overflow-hidden rounded-[10px] shadow-[0_8px_10px_rgb(0_0_0/0.2)] ">
 										<div href={d.href} className="block" aria-label="Academia Fortaleza" >
 											<motion.div
 												initial={{ opacity: 0, scale: 1 }}
-												animate={{ opacity: 1, scale: 1 }}
 												whileTap={{ scale: 1.25, rotate: 6 }}
 												whileHover={{ scale: 1.25, rotate: 6 }}
-												transition={{ duration: 0.2}}
-												className="transition-all"
-											>
+												transition={{ duration: 0.2 }}>
 												<ImageComponent iSrc={d.imgSrc} iAlt={d.alt} iWidth={400} iHeight={400} iClassName="h-full w-full rounded-[5px] " />
 											</motion.div>
 										</div>
@@ -58,27 +51,11 @@ const SectionNuestrosServicios = () => {
 										</div>
 									</div>
 								</div>
-
 							</SlideIn>
-							{/* }
-								duration={0.4}
-								delay={0.1}
-								rootMargin="0px 0px -10px 0px"
-								effect={{ initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 } }}
-								transition={{ duration: 0.4, delay: 0.1, ease: 'easeInOut' }}
-								hoverEffect={{ delay: 0, opacity: 0.8 }}
-							/> */}
 						</div>
 					))}
 				</div>
-				<motion.button
-					className="w-48 h-12 rounded-xl bg-blue-600 text-white text-lg font-semibold shadow-md focus:outline-none transition-colors"
-					whileTap={{ scale: 0.95, rotate: -2 }}
-					whileFocus={{ scale: 0.95, rotate: -2 }}
-					transition={{ type: "spring", stiffness: 300, damping: 20 }}
-				>
-					Tocá acá
-				</motion.button>
+
 				<ButtonSection
 					namebtn="Ver todos los servicios"
 					uri="./nuestros-servicios" />

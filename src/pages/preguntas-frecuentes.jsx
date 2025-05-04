@@ -1,3 +1,4 @@
+"use client";
 import Breadcrumb from '@/components/Breadcrumb';
 import SectionFAQ from '@/components/section/SectionFAQ';
 

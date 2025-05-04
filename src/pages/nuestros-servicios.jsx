@@ -1,8 +1,8 @@
+"use client";
 import { useState } from "react";
 import Breadcrumb from "@/components/Breadcrumb";
 import nuestrosServiciosData from '@/data/nuestrosServiciosData'
 import { ModalCard } from '@/components/ModalCard';
-
 import { SlideIn } from "@/components/motion/SlideIn";
 
 
@@ -41,11 +41,9 @@ const NuestrosServicios = () => {
               ))}
             </ul>
           </div>
-
-          <SlideIn delay={400} duration={800} direction="up">
+          <SlideIn delay={400} duration={700} once={true}>
             <ModalCard card={nuestrosServiciosData} showCard={showCard} />
           </SlideIn>
-
         </div>
       </div>
     </>

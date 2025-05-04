@@ -79,5 +79,4 @@ export const MotionWrapper = ({
 
 
 // whileHover={scalevar.visible} // desktop
-// whileFocus={scalevar.visible} // mobile
 // whileTap={scalevar.visible} // mobile press

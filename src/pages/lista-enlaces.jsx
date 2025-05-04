@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from 'react';
 import siteMetadata from '@/data/siteMetadata'
 import * as Dialog from "@radix-ui/react-dialog";
