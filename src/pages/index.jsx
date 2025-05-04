@@ -5,17 +5,17 @@ import SectionHeader from '@/components/home/SectionHeader';
 import SectionNuestrosServicios from '@/components/home/SectionNuestrosServicios';
 import SectionOfrecemos from '@/components/home/SectionOfrecemos';
 import SectionElegirnos from '@/components/home/SectionElegirnos';
+
 import SectionLicenciaDeConducir from '@/components/home/SectionLicenciaConducir';
 import SectionGraduados from '@/components/home/SectionGraduados';
-
 import SectionTestimonial from '@/components/home/SectionTestimonialFortaleza';
-import SectionRedes from '@/components/home/SectionRedes';
-
-
+// import SectionRedes from '@/components/home/SectionRedesFortaleza';
 // import SectionContact from '@/components/home/SectionContactFortaleza';
 // import SectionPreguntasFrecuentes from '@/components/home/SectionFAQFortaleza';
+// import Demo from '@/components/animations/Demo.jsx';
 // import SectionTrabajaConNosotros from '@/components/home/SectionTrabajaConNosotrosFortaleza';
-
+// import  ScrollTriggerSection  from "../lib/scroll-trigger-section"
+// import  ParallaxScroll  from "../lib/parallax-scroll";
 
 export default function Home() {
   return (
@@ -32,7 +32,6 @@ export default function Home() {
       <section id="que-ofrecemos " className="overflow-hidden bg-(--color-section-3)">
         <SectionOfrecemos />
       </section>
-    
 
       <section id="elegirnos" className="bg-(--color-section-3)">
         <SectionElegirnos />
@@ -51,7 +50,7 @@ export default function Home() {
       </section>
 
       <section id="redes-sociales" className=" bg-(--color-section-1)">
-        <SectionRedes />
+        {/* <SectionRedes /> */}
       </section>
 
       <section id="preguntas-frecuentes" className="overflow-hidden bg-(--color-section-3)">

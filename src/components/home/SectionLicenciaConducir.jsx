@@ -6,13 +6,13 @@ import { motion } from "framer-motion";
 import { useOutsideClick } from "@/lib/use-outside-click";
 import { listImagesSupabase } from "@/api/ImagenService";
 import Modals from '@mui/joy/Modal';
-import { ScrollAnimation } from "@/components/animations/ScrollAnimation";
+// import { ScrollAnimation } from "@/components/ScrollAnimation";
 import ModalClose from "@mui/joy/ModalClose";
 import ImageComponent from "@/components/ImageComponent";
 import TitleHeader from "@/components/TitleHeader";
 import ButtonSection from "@/components/ButtonSection";
 import Sheet from '@mui/joy/Sheet';
-import { SlideIn } from "../motion/SlideIn";
+import { SlideIn } from "@/components/motion/SlideIn";
 
 
 const IMG = {
@@ -67,8 +67,8 @@ const FeatureCard = ({ children, className }) => {
 
 export const CardLicencia = () => {
 	return (
-		<SlideIn duration={800} delay={800} direction="up">
-			<div className="flex flex-wrap" aria-label="Más información sobre cómo obtener tu licencia de conducir">
+		<SlideIn duration={700} delay={800} direction="up">
+			<div className=" flex flex-wrap" aria-label="Más información sobre cómo obtener tu licencia de conducir">
 				<div className={`overflow-hidden w-full lg:w-[380px] h-full justify-center pt-4 px-4`}>
 					<ImageComponent
 						iSrc="/static/images/card/servicio_18hd.webp"
@@ -168,7 +168,7 @@ const ModalCardAlumnos = () => {
 			</div>
 
 			<div className="flex flex-col p-2 gap-8 w-full overflow-visible mx-auto items-center justify-center">
-				<SlideIn duration={900} delay={200} direction="left">
+				<SlideIn duration={900} delay={500} direction="left">
 					<div className="flex flex-row">
 						{imagesFirst.map((img, idx) => (
 							<motion.div
@@ -191,7 +191,7 @@ const ModalCardAlumnos = () => {
 					</div>
 				</SlideIn>
 
-				<SlideIn duration={900} delay={200} direction="right">
+				<SlideIn duration={900} delay={500} direction="right">
 					<div className="flex flex-row">
 						{imagesSecond.map((img, idx) => (
 							<motion.div

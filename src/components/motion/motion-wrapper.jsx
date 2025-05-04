@@ -5,7 +5,7 @@ import { useRef } from "react"
 
 export const MotionWrapper = ({
   children,
-  animation = "slide", // slide | zoom | blob
+  animation = "slide", // slide | zoom | bounce | flip
   direction = "up",
   duration = 400,
   delay = 200,
@@ -23,7 +23,6 @@ export const MotionWrapper = ({
     ease: "easeOut",
     ...(loop ? { repeat: Infinity, repeatType: "loop" } : {}),
   }
-
 
   const variants = {
     slide: {

@@ -1,8 +1,8 @@
+// slide | zoom | bounce | flip
 import { SlideIn } from "@/components/motion/SlideIn";
 import { ZoomIn } from "@/components/motion/ZoomIn";
 import { Flip } from "@/components/motion/Flip";
 import { Bounce } from "@/components/motion/Bounce";
-
 
 function Demo() {
   return (
