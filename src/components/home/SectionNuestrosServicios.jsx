@@ -36,8 +36,7 @@ const SectionNuestrosServicios = () => {
 												animate={{ opacity: 1, scale: 1 }}
 												whileTap={{ scale: 1.25, rotate: 6 }}
 												whileHover={{ scale: 1.25, rotate: 6 }}
-												whileFocus={{ scale: 1.25, rotate: 6 }}
-												transition={{ duration: 0.3}}
+												transition={{ duration: 0.2}}
 												className="transition-all"
 											>
 												<ImageComponent iSrc={d.imgSrc} iAlt={d.alt} iWidth={400} iHeight={400} iClassName="h-full w-full rounded-[5px] " />
@@ -72,7 +71,14 @@ const SectionNuestrosServicios = () => {
 						</div>
 					))}
 				</div>
-
+				<motion.button
+					className="w-48 h-12 rounded-xl bg-blue-600 text-white text-lg font-semibold shadow-md focus:outline-none transition-colors"
+					whileTap={{ scale: 0.95, rotate: -2 }}
+					whileFocus={{ scale: 0.95, rotate: -2 }}
+					transition={{ type: "spring", stiffness: 300, damping: 20 }}
+				>
+					Tocá acá
+				</motion.button>
 				<ButtonSection
 					namebtn="Ver todos los servicios"
 					uri="./nuestros-servicios" />
