@@ -41,11 +41,11 @@ const NuestrosServicios = () => {
               ))}
             </ul>
           </div>
-          <SlideIn delay={500} duration={1000} direction="up">
-            <div className="flex flex-wrap "  >
-              <ModalCard card={nuestrosServiciosData} showCard={"Novedades"} />
-            </div>
+
+          <SlideIn delay={400} duration={800} direction="up">
+            <ModalCard card={nuestrosServiciosData} showCard={showCard} />
           </SlideIn>
+
         </div>
       </div>
     </>

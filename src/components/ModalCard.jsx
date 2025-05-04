@@ -81,8 +81,8 @@ const ModalAnimatedCard = ({ imageSrc, title, description, checkText, btnHref, s
 								<ul className="space-y-1 sm:space-y-1 px-1">
 									{checkText !== "" && (
 										checkText.map((itemText, index) => (
-											<>
-												<li key={index} className="flex gap-x-3">
+											<React.Fragment key={index}>
+												<li className="flex gap-x-3">
 													<span className="mt-0.5 size-5 flex justify-center items-center rounded-full bg-[#334a61] text-blue-500 dark:bg-blue-600/40 dark:text-blue-300">
 														<svg className="shrink-0 size-3.5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
 															<polyline points="20 6 9 17 4 12" />
@@ -96,7 +96,7 @@ const ModalAnimatedCard = ({ imageSrc, title, description, checkText, btnHref, s
 														</span>
 													</div>
 												</li>
-											</>
+											</React.Fragment>
 										))
 									)}
 								</ul>
