@@ -1,5 +1,5 @@
 import ImageComponent from "@/components/ImageComponent";
-import Breadcrumb from '@/components/Breadcrumb';
+import Breadcrumb from '@/components/ui/Breadcrumb';
 import SectionTeam from '@/components/section/SectionTeam';
 // import { SocialIcon } from '@/components/social-icons'
 

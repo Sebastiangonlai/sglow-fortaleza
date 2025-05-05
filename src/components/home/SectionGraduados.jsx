@@ -42,7 +42,10 @@ const SectionGraduados = () => {
 
   return (
     <>
-      <div ref={ref} className="w-screen h-screen pb-4 py-5 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]">
+
+      {/* <section id="graduados" className="overflow-hidden bg-(--color-section-3)">
+      </section> */}
+      <section id="graduados" ref={ref} className="w-screen h-screen pb-4 py-5 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] bg-(--color-section-3)">
         <Header />
         <motion.div style={{ rotateZ, translateY, opacity }}>
           {groups.map((group, index) => (
@@ -57,7 +60,7 @@ const SectionGraduados = () => {
         <ButtonSection
           namebtn="Fotos de nuestros graduados"
           uri="/galeria-media" />
-      </div>
+      </section>
     </>
   );
 };

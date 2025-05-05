@@ -1,4 +1,4 @@
-import Breadcrumb from '@/components/Breadcrumb';
+import Breadcrumb from '@/components/ui/Breadcrumb';
 import ImageComponent from '@/components/ImageComponent';
 
 

@@ -32,7 +32,10 @@ const SectionLicenciaConducir = () => {
 		},
 	];
 	return (
-		<section className="lg:px-10 pt-20 pb-14 lg:pt-[80px] lg:pb-[30px] dark:bg-transparent bg-gray-200">
+
+		  // <section id="licencia-de-conducir" className="overflow-hidden bg-(--color-section-3)">
+      // </section >
+		<section id="licencia-de-conducir" className="overflow-hidden lg:px-10 pt-20 pb-14 lg:pt-[80px] lg:pb-[30px] bg-(--color-section-3)">
 			<div className="mx-auto">
 				<TitleHeader
 					title="Últimos Graduados"

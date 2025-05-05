@@ -34,7 +34,10 @@ const SectionElegirnos = () => {
 	]
 
 	return (
-		<section className="container overflow-hidden bg-[#F9FAFB] dark:bg-[#1F2A37] lg:rounded-2xl py-10">
+
+		  // <section id="elegirnos" className="bg-(--color-section-3)">
+      // </section>
+		<section id="elegirnos" className="container overflow-hidden bg-(--color-section-2) lg:rounded-2xl py-10">
 			<TitleHeader
 				title="Por qué Elegirnos"
 				subtitle="Formando conductores responsables y seguros."

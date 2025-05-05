@@ -8,7 +8,7 @@ import CardContent from '@mui/joy/CardContent';
 import CardOverflow from '@mui/joy/CardOverflow';
 import Grid from '@mui/joy/Grid';
 import ImageComponent from '@/components/ImageComponent';
-import Breadcrumb from "@/components/Breadcrumb";
+import Breadcrumb from "@/components/ui/Breadcrumb";
 import Modal from '@mui/joy/Modal';
 import { RiSteering2Fill } from "react-icons/ri";
 import { LuCircleParking, LuConstruction } from "react-icons/lu";

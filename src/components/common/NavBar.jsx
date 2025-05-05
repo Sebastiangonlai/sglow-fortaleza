@@ -64,7 +64,7 @@ const Navbar = () => {
             alt="Logo Fortaleza" />
           <span className="text-xl font-bold text-gray-100 ml-2">Academia Fortaleza</span>
         </a>
-
+      
         {/* Desktop Navigation */}
         <nav className="hidden md:flex gap-6 items-center text-gray-100">
           {navLinks.map((link) => (

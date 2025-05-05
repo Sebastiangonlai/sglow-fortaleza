@@ -1,4 +1,3 @@
-
 const Breadcrumb = ({ title, subtitle, nameUri, uri }) => {
   const url = uri ? `../#${uri}` : "../#";
 
@@ -34,7 +33,7 @@ const Breadcrumb = ({ title, subtitle, nameUri, uri }) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Breadcrumb
+export default Breadcrumb;

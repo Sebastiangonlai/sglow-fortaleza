@@ -8,7 +8,11 @@ import ButtonTailwind from "../ui/ButtonTailwind";
 
 const SectionTestimonial = () => {
   return (
-    <div className="h-full w-full">
+
+
+    // <section id="testimonio" className="overflow-hidden bg-(--color-section-2)">
+    // </section>
+    <section className="overflow-hidden  bg-(--color-section-2)">
       <div className="flex flex-wrap mx-auto justify-center" >
 
         <TitleHeader
@@ -22,7 +26,7 @@ const SectionTestimonial = () => {
         </div>
         <ButtonTailwind name="Comparte tu experiencia" color="bg-(--color-section-2)" uri={import.meta.env.VITE_GOOGLE_REVIEW} />
       </div>
-    </div>
+    </section>
   );
 };
 

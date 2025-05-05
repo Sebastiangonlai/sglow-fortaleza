@@ -38,11 +38,13 @@ const services = [
 const SectionOfrecemos = () => {
 	return (
 		<>
-			<div className="relative z-20 overflow-hidden w-screen h-full bg-(--color-section-3)">
+			{/* <section id="que-ofrecemos " className="overflow-hidden bg-(--color-section-3)">
+			</section> */}
+			<section id="que-ofrecemos " className="relative z-20 overflow-hidden w-screen h-full bg-(--color-section-3)">
 				<SvgShape className="absolute bottom-0 left-0 rotate-180" />
 				<SvgShape className="absolute top-0 right-0" />
 
-				<section className="container mx-auto">
+				<div className="container mx-auto">
 					<TitleHeader
 						title="Qué Ofrecemos"
 						subtitle="Ofrecemos una formación completa para conductores, sin importar su nivel de experiencia."
@@ -62,8 +64,8 @@ const SectionOfrecemos = () => {
 							</div>
 						))}
 					</div>
-				</section>
-			</div>
+				</div>
+			</section>
 		</>
 	);
 };

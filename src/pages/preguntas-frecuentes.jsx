@@ -1,5 +1,5 @@
 "use client";
-import Breadcrumb from '@/components/Breadcrumb';
+import Breadcrumb from '@/components/ui/Breadcrumb';
 import SectionFAQ from '@/components/section/SectionFAQ';
 
 

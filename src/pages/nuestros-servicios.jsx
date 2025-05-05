@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import Breadcrumb from "@/components/Breadcrumb";
+import Breadcrumb from "@/components/ui/Breadcrumb";
 import nuestrosServiciosData from '@/data/nuestrosServiciosData'
 import { ModalCard } from '@/components/ModalCard';
 import { SlideIn } from "@/components/motion/SlideIn";
@@ -21,6 +21,7 @@ const NuestrosServicios = () => {
   return (
     <>
       {/* <PageSEO title="Nuestros Servicios - Academia Fortaleza" description="Descubre los servicios de Academia Fortaleza: clases prácticas, teóricas, trámites de licencia y más." /> */}
+
       <div className="pt-12 lg:pb-[1px] bg-(--color-section-3)">
         <Breadcrumb
           title="Nuestros Servicios"

@@ -12,7 +12,9 @@ import ButtonTailwind from '@/components/ui/ButtonTailwind';
 
 const SectionNuestrosServicios = () => {
 	return (
-		<section className="pt-12 lg:pb-[1px]">
+		//    <section id="nuestros-servicios" className="bg-(--color-section-2)">
+		// </section>
+		<section id="nuestros-servicios" className="pt-12 lg:pb-[1px] bg-(--color-section-2)">
 			<div className="max-w-[1200px] justify-center mx-auto relative overflow-hidden bg-transparent dark:bg-transparent pt-[10px] lg:pt-[40px] pb-[40px] lg:pb-[52px]">
 
 				<TitleHeader
@@ -54,7 +56,7 @@ const SectionNuestrosServicios = () => {
 							</SlideIn>
 						</div>
 					))}
-					<ButtonTailwind name="Ver todos los servicios" color="bg-(--color-section-2)" uri="./nuestros-servicios"/>
+					<ButtonTailwind name="Ver todos los servicios" color="bg-(--color-section-2)" uri="./nuestros-servicios" />
 				</div>
 			</div>
 		</section>

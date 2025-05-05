@@ -1,10 +1,8 @@
 'use client'
 
 import { useState } from 'react';
-import { twMerge } from "tailwind-merge";
 import Modals from '@mui/joy/Modal';
 import ModalClose from '@mui/joy/ModalClose';
-import { motion } from "framer-motion";
 import Sheet from '@mui/joy/Sheet';
 import ButtonTailwind from '@/components/ui/ButtonTailwind';
 import swal from 'sweetalert';
@@ -23,31 +21,93 @@ const SectionTrabajaConNosotros = () => {
 
   return (
     <>
-      <div id="trabaja-con-nosotros" className="py-[20px] lg:py-[50px] border-t border-b border-stroke dark:border-[#1F2A37]/30 bg-(--color-section-1) min-w-screen">
-        <div className="flex mx-auto justify-center items-center  sm:container">
-          <div className="items-center justify-between lg:border-b border-stroke dark:border-slate-600/80 md:flex py-2">
-            <div className="flex flex-wrap items-center">
-              <div className="mx-auto max-w-7xl w-full lg:text-left text-center">
-                <p className="pb-1.5 text-2xl font-bold text-[#111928] dark:text-white sm:text-3xl md:text-[32px] md:leading-[1]">
-                  Trabaja con nosotros
-                </p>
-                <p className="lg:text-left text-center text-base text-[#637381] dark:text-[#9CA3AF] leading-tight">
-                  ¿Querés unirte a nuestro equipo de instructores? Completá el siguiente formulario y adjuntá tu CV.
-                </p>
-              </div>
-            </div>
-            <button className="lg:flex-none flex mx-auto justify-center items-center pt-5 lg:pt-4 lg:flex pl-2 md:mt-0 py-4" aria-label="Postulate" onClick={handleOpen}>
-              <ButtonTailwind name="Enviar postulación" color="bg-(--color-section-1)" />
-            </button>
+      <div id="trabaja-con-nosotros" className=" py-8 lg:py-12 border-t border-stroke dark:border-(--color-border-2)/10 bg-(--color-section-1)">
+        <div className="mx-auto px-4 flex flex-col lg:flex-row items-center justify-between gap-3 w-fit">
+          <div className="text-center lg:text-left max-w-3xl">
+            <h2 className="text-2xl sm:text-3xl md:text-[32px] font-bold leading-tight">
+              Trabaja con nosotros
+            </h2>
+            <p className="mt-2 text-base text-[#637381] dark:text-[#9CA3AF]">
+              ¿Querés unirte a nuestro equipo de instructores? Completá el formulario y adjuntá tu CV.
+            </p>
+          </div>
+          <div>
+            <ButtonTailwind name="Enviar postulación" onClick={handleOpen} color="bg-(--color-section-1)" className="mt-4" />
           </div>
         </div>
       </div>
 
       <div>
+        <Modals id="myModal" open={open} onClose={handleClose} className="flex justify-center self-center px-2">
+          <Sheet className="w-fit h-fit rounded-xl">
+            <ModalClose
+              className="absolute right-3 top-3 z-50 text-white"
+              aria-label="Cerrar"
+              color="none"
+              sx={{ backgroundColor: "transparent", color: "#ffff" }}
+            >
+              &times;
+            </ModalClose>
+
+            <div className="dark:bg-[#0d1117] md:min-w-[440px] p-6 rounded-lg border border-zinc-700 bg-[#111928]">
+              <h3 className="text-lg text-center text-white font-semibold mb-4">Formulario de postulación</h3>
+
+              <form
+                method="POST"
+                action={import.meta.env.VITE_FORMSUBMIT}
+                encType="multipart/form-data"
+                onSubmit={UploadButton}
+              >
+                {[
+                  { id: "name", name: "Nombre", type: "text", placeholder: "Nombre*", autoComplete: undefined },
+                  { id: "telefono", name: "Telefono", type: "text", placeholder: "Teléfono*", autoComplete: undefined },
+                  { id: "email", name: "Email", type: "email", placeholder: "Email*", autoComplete: "email" },
+                ].map(({ id, ...props }) => (
+                  <div className="mb-2" key={id}>
+                    <input
+                      id={id}
+                      className="w-full text-white rounded-md py-1.5 px-4 ring ring-zinc-600 focus:outline-none focus:ring-2 focus:ring-purple-300/50 dark:bg-[#0d1117]"
+                      required
+                      {...props}
+                    />
+                  </div>
+                ))}
+
+                <div className="mb-2">
+                  <input                    type="file"                    name="Curriculum"                    accept=".pdf"
+                    required                    className="w-full cursor-pointer rounded-md text-sm file:text-sm ring ring-zinc-600 text-[#8c8d96] file:py-1.5 file:px-4 file:border-0 file:rounded-md file:mr-4 file:bg-zinc-800 file:text-zinc-400 dark:file:bg-[#0d1117]"                  />
+                </div>
+
+                <div className="mb-2">
+                  <textarea
+                    id="message"
+                    name="Mensaje"
+                    placeholder="Mensaje"
+                    className="w-full rounded-md py-1.5 px-4 ring ring-zinc-600 text-white focus:outline-none focus:ring-2 focus:ring-purple-300/50 dark:bg-[#0d1117]"/>
+                </div>
+
+                <div className="mt-4">
+                  <button                    type="submit"                    className="w-full rounded-md border border-zinc-600/70 px-4 py-2 text-sm text-white bg-blue-600/20 hover:bg-blue-500/30 transition-colors">
+                    Enviar solicitud
+                  </button>
+                </div>
+
+                <input type="hidden" name="_template" value="table" />
+                <input type="hidden" name="_subject" value="Has recibido una nueva postulación" />
+                <input type="hidden" name="_next" value="https://academiafortaleza.com.uy" />
+                <input type="hidden" name="_captcha" value="false" />
+              </form>
+            </div>
+          </Sheet>
+        </Modals>
+      </div>
+
+      
+      {/* <div>
         <Modals id="myModal" open={open} onClose={handleClose} className="flex flex-wrap mx-auto justify-center self-center px-2">
           <Sheet className="w-fit h-fit rounded-xl flex">
             <ModalClose className="close right-3 z-100 " aria-label="Close" color="none" sx={{ backgroundColor: "rgba(0, 0, 0, 0.0)", color: "#ffff" }}>&times;</ModalClose>
-            <Blocks className="dark:bg-[#0d1117] md:min-w-[440px] p-4 col-span-12 row-span-2 md:col-span-6">
+            <div className="dark:bg-[#0d1117] md:min-w-[440px] p-4 col-span-12 row-span-2 md:col-span-6 col-span-4 rounded-lg border border-zinc-700 bg-[#111928] p-6">
               <h3 className="text-[17px] mx-auto text-center text-white">Formulario de postulación</h3>
               <form method="POST" action={`import.meta.env.VITE_FORMSUBMIT`} enctype="multipart/form-data" onSubmit={UploadButton}>
 
@@ -81,10 +141,10 @@ const SectionTrabajaConNosotros = () => {
                 <input type="hidden" name="_next" value="https://academiafortaleza.com.uy" />
                 <input type="hidden" name="_captcha" value="false" />
               </form>
-            </Blocks>
+            </div>
           </Sheet>
         </Modals>
-      </div>
+      </div> */}
     </>
   )
 }
@@ -92,22 +152,22 @@ const SectionTrabajaConNosotros = () => {
 export default SectionTrabajaConNosotros;
 
 
-const Blocks = ({ className, ...rest }) => {
-  return (
-    <motion.div
-      variants={{
-        initial: { scale: 0.5, y: 50, opacity: 0, },
-        animate: { scale: 1, y: 0, opacity: 1, },
-      }}
-      transition={{ type: "spring", mass: 5, stiffness: 400, damping: 80, }}
-      className={twMerge(
-        "col-span-4 rounded-lg border border-zinc-700 bg-[#111928] p-6",
-        className,
-      )}
-      {...rest}
-    />
-  );
-};
+// const Blocks = ({ className, ...rest }) => {
+//   return (
+//     <motion.div
+//       variants={{
+//         initial: { scale: 0.5, y: 50, opacity: 0, },
+//         animate: { scale: 1, y: 0, opacity: 1, },
+//       }}
+//       transition={{ type: "spring", mass: 5, stiffness: 400, damping: 80, }}
+//       className={twMerge(
+//         "col-span-4 rounded-lg border border-zinc-700 bg-[#111928] p-6",
+//         className,
+//       )}
+//       {...rest}
+//     />
+//   );
+// };
 
 function UploadButton() {
   swal({

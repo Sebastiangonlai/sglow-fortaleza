@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from 'react';
-import Breadcrumb from '@/components/Breadcrumb';
+import Breadcrumb from '@/components/ui/Breadcrumb';
 import SectionPricing from '@/components/section/SectionPricing';
 import { URL_PDF } from '@/data/constants';
 import { ModalCard } from '@/components/ModalCard';
@@ -72,13 +72,11 @@ const LicenciaDeConducir = () => {
   return (
     <>
       {/* <PageSEO title="Licencia de Conducir - Academia Fortaleza" description="Todo lo que necesitas saber para obtener tu licencia de conducir de forma rápida y sencilla." /> */}
-      {/* <section className="overflow-hidden"> */}
       <Breadcrumb
         title="Licencia de Conducir"
         subtitle="Obtén tu licencia de conducir con nosotros."
         nameUri="Licencia de Conducir"
         href="nuestros-servicios" />
-      {/* </section> */}
 
       {/* <div className="overflow-hidden bg-(--color-section-3)">
         <div className="overflow-hidden">

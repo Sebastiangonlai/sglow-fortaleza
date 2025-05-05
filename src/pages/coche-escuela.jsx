@@ -1,6 +1,6 @@
 "use client";
 
-import Breadcrumb from '@/components/Breadcrumb';
+import Breadcrumb from '@/components/ui/Breadcrumb';
 import ImageComponent from '@/components/ImageComponent';
 import { ParallaxScrollSecond } from "../lib/parallax-scroll-2";
 

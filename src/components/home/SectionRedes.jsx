@@ -40,7 +40,10 @@ const SectionRedes = () => {
 
   return (
     <>
-      <div className="overflow-hidden pt-[60px] pb-[50px] px-4">
+      {/* 
+      <section id="redes-sociales" className="bg-(--color-section-1)">
+      </section> */}
+      <section id="redes-sociales" className="overflow-hidden pt-[60px] pb-[50px] px-4 bg-(--color-section-1)">
         <div className="absolute -rotate-45">
           <Cono className="fill text-gray-800 dark:text-gray-100 h-16 w-16 opacity-10" />
         </div>
@@ -101,7 +104,7 @@ const SectionRedes = () => {
             </div>
           </div>
         </section>
-      </div>
+      </section>
     </>
   );
 };

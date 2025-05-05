@@ -1,6 +1,6 @@
 import { useState } from "react";
 import * as Tabs from "@radix-ui/react-tabs";
-import Breadcrumb from "@/components/Breadcrumb";
+import Breadcrumb from "@/components/ui/Breadcrumb";
 import TabNovedades from '@/components/tab-galeria/NovedadesTab';
 import { TabAlumnos } from '@/components/tab-galeria/AlumnosTab';
 import TabVideos from '@/components/tab-galeria/VideosTab';
