@@ -10,33 +10,25 @@ import SectionGraduados from '@/components/home/SectionGraduados';
 import SectionTestimonial from '@/components/home/SectionTestimonial';
 import SectionRedes from '@/components/home/SectionRedes';
 import SectionPreguntasFrecuentes from '@/components/home/SectionPreguntas';
-import SectionTrabajaConNosotros from '@/components/home/SectionTrabajaConNosotros';
 import SectionContact from '@/components/home/SectionContact';
 // import Demo from '@/components/motion/Demo.jsx';
-{/* <Demo /> */} 
+{/* <Demo /> */ }
 
 
 export default function Home() {
   return (
     <>
       <ScrollProgress />
-        <SectionHeader />
-        <SectionNuestrosServicios />
-        <SectionOfrecemos />
-        <SectionElegirnos />
-        <SectionLicenciaDeConducir />
-        <SectionGraduados />
-        <SectionTestimonial />
-        <SectionRedes />
-        <SectionPreguntasFrecuentes />
-        <SectionContact />
-        <SectionTrabajaConNosotros />
-      {/* 
-    
- 
-    
-
-   */}
+      <SectionHeader />
+      <SectionNuestrosServicios />
+      <SectionOfrecemos />
+      <SectionElegirnos />
+      <SectionLicenciaDeConducir />
+      <SectionGraduados />
+      <SectionTestimonial />
+      <SectionRedes />
+      <SectionPreguntasFrecuentes />
+      <SectionContact />
     </>
   );
 }
