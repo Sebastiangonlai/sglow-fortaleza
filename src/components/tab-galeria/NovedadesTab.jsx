@@ -42,7 +42,7 @@ const TabNovedades = ({ cantidad }) => {
 
   return (
     <>
-      <section className="dark:bg-[#111928] pt-8">
+      <div className="dark:bg-[#111928] pt-8">
         <div className="overflow-hidden">
           <div className="flex flex-wrap items-center -mx-4">
             <div className="w-full px-4">
@@ -57,7 +57,7 @@ const TabNovedades = ({ cantidad }) => {
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
       <div className="select-none cursor-pointer flex flex-wrap py-4 space-y-6 justify-center" >
         <Box className="grid gap-x-4 gap-y-3 text-center items-center">

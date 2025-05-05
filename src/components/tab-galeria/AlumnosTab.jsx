@@ -70,7 +70,7 @@ export function TabAlumnos() {
 
   return (
     <>
-      <section className="dark:bg-[#111928] pt-8">
+      <div className="dark:bg-[#111928] pt-8">
         <div className="overflow-hidden">
           <div className="flex flex-wrap items-center -mx-4">
             <div className="w-full px-4">
@@ -85,8 +85,8 @@ export function TabAlumnos() {
             </div>
           </div>
         </div>
-      </section>
-      <section className="pt-14 pb-10 lg:pt-[14px] lg:pb-10 dark:bg-[#111928]">
+      </div>
+      <div className="pt-14 pb-10 lg:pt-[14px] lg:pb-10 dark:bg-[#111928]">
         <div className="overflow-hidden p-2">
 
           {/* Mostrar imágenes de la página actual */}
@@ -159,7 +159,7 @@ export function TabAlumnos() {
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </>
   );
 }

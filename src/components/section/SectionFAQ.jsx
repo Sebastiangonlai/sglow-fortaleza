@@ -1,45 +1,69 @@
-import FaqAccordion from "../home/SectionFAQ"
+"use client"
 
-const faqItems = [
-  {
-    id: "faq-1",
-    question: "¿Necesito tener un vehículo para las clases prácticas?",
-    answer:
-      "No, en nuestra academia proporcionamos vehículos equipados y seguros para las clases prácticas",
-  }, {
-    id: "faq-2",
-    question: "¿Si tengo 17 años puedo comenzar el curso?",
-    answer:
-      "No, solo es posible comenzar a partir de los 18 años.",
-  }, {
-    id: "faq-3",
-    question: "¿Puedo tomar clases si nunca he manejado antes?",
-    answer:
-      "Sí, nuestras clases están diseñadas para todos los niveles, incluyendo principiantes que nunca han estado al volante.",
-  }, {
-    id: "faq-4",
-    question: "¿Ofrecen clases en horarios nocturnos o fines de semana?",
-    answer:
-      "Sí, contamos con horarios flexibles, incluyendo opciones nocturnas y fines de semana, para adaptarnos a tu agenda.",
-  }, {
-    id: "faq-5",
-    question: "¿Requisitos para inscribirse en IMM?",
-    answer:
-      "Para inscribirse en la IMM se requieren: certificado médico, residir en Montevideo, fotocopia vigente de la CI y comprobante de pago (redes de cobranza)",
-  }, {
-    id: "faq-6",
-    question: "¿Cuál es la duración del curso?",
-    answer:
-      "La duración del curso varía según el nivel y la disponibilidad del alumno.",
-  },
-]
+import { useState } from "react"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import { cn } from "@/lib/utils"
+import TitleHeader from "@/components/TitleHeader"
+import { SlideIn } from "@/components/motion/SlideIn"
+import faqItems from "@/data/faqData"
 
 
-export default function FaqExample() {
+
+
+const FaqAccordion = () => {
+
+
+  const [openItems, setOpenItems] = useState([])
+
+  const handleToggle = (itemId) => {
+    setOpenItems((prevOpenItems) =>
+      prevOpenItems.includes(itemId) ? prevOpenItems.filter((id) => id !== itemId) : [...prevOpenItems, itemId],
+    )
+  }
+
+  const direction = [
+    {
+      animation: "right"
+    }, {
+      animation: "right"
+    }, {
+      animation: "right"
+    }, {
+      animation: "left"
+    }, {
+      animation: "left"
+    }, {
+      animation: "left"
+    }
+  ];
+
   return (
-    <div className="container mx-auto py-10">
-      
-      <FaqAccordion items={faqItems} />
+    <div className={cn("w-full max-w-3xl mx-auto px-4 pb-6")}>
+
+      <Accordion type="multiple" value={openItems} className="w-full">
+        {faqItems.map((item, idx) => (
+          <SlideIn duration={800} delay={600} direction={direction[idx].animation} once={true}>
+            <div className="left-0 w-full h-px bg-gradient-to-r from-[#DFE4EA]/0 via-stroke dark:via-[#374151] to-[#DFE4EA]/0" />
+            <AccordionItem key={item.id} value={item.id} className="border-0 ">
+              <AccordionTrigger
+                onClick={() => handleToggle(item.id)}
+                className="py-4 text-left font-medium text-[19px]">
+                {item.question}
+              </AccordionTrigger>
+              <AccordionContent className="py-3 text-(--color-gray-1) text-[15px]">{item.answer}</AccordionContent>
+            </AccordionItem>
+            {idx === faqItems.length - 1 && (
+              <div className="left-0 w-full h-px bg-gradient-to-r from-[#DFE4EA]/0 via-stroke dark:via-[#374151] to-[#DFE4EA]/0" />
+            )}
+          </SlideIn>
+        ))}
+      </Accordion>
     </div>
   )
 }
+
+export default FaqAccordion
+
+
+
+// export default function FaqAccordion({ className, }) {

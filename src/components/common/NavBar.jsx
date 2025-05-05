@@ -53,7 +53,7 @@ const Navbar = () => {
 
 
   return (
-    <div className="container fixed w-screen top-0 z-120 border-b border-violet-200/10  backdrop-blur dark:bg-(--color-section-3)/90 dark:border-gray-600/20
+    <div className="container fixed min-w-screen top-0 z-120 border-b border-violet-200/10  backdrop-blur dark:bg-(--color-section-3)/90 dark:border-gray-600/20
      text-gray-100 ">
       <div className="container px-[2%] sm:px-[2%] md:px-[2%] lg:px-[10%] flex h-16 items-center justify-between">
         {/* Logo */}

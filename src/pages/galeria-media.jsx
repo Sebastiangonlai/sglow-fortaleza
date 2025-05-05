@@ -21,12 +21,12 @@ export default function GaleriaMedia() {
 		<>
 			{/* <PageSEO title="Galería Multimedia - Academia Fortaleza" description="Mira imágenes y videos de nuestras clases prácticas, instructores y alumnos en acción." /> */}
 
+			<Breadcrumb
+				title="Galería Multimedia"
+				subtitle="Fotos y videos de nuestras actividades."
+				nameUri="Galería Multimedia"
+				href="nuestros-servicios" />
 			<section className="overflow-hidden dark:bg-[#111928]">
-				<Breadcrumb
-					title="Galería Multimedia"
-					subtitle="Fotos y videos de nuestras actividades."
-					nameUri="Galería Multimedia"
-					href="nuestros-servicios" />
 
 				<div className="overflow-hidden pt-10">
 					<Tabs.Root className="max-w-screen-2xl mt-2 mx-auto px-4 md:px-8" value={selectedTab} onValueChange={(val) => setSelectedTab(val)}>
@@ -42,13 +42,13 @@ export default function GaleriaMedia() {
 
 						{/* mobile */}
 						<div className="relative text-blue-100 dark:text-blue sm:hidden">
-							<select value={selectedTab} className="py-2 px-3 w-full bg-transparent appearance-none outline-hidden border rounded-lg border-indigo-600 dark:border-[#111928]-4/70 dark:text-base text-base text-white dark:text-white dark:bg-[#111928]" onChange={(e) => setSelectedTab(e.target.value)}>
+							<div value={selectedTab} className="py-2 px-3 w-full bg-transparent appearance-none outline-hidden border rounded-lg border-indigo-600 dark:border-[#111928]-4/70 dark:text-base text-base text-white dark:text-white dark:bg-[#111928]" onChange={(e) => setSelectedTab(e.target.value)}>
 								{tabItems.map((item, idx) => (
 									<option key={idx} id={idx} >
 										{item}
 									</option>
 								))}
-							</select>
+							</div>
 						</div>
 
 						{tabItems.map((item, idx) => (

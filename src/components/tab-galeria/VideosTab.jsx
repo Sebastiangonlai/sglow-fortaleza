@@ -10,7 +10,7 @@ const TabVideos = () => {
 
 	return (
 		<>
-			<section className="pt-8">
+			<div className="pt-8">
 				<div className=" overflow-hidden">
 					<div className="flex flex-wrap items-center -mx-4">
 						<div className="w-full px-4">
@@ -25,10 +25,10 @@ const TabVideos = () => {
 						</div>
 					</div>
 				</div>
-			</section>
-			<section className="bg-white py-6 dark:bg-transparent">
+			</div>
+			<div className="bg-white py-6 dark:bg-transparent">
 				<EmblaCarouselVideos slides={SLIDES} options={OPTIONS} />
-			</section>
+			</div>
 		</>
 	);
 };

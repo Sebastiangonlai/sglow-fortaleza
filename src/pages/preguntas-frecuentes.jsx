@@ -14,8 +14,8 @@ export default function PreguntasFrecuentes() {
         nameUri="FAQ"
         href="preguntas-frecuentes" />
 
-      <div className="container">
-        <div className="lg:mt-[30px] mt-10">
+      <div className=" bg-(--color-section-3) pt-20">
+        {/* <div className="lg:mt-[30px] mt-10">
           <div className="-mx-2 flex flex-wrap items-center">
             <div className="w-full px-2 lg:w-6/12">
               <div className="flex items-center -mx-0 sm:-mx-4 pb-8 lg:pb-0">
@@ -35,14 +35,14 @@ export default function PreguntasFrecuentes() {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="w-full px-4 lg:w-1/2">
-              <div className="mb-2 max-w-[540px] lg:mb-0">
-                <SectionFAQ />
-              </div>
-            </div>
-          </div>
-        </div>
+            </div>*/}
+        {/* <div className="w-full px-4 lg:w-1/2"> */}
+        {/* <div className="mb-2 max-w-[540px] lg:mb-0"> */}
+        <SectionFAQ />
+        {/* </div> */}
+        {/* </div> */}
+        {/* </div> */}
+        {/* </div>  */}
       </div>
     </>
   )

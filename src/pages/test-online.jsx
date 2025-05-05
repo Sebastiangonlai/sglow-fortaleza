@@ -44,15 +44,14 @@ const TestOnline = () => {
               href="nuestros-servicios" />
 
             <CssVarsProvider>
-              <section className="body-font overflow-hidden pt-4">
+              <div className="body-font overflow-hidden pt-4">
                 <div className="container py-5 mx-auto">
                   <div className="flex flex-col text-center w-full mb-15">
                     <h1 className='text-xl font-semibold text-blue-200 pt-4'>Evaluación online</h1>
                     <p className="lg:w-2/3 mx-auto text-base text-gray-800 dark:text-gray-300">Selecciona una versión para comenzar.</p>
                     <div className="flex flex-col text-center mb-3 pt-1"></div>
                     <div className="select-none flex space-x-1 mx-auto w-full justify-center overflow-hidden ">
-                      <button className="flex w-[105px] h-[40px] cursor-pointer rounded-lg border-[0.1rem] border-slate-300 transition-colors hover:border-blue-500/20 dark:border-slate-300/20 dark:bg-[#111928] dark:hover:border-blue-500/20 text-sm items-center justify-center " onClick={() => window.location.href = '/pruebas/prueba-teorico'}
-                      >
+                      <button className="flex w-[105px] h-[40px] cursor-pointer rounded-lg border-[0.1rem] border-slate-300 transition-colors hover:border-blue-500/20 dark:border-slate-300/20 dark:bg-[#111928] dark:hover:border-blue-500/20 text-sm items-center justify-center " onClick={() => window.location.href = '/pruebas/prueba-teorico'}>
                         Versión 1
                         <a className="rotate-90 h-5 w-4 rounded-full cursor-pointer flex justify-center">
                           <Icon />
@@ -79,9 +78,9 @@ const TestOnline = () => {
                     </div>
                   </div>
                 </div>
-              </section>
+              </div>
 
-              <section className="body-font text-center space-y-3 pt-5">
+              <div className="body-font text-center space-y-3 pt-5">
                 <h1 className='text-xl font-semibold text-blue-200'>Material IMM</h1>
                 <Stack className="mx-auto justify-center" direction={{ xs: 'column', sm: 'row' }} spacing={{ xs: 2, sm: 3, md: 4 }}>
                   <Grid container className="justify-center space-x-2">
@@ -116,9 +115,9 @@ const TestOnline = () => {
                     </button>
                   </Grid>
                 </Stack>
-              </section>
+              </div>
 
-              <section className="text-blue-200 body-font">
+              <div className="text-blue-200 body-font">
                 <div className="lg:w-2/2 md:w-1/1 mx-auto px-4 pt-8 justify-center items-center">
                   <Stack className="mx-auto justify-center" direction={{ xs: 'column', sm: 'row' }} spacing={{ xs: 2, sm: 3, md: 4 }}>
                     <div className="text-center space-y-3">
@@ -199,9 +198,9 @@ const TestOnline = () => {
                     </div>
                   </Stack>
                 </div>
-              </section>
+              </div>
 
-              <section className='max-w-[500px] justify-center mx-auto pt-10 py-2'>
+              <div className='max-w-[500px] justify-center mx-auto pt-10 py-2'>
                 <h1 className='text-xl font-semibold text-blue-200 text-center mb-3'>Aprende Jugando</h1>
                 <Grid container className="justify-center">
                   <button onClick={() => window.location.href = '/juego-preguntas-examen'} >
@@ -221,7 +220,7 @@ const TestOnline = () => {
                     </Card>
                   </button>
                 </Grid>
-              </section>
+              </div>
 
               <Modal open={activa} onClose={() => setActiva(false)} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <iframe

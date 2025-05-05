@@ -80,7 +80,7 @@ const LicenciaDeConducir = () => {
         href="nuestros-servicios" />
       {/* </section> */}
 
-      <section className="overflow-hidden bg-(--color-section-3)">
+      {/* <div className="overflow-hidden bg-(--color-section-3)">
         <div className="overflow-hidden">
           <div className="flex flex-wrap items-center">
             <div className="mx-auto max-w-7xl w-full px-4 text-left">
@@ -94,9 +94,9 @@ const LicenciaDeConducir = () => {
           </div>
         </div>
         <SectionPricing />
-      </section>
+      </div> */}
 
-      <section className="bg-(--color-section-2) overflow-hidden">
+      <div className="bg-(--color-section-2) overflow-hidden">
         <div className="max-w-[80rem] px-4 pb-10 pt-20 lg:py-20 sm:px-6 lg:px-8 lg:pt-20 mx-auto">
           <div className="dark:bg-[#1f2a37] pb-6">
             <div className=" overflow-hidden">
@@ -171,9 +171,9 @@ const LicenciaDeConducir = () => {
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
-      <section className="bg-(--color-section-3) overflow-hidden">
+      <div className="bg-(--color-section-3) overflow-hidden">
         <div className="overflow-hidden">
           <div className="flex flex-wrap items-center">
             <div className="mx-auto max-w-7xl w-full px-4 text-left">
@@ -187,7 +187,7 @@ const LicenciaDeConducir = () => {
           </div>
           <ModalCard card={cards} />
         </div>
-      </section>
+      </div>
 
       <div className="flex mx-auto justify-center gap-x-2 bg-(--color-section-3) pb-10">
         <div className="text-center pt-6 pb-8 overflow-hidden space-x-3 inline-block" >
