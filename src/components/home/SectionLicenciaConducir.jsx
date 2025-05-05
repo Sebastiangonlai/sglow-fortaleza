@@ -9,9 +9,9 @@ import Modals from '@mui/joy/Modal';
 import ModalClose from "@mui/joy/ModalClose";
 import ImageComponent from "@/components/ImageComponent";
 import TitleHeader from "@/components/TitleHeader";
-import ButtonSection from "@/components/ui/ButtonSection";
 import Sheet from '@mui/joy/Sheet';
 import { SlideIn } from "@/components/motion/SlideIn";
+import ButtonTailwind from "@/components/ui/ButtonTailwind";
 
 
 const IMG = {
@@ -75,11 +75,11 @@ export const CardLicencia = () => {
 						iWidth={IMG.width}
 						iHeight={IMG.height}
 						iClassName="aspect-square object-cover object-center blur-none group-hover/img:blur-sm transition-all duration-200 rounded-xl" />
-					<div className="relative mx-6 -mt-20 rounded-[10px] bg-white dark:bg-[#1F2A37] py-[22px] px-3 text-center shadow-portfolio dark:shadow-box-[#111928]">
-						<h2 className="text-[#111928] dark:text-white mb-3 text-xl leading-tight">
+					<div className="relative mx-6 -mt-20 rounded-[10px] bg-white dark:bg-[#1F2A37] min-h-[120px] px-3 py-4 text-center items-center justify-center shadow-portfolio dark:shadow-box-[#111928]">
+						<h2 className="text-[#111928] dark:text-white text-md leading-tight pb-2">
 							{"¿Querés aprender a manejar de verdad?"}
 						</h2>
-						<ButtonSection namebtn={"Obtén tu licencia"} uri={"/licencia-de-conducir"} />
+						<ButtonTailwind name="Obtén tu licencia" color="bg-(--color-section-2)" uri="./licencia-de-conducir" />
 					</div>
 				</div>
 			</div>

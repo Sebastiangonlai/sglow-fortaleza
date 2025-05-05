@@ -58,10 +58,8 @@ export default function Home() {
 
       <section id="contacto" className="overflow-hidden bg-(--color-section-2)">
         <SectionContact />
-      
-          <SectionTrabajaConNosotros />
+        <SectionTrabajaConNosotros />
       </section>
-
     </>
   );
 }

@@ -3,10 +3,10 @@
 import { useState } from 'react';
 import Breadcrumb from '@/components/Breadcrumb';
 import SectionPricing from '@/components/section/SectionPricing';
-import ButtonSection from '@/components/ui/ButtonSection';
 import { URL_PDF } from '@/data/constants';
 import { ModalCard } from '@/components/ModalCard';
 import Modal from '@mui/joy/Modal';
+import ButtonTailwind from '@/components/ui/ButtonTailwind';
 
 
 const cards = [
@@ -72,15 +72,15 @@ const LicenciaDeConducir = () => {
   return (
     <>
       {/* <PageSEO title="Licencia de Conducir - Academia Fortaleza" description="Todo lo que necesitas saber para obtener tu licencia de conducir de forma rápida y sencilla." /> */}
-      <section className="overflow-hidden">
-        <Breadcrumb
-          title="Licencia de Conducir"
-          subtitle="Obtén tu licencia de conducir con nosotros."
-          nameUri="Licencia de Conducir"
-          href="nuestros-servicios" />
-      </section>
+      {/* <section className="overflow-hidden"> */}
+      <Breadcrumb
+        title="Licencia de Conducir"
+        subtitle="Obtén tu licencia de conducir con nosotros."
+        nameUri="Licencia de Conducir"
+        href="nuestros-servicios" />
+      {/* </section> */}
 
-      <section className="dark:bg-[#111928] pt-14 pb-4">
+      <section className="overflow-hidden bg-(--color-section-3)">
         <div className="overflow-hidden">
           <div className="flex flex-wrap items-center">
             <div className="mx-auto max-w-7xl w-full px-4 text-left">
@@ -96,8 +96,8 @@ const LicenciaDeConducir = () => {
         <SectionPricing />
       </section>
 
-      <section className="overflow-hidden dark:bg-[#1f2a37] ">
-        <div className="max-w-[80rem] px-4 pb-10 pt-20 lg:py-20 sm:px-6 lg:px-8 lg:pt-20 mx-auto overflow-hidden dark:bg-[#1f2a37]">
+      <section className="bg-(--color-section-2) overflow-hidden">
+        <div className="max-w-[80rem] px-4 pb-10 pt-20 lg:py-20 sm:px-6 lg:px-8 lg:pt-20 mx-auto">
           <div className="dark:bg-[#1f2a37] pb-6">
             <div className=" overflow-hidden">
               <div className="flex flex-wrap items-center -mx-4">
@@ -173,7 +173,7 @@ const LicenciaDeConducir = () => {
         </div>
       </section>
 
-      <section className="dark:bg-[#111928] pt-20">
+      <section className="bg-(--color-section-3) overflow-hidden">
         <div className="overflow-hidden">
           <div className="flex flex-wrap items-center">
             <div className="mx-auto max-w-7xl w-full px-4 text-left">
@@ -189,13 +189,13 @@ const LicenciaDeConducir = () => {
         </div>
       </section>
 
-      <div className="flex mx-auto justify-center gap-x-2 dark:bg-[#111928]">
+      <div className="flex mx-auto justify-center gap-x-2 bg-(--color-section-3) pb-10">
         <div className="text-center pt-6 pb-8 overflow-hidden space-x-3 inline-block" >
-          <ButtonSection namebtn="Todos los Servicios" uri="/nuestros-servicios" />
+          <ButtonTailwind name="Todos los Servicios" uri="/nuestros-servicios" />
         </div>
 
         <div className="text-center pt-6 pb-8 overflow-hidden space-x-3 inline-block" >
-          <ButtonSection namebtn="Medios de Pago" uri="/medios-de-pago" />
+          <ButtonTailwind name="Medios de Pago" uri="/medios-de-pago" />
         </div>
       </div>
 

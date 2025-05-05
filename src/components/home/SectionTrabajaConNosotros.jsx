@@ -37,7 +37,7 @@ const SectionTrabajaConNosotros = () => {
               </div>
             </div>
             <button className="lg:flex-none flex mx-auto justify-center items-center pt-5 lg:pt-4 lg:flex pl-2 md:mt-0 py-4" aria-label="Postulate" onClick={handleOpen}>
-              <ButtonTailwind name="Enviar postulación" color="--color-section-3" />
+              <ButtonTailwind name="Enviar postulación" color="bg-(--color-section-1)" />
             </button>
           </div>
         </div>

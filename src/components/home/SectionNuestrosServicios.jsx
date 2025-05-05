@@ -54,7 +54,7 @@ const SectionNuestrosServicios = () => {
 							</SlideIn>
 						</div>
 					))}
-					<ButtonTailwind name="Ver todos los servicios" uri="./nuestros-servicios" />
+					<ButtonTailwind name="Ver todos los servicios" color="bg-(--color-section-2)" uri="./nuestros-servicios"/>
 				</div>
 			</div>
 		</section>

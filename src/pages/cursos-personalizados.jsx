@@ -13,17 +13,19 @@ export default function CursosPersonalizados() {
         title="Nuestros Cursos"
         subtitle="Cursos personalizados y adaptados a las distintas necesidades."
         nameUri="Cursos" />
-      <SectionPricing />
+      <section className="bg-(--color-section-3)">
+        <SectionPricing />
 
-      <StepsToStart />
-      <video
+        <StepsToStart />
+      </section>
+      {/* <video
         muted
         autoPlay
         loop
         className="w-screen h-full max-h-full object-cover pt-12 pb-2"
         poster="/static/videos/videopic.webp">
         <source src="/static/videos/0.mp4" type="video/mp4" />
-      </video>
+      </video> */}
     </>
   )
 }

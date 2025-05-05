@@ -26,10 +26,10 @@ const SectionPricing = () => {
 
   return (
     <>
-      <div className="bg-slate-50 dark:bg-[#111928] pb-10 pt-2">
+      <div className="  pb-1 pt-2">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="isolate mx-auto mt-10 grid max-w-md grid-cols-1 gap-y-8 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:gap-x-4">
-            <div className="flex flex-col justify-between rounded-3xl bg-slate-50 p-8 text-slate-900 ring-1 ring-slate-300 dark:bg-[#111928] dark:text-slate-200 dark:ring-slate-300/20 xl:p-10">
+            <div className="flex flex-col justify-between rounded-3xl bg-slate-950 p-8 text-slate-900 ring-1 ring-slate-300 dark:bg-[#111928] dark:text-slate-200 dark:ring-slate-300/20 xl:p-10">
               <div>
                 <div className="flex items-center justify-between gap-x-4">
                   <h3 id="tier-enterprise" className="text-lg font-semibold leading-8">

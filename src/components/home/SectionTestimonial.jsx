@@ -20,7 +20,7 @@ const SectionTestimonial = () => {
           <InfiniteMovingCards items={quotes} direction="right" speed="slow">
           </InfiniteMovingCards>
         </div>
-        <ButtonTailwind name="Comparte tu experiencia" color="--color-section-3" uri={import.meta.env.VITE_GOOGLE_REVIEW} />
+        <ButtonTailwind name="Comparte tu experiencia" color="bg-(--color-section-2)" uri={import.meta.env.VITE_GOOGLE_REVIEW} />
       </div>
     </div>
   );

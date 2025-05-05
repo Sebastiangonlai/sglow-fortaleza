@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
-import { FiMessageSquare } from "react-icons/fi";
 import { SiInstagram, SiFacebook, SiWhatsapp } from "react-icons/si";
 import { TfiWorld } from "react-icons/tfi";
 import { useInView } from "react-intersection-observer";
@@ -87,24 +86,24 @@ const FormBlock = () => (
 
     <form method="POST" action={import.meta.env.VITE_FORMSUBMIT}>
       <div className="relative mb-1.5">
-        <input id="name" name="Nombre" type="text" placeholder="Nombre" className="w-full rounded-md border-zinc-600 px-4 focus:border-transparent focus:outline-hidden focus:ring-2 focus:ring-blue-600/50 dark:bg-[#111928]" required />
+        <input id="name" name="Nombre" type="text" placeholder="Nombre" className="w-full rounded-md py-1.5 ring ring-zinc-600 px-4 focus:border-transparent focus:outline-hidden focus:ring-2 focus:ring-purple-300/50 dark:bg-[#111928]" required />
       </div>
 
       <div className="relative mb-1.5">
         <input id="telefono" name="Telefono" type="text" placeholder="Telefono"
-          className="w-full rounded-md border-zinc-600 px-4 focus:border-transparent focus:outline-hidden focus:ring-2 focus:ring-blue-600/50 dark:bg-[#111928]" required />
+          className="w-full rounded-md py-1.5 ring ring-zinc-600 px-4 focus:border-transparent focus:outline-hidden focus:ring-2 focus:ring-purple-300/50 dark:bg-[#111928]" required />
       </div>
 
       <div className="relative mb-1.5">
-        <input id="email" name="Email" type="email" placeholder="Email" autoComplete="email" className="w-full rounded-md border-zinc-600 px-4 focus:border-transparent focus:outline-hidden focus:ring-2 focus:ring-blue-600/50 dark:bg-[#111928]" required />
+        <input id="email" name="Email" type="email" placeholder="Email" autoComplete="email" className="w-full rounded-md py-1.5 ring ring-zinc-600 px-4 focus:border-transparent focus:outline-hidden focus:ring-2 focus:ring-purple-300/50 dark:bg-[#111928]" required />
       </div>
 
       <div className="relative mb-1">
-        <textarea id="message" name="Mensaje" type="text" placeholder="Mensaje" className="w-full rounded-md border-zinc-600 px-4 focus:border-transparent focus:outline-hidden focus:ring-2 focus:ring-blue-600/50 dark:bg-[#111928]" />
+        <textarea id="message" name="Mensaje" type="text" placeholder="Mensaje" className="w-full rounded-md py-1.5 ring ring-zinc-600 px-4 focus:border-transparent focus:outline-hidden focus:ring-2 focus:ring-purple-300/50 dark:bg-[#111928]" />
       </div>
       <div className="relative pt-1">
-        <button type="submit" className="w-full flex mx-auto justify-center items-center gap-2 whitespace-nowrap rounded-md border border-zinc-600 px-3 py-1.5 text-[16px] font-normal text-zinc-200 transition-colors hover:bg-blue-600/40">
-          Enviar mensaje<FiMessageSquare className="p-[1px]" />
+        <button type="submit" className="w-full flex mx-auto justify-center items-center gap-2 whitespace-nowrap rounded-md py-1.5 ring ring-zinc-600  px-3 text-[16px] font-normal text-zinc-200 transition-colors hover:bg-blue-500/30">
+          Enviar mensaje
         </button>
       </div>
       <input type="hidden" name="_template" value="table" />
