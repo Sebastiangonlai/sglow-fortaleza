@@ -70,6 +70,7 @@ export const MotionWrapper = ({
       className={className}
       initial="hidden"
       whileInView="visible"
+
       viewport={{ once, amount: threshold }}
       variants={variants[animation]} >
       {children}

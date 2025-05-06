@@ -15,7 +15,6 @@ const SectionContact = () => {
             subtitle="Si necesitas información adicional, no dudes en escribirnos o llamarnos."
             uri="contacto" />
           <img src="/static/images/svg/shape-06.svg" alt="Shape" className="absolute top-[5%] left-[0px] opacity-15" />
-          <img src="/static/images/svg/shape-09.svg" alt="Shape" className="absolute top-[2%] left-[12%] opacity-15" />
           <img src="/static/images/svg/shape-13.svg" alt="Shape" className="absolute top-[0px] right-[0px] opacity-15" />
           <img src="/static/images/svg/shape-07.svg" alt="Shape" className="absolute bottom-[0px] right-[5%] ee opacity-15" />
           <img src="/static/images/svg/shape-12.svg" alt="Shape" className="absolute bottom-[0px] left-0 opacity-15" />
