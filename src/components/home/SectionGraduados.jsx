@@ -1,9 +1,9 @@
 'use client';
 import { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
-import ButtonSection from '@/components/ui/ButtonSection';
 import ImageComponent from '@/components/ImageComponent';
 import Link from '@/components/Link';
+import ButtonTailwind from "@/components/ui/ButtonTailwind";
 
 
 const imgalumnos = [
@@ -41,27 +41,20 @@ const SectionGraduados = () => {
   const translateY = useSpring(useTransform(scrollYProgress, [0, 0.2], [-100, 0]), springConfig);
 
   return (
-    <>
-
-      {/* <section id="graduados" className="overflow-hidden bg-(--color-section-3)">
-      </section> */}
-      <section id="graduados" ref={ref} className="w-screen h-screen pb-4 py-5 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] bg-(--color-section-3)">
-        <Header />
-        <motion.div style={{ rotateZ, translateY, opacity }}>
-          {groups.map((group, index) => (
-            <motion.div className={`flex ${index % 2 === 0 ? 'flex-row-reverse space-x-reverse' : 'flex-row'} ml-8 mb-8 lg:ml-8 lg:mb-8`}
-              key={index}>
-              {group.map((product) => (
-                <ProductCard key={product.id} product={product} translate={index % 2 === 0 ? translateX : translateXReverse} />
-              ))}
-            </motion.div>
-          ))}
-        </motion.div>
-        <ButtonSection
-          namebtn="Fotos de nuestros graduados"
-          uri="/galeria-media" />
-      </section>
-    </>
+    <section id="graduados" ref={ref} className=" pb-4 py-5 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] bg-(--color-section-3)">
+      <Header />
+      <motion.div style={{ rotateZ, translateY, opacity }}>
+        {groups.map((group, index) => (
+          <motion.div className={`flex ${index % 2 === 0 ? 'flex-row-reverse space-x-reverse' : 'flex-row'} ml-8 mb-8 lg:ml-8 lg:mb-8`}
+            key={index}>
+            {group.map((product) => (
+              <ProductCard key={product.id} product={product} translate={index % 2 === 0 ? translateX : translateXReverse} />
+            ))}
+          </motion.div>
+        ))}
+      </motion.div>
+      <ButtonTailwind name="Fotos de nuestros graduados"  uri="galeria-media" />
+    </section>
   );
 };
 

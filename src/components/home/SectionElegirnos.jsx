@@ -19,31 +19,37 @@ const SectionElegirnos = () => {
 
 
 	const itemData = [{
-		desc: "100%", title: 'Calificaciones positivas',
-		iconSvg: "M22 11.08V12a10 10 0 11-5.93-9.14 M22 4L12 14.01l-3-3", estHref: import.meta.env.VITE_GOOGLE_REVIEW
+		desc: "100%",
+		title: 'Calificaciones positivas',
+		iconSvg: "M22 11.08V12a10 10 0 11-5.93-9.14 M22 4L12 14.01l-3-3",
+		href: import.meta.env.VITE_GOOGLE_REVIEW
 	}, {
-		desc: `${recibidos}`, title: 'Alumnos recibidos',
-		iconSvg: "M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2 M5 7 a4 4 0 1 0 8 0 a4 4 0 1 0 -8 0 M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75", estHref: "/galeria-media"
+		desc: `${recibidos}`,
+		title: 'Alumnos recibidos',
+		iconSvg: "M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2 M5 7 a4 4 0 1 0 8 0 a4 4 0 1 0 -8 0 M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75",
+		href: "/galeria-media"
 	}, {
-		desc: "3", title: 'Convenios vigentes',
-		iconSvg: "M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1zM4 22v-7", estHref: "/medios-de-pago"
+		desc: "3",
+		title: 'Convenios vigentes',
+		iconSvg: "M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1zM4 22v-7",
+		href: "/medios-de-pago"
 	}, {
-		desc: 'IMM', title: 'Academia habilitada',
-		iconSvg: "M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z", estHref: "/medios-de-pago"
+		desc: 'IMM',
+		title: 'Academia habilitada',
+		iconSvg: "M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z",
+		href: "/medios-de-pago"
 	},
 	]
 
 	return (
 
-		  // <section id="elegirnos" className="bg-(--color-section-3)">
-      // </section>
-		<section id="elegirnos" className="container overflow-hidden bg-(--color-section-2) lg:rounded-2xl py-10">
+		<section id="elegirnos" className="container overflow-hidden bg-(--color-section-2) py-10">
 			<TitleHeader
 				title="Por qué Elegirnos"
 				subtitle="Formando conductores responsables y seguros."
 				uri="nuestros-servicios" />
 
-			<span className="absolute opacity-15 right-0 -mt-[160px]">
+			<span className="absolute opacity-15 right-0 -mt-[160px]" aria-hidden="true">
 				<svg fill="none" height="556" viewBox="0 0 450 556" width="450" xmlns="http://www.w3.org/2000/svg">
 					<linearGradient id="a"><stop offset="0" stopColor="#4a6cf7" stopOpacity="0.31" />
 						<stop offset="1" stopColor="#4a6cf7" stopOpacity="0" />
@@ -63,28 +69,29 @@ const SectionElegirnos = () => {
 				</svg>
 			</span>
 
-			<div className="-mx-4 flex flex-wrap justify-center">
-				<div className="py-1 my-1">
-					<div className="py-2 px-1 tracking-tight dark:text-gray-100 text-gray-900">
-						<div className="gap-x-1 gap-y-1 text-center items-center grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4">
-							{itemData.map((d) => (
-								<div style={{ perspective: 1000 }}>
-									<Flip duration={800} delay={500} once={true}>
-										<a href={d.estHref} aria-label={d.title}>
-											<div className="group mb-1 rounded-xl bg-[#0d1117]/20 px-[50px] pb-[22px] pt-[22px] shadow-testimonial dark:bg-[#111928] dark:shadow-none">
-												<svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="text-[#0b76b7] w-20 h-20 inline-block" viewBox="0 0 25 26">
-													<path d={d.iconSvg}></path>
-												</svg>
-												<p className="text-4xl font-bold dark:text-white text-gray-800 pt-2">{d.desc}</p>
-												<p className="text-[14px] font-medium text-gray-800 dark:text-gray-300">{d.title}</p>
-											</div>
-										</a>
-									</Flip>
+			<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-center mt-8 max-w-420 bg-(--color-section-2)">
+				{itemData.map((card, i) => (
+					<div key={i} style={{ perspective: 1000 }}>
+						<Flip duration={800} delay={500} once>
+							<a href={card.href} aria-label={`Más sobre ${card.title}`}>
+								<div className="group rounded-xl bg-[#0d1117]/20 p-6 shadow-testimonial dark:bg-[#111928]">
+									<svg
+										fill="none"
+										stroke="currentColor"
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										strokeWidth="2"
+										className="text-[#0b76b7] w-20 h-20 mx-auto"
+										viewBox="0 0 25 26">
+										<path d={card.iconSvg}></path>
+									</svg>
+									<p className="text-4xl font-bold text-gray-800 dark:text-white pt-2">{card.desc}</p>
+									<p className="text-sm font-medium text-gray-800 dark:text-gray-300">{card.title}</p>
 								</div>
-							))}
-						</div>
+							</a>
+						</Flip>
 					</div>
-				</div>
+				))}
 			</div>
 		</section>
 	);

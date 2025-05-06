@@ -38,9 +38,7 @@ const services = [
 const SectionOfrecemos = () => {
 	return (
 		<>
-			{/* <section id="que-ofrecemos " className="overflow-hidden bg-(--color-section-3)">
-			</section> */}
-			<section id="que-ofrecemos " className="relative z-20 overflow-hidden w-screen h-full bg-(--color-section-3)">
+			<section id="que-ofrecemos" className="relative z-20 overflow-hidden bg-(--color-section-3)">
 				<SvgShape className="absolute bottom-0 left-0 rotate-180" />
 				<SvgShape className="absolute top-0 right-0" />
 

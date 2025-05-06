@@ -8,11 +8,7 @@ import { SlideIn } from "@/components/motion/SlideIn"
 import faqItems from "@/data/faqData"
 
 
-
-
 const FaqAccordion = () => {
-
-
   const [openItems, setOpenItems] = useState([])
 
   const handleToggle = (itemId) => {
@@ -63,7 +59,3 @@ const FaqAccordion = () => {
 }
 
 export default FaqAccordion
-
-
-
-// export default function FaqAccordion({ className, }) {

@@ -49,9 +49,6 @@ const SectionHeader = () => {
     </svg>;
 
   return (
-
-    // <section id="inicio" className="overflow-hidden bg-(--color-section-3)">
-    // </section>
     <section id="inicio" className="flex flex-col select-none items-center overflow-hidden justify-center h-screen pt-1 bg-(--color-section-3)">
 
       {showBackgroundLines && (

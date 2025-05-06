@@ -2,7 +2,7 @@
 
 import SectionPricing from '@/components/section/SectionPricing';
 import Breadcrumb from '@/components/ui/Breadcrumb';
-import StepsToStart from '@/components/StepsToStart';
+import SectionPasos from '@/components/section/SectionPasos';
 
 
 export default function CursosPersonalizados() {
@@ -16,7 +16,7 @@ export default function CursosPersonalizados() {
       <section className="bg-(--color-section-3)">
         <SectionPricing />
 
-        <StepsToStart />
+        <SectionPasos />
       </section>
       {/* <video
         muted
