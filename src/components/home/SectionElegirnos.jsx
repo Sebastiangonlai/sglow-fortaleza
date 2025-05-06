@@ -59,6 +59,7 @@ const SectionElegirnos = () => {
 								<motion.div
 									whileHover={{ rotateY: 180 }}
 									transition={{ duration: 0.6 }}
+									whileTap={{ rotateY: 180 }}
 									className="relative w-full h-64 preserve-3d"
 								>
 									{/* Cara frontal */}
@@ -80,8 +81,10 @@ const SectionElegirnos = () => {
 
 									{/* Cara trasera */}
 									<motion.div
+								
 										className="relative w-full h-50 backface-hidden rounded-2xl bg-primary text-white p-6 shadow-md border border-white/10 flex  items-center justify-center"
 										style={{ rotateY: 180 }}
+
 									>
 										<p className="text-lg font-semibold">Ver más información</p>
 									</motion.div>
