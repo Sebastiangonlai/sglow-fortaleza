@@ -44,14 +44,17 @@ const SectionElegirnos = () => {
 	]
 
 	return (
-		<LayoutSection id="elegirnos" size="half" color="bg-(--color-section-1)" className="overflow-hidden py-10 px-4 sm:px-4">
+		<LayoutSection id="elegirnos" size="half" color="bg-(--color-section-3)" className=" overflow-hidden py-14 px-4">
+			<div className="min-w-screen">
+				<img src="/static/images/svg/shape-1.svg" alt="Shape" className="absolute opacity-5 " />
+			</div>
 			<TitleHeader
 				title="Por qué Elegirnos"
 				subtitle="Formando conductores responsables y seguros."
 				uri="nuestros-servicios"
 			/>
 
-			<div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-center mt-12">
+			<div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-center my-6">
 				{itemData.map((card, i) => (
 					<div key={i} className="perspective w-full h-full">
 						<Flip duration={800} delay={200} once={false}>
@@ -67,7 +70,7 @@ const SectionElegirnos = () => {
 										strokeLinecap="round"
 										strokeLinejoin="round"
 										strokeWidth="2"
-										className="text-primary w-16 h-16 mx-auto"
+										className="text-(--color-purple-1) w-16 h-16 mx-auto"
 										viewBox="0 0 25 26">
 										<path d={card.iconSvg} />
 									</svg>
@@ -77,6 +80,7 @@ const SectionElegirnos = () => {
 									</motion.div> */}
 								</motion.div>
 							</a>
+
 						</Flip>
 					</div>
 				))}

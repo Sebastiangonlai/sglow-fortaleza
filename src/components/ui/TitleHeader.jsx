@@ -8,9 +8,9 @@ const TitleHeader = ({ title, subtitle, uri }) => {
       <div className="w-full px-4 z-[40]" >
         <ScrollAnimation
           description={
-            <div className="mx-auto mb-[50px] max-w-[520px] text-center">
+            <div className="mx-auto mb-[50px] max-w-[520px] text-center text-shadow-sm/40">
               <TextAnimation className="w-full px-4" title={title} time={100} uri={uri} />
-              <h2 className="mx-auto max-w-[485px] text-base text-gray-700 dark:text-gray-400 leading-tight tracking-tight delay-100 px-1.5">
+              <h2 className="mx-auto max-w-[485px] text-base text-gray-700 dark:text-gray-400 leading-tight tracking-tight delay-100 px-1.5 text-shadow-sm/20">
                 {subtitle}
               </h2>
             </div>

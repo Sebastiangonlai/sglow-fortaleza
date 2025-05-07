@@ -42,10 +42,9 @@ const SectionRedes = () => {
   return (
     <>
 
-      <LayoutSection id="redes-sociales" color="bg-(--color-section-1) overflow-hidden py-8 lg:py-10">
-        <div className="absolute -rotate-45">
-          <Cono className="fill text-gray-800 dark:text-gray-100 h-16 w-16 opacity-10  " />
-        </div>
+      <LayoutSection id="redes-sociales" color="fondo overflow-hidden py-8 lg:py-10 " >
+        {/* <Cono className="fill text-gray-800 dark:text-gray-100 h-16 w-16 opacity-10  " /> */}
+        
         <TitleHeader
           title="Redes Sociales"
           subtitle="Visita nuestras redes para enterarte de novedades y promociones."
@@ -60,7 +59,7 @@ const SectionRedes = () => {
                       <nav className="grid gap-2 mt-4 md:mt-10 justify-center px-2" aria-label="Tabs" role="tablist" aria-orientation="vertical">
                         {redes.map((item, index) => (
                           <button key={index} aria-label="Redes"
-                            className="max-w-[300px] rounded-[10px] bg-slate-900 hover:border-blue-600 ring-1 dark:border-blue-500/90 dark:bg-[#111928]/40 ring-blue/80 dark:hover:bg-blue-800/20"
+                            className="max-w-[300px] rounded-[10px] bg-slate-900 hover:border-blue-600 ring-1 dark:border-blue-500/90 dark:bg-gray-950 ring-blue/80 dark:hover:bg-blue-800/20"
                             onClick={() => handleTabClick("tabs-with-card-" + `${index + 1}`)}
                             role="tab" aria-selected={activeTab === "tabs-with-card-" + `${index + 1}`} aria-controls="tabpanel-1" id="tab-1">
                             <div className="flex items-center justify-start gap-4 px-20 my-3">

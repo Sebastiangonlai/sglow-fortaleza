@@ -6,7 +6,7 @@ import { Modal, ModalBody, ModalContent, ModalTrigger, ModalFooter } from "@/lib
 
 function ModalCard({ card, showCard = "Novedades" }) {
 	return (
-		<section className="w-screen min-h-screen flex flex-col justify-center items-center">
+		<section className="w-full h-full flex flex-col justify-center items-center px-2 lg:px-18">
 			<div className="container flex flex-wrap">
 				{card.map((d, index) => (
 					<ModalAnimatedCard

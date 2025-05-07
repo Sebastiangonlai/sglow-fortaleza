@@ -9,16 +9,16 @@ import ButtonTailwind from "../ui/ButtonTailwind";
 
 const SectionTestimonial = () => {
   return (
-    <LayoutSection id="testimonio" size="auto" color="bg-(--color-section-2)" className="overflow-hidden">
+    <LayoutSection id="testimonio" size="auto" color="bg-(--color-section-2)" className="overflow-hidden py-16">
       <TitleHeader
         title="Testimonios de Alumnos"
         subtitle="Opiniones de nuestros alumnos sobre su experiencia."
         uri={import.meta.env.VITE_GOOGLE_REVIEW} />
-      <div className="swiper testimonial-carousel common-carousel ">
+      <div className="swiper testimonial-carousel common-carousel pt-4">
         <InfiniteMovingCards items={quotes} direction="right" speed="slow">
         </InfiniteMovingCards>
       </div>
-      <ButtonTailwind name="Comparte tu experiencia" color="bg-(--color-section-2)" uri={import.meta.env.VITE_GOOGLE_REVIEW} className="mb-4" />
+      <ButtonTailwind name="Comparte tu experiencia" color="bg-(--color-section-2)" uri={import.meta.env.VITE_GOOGLE_REVIEW} className="my-4" />
     </LayoutSection>
   );
 };

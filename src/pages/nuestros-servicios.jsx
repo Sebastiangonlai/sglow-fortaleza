@@ -33,7 +33,7 @@ const NuestrosServicios = () => {
           <div className="w-full flex flex-wrap justify-center pt-10 sm:pb-4 lg:pb-0">
             <ul className="flex flex-wrap justify-center space-x-2">
               {options.map((item) => (
-                <li key={item} className="mb-4 lg:mb-0 ">
+                <li key={item} className="mb-4 lg:mx-0 ">
                   <button onClick={() => handleProject(item)} className={getButtonClasses(item)}>
                     {item}
                   </button>

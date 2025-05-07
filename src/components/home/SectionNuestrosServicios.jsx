@@ -14,7 +14,7 @@ import ButtonTailwind from '@/components/ui/ButtonTailwind';
 const SectionNuestrosServicios = () => {
 	return (
 		<LayoutSection id="nuestros-servicios" color="bg-(--color-section-2)" className="pt-12 lg:pb-[1px]">
-			<div className="max-w-[1200px] justify-center mx-auto relative overflow-hidden pt-[10px] lg:pt-[40px] pb-[40px] lg:pb-[52px]">
+			<div className="max-w-[1200px] justify-center mx-auto relative overflow-hidden pt-[10px] lg:pt-[40px] pb-[40px] lg:pb-[52px] ">
 
 				<TitleHeader
 					title="Nuestros Servicios"

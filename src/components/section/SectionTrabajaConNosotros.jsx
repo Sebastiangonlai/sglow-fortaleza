@@ -28,7 +28,7 @@ const SectionTrabajaConNosotros = () => {
       <div id="trabaja-con-nosotros" className="py-8 lg:py-12 border-t border-stroke dark:border-(--color-border-2)/10 bg-(--color-section-1)">
         <div className="mx-auto px-4 flex flex-col lg:flex-row items-center justify-between gap-4 w-fit">
           <div className="text-center lg:text-left max-w-3xl ">
-            <h2 className="text-2xl sm:text-3xl md:text-[32px] font-bold leading-tight ">
+            <h2 className="text-2xl sm:text-3xl md:text-[32px] font-bold leading-tight text-shadow-sm/50">
               Trabaja con nosotros
             </h2>
             <p className="mt-2 text-base text-[#637381] dark:text-[#9CA3AF] leading-tight">

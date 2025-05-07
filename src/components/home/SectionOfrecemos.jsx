@@ -95,10 +95,10 @@ const ServiceItems = ({ icon: Icon, title, description, href }) => {
 				</div>
 			</div>
 			<div className="w-full px-4">
-				<h2 className="mb-2 text-xl font-bold text-[#111928] dark:text-white sm:text-2xl lg:text-xl xl:text-2xl leading-tight ">
+				<h2 className="mb-2 text-xl font-bold text-[#111928] dark:text-white sm:text-2xl lg:text-xl xl:text-2xl leading-tight text-shadow-sm/50">
 					{title}
 				</h2>
-				<p className="text-base text-[#637381] dark:text-[#9CA3AF] leading-tight tracking-tight">
+				<p className="text-base text-[#637381] dark:text-[#9CA3AF] leading-tight tracking-tight text-shadow-sm/50">
 					{description}
 				</p>
 			</div>
