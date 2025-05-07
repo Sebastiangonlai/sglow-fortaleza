@@ -67,7 +67,7 @@ const FeatureCard = ({ children, className }) => {
 
 export const CardLicencia = () => {
 	return (
-		<SlideIn duration={700} delay={400} direction="up" once={true}>
+		<SlideIn duration={800} delay={500} direction="up" once={true}>
 			<div className=" flex flex-wrap" aria-label="Más información sobre cómo obtener tu licencia de conducir">
 				<div className={`overflow-hidden w-full lg:w-[380px] h-full justify-center pt-4 px-4`}>
 					<ImageComponent

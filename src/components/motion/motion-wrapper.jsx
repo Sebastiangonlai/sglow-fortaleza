@@ -6,7 +6,7 @@ export const MotionWrapper = ({
   children,
   animation = "slide", // slide | zoom | bounce | flip
   direction = "up",
-  duration = 700,
+  duration = 800,
   delay = 500,
   threshold = 0.1,
   once = false,
