@@ -1,7 +1,7 @@
 'use client'
 
 import serviceData from '@/data/serviceDataIndex'
-import TitleHeader from "@/components/TitleHeader";
+import TitleHeader from "@/components/ui/TitleHeader";
 import { FiChevronRight } from "react-icons/fi";
 import ImageComponent from '@/components/ImageComponent';
 import { cn } from "@/lib/utils";

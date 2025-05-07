@@ -1,6 +1,6 @@
 'use client'
 
-import TitleHeader from "@/components/TitleHeader";
+import TitleHeader from "@/components/ui/TitleHeader";
 import { contarImagesSupabase } from '@/api/ImagenService.jsx'
 import { useEffect, useState } from "react";
 import LayoutSection from "@/components/LayoutSection";
@@ -44,37 +44,37 @@ const SectionElegirnos = () => {
 	]
 
 	return (
-		<LayoutSection id="elegirnos" size="auto" color="bg-(--color-section-1)" className="overflow-hidden py-10 px-4 sm:px-4">
+		<LayoutSection id="elegirnos" size="half" color="bg-(--color-section-1)" className="overflow-hidden py-10 px-4 sm:px-4">
 			<TitleHeader
 				title="Por qué Elegirnos"
 				subtitle="Formando conductores responsables y seguros."
 				uri="nuestros-servicios"
 			/>
 
-			<div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-center mt-12">
+			<div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-center mt-12">
 				{itemData.map((card, i) => (
 					<div key={i} className="perspective w-full h-full">
-						<Flip duration={800} delay={800} once={false}>
+						<Flip duration={800} delay={200} once={false}>
 							<a href={card.href} aria-label={`Más sobre ${card.title}`}>
 								<motion.div
-									whileHover={{ rotateY: 180 }}
-									transition={{ duration: 0.8 }}
-									whileTap={{ rotateY: 180 }}
-									className="z-50 relative w-full h-56 preserve-3d">
-									<motion.div className="w-full h-fit backface-hidden rounded-2xl bg-white/10 backdrop-blur-xl p-6 shadow-md border border-white/10 dark:bg-white/5">
-										<svg
-											fill="none"
-											stroke="currentColor"
-											strokeLinecap="round"
-											strokeLinejoin="round"
-											strokeWidth="2"
-											className="text-primary w-16 h-16 mx-auto"
-											viewBox="0 0 25 26">
-											<path d={card.iconSvg} />
-										</svg>
-										<p className="text-3xl font-bold text-white mt-4">{card.desc}</p>
-										<p className="text-base font-medium text-gray-200">{card.title}</p>
-									</motion.div>
+									// whileHover={{ rotateY: 180 }}
+									transition={{ duration: 0.6 }}
+									whileTap={{ scale: 1.05 }}
+									className="z-50 relative preserve-3d w-full h-fit backface-hidden rounded-2xl bg-white/10 backdrop-blur-xl p-6  shadow-md border border-white/10 dark:bg-white/5">
+									<svg
+										fill="none"
+										stroke="currentColor"
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										strokeWidth="2"
+										className="text-primary w-16 h-16 mx-auto"
+										viewBox="0 0 25 26">
+										<path d={card.iconSvg} />
+									</svg>
+									<p className="text-3xl font-bold text-white mt-4">{card.desc}</p>
+									<p className="text-base font-medium text-gray-200">{card.title}</p>
+									{/* <motion.div className="w-full h-fit backface-hidden rounded-2xl bg-white/10 backdrop-blur-xl p-6 shadow-md border border-white/10 dark:bg-white/5">
+									</motion.div> */}
 								</motion.div>
 							</a>
 						</Flip>

@@ -2,6 +2,7 @@
 
 import Breadcrumb from '@/components/ui/Breadcrumb';
 import ImageComponent from '@/components/ImageComponent';
+import LayoutSection from '@/components/LayoutSection';
 import { ParallaxScrollSecond } from "../lib/parallax-scroll-2";
 
 
@@ -44,7 +45,7 @@ const NuestrosVeiculos = () => {
         nameUri="Flota de Vehículos"
         href="coche-escuela" />
 
-      <section className="pt-16">
+      <LayoutSection size="auto" className="pt-16">
         <div className="max-w-screen-xl mx-auto px-4 text-gray-200 gap-16 justify-center md:px-8 lg:flex">
           <div>
             <div className="max-w-xl space-y-3">
@@ -77,10 +78,10 @@ const NuestrosVeiculos = () => {
             <ImageComponent iWidth={430} iHeight={430} iAlt="Licencia de conducir" iSrc="/static/images/vehiculo/nuestros-autos-sm.webp" loading="lazy" iClassName="object-cover rounded-xl focus:touch-pan-x delay-200 border border-zinc-700 select-none dark:rounded-lg dark:border justify-center items-center" />
           </div>
         </div>
-      </section>
-      <div className="min-w-screen min-h-screen mx-auto px-4 text-gray-200 gap-6 justify-between md:px-8 lg:flex">
+      </LayoutSection>
+      <LayoutSection size="auto" className="min-w-screen min-h-screen mx-auto px-4 text-gray-200 gap-6 justify-between md:px-8 lg:flex">
         <ParallaxScrollSecond images={images} />
-      </div>
+      </LayoutSection>
     </>
   );
 };

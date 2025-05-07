@@ -3,6 +3,7 @@ import * as Tabs from "@radix-ui/react-tabs";
 import Breadcrumb from "@/components/ui/Breadcrumb";
 import TabNovedades from '@/components/tab-galeria/NovedadesTab';
 import { TabAlumnos } from '@/components/tab-galeria/AlumnosTab';
+import LayoutSection from "@/components/LayoutSection";
 import TabVideos from '@/components/tab-galeria/VideosTab';
 import TabHome from "@/components/tab-galeria/ImagenesTabHome";
 
@@ -26,7 +27,7 @@ export default function GaleriaMedia() {
 				subtitle="Fotos y videos de nuestras actividades."
 				nameUri="Galería Multimedia"
 				href="nuestros-servicios" />
-			<section className="overflow-hidden dark:bg-[#111928]">
+			<LayoutSection size="auto" className="overflow-hidden">
 
 				<div className="overflow-hidden pt-10">
 					<Tabs.Root className="max-w-screen-2xl mt-2 mx-auto px-4 md:px-8" value={selectedTab} onValueChange={(val) => setSelectedTab(val)}>
@@ -66,7 +67,7 @@ export default function GaleriaMedia() {
 						))}
 					</Tabs.Root>
 				</div>
-			</section>
+			</LayoutSection>
 		</>
 	)
 }

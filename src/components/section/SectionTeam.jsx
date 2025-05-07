@@ -1,4 +1,4 @@
-import TitleHeader from "@/components/TitleHeader";
+import TitleHeader from "@/components/ui/TitleHeader";
 
 
 const SectionTeam = () => {

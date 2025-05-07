@@ -1,7 +1,7 @@
 'use client'
 
 import SectionContactBlock from "@/components/section/SectionContactBlock";
-import TitleHeader from "../TitleHeader";
+import TitleHeader from "@/components/ui/TitleHeader";
 import LayoutSection from "@/components/LayoutSection";
 import SectionTrabajaConNosotros from "@/components/section/SectionTrabajaConNosotros";
 

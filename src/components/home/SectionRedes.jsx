@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from "react";
-import TitleHeader from "@/components/TitleHeader";
+import TitleHeader from "@/components/ui/TitleHeader";
 import { IoLogoInstagram, IoLogoFacebook, IoLogoYoutube } from "react-icons/io5";
 import ImageComponent from "@/components/ImageComponent";
 import Cono from "@/components/social-icons/cono.svg?react";

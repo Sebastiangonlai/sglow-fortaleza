@@ -1,7 +1,7 @@
 'use client'
 
 import { RiUserStarLine, RiCarLine, RiSteering2Fill, RiIdCardLine } from "react-icons/ri";
-import TitleHeader from "@/components/TitleHeader";
+import TitleHeader from "@/components/ui/TitleHeader";
 import LayoutSection from "@/components/LayoutSection";
 import PropTypes from 'prop-types';
 import { SlideIn } from "@/components/motion/SlideIn";

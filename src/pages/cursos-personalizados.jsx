@@ -2,6 +2,7 @@
 
 import SectionPricing from '@/components/section/SectionPricing';
 import Breadcrumb from '@/components/ui/Breadcrumb';
+import LayoutSection from '@/components/LayoutSection';
 import SectionPasos from '@/components/section/SectionPasos';
 
 
@@ -13,11 +14,10 @@ export default function CursosPersonalizados() {
         title="Nuestros Cursos"
         subtitle="Cursos personalizados y adaptados a las distintas necesidades."
         nameUri="Cursos" />
-      <section className="bg-(--color-section-3)">
+      <LayoutSection size="auto">
         <SectionPricing />
-
         <SectionPasos />
-      </section>
+      </LayoutSection>
       {/* <video
         muted
         autoPlay

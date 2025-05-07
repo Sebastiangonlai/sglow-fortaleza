@@ -33,13 +33,13 @@ const SectionGraduados = () => {
   });
 
   const springConfig = {
-    stiffness: 100, damping: 20,
+    stiffness: 100, damping: 30,
   };
-  const translateX = useSpring(useTransform(scrollYProgress, [0, 0.5], [0, 400]), springConfig);
-  const translateXReverse = useSpring(useTransform(scrollYProgress, [0, 0.5], [0, -400]), springConfig);
+  const translateX = useSpring(useTransform(scrollYProgress, [0, 0.5], [0, 300]), springConfig);
+  const translateXReverse = useSpring(useTransform(scrollYProgress, [0, 0.5], [0, -300]), springConfig);
   const opacity = useSpring(useTransform(scrollYProgress, [0, 0.2], [0.3, 0.5]), springConfig);
   const rotateZ = useSpring(useTransform(scrollYProgress, [0, 0.2], [20, 0]), springConfig);
-  const translateY = useSpring(useTransform(scrollYProgress, [0, 0.2], [-100, 0]), springConfig);
+  const translateY = useSpring(useTransform(scrollYProgress, [0, 0.2], [-80, 0]), springConfig);
 
   return (
     <LayoutSection id="graduados" className=" pb-4 py-5 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]">
@@ -88,7 +88,7 @@ export const ProductCard = ({ product, translate }) => {
       // whileHover={{ y: -20, }}
       key={product}
       className="h-[17rem] w-[20rem] lg:h-90 lg:w-[40rem] ml-6 relative shrink-0">
-      <ImageComponent iSrc={product.srcalum} iClassName="object-cover object-left-top absolute h-full w-full inset-0 rounded-3xl" iAlt={`Licencia de conducir ${product.id}`} iWidth={30} iHeight={30} />
+      <ImageComponent iSrc={product.srcalum} iClassName="object-cover object-left-top absolute h-full w-full inset-0 rounded-3xl" iAlt={`Licencia de conducir ${product.id}`} iWidth={30} iHeight={25} />
     </motion.div>
   );
 };

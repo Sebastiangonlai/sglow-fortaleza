@@ -8,7 +8,7 @@ import { listImagesSupabase } from "@/api/ImagenService";
 import Modals from '@mui/joy/Modal';
 import ModalClose from "@mui/joy/ModalClose";
 import ImageComponent from "@/components/ImageComponent";
-import TitleHeader from "@/components/TitleHeader";
+import TitleHeader from "@/components/ui/TitleHeader";
 import Sheet from '@mui/joy/Sheet';
 import { SlideIn } from "@/components/motion/SlideIn";
 import LayoutSection from "@/components/LayoutSection";

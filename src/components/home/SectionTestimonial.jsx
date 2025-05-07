@@ -2,14 +2,14 @@
 
 import { InfiniteMovingCards } from "@/lib/infinite-moving-cards";
 import { quotes } from "@/data/quotesData";
-import TitleHeader from "@/components/TitleHeader";
+import TitleHeader from "@/components/ui/TitleHeader";
 import LayoutSection from "@/components/LayoutSection";
 import ButtonTailwind from "../ui/ButtonTailwind";
 
 
 const SectionTestimonial = () => {
   return (
-    <LayoutSection id="testimonio" color="bg-(--color-section-2)" className="overflow-hidden">
+    <LayoutSection id="testimonio" size="auto" color="bg-(--color-section-2)" className="overflow-hidden">
       <TitleHeader
         title="Testimonios de Alumnos"
         subtitle="Opiniones de nuestros alumnos sobre su experiencia."
@@ -18,7 +18,7 @@ const SectionTestimonial = () => {
         <InfiniteMovingCards items={quotes} direction="right" speed="slow">
         </InfiniteMovingCards>
       </div>
-      <ButtonTailwind name="Comparte tu experiencia" color="bg-(--color-section-2)" uri={import.meta.env.VITE_GOOGLE_REVIEW} className="my-6" />
+      <ButtonTailwind name="Comparte tu experiencia" color="bg-(--color-section-2)" uri={import.meta.env.VITE_GOOGLE_REVIEW} className="mb-4" />
     </LayoutSection>
   );
 };

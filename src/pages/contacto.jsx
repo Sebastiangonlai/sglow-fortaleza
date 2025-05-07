@@ -1,4 +1,5 @@
 import Breadcrumb from "@/components/ui/Breadcrumb";
+import LayoutSection from "@/components/LayoutSection";
 import ContactBlock from '@/components/section/SectionContactBlock';
 
 
@@ -11,9 +12,9 @@ export default function Contacto() {
         subtitle="Envíanos tus comentarios, dudas o sugerencias."
         nameUri="Contacto"
         uri="contacto" />
-      <section className='pt-10'>
+      <LayoutSection className='pt-10'>
         <ContactBlock />
-      </section>
+      </LayoutSection>
     </>
   )
 }

@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Breadcrumb from "@/components/ui/Breadcrumb";
+import LayoutSection from "@/components/LayoutSection";
 import nuestrosServiciosData from '@/data/nuestrosServiciosData'
 import { ModalCard } from '@/components/ModalCard';
 import { SlideIn } from "@/components/motion/SlideIn";
@@ -22,13 +23,12 @@ const NuestrosServicios = () => {
     <>
       {/* <PageSEO title="Nuestros Servicios - Academia Fortaleza" description="Descubre los servicios de Academia Fortaleza: clases prácticas, teóricas, trámites de licencia y más." /> */}
 
-      <div className="pt-12 lg:pb-[1px] bg-(--color-section-3)">
-        <Breadcrumb
-          title="Nuestros Servicios"
-          subtitle="Información sobre la licencia de conducir."
-          nameUri="Servicios"
-          href="nuestros-servicios" />
-
+      <Breadcrumb
+        title="Nuestros Servicios"
+        subtitle="Información sobre la licencia de conducir."
+        nameUri="Servicios"
+        href="nuestros-servicios" />
+      <LayoutSection size="half" className="pt-12 lg:pb-[1px] overflow-hidden">
         <div className="pt-12 lg:pb-[1px]">
           <div className="w-full flex flex-wrap justify-center pt-10 sm:pb-4 lg:pb-0">
             <ul className="flex flex-wrap justify-center space-x-2">
@@ -45,7 +45,7 @@ const NuestrosServicios = () => {
             <ModalCard card={nuestrosServiciosData} showCard={showCard} />
           </SlideIn>
         </div>
-      </div>
+      </LayoutSection>
     </>
   );
 };

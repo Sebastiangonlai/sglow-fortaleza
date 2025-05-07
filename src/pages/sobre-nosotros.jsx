@@ -1,5 +1,6 @@
 import ImageComponent from "@/components/ImageComponent";
 import Breadcrumb from '@/components/ui/Breadcrumb';
+import LayoutSection from '@/components/LayoutSection';
 import SectionTeam from '@/components/section/SectionTeam';
 // import { SocialIcon } from '@/components/social-icons'
 
@@ -26,7 +27,7 @@ const SobreNosotrosIndex = () => {
         nameUri="Sobre Nosotros"
         href="home" />
 
-      <div className="container items-center w-[90%] space-y-4 lg:grid lg:grid-cols-3 lg:gap-x-4 lg:space-y-0 pt-[60px] pb-20" >
+      <LayoutSection size="auto" className="container items-center space-y-4 lg:grid lg:grid-cols-3 lg:gap-x-4 lg:space-y-0 pt-[60px] pb-20" >
         <div className="flex flex-col items-center pt-4">
           <ImageComponent
             iSrc={'/logoHd.webp'}
@@ -63,7 +64,7 @@ const SobreNosotrosIndex = () => {
             parte.
           </p>
         </div>
-      </div>
+      </LayoutSection>
       <SectionTeam />
     </>
   )

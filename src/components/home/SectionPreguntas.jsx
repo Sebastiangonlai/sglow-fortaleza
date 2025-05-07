@@ -1,6 +1,6 @@
 import FaqAccordion from "@/components/section/SectionFAQ"
 import LayoutSection from "@/components/LayoutSection"
-import TitleHeader from "@/components/TitleHeader"
+import TitleHeader from "@/components/ui/TitleHeader";
 
 
 const SectionPreguntas = () => {

@@ -19,25 +19,6 @@
     outline: none;
   }
 
-  /* section {
-    min-height: 100vh;
-    min-height: 100dvh;
-    max-width: 100%;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    @media (min-width: 640px) {
-      padding-inline: 0.1rem;
-    }
-
-    @media (min-width: 1024px) {
-      padding-inline: 2rem;
-    }
-  } */
-
   button {
     cursor: pointer;
     /* &:hover {
