@@ -42,7 +42,7 @@ const SectionRedes = () => {
   return (
     <>
 
-      <LayoutSection id="redes-sociales" color="bg-(--color-section-1)">
+      <LayoutSection id="redes-sociales" color="bg-(--color-section-1) overflow-hidden">
         {/* <div className="absolute -rotate-45">
           <Cono className="fill text-gray-800 dark:text-gray-100 h-16 w-16 opacity-10" />
         </div> */}
@@ -50,7 +50,7 @@ const SectionRedes = () => {
           title="Redes Sociales"
           subtitle="Visita nuestras redes para enterarte de novedades y promociones."
           uri={import.meta.env.VITE_INSTAGRAM} />
-        <div className="overflow-hidden lg:pb-[50px] lg:pt-[10px] -pt-[30px] delay-500 mx-auto justify-center items-center ">
+        <div className=" lg:pb-[50px] lg:pt-[10px] -pt-[30px] delay-500 mx-auto justify-center items-center ">
           <div className="container group pb-2 mx-auto justify-center items-center">
             <div className="min-w-full flex flex-col mx-auto">
               <div className="lg:w-fit">

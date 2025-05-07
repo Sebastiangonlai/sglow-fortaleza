@@ -44,14 +44,14 @@ const SectionElegirnos = () => {
 	]
 
 	return (
-		<LayoutSection id="elegirnos" size="auto" color="bg-(--color-section-1)" className="container overflow-hidden py-16 px-4 sm:px-8">
+		<LayoutSection id="elegirnos" size="auto" color="bg-(--color-section-1)" className="overflow-hidden py-10 px-4 sm:px-4">
 			<TitleHeader
 				title="Por qué Elegirnos"
 				subtitle="Formando conductores responsables y seguros."
 				uri="nuestros-servicios"
 			/>
 
-			<div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-center mt-12">
+			<div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-center mt-12">
 				{itemData.map((card, i) => (
 					<div key={i} className="perspective w-full h-full">
 						<Flip duration={800} delay={800} once={false}>
@@ -60,9 +60,8 @@ const SectionElegirnos = () => {
 									whileHover={{ rotateY: 180 }}
 									transition={{ duration: 0.8 }}
 									whileTap={{ rotateY: 180 }}
-									className="z-50 relative w-full h-64 preserve-3d"
-								>
-									<motion.div className="w-full h-50 backface-hidden rounded-2xl bg-white/10 backdrop-blur-xl p-6 shadow-md border border-white/10 dark:bg-white/4">
+									className="z-50 relative w-full h-56 preserve-3d">
+									<motion.div className="w-full h-fit backface-hidden rounded-2xl bg-white/10 backdrop-blur-xl p-6 shadow-md border border-white/10 dark:bg-white/5">
 										<svg
 											fill="none"
 											stroke="currentColor"
