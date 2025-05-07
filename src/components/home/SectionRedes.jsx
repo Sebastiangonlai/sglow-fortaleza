@@ -42,10 +42,10 @@ const SectionRedes = () => {
   return (
     <>
 
-      <LayoutSection id="redes-sociales" color="bg-(--color-section-1) overflow-hidden">
-        {/* <div className="absolute -rotate-45">
-          <Cono className="fill text-gray-800 dark:text-gray-100 h-16 w-16 opacity-10" />
-        </div> */}
+      <LayoutSection id="redes-sociales" color="bg-(--color-section-1) overflow-hidden py-8 lg:py-10">
+        <div className="absolute -rotate-45">
+          <Cono className="fill text-gray-800 dark:text-gray-100 h-16 w-16 opacity-10  " />
+        </div>
         <TitleHeader
           title="Redes Sociales"
           subtitle="Visita nuestras redes para enterarte de novedades y promociones."
