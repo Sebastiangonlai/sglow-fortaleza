@@ -11,6 +11,7 @@ import ImageComponent from "@/components/ImageComponent";
 import TitleHeader from "@/components/TitleHeader";
 import Sheet from '@mui/joy/Sheet';
 import { SlideIn } from "@/components/motion/SlideIn";
+import LayoutSection from "@/components/LayoutSection";
 import ButtonTailwind from "@/components/ui/ButtonTailwind";
 
 
@@ -32,7 +33,7 @@ const SectionLicenciaConducir = () => {
 		},
 	];
 	return (
-		<section id="licencia-de-conducir" className="overflow-hidden lg:px-10 pt-20 pb-14 lg:pt-[80px] lg:pb-[30px] bg-(--color-section-3)">
+		<LayoutSection id="licencia-de-conducir" className="overflow-hidden lg:px-10 pt-20 pb-14 lg:pt-[80px] lg:pb-[30px]">
 			<div className="mx-auto">
 				<TitleHeader
 					title="Últimos Graduados"
@@ -48,7 +49,7 @@ const SectionLicenciaConducir = () => {
 					</div>
 				</div>
 			</div>
-		</section>
+		</LayoutSection>
 	);
 }
 

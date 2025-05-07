@@ -42,7 +42,7 @@ const SectionGraduados = () => {
   const translateY = useSpring(useTransform(scrollYProgress, [0, 0.2], [-100, 0]), springConfig);
 
   return (
-    <LayoutSection id="graduados" className=" pb-4 py-5 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] bg-(--color-section-3)">
+    <LayoutSection id="graduados" className=" pb-4 py-5 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]">
       <div ref={ref}>
         <Header />
         <motion.div style={{ rotateZ, translateY, opacity }}>

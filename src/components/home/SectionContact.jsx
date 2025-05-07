@@ -2,13 +2,14 @@
 
 import SectionContactBlock from "@/components/section/SectionContactBlock";
 import TitleHeader from "../TitleHeader";
+import LayoutSection from "@/components/LayoutSection";
 import SectionTrabajaConNosotros from "@/components/section/SectionTrabajaConNosotros";
 
 
 const SectionContact = () => {
   return (
     <>
-      <section id="contacto" className="relative z-10 overflow-hidden pt-0 dark:bg-(--color-section-2) bg-[#F9FAFB] delay-500">
+      <LayoutSection id="contacto" color="bg-(--color-section-2)" className="relative z-10 overflow-hidden pt-0 delay-500">
         <div className="pt-[20px] lg:pt-[30px] pb-[10px] lg:pb-[10px] select-none">
           <TitleHeader
             title="Contacto"
@@ -24,7 +25,7 @@ const SectionContact = () => {
         <div className="min-w-screen z-1">
           <SectionTrabajaConNosotros />
         </div>
-      </section>
+      </LayoutSection>
     </>
   );
 };

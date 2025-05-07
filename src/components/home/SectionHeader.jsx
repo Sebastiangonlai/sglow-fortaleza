@@ -50,7 +50,7 @@ const SectionHeader = () => {
     </svg>;
 
   return (
-    <LayoutSection id="inicio" className="flex flex-col select-none items-center overflow-hidden justify-center h-screen pt-1 bg-(--color-section-3)">
+    <LayoutSection id="inicio" className="flex flex-col select-none items-center overflow-hidden justify-center h-screen pt-1">
 
       {showBackgroundLines && (
         <BackgroundLines className="absolute justify-center items-center top-0 left-0" />

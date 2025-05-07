@@ -6,14 +6,15 @@ import { FiChevronRight } from "react-icons/fi";
 import ImageComponent from '@/components/ImageComponent';
 import { cn } from "@/lib/utils";
 import { SlideIn } from "@/components/motion/SlideIn";
+import LayoutSection from "@/components/LayoutSection";
 import { motion } from "framer-motion";
 import ButtonTailwind from '@/components/ui/ButtonTailwind';
 
 
 const SectionNuestrosServicios = () => {
 	return (
-		<section id="nuestros-servicios" className="pt-12 lg:pb-[1px] bg-(--color-section-2)">
-			<div className="max-w-[1200px] justify-center mx-auto relative overflow-hidden bg-transparent dark:bg-transparent pt-[10px] lg:pt-[40px] pb-[40px] lg:pb-[52px]">
+		<LayoutSection id="nuestros-servicios" color="bg-(--color-section-2)" className="pt-12 lg:pb-[1px]">
+			<div className="max-w-[1200px] justify-center mx-auto relative overflow-hidden pt-[10px] lg:pt-[40px] pb-[40px] lg:pb-[52px]">
 
 				<TitleHeader
 					title="Nuestros Servicios"
@@ -57,7 +58,7 @@ const SectionNuestrosServicios = () => {
 					<ButtonTailwind name="Ver todos los servicios" color="bg-(--color-section-2)" uri="./nuestros-servicios" className="mx-auto" />
 				</div>
 			</div>
-		</section>
+		</LayoutSection>
 	);
 };
 

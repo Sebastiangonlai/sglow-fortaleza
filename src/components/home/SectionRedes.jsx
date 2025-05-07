@@ -42,7 +42,7 @@ const SectionRedes = () => {
   return (
     <>
 
-      <LayoutSection id="redes-sociales" size="full">
+      <LayoutSection id="redes-sociales" color="bg-(--color-section-1)">
         {/* <div className="absolute -rotate-45">
           <Cono className="fill text-gray-800 dark:text-gray-100 h-16 w-16 opacity-10" />
         </div> */}

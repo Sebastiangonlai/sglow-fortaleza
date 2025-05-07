@@ -2,6 +2,7 @@
 
 import { RiUserStarLine, RiCarLine, RiSteering2Fill, RiIdCardLine } from "react-icons/ri";
 import TitleHeader from "@/components/TitleHeader";
+import LayoutSection from "@/components/LayoutSection";
 import PropTypes from 'prop-types';
 import { SlideIn } from "@/components/motion/SlideIn";
 
@@ -38,7 +39,7 @@ const services = [
 const SectionOfrecemos = () => {
 	return (
 		<>
-			<section id="que-ofrecemos" className="relative z-20 overflow-hidden bg-(--color-section-3)">
+			<LayoutSection id="que-ofrecemos" className="relative z-20 overflow-hidden">
 				<SvgShape className="absolute bottom-0 left-0 rotate-180" />
 				<SvgShape className="absolute top-0 right-0" />
 
@@ -63,7 +64,7 @@ const SectionOfrecemos = () => {
 						))}
 					</div>
 				</div>
-			</section>
+			</LayoutSection>
 		</>
 	);
 };

@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 
+
 const LayoutSection = ({ children, id = "", size = "full", color = "bg-(--color-section-3)", padding = "px-[0.1rem] sm:px-[0.1rem] lg:px-8", className = "" }) => {
   const sizeClass = {
     full: "min-h-screen min-h-dvh",

@@ -3,6 +3,7 @@
 import TitleHeader from "@/components/TitleHeader";
 import { contarImagesSupabase } from '@/api/ImagenService.jsx'
 import { useEffect, useState } from "react";
+import LayoutSection from "@/components/LayoutSection";
 import { motion } from "framer-motion";
 import { Flip } from '@/components/motion/Flip';
 
@@ -43,27 +44,25 @@ const SectionElegirnos = () => {
 	]
 
 	return (
-		<section id="elegirnos" className="container overflow-hidden py-16 px-4 sm:px-8 bg-(--color-section-3)">
+		<LayoutSection id="elegirnos" size="auto" color="bg-(--color-section-1)" className="container overflow-hidden py-16 px-4 sm:px-8">
 			<TitleHeader
 				title="Por qué Elegirnos"
 				subtitle="Formando conductores responsables y seguros."
 				uri="nuestros-servicios"
 			/>
 
-
 			<div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-center mt-12">
 				{itemData.map((card, i) => (
 					<div key={i} className="perspective w-full h-full">
-						<Flip duration={800} delay={500} once>
+						<Flip duration={800} delay={800} once={false}>
 							<a href={card.href} aria-label={`Más sobre ${card.title}`}>
 								<motion.div
 									whileHover={{ rotateY: 180 }}
-									transition={{ duration: 0.6 }}
+									transition={{ duration: 0.8 }}
 									whileTap={{ rotateY: 180 }}
-									className="relative w-full h-64 preserve-3d"
+									className="z-50 relative w-full h-64 preserve-3d"
 								>
-									{/* Cara frontal */}
-									<motion.div className="absolute w-full h-50 backface-hidden rounded-2xl bg-white/10 backdrop-blur-xl p-6 shadow-md border border-white/10 dark:bg-white/5">
+									<motion.div className="w-full h-50 backface-hidden rounded-2xl bg-white/10 backdrop-blur-xl p-6 shadow-md border border-white/10 dark:bg-white/4">
 										<svg
 											fill="none"
 											stroke="currentColor"
@@ -71,33 +70,19 @@ const SectionElegirnos = () => {
 											strokeLinejoin="round"
 											strokeWidth="2"
 											className="text-primary w-16 h-16 mx-auto"
-											viewBox="0 0 25 26"
-										>
+											viewBox="0 0 25 26">
 											<path d={card.iconSvg} />
 										</svg>
 										<p className="text-3xl font-bold text-white mt-4">{card.desc}</p>
 										<p className="text-base font-medium text-gray-200">{card.title}</p>
-									</motion.div>
-
-									{/* Cara trasera */}
-									<motion.div
-								
-										className="relative w-full h-50 backface-hidden rounded-2xl bg-primary text-white p-6 shadow-md border border-white/10 flex  items-center justify-center"
-										style={{ rotateY: 180 }}
-
-									>
-										<p className="text-lg font-semibold">Ver más información</p>
 									</motion.div>
 								</motion.div>
 							</a>
 						</Flip>
 					</div>
 				))}
-
 			</div>
-		</section>
-
-
+		</LayoutSection>
 	);
 };
 
