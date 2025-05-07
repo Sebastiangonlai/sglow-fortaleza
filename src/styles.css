@@ -19,7 +19,7 @@
     outline: none;
   }
 
-  section {
+  /* section {
     min-height: 100vh;
     min-height: 100dvh;
     max-width: 100%;
@@ -36,7 +36,7 @@
     @media (min-width: 1024px) {
       padding-inline: 2rem;
     }
-  }
+  } */
 
   button {
     cursor: pointer;
@@ -49,9 +49,7 @@
   }
 }
 
-  
-
-
+/*   
 
 @keyframes shimmer {
   0% {
@@ -73,4 +71,4 @@
 
 .backface-hidden {
   backface-visibility: hidden;
-}
+} */

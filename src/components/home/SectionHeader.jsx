@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { BackgroundLines } from "@/lib/background-lines";
 import ImageComponent from "@/components/ImageComponent";
+import LayoutSection from "@/components/LayoutSection";
 import "@/css/animations.css";
 
 
@@ -49,7 +50,7 @@ const SectionHeader = () => {
     </svg>;
 
   return (
-    <section id="inicio" className="flex flex-col select-none items-center overflow-hidden justify-center h-screen pt-1 bg-(--color-section-3)">
+    <LayoutSection id="inicio" className="flex flex-col select-none items-center overflow-hidden justify-center h-screen pt-1 bg-(--color-section-3)">
 
       {showBackgroundLines && (
         <BackgroundLines className="absolute justify-center items-center top-0 left-0" />
@@ -83,7 +84,7 @@ const SectionHeader = () => {
           <div className="w-1.5 h-3 bg-gray-400 dark:bg-gray-600 rounded-full mt-2 animate-scroll-down"></div>
         </div>
       </div>
-    </section>
+    </LayoutSection>
   );
 };
 

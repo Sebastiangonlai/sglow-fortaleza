@@ -11,7 +11,8 @@ import SectionTestimonial from '@/components/home/SectionTestimonial';
 import SectionRedes from '@/components/home/SectionRedes';
 import SectionPreguntasFrecuentes from '@/components/home/SectionPreguntas';
 import SectionContact from '@/components/home/SectionContact';
-import CardDark from '@/components/ui/CardDark';
+// import CardDark from '@/components/ui/CardDark';
+// import SectionDemo from '@/components/home/SectionDemo';
 // import Demo from '@/components/motion/Demo.jsx';
 {/* <Demo /> */ }
 
@@ -113,6 +114,7 @@ export default function Home() {
       <ScrollProgress />
       <SectionHeader />
       <SectionNuestrosServicios />
+
       <SectionOfrecemos />
       <SectionElegirnos />
       <SectionLicenciaDeConducir />

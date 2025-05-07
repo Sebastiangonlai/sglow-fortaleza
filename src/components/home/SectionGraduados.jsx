@@ -3,6 +3,7 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import ImageComponent from '@/components/ImageComponent';
 import Link from '@/components/Link';
+import LayoutSection from "@/components/LayoutSection";
 import ButtonTailwind from "@/components/ui/ButtonTailwind";
 
 
@@ -41,20 +42,22 @@ const SectionGraduados = () => {
   const translateY = useSpring(useTransform(scrollYProgress, [0, 0.2], [-100, 0]), springConfig);
 
   return (
-    <section id="graduados" ref={ref} className=" pb-4 py-5 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] bg-(--color-section-3)">
-      <Header />
-      <motion.div style={{ rotateZ, translateY, opacity }}>
-        {groups.map((group, index) => (
-          <motion.div className={`flex ${index % 2 === 0 ? 'flex-row-reverse space-x-reverse' : 'flex-row'} ml-8 mb-8 lg:ml-8 lg:mb-8`}
-            key={index}>
-            {group.map((product) => (
-              <ProductCard key={product.id} product={product} translate={index % 2 === 0 ? translateX : translateXReverse} />
-            ))}
-          </motion.div>
-        ))}
-      </motion.div>
-      <ButtonTailwind name="Fotos de nuestros graduados"  uri="galeria-media" />
-    </section>
+    <LayoutSection id="graduados" className=" pb-4 py-5 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] bg-(--color-section-3)">
+      <div ref={ref}>
+        <Header />
+        <motion.div style={{ rotateZ, translateY, opacity }}>
+          {groups.map((group, index) => (
+            <motion.div className={`flex ${index % 2 === 0 ? 'flex-row-reverse space-x-reverse' : 'flex-row'} ml-8 mb-8 lg:ml-2 lg:mb-8`}
+              key={index}>
+              {group.map((product) => (
+                <ProductCard key={product.id} product={product} translate={index % 2 === 0 ? translateX : translateXReverse} />
+              ))}
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+      <ButtonTailwind name="Fotos de nuestros graduados" uri="galeria-media" />
+    </LayoutSection>
   );
 };
 
@@ -77,7 +80,6 @@ export const Header = () => {
   );
 };
 
-
 export const ProductCard = ({ product, translate }) => {
   return (
     <motion.div
@@ -85,12 +87,11 @@ export const ProductCard = ({ product, translate }) => {
       transition={{ duration: 1 }}
       // whileHover={{ y: -20, }}
       key={product}
-      className=" h-[17rem] w-[20rem] lg:h-90 lg:w-[40rem] ml-6 relative shrink-0">
-      <ImageComponent iSrc={product.srcalum} iClassName="object-cover object-left-top absolute h-full w-full inset-0 rounded-3xl" iAlt="Licencia de conducir" iWidth={30} iHeight={30} />
+      className="h-[17rem] w-[20rem] lg:h-90 lg:w-[40rem] ml-6 relative shrink-0">
+      <ImageComponent iSrc={product.srcalum} iClassName="object-cover object-left-top absolute h-full w-full inset-0 rounded-3xl" iAlt={`Licencia de conducir ${product.id}`} iWidth={30} iHeight={30} />
     </motion.div>
   );
 };
-
 
 const Icon = () => {
   return (

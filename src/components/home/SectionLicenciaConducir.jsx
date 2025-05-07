@@ -170,7 +170,7 @@ const ModalCardAlumnos = () => {
 			<div className="flex flex-col p-2 gap-8 w-full overflow-visible mx-auto items-center justify-center">
 				<div className="grid grid-cols-3 cursor-pointer">
 					{aux.map((img, idx) => (
-						<SlideIn duration={800} delay={600} direction={direction[idx].animation} once={true}>
+						<SlideIn key={"images" + idx} duration={800} delay={600} direction={direction[idx].animation} once={true}>
 							<motion.div
 								key={"images" + idx}
 								style={{ rotate: Math.random() * 20 - 10, }}
