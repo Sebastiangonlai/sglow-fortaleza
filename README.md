@@ -64,18 +64,6 @@ Este proyecto es una aplicación web desarrollada con React y Vite, diseñada pa
 --color-teal-1: #14b8a6;
 --color-teal-2: #0d9488;
 --color-teal-3: #115e59;
-
---gpt-b1: #0f0f0f;
---gpt-b2: #121212;
---gpt-b3: #1d232a;
-
---gpt-t1: #f5f5f5;
---gpt-t2: #9ca3af;
-
---gpt-a: #60a5fa;
---gpt-v: #a78bfa;
-
 }
-
 
 ```
