@@ -3,9 +3,9 @@ import { Stagger } from '@/components/motion/Stagger'
 
 const TitleHeader = ({ title, subtitle, uri }) => {
   return (
-    <div className="-mx-4 flex flex-wrap pt-8 w-full px-4 z-[40]">
-      <Stagger duration={400} delay={600} once={false}>
-        <div className="mx-auto mb-[50px] max-w-[520px] text-center text-shadow-sm/40">
+    <div className="-mx-4 flex flex-wrap pt-8 w-full px-4 z-[40] justify-center text-center">
+      <Stagger duration={400} delay={600} once={true}>
+        <div className="mx-auto mb-[50px] max-w-[520px] text-shadow-sm/40">
           <a href={uri} className="block cursor-pointer hover:text-[#808ae8] transition-colors duration-500 ease-in-out">
             <h2 className="mb-2 text-3xl sm:text-4xl md:text-2xl lg:text-4xl font-bold leading-tight tracking-tight">
               {title}
