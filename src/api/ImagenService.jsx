@@ -29,7 +29,6 @@ export const listImagesSupabase = async ({ imgFirst = 0, imgLimit = 170 } = {}) 
         return numB - numA;
       })
       .map(file => `${URL}${file.name}`);
-
     return imagenes;
   } catch (err) {
     console.error('Error inesperado al listar imágenes:', err);
@@ -46,7 +45,6 @@ export const useListImagesSupabase = ({ imgFirst = 0, imgLimit = 170 } = {}) => 
       const imagenes = await listImagesSupabase({ imgFirst, imgLimit });
       setImages(imagenes);
     };
-
     fetchImages();
   }, [imgFirst, imgLimit]);
 
@@ -72,6 +70,7 @@ export const contarImagesSupabase = async () => {
 
   return imagenes.length;
 };
+
 // Función para obtener la URL pública de una imagen específica
 export const getImageSupabase = async (imgName) => {
   try {
@@ -101,7 +100,6 @@ export const uploadImageSupabase = async (file) => {
   try {
     const cantidad = await contarImagesSupabase() + 1;
     const filePath = `alumno${cantidad}.webp`;
-
     const { data, error } = await supabase.storage
       .from('img')
       .upload(filePath, file);

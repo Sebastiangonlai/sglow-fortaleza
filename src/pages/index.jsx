@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <>
       <ScrollProgress />
-      <SectionHeader />
+      <SectionHeader /> 
       <SectionNuestrosServicios />
       <SectionOfrecemos />
       <SectionElegirnos />
