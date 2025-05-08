@@ -64,7 +64,7 @@ const SectionElegirnos = () => {
 										strokeLinecap="round"
 										strokeLinejoin="round"
 										strokeWidth="2"
-										className="text-(--color-purple-1) w-16 h-16 mx-auto"
+										className="text-(--color-blue-2) w-16 h-16 mx-auto"
 										viewBox="0 0 25 26">
 										<path d={card.iconSvg} />
 									</svg>

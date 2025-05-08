@@ -2,64 +2,9 @@
 
 import { useState } from 'react';
 import Breadcrumb from '@/components/ui/Breadcrumb';
+import SectionPasos from '@/components/section/SectionPasos';
 import SectionPricing from '@/components/section/SectionPricing';
 import { URL_PDF } from '@/data/constants';
-import { ModalCard } from '@/components/ModalCard';
-import Modal from '@mui/joy/Modal';
-import ButtonTailwind from '@/components/ui/ButtonTailwind';
-
-
-const cards = [
-  {
-    src: "/static/images/card/servicio_7.webp",
-    title: "Academia habilitada",
-    description: "Estamos habilitados por la Intendencia de Montevideo, cumpliendo con todas las normativas y requisitos necesarios para ofrecer cursos de manejo de alta calidad",
-    checkText: '',
-    href: "/sobre-nosotros",
-  }, {
-    src: "/static/images/card/servicio_11.webp",
-    title: "Auto para examen",
-    description: "Utilizarás el mismo vehículo en el que practicas para presentarte al examen práctico, garantizando familiaridad y confianza.",
-    checkText: '',
-    href: "/coche-escuela",
-  }, {
-    src: "/static/images/card/servicio_6.webp",
-    title: "Flexibilidad horaria",
-    description: "Nuestros horarios se adaptan a tu disponibilidad, incluyendo opciones los fines de semana. Disponibles de lunes a sábado de 7 a 21 hs.",
-    checkText: "",
-    href: "/coche-escuela",
-  }, {
-    src: "/static/images/card/servicio_16.webp",
-    title: "Cursos para todas las edades",
-    description: "Adaptados a diferentes niveles de experiencia, garantizando un aprendizaje efectivo en cada etapa de la vida.",
-    checkText: "",
-    href: "/nuestros-cursos",
-  }, {
-    src: "/static/images/card/servicio_3.webp",
-    title: "Material y test online",
-    description: "Accede a contenido teórico digital y realiza exámenes desde cualquier dispositivo, en el momento y lugar que prefieras.",
-    checkText: "",
-    href: "/test-online",
-  }, {
-    src: "/static/images/card/servicio_14.webp",
-    title: "Apoyo en trámites",
-    description: "Nos encargamos de gestionar tus trámites ante la IMM para que el proceso sea más sencillo.",
-    checkText: "",
-    href: "/licencia-de-conducir",
-  }, {
-    src: "/static/images/card/servicio_12.webp",
-    title: "Instructores calificados",
-    description: "Contamos con profesionales altamente capacitados y con amplia experiencia en la enseñanza de conducción.",
-    checkText: "",
-    href: "/sobre-nosotros",
-  }, {
-    src: "/static/images/card/servicio_13.webp",
-    title: "Flota moderna y segura",
-    description: "Nuestros vehículos están equipados con tecnología de seguridad avanzada para garantizar tu bienestar.",
-    checkText: "",
-    href: "/coche-escuela",
-  },
-];
 
 
 const LicenciaDeConducir = () => {
@@ -78,21 +23,7 @@ const LicenciaDeConducir = () => {
         nameUri="Licencia de Conducir"
         href="nuestros-servicios" />
 
-      {/* <div className="overflow-hidden bg-(--color-section-3)">
-        <div className="overflow-hidden">
-          <div className="flex flex-wrap items-center">
-            <div className="mx-auto max-w-7xl w-full px-4 text-left">
-              <h1 className="mb-1 text-3xl font-bold text-[#111928] dark:text-white sm:text-4xl md:text-[35px] md:leading-[1]">
-                Cursos a tu medida
-              </h1>
-              <p className="text-left text-base text-[#637381] dark:text-[#9CA3AF] max-w-[650px]">
-                Cursos personalizados y adaptados a las distintas necesidades.
-              </p>
-            </div>
-          </div>
-        </div>
-        <SectionPricing />
-      </div> */}
+  
 
       <div className="bg-(--color-section-2) overflow-hidden">
         <div className="max-w-[80rem] px-4 pb-10 pt-20 lg:py-20 sm:px-6 lg:px-8 lg:pt-20 mx-auto">
@@ -172,35 +103,10 @@ const LicenciaDeConducir = () => {
       </div>
 
       <div className="bg-(--color-section-3) overflow-hidden">
-        <div className="overflow-hidden">
-          <div className="flex flex-wrap items-center">
-            <div className="mx-auto max-w-7xl w-full px-4 text-left">
-              <h4 className="mb-1 text-3xl font-bold text-[#111928] dark:text-white sm:text-4xl md:text-[35px] md:leading-[1]">
-                Caracteristicas
-              </h4>
-              <p className="text-left text-base text-[#637381] dark:text-[#9CA3AF] max-w-[650px]">
-                Descubre las ventajas de nuestros cursos.
-              </p>
-            </div>
-          </div>
-          <ModalCard card={cards} />
-        </div>
+        <SectionPasos />
+
       </div>
 
-      <div className="flex mx-auto justify-center gap-x-2 bg-(--color-section-3) pb-10">
-        <div className="text-center pt-6 pb-8 overflow-hidden space-x-3 inline-block" >
-          <ButtonTailwind name="Todos los Servicios" uri="/nuestros-servicios" />
-        </div>
-
-        <div className="text-center pt-6 pb-8 overflow-hidden space-x-3 inline-block" >
-          <ButtonTailwind name="Medios de Pago" uri="/medios-de-pago" />
-        </div>
-      </div>
-
-      <Modal open={activa} onClose={() => setActiva(false)} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <iframe src={openPdf} style={{ width: '90%', maxWidth: '85vw', height: '100%', maxHeight: '95vh', border: 'none' }}
-          frameBorder="0" title="PDF Viewer" />
-      </Modal>
     </>
   );
 };
