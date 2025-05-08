@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 
-
 const ImageComponent = ({ iSrc, iAlt = "", iWidth = 120, iHeight = 120, iClassName = "", iPriority = false }) => {
 	return (
 		<img

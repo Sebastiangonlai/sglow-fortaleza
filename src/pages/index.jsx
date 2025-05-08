@@ -11,6 +11,7 @@ import SectionTestimonial from '@/components/home/SectionTestimonial';
 import SectionRedes from '@/components/home/SectionRedes';
 import SectionPreguntasFrecuentes from '@/components/home/SectionPreguntas';
 import SectionContact from '@/components/home/SectionContact';
+import Demo from '@/components/motion/Demo';
 
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
       <ScrollProgress />
       <SectionHeader /> 
       <SectionNuestrosServicios />
+      <Demo />
       <SectionOfrecemos />
       <SectionElegirnos />
       <SectionLicenciaDeConducir />
