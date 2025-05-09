@@ -10,18 +10,15 @@ const itemClases = [
     id: 1,
     title: "Rutas simuladas: ",
     description: "Práctica en recorridos que imitan los trayectos del examen oficial.",
-  },
-  {
+  }, {
     id: 2,
     title: "Condiciones reales de tránsito: ",
     description: "Conduce en situaciones reales para ganar confianza en entornos urbanos.",
-  },
-  {
+  }, {
     id: 3,
     title: "Supervisión continua: ",
     description: "Instructores calificados te guiarán y corregirán en cada maniobra.",
-  },
-  {
+  }, {
     id: 4,
     title: "Preparación para maniobras: ",
     description: "Ejercicios específicos para dominar estacionamiento, giros y control del vehículo.",
@@ -36,21 +33,16 @@ export default function CursosPersonalizados() {
         subtitle="Cursos personalizados y adaptados a las distintas necesidades."
         nameUri="Cursos" />
 
-      <LayoutSection size="auto">
-        <div className="bg-[--color-section-3] pt-6 px-4 max-w-7xl mx-auto">
-          <h1 className="mb-1 text-3xl font-bold text-[#111928] dark:text-white sm:text-4xl md:text-[35px] md:leading-[1]">
-            Cursos a tu medida
-          </h1>
-          <p className="text-base text-[#637381] dark:text-[#9CA3AF] max-w-[650px]">
-            Cursos personalizados y adaptados a las distintas necesidades.
-          </p>
+      <LayoutSection size="auto" className="py-10 lg:py-20">
+        <div className="max-w-7xl px-4 xl:px-0 mx-auto">
+          <h2 className="text-white font-bold text-2xl md:text-4xl md:leading-tight">Cursos a tu medida</h2>
+          <SectionPricing />
         </div>
-        <SectionPricing />
       </LayoutSection>
 
-      <section className="bg-[#111928] py-10 lg:py-20">
+      <LayoutSection size="auto" color="bg-(--color-section-2)" className="py-10 lg:py-14">
         <div className="max-w-5xl px-4 xl:px-0 mx-auto">
-          <div className="max-w-3xl mb-10 lg:mb-14">
+          <div className="max-w-3xl mb-6 lg:mb-10">
             <h2 className="text-white font-bold text-2xl md:text-4xl md:leading-tight">Clases de Manejo</h2>
             <p className="mt-1 text-neutral-400">
               Se dictan en tránsito real a cargo de instructores profesionales y vehículos autoescuela habilitados.
@@ -63,8 +55,8 @@ export default function CursosPersonalizados() {
             <div>
               {itemClases.map(({ id, title, description }) => (
                 <div key={id} className="flex gap-x-5 ms-1">
-                  <div className="relative after:absolute after:top-8 after:bottom-0 after:start-4 after:w-px after:-translate-x-[0.5px] after:bg-neutral-800">
-                    <div className="size-8 flex justify-center items-center border border-neutral-800 text-[#ff0] font-semibold text-xs uppercase rounded-full">
+                  <div className="relative after:absolute after:top-8 after:bottom-0 after:start-4 after:w-px after:-translate-x-[0.5px] after:bg-neutral-600">
+                    <div className="size-8 flex justify-center items-center border border-neutral-600 text-[#ff0] font-semibold text-xs uppercase rounded-full">
                       {id}
                     </div>
                   </div>
@@ -87,9 +79,9 @@ export default function CursosPersonalizados() {
             </div>
           </div>
         </div>
-      </section>
+      </LayoutSection>
 
-      <section className="bg-white dark:bg-[#1F2A37]">
+      <LayoutSection size="auto" color="bg-(--color-section-3)">
         <div className="container mx-auto flex flex-col xl:flex-row items-center px-8 max-w-[80%] py-4">
           <ImageComponent iClassName="max-h-[22rem] max-w-[24rem] aspect-[4/4] p-4 justify-center items-center mx-auto px-4
            rounded-full p-4" iSrc="/static/images/vehiculo/flota-fortaleza4.webp" iWidth={290} iHeight={290} iAlt="Flota Fortaleza" />
@@ -107,7 +99,7 @@ export default function CursosPersonalizados() {
             </ul>
           </div>
         </div>
-      </section>
+      </LayoutSection>
     </>
   )
 }
