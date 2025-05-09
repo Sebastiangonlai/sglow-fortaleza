@@ -1,12 +1,12 @@
 "use client"
-import { Stagger } from '@/components/motion/Stagger'
+import { SlideIn } from '@/components/motion/SlideIn'
 
 const TitleHeader = ({ title, subtitle, uri }) => {
   return (
     <div className="-mx-4 flex flex-wrap pt-8 w-full px-4 z-[40] justify-center text-center">
-      <Stagger duration={400} delay={600} once={true}>
+      <SlideIn duration={0.4} delay={0.3}>
         <div className="mx-auto mb-[50px] max-w-[520px] text-shadow-sm/40">
-          <a href={uri} className="block cursor-pointer hover:text-[#808ae8] transition-colors duration-500 ease-in-out">
+          <a href={uri} className="block cursor-pointer hover:text-[#808ae8]">
             <h2 className="mb-2 text-3xl sm:text-4xl md:text-2xl lg:text-4xl font-bold leading-tight tracking-tight">
               {title}
             </h2>
@@ -15,7 +15,7 @@ const TitleHeader = ({ title, subtitle, uri }) => {
             {subtitle}
           </p>
         </div>
-      </Stagger>
+      </SlideIn>
     </div>
   )
 }

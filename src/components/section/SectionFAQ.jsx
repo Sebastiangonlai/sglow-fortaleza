@@ -37,7 +37,7 @@ const FaqAccordion = () => {
 
       <Accordion type="multiple" value={openItems} className="w-full">
         {faqItems.map((item, idx) => (
-          <SlideIn key={item.id} duration={800} delay={600} direction={direction[idx].animation} once={true}>
+          <SlideIn key={item.id} duration={0.5} delay={idx * 0.1} direction={direction[idx].animation}>
             <div className="left-0 w-full h-px bg-gradient-to-r from-[#DFE4EA]/0 via-stroke dark:via-[#374151] to-[#DFE4EA]/0" />
             <AccordionItem key={item.id} value={item.id} className="border-0 ">
               <AccordionTrigger
@@ -53,6 +53,7 @@ const FaqAccordion = () => {
           </SlideIn>
         ))}
       </Accordion>
+     
     </div>
   )
 }

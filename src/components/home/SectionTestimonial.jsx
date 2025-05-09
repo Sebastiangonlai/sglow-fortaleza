@@ -9,7 +9,7 @@ import ButtonTailwind from "../ui/ButtonTailwind";
 
 const SectionTestimonial = () => {
   return (
-    <LayoutSection id="testimonio" size="auto" color="bg-(--color-section-2)" className="overflow-hidden py-16">
+    <LayoutSection id="testimonio" size="auto" color="bg-(--color-section-2)" className="overflow-hidden py-10 lg:py-1 lg:pb-8">
       <TitleHeader
         title="Testimonios de Alumnos"
         subtitle="Opiniones de nuestros alumnos sobre su experiencia."
@@ -18,7 +18,7 @@ const SectionTestimonial = () => {
         <InfiniteMovingCards items={quotes} direction="right" speed="slow">
         </InfiniteMovingCards>
       </div>
-      <ButtonTailwind name="Comparte tu experiencia" color="bg-(--color-section-2)" uri={import.meta.env.VITE_GOOGLE_REVIEW} className="my-4" />
+      <ButtonTailwind name="Comparte tu experiencia" color="bg-(--color-section-2)" uri={import.meta.env.VITE_GOOGLE_REVIEW} className="mt-6" />
     </LayoutSection>
   );
 };

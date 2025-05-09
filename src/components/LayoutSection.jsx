@@ -1,3 +1,4 @@
+"use client";
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 
@@ -9,7 +10,7 @@ const LayoutSection = ({ children, id = "", size = "full", color = "bg-(--color-
   }[size] || "min-h-screen min-h-dvh";
 
   return (
-    <section id={id} className={clsx(sizeClass, color, "max-w-full box-border flex flex-col justify-center items-center", padding, className)}>
+    <section id={id} className={clsx(sizeClass, color, "max-w-full box-border flex flex-col justify-center items-center select-none ", padding, className)}>
       {children}
     </section>
   );

@@ -22,9 +22,9 @@ const SectionNuestrosServicios = () => {
 					uri="nuestros-servicios" />
 
 				<div className="flex flex-wrap -my-4 pb-6 mx-auto" >
-					{serviceData.map((d) => (
+					{serviceData.map((d, indx) => (
 						<div className="w-full lg:px-4 px-8 md:w-1/2 lg:w-1/3" key={d.title}>
-							<SlideIn duration={400} delay={100} once={true}>
+							<SlideIn duration={0.5} delay={indx * 0.1} >
 								<div className="mb-8">
 									<div className="mb-2 overflow-hidden rounded-[12px] shadow-[0_6px_8px_rgb(0_0_0/0.2)] ">
 										<div href={d.href} className="block cursor-pointer" aria-label="Academia Fortaleza" >
@@ -55,7 +55,7 @@ const SectionNuestrosServicios = () => {
 							</SlideIn>
 						</div>
 					))}
-					<ButtonTailwind name="Ver todos los servicios" color="bg-(--color-section-2)" uri="./nuestros-servicios" className="mx-auto" />
+					<ButtonTailwind name="Ver todos los servicios" color="bg-(--color-section-2)" uri="./nuestros-servicios" className="mx-auto mt-2" />
 				</div>
 			</div>
 		</LayoutSection>

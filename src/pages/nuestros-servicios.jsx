@@ -41,7 +41,7 @@ const NuestrosServicios = () => {
               ))}
             </ul>
           </div>
-          <SlideIn delay={400} duration={700} once={true}>
+          <SlideIn delay={0.4} duration={0.7} >
             <ModalCard card={nuestrosServiciosData} showCard={showCard} />
           </SlideIn>
         </div>

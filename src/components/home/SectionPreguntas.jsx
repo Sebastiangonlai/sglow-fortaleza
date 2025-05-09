@@ -1,3 +1,4 @@
+"use client";
 import FaqAccordion from "@/components/section/SectionFAQ"
 import LayoutSection from "@/components/LayoutSection"
 import TitleHeader from "@/components/ui/TitleHeader";

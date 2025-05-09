@@ -55,7 +55,7 @@ const SectionElegirnos = () => {
 			<div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-center my-6">
 				{itemData.map((card, i) => (
 					<div key={i} className="perspective w-full h-full">
-						<Flip duration={800} delay={500} once={true}>
+						<Flip duration={0.5} delay={i * 0.1} >
 							<a href={card.href} aria-label={`Más sobre ${card.title}`}>
 								<div className="group rounded-xl bg-[#0d1117]/20 p-6 shadow-testimonial dark:bg-(--color-border-1)">
 									<svg
@@ -76,8 +76,8 @@ const SectionElegirnos = () => {
 					</div>
 				))
 				}
-			</div >
-		</LayoutSection >
+			</div>
+		</LayoutSection>
 	);
 };
 

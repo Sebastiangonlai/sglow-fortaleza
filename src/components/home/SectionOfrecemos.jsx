@@ -51,7 +51,7 @@ const SectionOfrecemos = () => {
 				<div className="flex flex-wrap lg:flex-row max-w-[1100px] mx-auto pl-2">
 					{services.map((service, index) => (
 						<div key={index} className="w-full px-4 lg:w-1/2">
-							<SlideIn duration={500} delay={400} once={true} direction={service.animation} >
+							<SlideIn duration={0.5} delay={index * 0.1} direction={service.animation} >
 								<ServiceItems
 									icon={service.icon}
 									title={service.title}
@@ -63,6 +63,7 @@ const SectionOfrecemos = () => {
 					))}
 				</div>
 			</div>
+
 		</LayoutSection>
 	);
 };

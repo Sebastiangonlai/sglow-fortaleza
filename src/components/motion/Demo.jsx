@@ -29,10 +29,9 @@ const ExampleComponent = () => {
 
       {/*  Ejemplo de animación de rebote */}
       <MotionWrapper animation="spring"
-        duration={700}
-        delay={400}
+        duration={0.7}
+        delay={0.4}
         threshold={0.1}
-        once={true}
         loop={false}
         className="bg-blue-500 text-white p-5 rounded-md">
         <div className="my-2 w-60 h-20 bg-blue-500 rounded-md" />
@@ -46,7 +45,7 @@ const ExampleComponent = () => {
         duration={500}
         delay={100}
         threshold={0.1}
-        once={false}
+     
         className="bg-blue-500 text-white p-5 rounded-md">
         <h2>Contenido animado al aparecer (slide)</h2>
       </MotionWrapper>
@@ -54,10 +53,9 @@ const ExampleComponent = () => {
       {/* Ejemplo con animación de zoom */}
       <MotionWrapper
         animation="zoom"
-        duration={300}
-        delay={200}
+        duration={0.3}
+        delay={0.2}
         threshold={0.1}
-        once={true}
         className="bg-green-500 text-white p-5 rounded-md">
         <h2>Contenido animado al aparecer (zoom)</h2>
       </MotionWrapper>
@@ -76,7 +74,7 @@ const ExampleComponent = () => {
         <h1 className="text-3xl">Slide desde la izquierda</h1>
       </SlideIn>
 
-      <ZoomIn delay={500} duration={2000} loop>
+      <ZoomIn delay={0.5} duration={0.2} loop>
         <p>Texto que hace zoom al aparecer</p>
       </ZoomIn>
 
@@ -85,7 +83,7 @@ const ExampleComponent = () => {
       </Bounce>
 
       <div style={{ perspective: 1000 }}>
-        <Flip duration={1000} delay={500}>
+        <Flip duration={0.10} delay={500}>
           <div className="w-30 h-30 bg-red-400" />
         </Flip>
       </div>

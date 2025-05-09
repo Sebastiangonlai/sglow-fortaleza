@@ -15,24 +15,28 @@ const redes = [
     description: "Síguenos en Instagram para ver nuestras últimas novedades y promociones.",
     href: import.meta.env.VITE_INSTAGRAM,
     imgSrc: "/static/images/redes/instagram.webp",
+    direction: "right",
   }, {
     icon: IoLogoFacebook,
     title: "Facebook",
     description: "Síguenos en Facebook para ver nuestras últimas novedades y promociones.",
     href: import.meta.env.VITE_FACEBOOK,
     imgSrc: "/static/images/redes/s.webp",
+    direction: "left",
   }, {
     icon: IoLogoWhatsapp,
     title: "WhatsApp",
     description: "Escribinos directo por WhatsApp para más información.",
     href: import.meta.env.VITE_API_WHATSAPP,
     imgSrc: "/static/images/redes/w.webp",
+    direction: "right",
   }, {
     icon: IoLogoYoutube,
     title: "Youtube",
     description: "Síguenos en Youtube para ver nuestras últimas novedades y promociones.",
     href: import.meta.env.VITE_YOUTUBE,
     imgSrc: "/static/images/redes/you.webp",
+    direction: "left",
   }
 ];
 
@@ -55,14 +59,13 @@ const SectionRedes = () => {
             <div className="relative z-[10] lg:grid lg:grid-cols-2 lg:gap-6 lg:items-center">
 
               {/* Tabs */}
-              <SlideIn duration={500} delay={400} once direction="left">
-                <nav className="grid gap-2 mt-4 md:mt-10 justify-center items-center mx-auto px-6 pb-4 grid-cols-2  lg:grid-cols-1" aria-label="Tabs">
-                  {redes.map((item, index) => {
-                    const isActive = activeTab === item.title;
-                    const Icon = isActive ? PiHandTap : item.icon;
-
-                    return (
-                      <button key={index} onClick={() => setActiveTab(item.title)} className="flex max-w-[490px] shadow-sm rounded-xl bg-slate-900/90 hover:border-blue-600 ring-1 dark:border-blue-500/90 dark:bg-(--color-tab-1) ring-(--color-tab-1)/50 px-6 dark:hover:bg-(--color-blue-3)/90">
+              <nav className="grid gap-2 mt-4 md:mt-10 justify-center items-center mx-auto px-6 pb-4 grid-cols-2 lg:grid-cols-1" aria-label="Tabs">
+                {redes.map((item, index) => {
+                  const isActive = activeTab === item.title;
+                  const Icon = isActive ? PiHandTap : item.icon;
+                  return (
+                    <SlideIn duration={0.5} delay={index * 0.1} direction={redes[index].direction}>
+                      <button key={index} onClick={() => setActiveTab(item.title)} className="flex w-full max-w-[490px] shadow-sm rounded-xl bg-slate-900/90 hover:border-blue-600 ring-1 dark:border-blue-500/90 dark:bg-(--color-tab-1) ring-(--color-tab-1)/50 px-6 dark:hover:bg-(--color-blue-3)/90">
                         <div className="flex items-center justify-center mx-auto gap-4 my-2">
                           {isActive ? (
                             <a href={item.href} target="_blank" rel="noopener noreferrer" className="flex justify-center gap-4">
@@ -77,14 +80,14 @@ const SectionRedes = () => {
                           )}
                         </div>
                       </button>
-                    );
-                  })}
-                </nav>
-              </SlideIn>
+                    </SlideIn>
+                  );
+                })}
+              </nav>
 
               {/* Imagen */}
-              <SlideIn duration={500} delay={400} once direction="right">
-                <div className="flex justify-center items-center">
+              <div className="flex justify-center items-center">
+                <SlideIn duration={0.5} delay={0.4} direction={"left"}>
                   {redes.map((item, index) => (
                     <div key={index} className={activeTab === item.title ? "" : "hidden"}>
                       <ImageComponent
@@ -96,8 +99,8 @@ const SectionRedes = () => {
                       />
                     </div>
                   ))}
-                </div>
-              </SlideIn>
+                </SlideIn>
+              </div>
             </div>
           </div>
         </div>
