@@ -4,7 +4,8 @@
   --shadow-2xs: 0 1px rgb(0 0 0 / 0.05);
   --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
   /* --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
       --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4), 0 1px 2px 0 rgba(0, 0, 0, 0.3);
       --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
@@ -30,6 +31,8 @@
   --color-primary: #8b5cf6;
   --color-border-1: #1d2533;
   --color-border-2: #ddd6fe;
+  --color-border-opacity-1: rgba(29, 37, 51, 0.5);
+  --color-border-opacity-2: rgba(29, 37, 51, 0.2);
 
   --color-section-1: #182341;
   --color-section-2: #1f2a37;
@@ -50,17 +53,15 @@
   --color-blue-1: #60a5fa;
   --color-blue-2: #3b82f4;
   --color-blue-3: #3758f9;
-  
+
   --color-violet-1: #7480ff;
   --color-violet-2: #4f46e5;
   --color-violet-3: #4338ca;
 
   --color-purple-1: #a684ff;
-  --color-purple-2: #a855f7;
-  --color-purple-3: #7c3aed;
-
-  --color-pink-1: #9d174d;
-  --color-pink-2: #831843;
+  --color-purple-2: #cdabee;
+  --color-purple-3: #a855f7;
+  --color-purple-4: #7c3aed;
 
   --color-rose-1: #fb7185;
   --color-rose-2: #f43f5e;

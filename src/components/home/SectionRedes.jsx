@@ -43,11 +43,11 @@ const redes = [
 const SectionRedes = () => {
   const [activeTab, setActiveTab] = useState(redes[0].title);
 
-  const imgClassName = "shadow-md rounded-[40px] shadow-gray-950/80 min-w-[290px]";
-  const classH3 = "block text-lg font-medium hs-tab-active:text-blue-500 text-neutral-200 dark:hs-tab-active:text-blue-500 dark:text-neutral-100";
+  const imgClassName = "flex shadow-md rounded-4xl shadow-gray-950/80 max-w-[20rem] max-h-[30rem] lg:max-w-[20rem] lg:max-h-[30rem] object-cover object-center transition-transform duration-500 ease-in-out transform";
+  const classH3 = "block text-base sm:text-base lg:text-xl font-medium hs-tab-active:text-blue-500 text-neutral-200 dark:hs-tab-active:text-blue-500 dark:text-neutral-100";
 
   return (
-    <LayoutSection id="redes-sociales" color="fondo overflow-hidden py-8 lg:py-10">
+    <LayoutSection id="redes-sociales" className="fondo overflow-hidden py-8 lg:py-10">
       <TitleHeader
         title="Redes Sociales"
         subtitle="Visita nuestras redes para enterarte de novedades y promociones."
@@ -56,7 +56,7 @@ const SectionRedes = () => {
       <div className="lg:pb-[50px] lg:pt-[10px] pt-0 mx-auto justify-center items-center">
         <div className="container group pb-2 mx-auto">
           <div className="flex flex-col items-center">
-            <div className="relative z-[10] lg:grid lg:grid-cols-2 lg:gap-6 lg:items-center">
+            <div className="relative z-[10] lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
 
               {/* Tabs */}
               <nav className="grid gap-2 mt-4 md:mt-10 justify-center items-center mx-auto px-6 pb-4 grid-cols-2 lg:grid-cols-1" aria-label="Tabs">
@@ -64,8 +64,8 @@ const SectionRedes = () => {
                   const isActive = activeTab === item.title;
                   const Icon = isActive ? PiHandTap : item.icon;
                   return (
-                    <SlideIn duration={0.5} delay={index * 0.1} direction={redes[index].direction}>
-                      <button key={index} onClick={() => setActiveTab(item.title)} className="flex w-full max-w-[490px] shadow-sm rounded-xl bg-slate-900/90 hover:border-blue-600 ring-1 dark:border-blue-500/90 dark:bg-(--color-tab-1) ring-(--color-tab-1)/50 px-6 dark:hover:bg-(--color-blue-3)/90">
+                    <SlideIn key={index} duration={0.5} delay={index * 0.1} direction={redes[index].direction}>
+                      <button onClick={() => setActiveTab(item.title)} className="flex w-full max-w-[490px] shadow-sm rounded-xl bg-slate-900/90 hover:border-blue-600 ring-1 dark:border-blue-500/90 dark:bg-(--color-tab-1) dark:focus:bg-(--color-tab-1) ring-(--color-tab-1)/50 px-6 dark:hover:bg-(--color-blue-3)/90">
                         <div className="flex items-center justify-center mx-auto gap-4 my-2">
                           {isActive ? (
                             <a href={item.href} target="_blank" rel="noopener noreferrer" className="flex justify-center gap-4">
@@ -87,9 +87,10 @@ const SectionRedes = () => {
 
               {/* Imagen */}
               <div className="flex justify-center items-center">
-                <SlideIn duration={0.5} delay={0.4} direction={"left"}>
-                  {redes.map((item, index) => (
-                    <div key={index} className={activeTab === item.title ? "" : "hidden"}>
+                {/* <SlideIn duration={0.5} delay={0.4} direction={"left"}> */}
+                {redes.map((item, index) => (
+                  <div key={index} className={activeTab === item.title ? "" : "hidden"}>
+                    <SlideIn duration={0.5} delay={index * 0.1} direction={"left"}>
                       <ImageComponent
                         iClassName={imgClassName}
                         iSrc={item.imgSrc}
@@ -97,9 +98,10 @@ const SectionRedes = () => {
                         iWidth={315}
                         iHeight={642}
                       />
-                    </div>
-                  ))}
-                </SlideIn>
+                    </SlideIn>
+                  </div>
+                ))}
+                {/* </SlideIn> */}
               </div>
             </div>
           </div>

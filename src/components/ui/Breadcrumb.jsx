@@ -22,8 +22,8 @@ const Breadcrumb = ({ title, subtitle, nameUri, uri }) => {
                   </a>
                 </li>
                 <li>
-                  <a href="" className="flex items-center gap-[10px] text-base font-medium text-[#637381] whitespace-nowrap" aria-label={url}>
-                    <span className="text-[#637381] dark:text-[#9CA3AF]"> / </span>
+                  <a href="" className="flex items-center gap-2 text-base font-medium text-gray-2 whitespace-nowrap" aria-label={url}>
+                    <span className="text-gray-2"> / </span>
                     {nameUri}
                   </a>
                 </li>

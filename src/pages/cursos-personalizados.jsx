@@ -34,8 +34,8 @@ export default function CursosPersonalizados() {
         nameUri="Cursos" />
 
       <LayoutSection size="auto" className="py-10 lg:py-20">
-        <div className="max-w-7xl px-4 xl:px-0 mx-auto">
-          <h2 className="text-white font-bold text-2xl md:text-4xl md:leading-tight">Cursos a tu medida</h2>
+        <div className="max-w-7xl px-1 xl:px-0 mx-auto">
+          <h2 className="text-white font-bold text-2xl md:text-4xl leading-tight px-2">Cursos a tu medida</h2>
           <SectionPricing />
         </div>
       </LayoutSection>
@@ -44,7 +44,7 @@ export default function CursosPersonalizados() {
         <div className="max-w-5xl px-4 xl:px-0 mx-auto">
           <div className="max-w-3xl mb-6 lg:mb-10">
             <h2 className="text-white font-bold text-2xl md:text-4xl md:leading-tight">Clases de Manejo</h2>
-            <p className="mt-1 text-neutral-400">
+            <p className="mt-1 text-neutral-400 leading-tight">
               Se dictan en tránsito real a cargo de instructores profesionales y vehículos autoescuela habilitados.
             </p>
           </div>
@@ -82,10 +82,15 @@ export default function CursosPersonalizados() {
       </LayoutSection>
 
       <LayoutSection size="auto" color="bg-(--color-section-3)">
-        <div className="container mx-auto flex flex-col xl:flex-row items-center px-8 max-w-[80%] py-4">
-          <ImageComponent iClassName="max-h-[22rem] max-w-[24rem] aspect-[4/4] p-4 justify-center items-center mx-auto px-4
-           rounded-full p-4" iSrc="/static/images/vehiculo/flota-fortaleza4.webp" iWidth={290} iHeight={290} iAlt="Flota Fortaleza" />
-          <div className="mt-6 xl:mt-0 xl:ml-10 ">
+        <div className="container mx-auto flex flex-col xl:flex-row items-center px-6 lg:max-w-[80%] py-4 pt-8 pb-8">
+          {/* <ImageComponent iClassName="max-h-[22rem] max-w-[24rem] aspect-[4/4] p-4 justify-center items-center mx-auto px-4 */}
+          {/* rounded-full p-4" iSrc="/static/images/vehiculo/flota-fortaleza4.webp" iWidth={290} iHeight={290} iAlt="Flota Fortaleza" /> */}
+
+          <div class="rounded-full mask-radial-from-10% md:mask-radial-from-60% max-h-[10rem] max-w-[10rem] sm:max-w-[10rem] sm:max-h-[10rem] lg:max-w-[20rem] lg:max-h-[20rem]">
+            <img class="mask-radial-from-10% md:mask-radial-from-10% shadow-xl shadow-gray-700" src="/static/images/vehiculo/flota-fortaleza1.webp" alt="Flota Fortaleza" />
+          </div>
+
+          <div className="mt-6 xl:mt-0 xl:ml-10 px-3 sm:px-3 lg:px-20">
             <ul className="list-disc space-y-4 text-gray-800 dark:text-gray-200 leading-tight">
               <li>
                 Nuestros cursos prácticos comienzan en el punto de encuentro. Los alumnos enfrentan la realidad del manejo desde el inicio.

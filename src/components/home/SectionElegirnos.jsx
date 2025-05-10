@@ -45,7 +45,7 @@ const SectionElegirnos = () => {
 	return (
 		<LayoutSection id="elegirnos" size="half" color="bg-(--color-section-3)" className=" overflow-hidden py-14 px-4">
 			<div className="min-w-screen">
-				<img src="/static/images/svg/shape-1.svg" alt="Shape" className="absolute opacity-5 " />
+				<img src="/static/images/svg/shape-1.svg" alt="Shape" className="absolute opacity-5" />
 			</div>
 			<TitleHeader
 				title="Por qué Elegirnos"

@@ -3,7 +3,6 @@
 import Breadcrumb from '@/components/ui/Breadcrumb';
 import ImageComponent from '@/components/ImageComponent';
 import LayoutSection from '@/components/LayoutSection';
-import { ParallaxScrollSecond } from "../lib/parallax-scroll-2";
 
 
 const features2 = [
@@ -20,21 +19,11 @@ const features2 = [
     desc: "Vehículos siempre en perfectas condiciones."
   }, {
     icon:
-      <svg fill="currentColor" strokeWidth="0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="1.8em" width="1.8em" className="overflow: visible; color: currentcolor;"><path d="m12 17-5.877 3.59 1.598-6.7-5.23-4.48 6.865-.55L12 2.5l2.645 6.36 6.865.55-5.23 4.48 1.598 6.7L12 17Z"></path></svg>,
+      <svg fill="currentColor" strokeWidth="0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 23" height="1.8em" width="2em" className="overflow: visible; color: currentcolor;"><path d="m12 17-5.877 3.59 1.598-6.7-5.23-4.48 6.865-.55L12 2.5l2.645 6.36 6.865.55-5.23 4.48 1.598 6.7L12 17Z"></path></svg>,
     title: "Confort y tecnología",
     desc: "Equipados con sistemas avanzados y cómodos interiores."
   },
 ]
-
-const images = [
-  "/static/images/vehiculo/flota-fortaleza2.webp",
-  "/static/images/vehiculo/flota-fortaleza4.webp",
-  "/static/images/vehiculo/flota-fortaleza3.webp",
-  "/static/images/vehiculo/flota-fortaleza1.webp",
-  "/static/images/vehiculo/1.webp",
-  "/static/images/vehiculo/2.webp",
-];
-
 
 const NuestrosVeiculos = () => {
   return (
@@ -45,7 +34,7 @@ const NuestrosVeiculos = () => {
         nameUri="Flota de Vehículos"
         href="coche-escuela" />
 
-      <LayoutSection size="auto" className="pt-16">
+      <LayoutSection size="full" className="py-10 overflow-hidden">
         <div className="max-w-screen-xl mx-auto px-4 text-gray-200 gap-16 justify-center md:px-8 lg:flex">
           <div>
             <div className="max-w-xl space-y-3">
@@ -58,7 +47,7 @@ const NuestrosVeiculos = () => {
               <ul className="space-y-4">
                 {features2.map((item, idx) => (
                   <li key={idx} className="flex gap-x-4">
-                    <div className="flex-none w-12 h-12 bg-black/20 border border-gray-100/20 text-gray-900 dark:text-gray-100 rounded-lg flex items-center justify-center tracking-tight leading-tight">
+                    <div className="flex-none w-12 h-12 bg-tab-1/30 border border-white/5 text-gray-900 dark:text-gray-100 rounded-lg flex items-center justify-center px-2.5 tracking-tight leading-tight">
                       {item.icon}
                     </div>
                     <div>
@@ -74,13 +63,10 @@ const NuestrosVeiculos = () => {
               </ul>
             </div>
           </div>
-          <div className="mt-12 lg:mt-0 p-4">
-            <ImageComponent iWidth={430} iHeight={430} iAlt="Licencia de conducir" iSrc="/static/images/vehiculo/nuestros-autos-sm.webp" loading="lazy" iClassName="object-cover rounded-xl focus:touch-pan-x delay-200 border border-zinc-700 select-none dark:rounded-lg dark:border justify-center items-center" />
+          <div className=" mt-12 lg:mt-0 p-4">
+            <ImageComponent iWidth={330} iHeight={330} iAlt="Licencia de conducir" iSrc="/static/images/vehiculo/nuestros-autos-sm.webp" loading="lazy" iClassName="max-w-full object-cover object-center rounded-2xl focus:touch-pan-x delay-200 ring-6 ring-zinc-300 justify-center items-center" />
           </div>
         </div>
-      </LayoutSection>
-      <LayoutSection size="auto" className="min-w-screen min-h-screen mx-auto px-4 text-gray-200 gap-6 justify-between md:px-8 lg:flex">
-        <ParallaxScrollSecond images={images} />
       </LayoutSection>
     </>
   );
