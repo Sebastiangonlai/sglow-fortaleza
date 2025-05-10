@@ -43,7 +43,7 @@ const SectionElegirnos = () => {
 	]
 
 	return (
-		<LayoutSection id="elegirnos" size="half" color="bg-(--color-section-3)" className=" overflow-hidden py-14 px-4">
+		<LayoutSection id="elegirnos" size="half" color="bg-(--color-section-3)" className="overflow-hidden py-6 px-4">
 			<div className="min-w-screen">
 				<img src="/static/images/svg/shape-1.svg" alt="Shape" className="absolute opacity-5" />
 			</div>
@@ -52,12 +52,12 @@ const SectionElegirnos = () => {
 				subtitle="Formando conductores responsables y seguros."
 				uri="nuestros-servicios" />
 
-			<div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-center my-6">
+			<div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-center my-5">
 				{itemData.map((card, i) => (
-					<div key={i} className="perspective w-full h-full">
+					<div key={i} className=" w-full h-full">
 						<Flip duration={0.5} delay={i * 0.1} >
 							<a href={card.href} aria-label={`Más sobre ${card.title}`}>
-								<div className="group rounded-xl bg-[#0d1117]/20 p-6 shadow-testimonial dark:bg-(--color-border-1)">
+								<div className="rounded-xl bg-[#0d1117]/20 p-6 shadow-testimonial dark:bg-(--color-border-1)">
 									<svg
 										fill="none"
 										stroke="currentColor"

@@ -67,3 +67,12 @@ Este proyecto es una aplicación web desarrollada con React y Vite, diseñada pa
 }
 
 ```
+
+
+
+    "@react-three/drei": "10.0.7",
+    "@react-three/fiber": "9.1.2",
+    "react-scripts": "^5.0.1",
+    "framer-motion-3d": "12.4.13",
+    "react-use-measure": "2.1.7",
+    "three": "0.176.0",

@@ -3,8 +3,6 @@ import ImageComponent from '../ImageComponent';
 
 export function HelpModal({ onClose }) {
   return (
-
-
     <div className="absolute inset-0 flex items-center justify-center bg-[#111928] bg-opacity-50 z-10">
       {/* <div className="bg-[#111928] p-4 rounded-lg max-w-sm w-full text-center"> */}
       <div className="bg-[#111928] p-4 rounded-lg max-w-sm w-full text-center relative">

@@ -41,7 +41,7 @@ const IconCheck = () => (
 const CardCurso = ({ titulo, subtitulo, items, destacado, dark = false }) => {
   return (
     <div className={`flex flex-col justify-between rounded-3xl p-8 ring-1 xl:p-9 
-      ${dark ? "bg-slate-950" : "bg-slate-50"} text-slate-200 ring-slate-300/20 dark:bg-[#111928]`}>
+      ${dark ? "bg-slate-950" : "bg-slate-50"} text-slate-200 ring-slate-300/20 dark:bg-[#111928] shadow-xl`}>
       <div>
         <div className="flex items-center justify-between gap-x-4">
           <h3 className="text-lg font-semibold leading-8">{titulo}</h3>

@@ -50,7 +50,7 @@ const SectionHeader = () => {
     </svg>;
 
   return (
-    <LayoutSection id="inicio" className="flex flex-col select-none items-center overflow-hidden justify-center h-screen pt-1">
+    <LayoutSection id="inicio" className="flex flex-col select-none items-center overflow-hidden justify-center h-screen pt-16">
 
       {showBackgroundLines && (
         <BackgroundLines className="absolute justify-center items-center top-0 left-0" />
@@ -60,8 +60,8 @@ const SectionHeader = () => {
         {svgContent}
       </span>
 
-      <div className="flex flex-col justify-center items-center ">
-        <h1 className="animate-float text-3xl sm:text-3xl md:text-4xl lg:text-6xl text-white font-extrabold sm:font-extrabold lg:font-bold text-center pb-7 pt-8 lg:mb-0 text-shadow-sm/30">
+      <div className="flex flex-col justify-center items-center place-items-center">
+        <h1 className="animate-float text-4xl sm:text-4xl md:text-4xl lg:text-6xl text-white font-extrabold sm:font-extrabold lg:font-bold text-center  text-shadow-sm/30">
           Academia Fortaleza
         </h1>
         <div className="bg-transparent relative dark:bg-transparent rounded-xl">

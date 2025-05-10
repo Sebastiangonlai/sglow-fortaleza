@@ -2,7 +2,7 @@ import  { useCallback, useEffect, useState } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import { NextButton, PrevButton, usePrevNextButtons } from './EmblaCarouselArrowButtons'
 import ImageComponent from '../ImageComponent';
-
+import "@/css/embla-animation.css"
 
 const EmblaCarouselHome = (props) => {
 	const { slides, options } = props

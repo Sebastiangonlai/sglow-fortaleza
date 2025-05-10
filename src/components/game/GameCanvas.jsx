@@ -51,8 +51,8 @@ export default function GameCanvas({ carPosition, isMovingForward, width, height
       const carWidth = width * 0.15
       const carHeight = carWidth * (carImage.height / carImage.width)
       const carY = height * 0.75 - carHeight / 2
-      
-      ctx.drawImage(carImage, carPosition.x, carY+15, 145, 70)
+
+      ctx.drawImage(carImage, carPosition.x, carY + 15, 145, 70)
     }
 
     const animate = () => {
@@ -64,7 +64,7 @@ export default function GameCanvas({ carPosition, isMovingForward, width, height
         // Ajustamos la velocidad de desplazamiento para que sea más suave
         backgroundOffsetRef.current += 0.1
       } else if (stop == 0) {
-       backgroundOffsetRef.current= 0
+        backgroundOffsetRef.current = 0
       }
       requestAnimationFrame(animate)
     }

@@ -29,19 +29,19 @@ const SectionLicenciaConducir = () => {
 			skeleton: <ModalCardAlumnos />,
 		}, {
 			title: "Obten tu licencia",
-			className: "mx-2 my-2 justify-center items-center",
+			className: "flex mx-6 my-6 justify-center items-center place-items-center max-w-sm mx-auto",
 			skeleton: <CardLicencia />,
 		},
 	];
 	return (
-		<LayoutSection id="licencia-de-conducir" className="overflow-hidden lg:px-10 pt-20 pb-14 lg:pt-[70px] lg:pb-[30px]">
+		<LayoutSection id="licencia-de-conducir" className="overflow-hidden lg:px-10 pt-18 pb-14 lg:pt-[70px] lg:pb-[30px]">
 			<div className="mx-auto">
 				<TitleHeader
 					title="Últimos Graduados"
 					subtitle="Ellos lograron su objetivo: obtener la libreta."
 					uri="galeria-media" />
 				<div className="relative h-full" >
-					<div className="grid grid-cols-1 lg:grid-cols-2 -mt-6 gap-8 rounded-md">
+					<div className="grid grid-cols-1 lg:grid-cols-2 -mt-6 gap-6 rounded-md">
 						{features.map((feature) => (
 							<FeatureCard key={feature.title} className={feature.className}>
 								<div className="min-h-full min-w-full">{feature.skeleton}</div>
@@ -69,7 +69,7 @@ const FeatureCard = ({ children, className }) => {
 export const CardLicencia = () => {
 	return (
 		<SlideIn duration={0.5} delay={0.5} direction="up">
-			<BackgroundGradient className="flex rounded-[22px] min-w-full p-2 sm:p-2 bg-white dark:bg-[#111827] inset-0 z-50 pb-2" >
+			<BackgroundGradient className="flex rounded-[22px] max-w-md p-2 sm:p-2 bg-white dark:bg-[#111827] inset-0 z-50 pb-2" >
 				<ImageComponent
 					iSrc="/static/images/card/servicio_18hd.webp"
 					iAlt="portfolio"
@@ -77,9 +77,9 @@ export const CardLicencia = () => {
 					iHeight={IMG.height}
 					iClassName="w-full h-auto max-h-fit object-cover rounded-2xl transition-all duration-200 blur-none group-hover/img:blur-sm" />
 
-				<div className="absolute bottom-4 left-4 right-4 rounded-[22px] bg-white/90 dark:bg-[rgba(17,24,39,0.85)] backdrop-blur-md px-2 py-3 text-center shadow-portfolio dark:shadow-box-[#111928] ring-1 dark:ring-gray-500/20 z-50">
+				<div className="absolute bottom-4 left-8 right-8 rounded-[22px] bg-white/90 dark:bg-[rgba(17,24,39,0.85)] backdrop-blur-md px-2 py-3 text-center shadow-portfolio dark:shadow-box-[#111928] ring-1 dark:ring-gray-500/20 z-50">
 
-					<h2 className="text-[#111928] dark:text-white text-base leading-tight pb-2 inset-0 z-500 blur-none">
+					<h2 className="text-[#111928] dark:text-white text-base leading-tight pb-2.5 inset-0 z-500 blur-none">
 						{"¿Querés aprender a manejar de verdad?"}
 					</h2>
 					<ButtonTailwind name="Obtén tu licencia" color="bg-(--color-section-3)/80" uri="./licencia-de-conducir" />

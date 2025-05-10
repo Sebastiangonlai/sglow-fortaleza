@@ -21,7 +21,7 @@ export default function Home() {
       <SectionOfrecemos />
       <SectionElegirnos />
       <SectionLicenciaDeConducir />
-      
+
       <SectionGraduados />
       <SectionTestimonial />
       <SectionRedes />
